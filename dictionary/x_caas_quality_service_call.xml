@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="Обращение" max_length="40" name="x_caas_quality_service_call" type="collection">
+        <element label="Акцент" max_length="40" name="u_accent" type="string"/>
+    </element>
+</database>
