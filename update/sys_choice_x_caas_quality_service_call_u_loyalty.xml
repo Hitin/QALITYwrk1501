@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_loyalty" table="x_caas_quality_service_call" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_loyalty</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>нейтрально</label>
+            <language>en</language>
+            <name>x_caas_quality_service_call</name>
+            <sequence/>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-21 06:38:35</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>0998bde74fc2b780b41f05818110c7f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-21 06:38:35</sys_updated_on>
+            <value>нейтрально</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_loyalty</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>отрицательно</label>
+            <language>en</language>
+            <name>x_caas_quality_service_call</name>
+            <sequence/>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-21 06:38:53</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>7da835e74fc2b780b41f05818110c785</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-21 06:38:53</sys_updated_on>
+            <value>отрицательно</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_loyalty</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>положительно</label>
+            <language>en</language>
+            <name>x_caas_quality_service_call</name>
+            <sequence/>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-21 06:39:07</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>01b8b9e74fc2b780b41f05818110c7b2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-21 06:39:07</sys_updated_on>
+            <value>положительно</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_loyalty</element>
+            <name>x_caas_quality_service_call</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-21 06:38:35</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>5b987de74fc2b780b41f05818110c741</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_loyalty</sys_name>
+            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_choice_x_caas_quality_service_call_u_loyalty</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-21 06:38:35</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

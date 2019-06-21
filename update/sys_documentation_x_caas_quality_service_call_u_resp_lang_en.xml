@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_resp_lang" label="Язык автоотвеaта" language="en" table="x_caas_quality_service_call">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_resp_lang</element>
+            <help/>
+            <hint/>
+            <label>Язык автоотвеaта</label>
+            <language>en</language>
+            <name>x_caas_quality_service_call</name>
+            <plural>Язык автоотвеaтаs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-21 07:00:34</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>d1ad7def4fc2b780b41f05818110c75d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Язык автоотвеaта</sys_name>
+            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_documentation_x_caas_quality_service_call_u_resp_lang_en</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-21 07:00:34</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

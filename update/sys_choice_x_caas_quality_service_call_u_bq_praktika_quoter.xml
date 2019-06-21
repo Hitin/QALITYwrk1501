@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_bq_praktika_quoter" table="x_caas_quality_service_call" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_bq_praktika_quoter</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Другая</label>
+            <language>en</language>
+            <name>x_caas_quality_service_call</name>
+            <sequence>100</sequence>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-20 12:25:36</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>de6ef1174fc27780b41f05818110c7df</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-20 12:25:36</sys_updated_on>
+            <value>Другая</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_bq_praktika_quoter</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Прохождение практики</label>
+            <language>en</language>
+            <name>x_caas_quality_service_call</name>
+            <sequence>200</sequence>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-20 12:25:48</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>f97eb9d34fc27780b41f05818110c7ff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-20 12:25:48</sys_updated_on>
+            <value>Прохождение практики</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_bq_praktika_quoter</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Торговый представитель</label>
+            <language>en</language>
+            <name>x_caas_quality_service_call</name>
+            <sequence>300</sequence>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-20 12:26:03</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>f08ef1174fc27780b41f05818110c73a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-20 12:26:03</sys_updated_on>
+            <value>Торговый представитель</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_bq_praktika_quoter</element>
+            <name>x_caas_quality_service_call</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-20 12:25:36</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>7c7efdd34fc27780b41f05818110c797</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_bq_praktika_quoter</sys_name>
+            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_choice_x_caas_quality_service_call_u_bq_praktika_quoter</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-20 12:25:36</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>
