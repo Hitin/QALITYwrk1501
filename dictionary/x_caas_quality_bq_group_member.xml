@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="false" label="bq group member" max_length="40" name="x_caas_quality_bq_group_member" type="collection">
+        <element audit="false" label="Группа" max_length="32" name="u_bq_group" reference="x_caas_quality_bq_usergroup" reference_floats="true" type="reference"/>
+        <element audit="false" display="true" label="Сотрудник" max_length="32" name="u_bq_user" reference="sys_user" reference_floats="true" type="reference"/>
+        <element audit="false" label="Временный" max_length="40" name="u_temp" type="boolean"/>
+        <index name="index">
+            <element name="u_bq_group"/>
+        </index>
+        <index name="index2">
+            <element name="u_bq_user"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_category" table="x_caas_quality_bq_site_matrix" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Вакансии</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_site_matrix</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-02-16 13:36:06</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>2d2d3fb137dc97005978466754990e2a</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-02-16 13:36:20</sys_updated_on>
+            <value>Вакансии</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Вопросы сотрудникам Пресс-центра</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_site_matrix</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-02-16 13:36:32</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>473df3f137dc97005978466754990e8b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-02-16 13:36:32</sys_updated_on>
+            <value>Вопросы сотрудникам Пресс-центра</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Народный знак качества</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_site_matrix</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-02-16 13:36:39</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>bd4df3f137dc97005978466754990ed5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-02-16 13:36:39</sys_updated_on>
+            <value>Народный знак качества</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>О компании</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_site_matrix</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-02-16 13:36:46</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>274dfbb137dc97005978466754990ef9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-02-16 13:36:46</sys_updated_on>
+            <value>О компании</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>О пиве</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_site_matrix</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-02-16 13:36:52</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>7c5d3fb137dc97005978466754990e8a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-02-16 13:36:52</sys_updated_on>
+            <value>О пиве</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Продажи в России</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_site_matrix</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-02-16 13:36:59</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>aa5dbf7137dc97005978466754990ed6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-02-16 13:36:59</sys_updated_on>
+            <value>Продажи в России</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Продажи за рубежом</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_site_matrix</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-02-16 13:37:06</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>d86d7fb137dc97005978466754990ebb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-02-16 13:37:06</sys_updated_on>
+            <value>Продажи за рубежом</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Продукция</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_site_matrix</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-02-16 13:37:14</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>8a6d37f137dc97005978466754990e3a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-02-16 13:37:14</sys_updated_on>
+            <value>Продукция</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Рекламные акции</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_site_matrix</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-02-16 13:37:20</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>6b6df3f137dc97005978466754990ee1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-02-16 13:37:20</sys_updated_on>
+            <value>Рекламные акции</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Стажировка в компании "Балтика"</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_site_matrix</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-02-16 13:37:32</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>ea7dbbb137dc97005978466754990eba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-02-16 13:37:32</sys_updated_on>
+            <value>Стажировка в компании "Балтика"</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Технологии</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_site_matrix</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-02-16 13:37:40</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>6c8dffb137dc97005978466754990e74</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-02-16 13:37:40</sys_updated_on>
+            <value>Технологии</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_category</element>
+            <name>x_caas_quality_bq_site_matrix</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-27 12:39:22</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>7ab482654f5ebf80b41f05818110c730</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_category</sys_name>
+            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_choice_x_caas_quality_bq_site_matrix_u_category</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-27 12:39:22</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

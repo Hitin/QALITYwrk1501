@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_role" table="x_caas_quality_bq_role_assignment" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Координатор по ОЗС</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_role_assignment</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-02-20 08:18:21</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>0acad74737909b005978466754990efb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-02-20 08:18:21</sys_updated_on>
+            <value>Координатор по ОЗС</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Ответственный по ОЗС</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_role_assignment</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-02-20 08:15:59</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>673adf8737909b005978466754990eb1</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-02-20 08:16:52</sys_updated_on>
+            <value>Ответственный по ОЗС</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Согласующий Базы Знаний</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_role_assignment</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-02-20 08:17:24</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>949a53c737909b005978466754990ef9</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-02-20 08:17:38</sys_updated_on>
+            <value>Согласующий Базы Знаний</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Согласующий по ОЗС</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_role_assignment</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-02-20 08:17:08</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>eb7a17c737909b005978466754990ea3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-02-20 08:17:08</sys_updated_on>
+            <value>Согласующий по ОЗС</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_role</element>
+            <name>x_caas_quality_bq_role_assignment</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-27 12:39:22</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>b2b482654f5ebf80b41f05818110c72d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_role</sys_name>
+            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_choice_x_caas_quality_bq_role_assignment_u_role</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-27 12:39:22</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

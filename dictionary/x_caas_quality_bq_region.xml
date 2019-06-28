@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="false" label="Регион" max_length="40" name="x_caas_quality_bq_region" type="collection">
+        <element audit="false" label="Федеральный округ (РФ)" max_length="40" name="u_bq_okrug" type="string"/>
+        <element audit="false" label="Регион" max_length="40" name="u_name" type="string"/>
+        <element audit="false" label="Код региона" max_length="40" name="u_region_code" type="string"/>
+        <element audit="false" label="Часовой пояс" max_length="40" name="u_timezone" type="string"/>
+    </element>
+</database>

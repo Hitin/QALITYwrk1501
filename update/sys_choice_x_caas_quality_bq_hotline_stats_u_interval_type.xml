@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_interval_type" table="x_caas_quality_bq_hotline_stats" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_interval_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Месяц</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_hotline_stats</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-05-30 08:45:26</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>8c66d18737161b005978466754990e87</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-05-30 08:45:51</sys_updated_on>
+            <value>m</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_interval_type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Год</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_hotline_stats</name>
+            <sequence/>
+            <sys_created_by>x-ruVoyAnd</sys_created_by>
+            <sys_created_on>2018-05-30 08:45:58</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>4486190737161b005978466754990e48</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+            <sys_updated_on>2018-05-30 08:45:58</sys_updated_on>
+            <value>y</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_interval_type</element>
+            <name>x_caas_quality_bq_hotline_stats</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-27 12:39:22</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>fab482654f5ebf80b41f05818110c728</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_interval_type</sys_name>
+            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_choice_x_caas_quality_bq_hotline_stats_u_interval_type</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-27 12:39:22</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

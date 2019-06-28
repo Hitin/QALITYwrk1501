@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="false" label="Матрица обработки обращений (сайты)" max_length="40" name="x_caas_quality_bq_site_matrix" type="collection">
+        <element audit="false" label="Проверка оператором" max_length="40" name="u_auto_assign" type="boolean"/>
+        <element audit="false" label="Закрытие после регистрации" max_length="40" name="u_auto_close" type="boolean"/>
+        <element audit="false" choice="1" label="Рубрика" max_length="40" name="u_category" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Вакансии" value="Вакансии"/>
+                <element inactive_on_update="false" label="Вопросы сотрудникам Пресс-центра" value="Вопросы сотрудникам Пресс-центра"/>
+                <element inactive_on_update="false" label="Народный знак качества" value="Народный знак качества"/>
+                <element inactive_on_update="false" label="О компании" value="О компании"/>
+                <element inactive_on_update="false" label="О пиве" value="О пиве"/>
+                <element inactive_on_update="false" label="Продажи в России" value="Продажи в России"/>
+                <element inactive_on_update="false" label="Продажи за рубежом" value="Продажи за рубежом"/>
+                <element inactive_on_update="false" label="Продукция" value="Продукция"/>
+                <element inactive_on_update="false" label="Рекламные акции" value="Рекламные акции"/>
+                <element inactive_on_update="false" label="Стажировка в компании &quot;Балтика&quot;" value="Стажировка в компании &quot;Балтика&quot;"/>
+                <element inactive_on_update="false" label="Технологии" value="Технологии"/>
+            </choice>
+        </element>
+        <element audit="false" label="Город" max_length="32" name="u_city" reference="x_caas_quality_bq_city" type="reference"/>
+        <element audit="false" label="Тема письма (en)" max_length="200" name="u_mail_subject_en" type="string"/>
+        <element audit="false" display="true" label="Тема письма (ру)" max_length="200" name="u_mail_subject_ru" type="string"/>
+        <element audit="false" label="Регион дистрибуции" max_length="40" name="u_region" type="string"/>
+        <element attributes="ref_qual_elements=u_topic,ref_sequence=u_bq_order" audit="false" choice="1" label="Подтема" max_length="32" name="u_subtopic" reference="x_caas_quality_bq_subtopic" reference_qual="javascript:'u_inactive=false^u_bq_topic=' + current.u_topic +'^sys_id!=a1474c4c3750ba00b9af806754990e3a';" type="reference" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element audit="false" choice="1" label="Тема" max_length="32" name="u_topic" reference="x_caas_quality_bq_topic" reference_qual="u_inactive=false^u_bq_name!=Проблемы доставки сетевым клиентам^u_bq_name!=Администрирование процесса^EQ" reference_qual_condition="u_inactive=false^u_bq_name!=Проблемы доставки сетевым клиентам^u_bq_name!=Администрирование процесса^EQ" type="reference">
+            <choice/>
+        </element>
+        <index name="index">
+            <element name="u_city"/>
+        </index>
+        <index name="index2">
+            <element name="u_topic"/>
+        </index>
+        <index name="index3">
+            <element name="u_subtopic"/>
+        </index>
+    </element>
+</database>

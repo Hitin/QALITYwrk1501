@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>sc_attached_knowledge</name>
+        <scoped_name/>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+        <sys_created_on>2019-06-28 08:08:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a7209ebd4f1233c0b41f05818110c7ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sc_attached_knowledge</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_ui_macro_a7209ebd4f1233c0b41f05818110c7ed</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-06-28 08:08:50</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+		<g2:evaluate var="tasks" jelly="true" expression="
+			var tasks = new GlideRecord('m2m_kb_task');
+			tasks.addQuery('task',current.sys_id);
+			tasks.orderBy('kb_knowledge.number');
+			tasks.query();
+			"/>
+		<j2:if test="$[tasks.hasNext()]" >
+				<tr>
+					<td class="label label_spacing">
+						<span style="margin-right:3px; margin-left:1px;">$[SP]</span>
+						Статья из Базы знаний:
+					</td>
+					<td>
+						<j2:while test="$[tasks.next()]">
+							<div>
+								<img src="images/nav_bult.gifx" alt="${gs.getMessage('Статья из БЗ')}" />
+								<a class="obvious" href="kb_view.do?sys_kb_id=$[tasks.kb_knowledge]">$[HTML:tasks.kb_knowledge.number] - $[HTML:tasks.kb_knowledge.short_description]</a>
+							</div>
+						</j2:while>
+					</td>
+				</tr>
+		</j2:if>
+
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>
