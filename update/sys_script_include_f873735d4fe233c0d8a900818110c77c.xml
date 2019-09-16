@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_caas_quality.bq_test</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>bq_test</name>
+        <script><![CDATA[var bq_test = Class.create();
+bq_test.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	bq_test:function() {
+		return  'u_ttn_numberSTARTSWITHTulZ';
+	},
+    type: 'bq_test'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+        <sys_created_on>2019-07-09 12:26:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f873735d4fe233c0d8a900818110c77c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>bq_test</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_include_f873735d4fe233c0d8a900818110c77c</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-11 09:00:12</sys_updated_on>
+    </sys_script_include>
+</record_update>

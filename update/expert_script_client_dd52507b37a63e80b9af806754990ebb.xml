@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="expert_script_client">
+    <expert_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <expert display_value="Новое обращение по Логистике">c987ff5d37f7a2005978466754990edb</expert>
+        <expert_panel display_value="new_logistic">4bd66d4e3733e2005978466754990e2d</expert_panel>
+        <expert_panel_variable>e6eeafaa3761fa005978466754990ed8</expert_panel_variable>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>bq_eraseOtherTTN</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+// 	var gr = new GlideRecord('expert_variable');   
+// 	gr.addQuery('name','u_bq_inv_number');  
+// 	gr.query();  
+	if (isLoading){
+		return;
+	}
+		var varName = 'u_other_ttn_list';
+		var leftBucket = gel(varName + '_select_0');
+		var rightBucket = gel(varName + '_select_1');
+		var selectedOptions = rightBucket.options;
+		var selectedIDs = [];
+		var index = 0;
+		for(var i = 0; i < selectedOptions.length; i++){
+		   selectedIDs[index] = i;
+		   index++;
+		}
+		moveSelectedOptions(selectedIDs, rightBucket, leftBucket, '--None--');
+
+		sortSelect(leftBucket);
+	
+}	  
+
+]]></script>
+        <sys_class_name>expert_script_client</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-05-12 05:36:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>dd52507b37a63e80b9af806754990ebb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>bq_eraseOtherTTN</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_script_client_dd52507b37a63e80b9af806754990ebb</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2017-05-12 05:37:27</sys_updated_on>
+        <table/>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </expert_script_client>
+</record_update>

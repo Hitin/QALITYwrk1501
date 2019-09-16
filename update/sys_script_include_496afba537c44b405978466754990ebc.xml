@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_caas_quality.bqFunctions</api_name>
+        <client_callable>false</client_callable>
+        <description>.</description>
+        <name>bqFunctions</name>
+        <script><![CDATA[var bqFunctions = Class.create();
+bqFunctions.prototype = {
+    initialize: function() {
+    },
+	getKBreviewers: function(kb_id) {
+		var res = '';
+		var pID;
+		var kbThis= new GlideRecord ('kb_knowledge');
+		if (kbThis.get(kb_id)){
+			var kb_cat;
+			var kb_gCat = new GlideRecord("kb_category");
+			kb_gCat.get(kbThis.kb_category);
+			var i = 0;
+			while (res == '' && pID != 'b93f8c7137bae2401c0712c543990ed2' && i <10){
+				pID = kb_gCat.parent_id;
+				i++;
+				kb_cat = new GlideRecord("u_bq_kb_category");
+				if (kb_cat.get('u_bq_category_v3', kb_gCat.sys_id)){
+					
+					res = kb_cat.u_bq_publishers;
+				
+				}
+				else{
+						kb_gCat = new GlideRecord("kb_category");
+						kb_gCat.get(pID);
+					}	
+			}
+			if (res == '') {
+				var kb_catL0 = new GlideRecord("u_bq_kb_category");
+				if (kb_catL0.get('sys_id', '061901630f32d6804a2757d003050eeb')){
+					res = kb_catL0.u_bq_publishers;
+				}
+			}
+		}
+		return res;
+	},
+	getKBreviewers_byCat: function(cat_id) {
+		var res = '';
+		var pID;
+	//	var kbThis= new GlideRecord ('kb_knowledge');
+	//	if (kbThis.get(kb_id)){
+			var kb_cat;
+			var kb_gCat = new GlideRecord("kb_category");
+			if	(kb_gCat.get(cat_id)){
+				var i = 0;
+				while (res == '' && pID != 'b93f8c7137bae2401c0712c543990ed2' && i <10){
+				//	gs.log('AV ' + kb_gCat.sys_id + ' - ' + kb_gCat.parent_id + ' - ' + i);
+					pID = kb_gCat.parent_id;
+					i++;
+					kb_cat = new GlideRecord("u_bq_kb_category");
+					if (kb_cat.get('u_bq_category_v3', kb_gCat.sys_id)){
+						//	gs.log('AV1 ' + res);
+						res = kb_cat.u_bq_publishers;
+					}
+					else{
+						kb_gCat = new GlideRecord("kb_category");
+						kb_gCat.get(pID);
+					}
+						
+				}
+			}
+			if (res == '') {
+				var kb_catL0 = new GlideRecord("u_bq_kb_category");
+				if (kb_catL0.get('sys_id', '061901630f32d6804a2757d003050eeb')){
+					res = kb_catL0.u_bq_publishers;
+				}
+			}
+//		}
+		return res;
+	},
+	setAgreeList: function(){
+		var Topic = current.u_bq_topic;
+		var Danger = current.u_bq_danger;
+		var Factory = current.u_bq_factory;
+		var lvl = 100;
+		var location;
+		current.u_agree_list = '';
+		//Поиск по заводам для темы Качество
+		if (Topic == '9fb910a46f62d20010e00d55eb3ee497'/* && current.u_bq_usergroup != ''*/){
+			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix');
+			AM.addQuery('u_agree_list', '!=', '');
+			AM.addQuery('u_bq_topic', Topic);
+			AM.addQuery('u_bq_danger', Danger).addOrCondition('u_bq_danger', '');
+			AM.addQuery('u_bq_factory', Factory);
+			AM.orderByDesc('u_bq_danger');
+			AM.query();
+			if (AM.next()){
+				current.u_agree_list = AM.u_agree_list;
+			}
+		}
+		location = current.u_bq_usercity;
+		var r = 0;
+		//поиск по тема - подтема - город и при необходимости цикличный перебор родительских локаций
+		while (current.u_agree_list == '' && lvl != -1 && r<10){
+			r++;
+			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+			AM.addQuery('u_agree_list', '!=', '');
+			AM.addQuery('u_bq_topic', Topic);
+			AM.addQuery('u_bq_danger', Danger);
+			AM.addQuery('u_bq_usercity', location);
+			AM.query();
+			if (AM.next()){
+				current.u_agree_list = AM.u_agree_list;
+			}
+			else if (lvl == 0) lvl = -1; 
+			else if (lvl > 0){
+				var loc = new GlideRecord ('x_caas_quality_bq_city');
+				loc.get(location);
+				var newLoc = new GlideRecord ('x_caas_quality_bq_city');
+				if (newLoc.get(loc.u_bq_parent)) {
+			//		gs.log('!!! '+  r + '-- ' + lvl + ' -- ' + loc.sys_id + '-- ' + newLoc.sys_id);
+					lvl = newLoc.u_tree_level;
+					location = newLoc.sys_id;
+				}
+				else {
+					lvl = -1;
+					location = '-1';
+				}
+			}
+		}
+			
+		//поиск по тема - подтема - без локации
+		if (current.u_agree_list == ''){
+			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+			AM.addQuery('u_agree_list', '!=', '');
+			AM.addQuery('u_bq_topic', Topic);
+			AM.addQuery('u_bq_danger', Danger);
+			AM.addQuery('u_bq_usercity', '');
+			AM.query();
+			if (AM.next()){
+				current.u_agree_list = AM.u_agree_list;
+			}
+		}
+		location = current.u_bq_usercity;
+		lvl = 100;
+		r = 0;
+		//поиск по тема - город и при необходимости цикличный перебор родительских локаций
+		while (current.u_agree_list == '' && lvl != -1 && r<10){
+			r++;
+			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+			AM.addQuery('u_agree_list', '!=', '');
+			AM.addQuery('u_bq_topic', Topic);
+			AM.addQuery('u_bq_danger', '');
+			AM.addQuery('u_bq_usercity', location);
+			AM.query();
+			if (AM.next()){
+				current.u_agree_list = AM.u_agree_list;
+			}
+			else if (lvl == 0) lvl = -1; 
+			else if (lvl > 0){
+				var loc = new GlideRecord ('x_caas_quality_bq_city');
+				loc.get(location);
+				var newLoc = new GlideRecord ('x_caas_quality_bq_city');
+				if (newLoc.get(loc.u_bq_parent)) {
+					lvl = newLoc.u_tree_level;
+					location = newLoc.sys_id;
+				}
+				else {
+					lvl = -1;
+					location = '-1';
+				}
+			}
+		}
+		//поиск по тема - без подтемы - без локации
+		if (current.u_agree_list == ''){
+			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+			AM.addQuery('u_agree_list', '!=', '');
+			AM.addQuery('u_bq_topic', Topic);
+			AM.addQuery('u_bq_danger', '');
+			AM.addQuery('u_bq_usercity', '');
+			AM.query();
+			if (AM.next()){
+				current.u_agree_list = AM.u_agree_list;
+			}
+		}
+	},
+	setNotifyList: function(){
+		var Topic = current.u_bq_topic;
+		var Danger = current.u_bq_danger;
+		var Factory = current.u_bq_factory;
+		var lvl = 100;
+		var location;
+		current.u_notify_list = '';
+		//Поиск по заводам для темы Качество
+		if (Topic == '9fb910a46f62d20010e00d55eb3ee497'/* && current.u_bq_usergroup != ''*/){
+			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix');
+			AM.addQuery('u_notify_list', '!=', '');
+			AM.addQuery('u_bq_topic', Topic);
+			AM.addQuery('u_bq_danger', Danger).addOrCondition('u_bq_danger', '');
+			AM.addQuery('u_bq_factory', Factory);
+			AM.orderByDesc('u_bq_danger');
+			AM.query();
+			if (AM.next()){
+				current.u_notify_list = AM.u_notify_list;
+			}
+		}
+		location = current.u_bq_usercity;
+		var r = 0;
+		//поиск по тема - подтема - город и при необходимости цикличный перебор родительских локаций
+		while (current.u_notify_list == '' && lvl != -1 && r<10){
+			r++;
+			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+			AM.addQuery('u_notify_list', '!=', '');
+			AM.addQuery('u_bq_topic', Topic);
+			AM.addQuery('u_bq_danger', Danger);
+			AM.addQuery('u_bq_usercity', location);
+			AM.query();
+			if (AM.next()){
+				current.u_notify_list = AM.u_notify_list;
+			}
+			else if (lvl == 0) lvl = -1; 
+			else if (lvl > 0){
+				var loc = new GlideRecord ('x_caas_quality_bq_city');
+				loc.get(location);
+				var newLoc = new GlideRecord ('x_caas_quality_bq_city');
+				if (newLoc.get(loc.u_bq_parent)) {
+			//		gs.log('!!! '+  r + '-- ' + lvl + ' -- ' + loc.sys_id + '-- ' + newLoc.sys_id);
+					lvl = newLoc.u_tree_level;
+					location = newLoc.sys_id;
+				}
+				else {
+					lvl = -1;
+					location = '-1';
+				}
+			}
+		}
+			
+		//поиск по тема - подтема - без локации
+		if (current.u_notify_list == ''){
+			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+			AM.addQuery('u_notify_list', '!=', '');
+			AM.addQuery('u_bq_topic', Topic);
+			AM.addQuery('u_bq_danger', Danger);
+			AM.addQuery('u_bq_usercity', '');
+			AM.query();
+			if (AM.next()){
+				current.u_notify_list = AM.u_notify_list;
+			}
+		}
+		location = current.u_bq_usercity;
+		lvl = 100;
+		r = 0;
+		//поиск по тема - город и при необходимости цикличный перебор родительских локаций
+		while (current.u_notify_list == '' && lvl != -1 && r<10){
+			r++;
+			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+			AM.addQuery('u_notify_list', '!=', '');
+			AM.addQuery('u_bq_topic', Topic);
+			AM.addQuery('u_bq_danger', '');
+			AM.addQuery('u_bq_usercity', location);
+			AM.query();
+			if (AM.next()){
+				current.u_notify_list = AM.u_notify_list;
+			}
+			else if (lvl == 0) lvl = -1; 
+			else if (lvl > 0){
+				var loc = new GlideRecord ('x_caas_quality_bq_city');
+				loc.get(location);
+				var newLoc = new GlideRecord ('x_caas_quality_bq_city');
+				if (newLoc.get(loc.u_bq_parent)) {
+					lvl = newLoc.u_tree_level;
+					location = newLoc.sys_id;
+				}
+				else {
+					lvl = -1;
+					location = '-1';
+				}
+			}
+		}
+		//поиск по тема - без подтемы - без локации
+		if (current.u_notify_list == ''){
+			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+			AM.addQuery('u_notify_list', '!=', '');
+			AM.addQuery('u_bq_topic', Topic);
+			AM.addQuery('u_bq_danger', '');
+			AM.addQuery('u_bq_usercity', '');
+			AM.query();
+			if (AM.next()){
+				current.u_notify_list = AM.u_notify_list;
+			}
+		}
+	},
+	htmlToTxt: function(input){
+		input = input.replaceAll('&quot;','"');
+		input = input.replaceAll('&#43;','+');
+		input = input.replaceAll('&amp;quot;','"');
+		var output = input;
+		return output;
+	},
+	roleUpdate: function(searchRef,record,value,roleName,actionType){
+		var role = new GlideRecord ('x_caas_quality_bq_role_assignment');
+		var role1 = new GlideRecord ('x_caas_quality_bq_role_assignment');
+		if (actionType == 'delete'){
+			role.addQuery('u_matrix', record).addOrCondition('u_group', record).addOrCondition('u_kb_review', record);
+			role.addQuery('u_active', true);
+			role.query();
+			while (role.next()){
+				role.u_active = false;
+				role.update();
+			}
+		}
+		else if (roleName == 'Ответственный по ОЗС'){
+			role.addQuery('u_matrix', record);
+			role.addQuery('u_role', roleName);
+			role.addQuery('u_active', true);
+			role.query();
+			if (role.next()){
+				if (role.u_employee == value){
+					role.sys_updated_on = new GlideDateTime();
+					role.update();
+				}
+				else {
+					role.u_active = false;
+					role.update();
+					if (value != ''){
+						role1 = new GlideRecord ('x_caas_quality_bq_role_assignment');
+						role1.initialize();
+						role1.u_role = roleName;
+						role1.u_matrix = record;
+						role1.u_employee = value;
+						role1.u_active = true;
+						role1.insert();
+					}
+				}
+			}
+			else if (value != ''){
+				role1 = new GlideRecord ('x_caas_quality_bq_role_assignment');
+				role1.initialize();
+				role1.u_role = roleName;
+				role1.u_matrix = record;
+				role1.u_employee = value;
+				role1.u_active = true;
+				role1.insert();
+			}
+		}
+		else{
+			var arr = value.split(',');
+			var str = value.toString();
+			role.addQuery(searchRef, record);
+			role.addQuery('u_role', roleName);
+			role.addQuery('u_active', true);
+			if (str != '')
+				role.addQuery('u_employee', 'NOT IN', str);
+			role.query();
+			while (role.next()){
+				role.u_active = false;
+				role.update();
+			}
+			if (str != ''){
+				for (var i = 0; i<arr.length; i++){
+				//	gs.log('av ' + arr.length + str + arr[i])
+					role = new GlideRecord ('x_caas_quality_bq_role_assignment');
+					role.addQuery(searchRef, record);
+					role.addQuery('u_role', roleName);
+					role.addQuery('u_active', true);
+					role.addQuery('u_employee', arr[i]);
+					role.setLimit(1);
+					role.query();
+					if (role.next()){
+						role.sys_updated_on = new GlideDateTime();
+						role.update();
+					}
+					else {
+						role1 = new GlideRecord ('x_caas_quality_bq_role_assignment');
+						role1.initialize();
+						role1.u_role = roleName;
+						if (searchRef == 'u_matrix')
+							role1.u_matrix = record;
+						else if (searchRef == 'u_group')
+							role1.u_group = record;
+						else if (searchRef == 'u_kb_review')
+							role1.u_kb_review = record;
+						role1.u_employee = arr[i];
+						role1.u_active = true;
+						role1.insert();
+					}
+				}
+			}
+		}
+	},
+	getTimeZone: function(field, shift){
+		tz = new GlideDateTime(field);
+		tz.addSeconds(3600 * shift);
+		return tz;
+	},
+	replaceAll: function(str, from, to){
+		while (str.indexOf(from) > -1){
+			str  = str.replace(from, to);
+		}
+		return str;
+	},
+	isHoliday: function(date_str){
+		var gdt = new GlideDateTime(date_str);
+		var curentDayOfWeek = gdt.getDayOfWeekUTC();
+		return (curentDayOfWeek == 6 || curentDayOfWeek == 7); 	
+	},
+	getLogUserByGroup: function(group_id){
+		var resArr = [];
+		var usr = new GlideRecord ('x_caas_quality_bq_group_member');
+		usr.addQuery('u_bq_group', group_id);
+		usr.query();
+		while (usr.next()){
+			resArr.push(usr.u_bq_user.email);
+		}
+	
+		return resArr.toString();
+	},
+    type: 'bqFunctions'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-07-19 12:27:21</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>496afba537c44b405978466754990ebc</sys_id>
+        <sys_mod_count>47</sys_mod_count>
+        <sys_name>bqFunctions</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_include_496afba537c44b405978466754990ebc</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-10 08:29:26</sys_updated_on>
+    </sys_script_include>
+</record_update>

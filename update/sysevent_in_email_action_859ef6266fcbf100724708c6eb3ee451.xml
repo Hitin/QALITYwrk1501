@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sysevent_in_email_action">
+    <sysevent_in_email_action action="INSERT_OR_UPDATE">
+        <action>record_action</action>
+        <active>true</active>
+        <assignment_operator/>
+        <condition_script/>
+        <description/>
+        <event_name>email.read</event_name>
+        <filter_condition/>
+        <from/>
+        <name>bq_Update Service Call</name>
+        <order>100</order>
+        <reply_email/>
+        <required_roles/>
+        <script><![CDATA[gs.include('validators');
+function checkUsers(){
+	var ItilUser = new GlideRecord('sys_user');
+		ItilUser.addQuery('email', email.from);
+		ItilUser.addQuery('active', true);
+		//ItilUser.addQuery('sys_id', email.user_id);
+		ItilUser.query();
+		if (ItilUser.next() && (current.u_bq_user == ItilUser.sys_id || current.u_bq_usergroup.u_bq_coors.indexOf(ItilUser.sys_id) > -1)){
+			return true;
+		}else
+			return false;
+}
+
+function checkAgreeList(){
+	var ItilUser = new GlideRecord('sys_user');
+		ItilUser.addQuery('email', email.from);
+		ItilUser.addQuery('active', true);
+		//ItilUser.addQuery('sys_id', email.user_id);
+		ItilUser.query();
+		if (ItilUser.next() && (current.u_agree_list.indexOf(ItilUser.sys_id) > -1)){
+			return true;
+		}else
+			return false;
+}
+
+if (current.getTableName() == "x_caas_quality_service_call") {
+	current.comments = "reply from: " + email.origemail + "\n\n" + email.body_text;
+	
+	if (email.subject.toLowerCase().indexOf("согласовано") >= 0 && current.u_bq_state == 'На согласовании') {
+		if (checkAgreeList()){
+			//current.u_bq_state = "Согласованно";
+			current.u_bq_state = "Решено";
+			//current.u_bq_prot_input = email.body_text;
+			current.u_bq_resptext = email.body_text;
+		}
+	}
+	
+	if (email.subject.toLowerCase().indexOf("отклонено") >= 0 && current.u_bq_state == 'На согласовании') {
+		if (checkAgreeList()){
+			current.u_bq_state = "Не согласованно";
+			current.u_bq_prot_input = email.body_text;
+		}
+	}
+	if (email.subject.toLowerCase().indexOf("другая группа") >= 0) {
+		if (checkUsers()){
+			current.u_bq_state = "Новое";
+			current.u_bq_prot_input = email.body_text;
+			current.u_bq_return_count++;
+		}
+		else
+			gs.eventQueue("bq_sender_email", current, email.from, current.u_bq_user.email); 
+	}
+	if (email.subject.toLowerCase().indexOf("вернуть координатору группы") >= 0) {
+		if (checkUsers()){
+			current.u_bq_state = "Назначено в группу";
+			current.u_bq_prot_input = email.body_text;
+			current.u_bq_changecount++;
+		}
+		else
+			gs.eventQueue("bq_sender_email", current, email.from, current.u_bq_user.email);
+	}
+	if (email.subject.toLowerCase().indexOf("запросить доп информацию") >= 0) {
+		if (current.u_bq_topic == '46aa161f6f972200724708c6eb3ee4ea'){
+			current.u_bq_state = "Запрос дополнительной информации";
+			current.u_bq_prot_input = email.body_text;
+			current.u_bq_return_count++;
+			//gs.eventQueue("bq_service_calls_additional_info", current, email.from, email.body_text);
+			if (current.u_bq_user == ''){
+				var ItilUser = new GlideRecord('sys_user');
+				ItilUser.addQuery('email', email.from);
+				ItilUser.addQuery('active', true);
+				ItilUser.query();
+				if (ItilUser.next())
+					current.u_bq_user = ItilUser.sys_id;
+			}
+		} else { 
+			if (checkUsers()){
+				current.u_bq_state = "Запрос дополнительной информации";
+				current.u_bq_prot_input = email.body_text;
+				current.u_bq_return_count++;
+			} else {
+				gs.eventQueue("bq_service_calls_additional_info", current, email.from, email.body_text); 
+				gs.eventQueue("bq_sender_email", current, email.from, current.u_bq_user.email); 
+			}
+		}
+	}
+	if (email.subject.toLowerCase().indexOf("согласовать ответ") >= 0) {
+		if (checkUsers()){
+			current.u_bq_state = "На согласовании";
+	//		current.u_bq_prot_input = email.body_text;
+			current.u_bq_resptext = email.body_text;
+		}
+		else
+			gs.eventQueue("bq_sender_email", current, email.from, current.u_bq_user.email);
+	}
+	if (email.subject.toLowerCase().indexOf("в работу") >= 0) {
+		if (current.u_bq_topic == '46aa161f6f972200724708c6eb3ee4ea'){
+			var ItilUser = new GlideRecord('sys_user');
+			if (ItilUser.get('email', email.from)){
+				var usergroup = new GlideRecord('x_caas_quality_bq_group_member');
+				usergroup.addQuery('u_bq_group', current.u_bq_usergroup);
+				usergroup.addQuery('u_bq_user', ItilUser.sys_id);
+				usergroup.setLimit(1);
+				usergroup.query();
+				if (usergroup.hasNext()){
+					if (current.u_bq_user == ''){
+						current.u_bq_state = "В работе";
+						current.u_bq_prot_input = email.body_text;
+						current.u_bq_user = ItilUser.sys_id;
+					}
+					else {
+						if (ItilUser.sys_id != current.u_bq_user){
+							gs.eventQueue('bq_log_to_work_deny', current, email.from);
+						}
+						else{
+							gs.eventQueue('bq_log_new_info', current);
+						}
+					}	
+				}
+			}
+		}
+		else if (current.u_bq_user == ''){
+			current.u_bq_state = "В работе";
+			current.u_bq_prot_input = email.body_text;
+			var ItilUser = new GlideRecord('sys_user');
+			ItilUser.addQuery('email', email.from);
+			ItilUser.query();
+			if (ItilUser.next())
+				current.u_bq_user = ItilUser.sys_id;
+		}
+// 		else if (current.u_bq_topic == '46aa161f6f972200724708c6eb3ee4ea'){
+// 			var ItilUser = new GlideRecord('sys_user');
+// 			ItilUser.get('email', email.from);
+
+// 			if (ItilUser.sys_id != current.u_bq_user){
+// 				gs.eventQueue('bq_log_to_work_deny', current, email.from);
+// 			}
+// 			else{
+// 				gs.eventQueue('bq_log_new_info', current);
+// 			}
+// 		}
+		
+	}
+	if (email.subject.toLowerCase().indexOf("решено/ приняты меры") >= 0) {
+	//	if (current.u_bq_user.email == email.from) {
+
+			
+			//if (ItilUser.next() && (current.u_bq_user == ItilUser.sys_id || current.u_bq_usergroup.u_bq_coors.indexOf(ItilUser.sys_id) > -1)){
+				if (checkUsers()){
+					var ItilUser = new GlideRecord('sys_user');
+					ItilUser.addQuery('email', email.from);
+					ItilUser.addQuery('active', true);
+					ItilUser.query();
+					if (ItilUser.next()){
+						current.u_bq_closed_by = ItilUser.sys_id;
+						current.u_bq_state = "Решено";
+						current.u_bq_resptext = email.body_text;
+					}
+				}
+				else {
+					gs.eventQueue("bq_review_solution", current, current.u_bq_user.sys_id, email.body_text);
+				}
+			//}
+	}
+	if (email.subject.toLowerCase().indexOf("назначение ответственного") >= 0 && email.copied != '') {
+		if (checkUsers()){	
+			current.u_bq_state = "Назначено ответственному";
+			current.u_bq_prot_input = email.body_text.substring(89);
+			if (current.u_bq_user == '') {
+				var ItilUser = new GlideRecord('sys_user');
+				ItilUser.addQuery('email', email.copied);
+				ItilUser.addQuery('active', true);
+				ItilUser.query();
+				if (ItilUser.next()){
+					current.u_bq_user = ItilUser.sys_id;
+					var grMember = new GlideRecord('x_caas_quality_bq_group_member');
+					grMember.addQuery('u_bq_group', current.u_bq_usergroup.sys_id);
+					grMember.addQuery('u_bq_user',ItilUser.sys_id);
+					grMember.query();
+					if (!grMember.hasNext()){
+						gs.eventQueue('bq_incorrect_assignee', current, ItilUser.name);
+						current.u_bq_state = 'Назначено в группу';
+						current.u_bq_user = '';
+					}
+				}
+			}
+		}
+		else
+			gs.eventQueue("bq_sender_email", current, email.from, current.u_bq_user.email);
+	}
+	if ((email.subject.toLowerCase().indexOf("на горячую линию с вопросом ") >= 0) && (current.u_bq_state == 'Ждет ответа')){
+		//current.u_bq_state = "Согласованно";
+		current.u_bq_state = "Ответ получен";
+		//current.u_bq_prot_input = email.body_text;
+		current.u_bq_prot_input = email.body_text;
+	}
+	if ((email.subject.toLowerCase().indexOf("указание ответственного") >= 0) && (current.u_bq_state == 'Назначено ответственному') && current.u_bq_user != '' && email.copied != ''){
+		var oldUser = new GlideRecord('sys_user');
+		var newUser = new GlideRecord('sys_user');
+		newUser.addQuery('email', email.copied);
+		newUser.addQuery('active', true);
+		oldUser.get(current.u_bq_user.sys_id);
+		newUser.query();
+		if (newUser.next()){
+			current.u_bq_prot_input = email.body_text.substring(87);
+			var matrix= new GlideRecord('x_caas_quality_bq_assign_matrix');
+			if (newUser != oldUser){
+				current.u_bq_user = newUser.sys_id;
+				matrix.addQuery('u_bq_user',oldUser.sys_id);
+				matrix.query();
+				while (matrix.next()){
+					matrix.u_bq_user = newUser.sys_id;
+					matrix.update();
+				}
+			}
+		}
+	}
+	if (email.subject.toLowerCase().indexOf("предоставить решение") >= 0) {
+		var bIndex;
+		var eIndex;
+		var restString = email.body_text;
+		var parms = [];
+		for (var i = 0; i<3; i++){
+			//3 - количесвто параметров в письме
+			if (restString.indexOf('Код решения') < 0 && i == 0) i++;
+			bIndex = restString.indexOf('[') + 1;
+			eIndex = restString.indexOf(']');
+			parms[i] = restString.substring(bIndex,eIndex);
+	//		gs.log('!!! ' + '-' + i + '-' + bIndex + '-' + eIndex + '-' + parms[i] + '-' + restString);			
+			restString = restString.substring(eIndex + 1);
+
+		}
+ 		current.u_bq_resptext = parms[2];
+ 		current.u_bq_state = "Закрыто";
+ 		var gr = new GlideRecord('x_caas_quality_bq_delivery_close_code');
+		if (current.u_log_country == 'BY'){
+			if (parms[1] !=	'приемка'){
+				gr.get('u_code', 'R_001');
+				current.u_bq_log_reason = gr.sys_id;
+			}
+		}
+		else{
+			gr.addQuery('u_code', parms[0]);
+			gr.addQuery('u_archive', false);
+			gr.query();
+			if (gr.next()){
+				current.u_bq_log_reason = gr.sys_id;
+			}
+			else {
+				current.u_bq_log_reason = '';
+			}
+		}
+		var ch = new GlideRecord('sys_choice');
+		ch.addQuery('element', 'u_bq_log_solution');
+		ch.addQuery('dependent_value', current.u_log_country);
+		ch.addQuery('value', parms[1]);
+		ch.query();
+		if (ch.next()){
+			current.u_bq_log_solution = ch.value;
+		}
+// 		if (parms[1] == 'возврат') current.u_bq_log_solution = 'Возврат';
+// 		if (parms[1] ==	'приемка') current.u_bq_log_solution = 'Приемка';
+// 		if (parms[1] == 'частичный возврат') current.u_bq_log_solution = 'Частичный возврат';
+		var ItilUser = new GlideRecord('sys_user');
+		ItilUser.addQuery('email', email.from);
+		ItilUser.addQuery('active', true);
+		ItilUser.query();
+		if (ItilUser.next()){
+			current.u_bq_closed_by = ItilUser.sys_id;
+		}
+	}
+	if (email.subject.toLowerCase().indexOf("назначение другого ответственного") >= 0 && email.copied != '' && current.u_bq_topic == '46aa161f6f972200724708c6eb3ee4ea') {
+//		current.u_bq_state = "Назначено ответственному";
+		current.u_bq_prot_input = email.body_text.substring(89);
+		var ItilUser = new GlideRecord('sys_user');
+		ItilUser.addQuery('email', email.copied);
+		ItilUser.addQuery('active', true);
+		ItilUser.query();
+		if (ItilUser.next()){
+			var grMember = new GlideRecord('x_caas_quality_bq_group_member');
+			grMember.addQuery('u_bq_group.u_bq_grupnqme', 'CONTAINS', 'Доставка.');
+			grMember.addQuery('u_bq_group', '!=', '7301949337a722005978466754990e4f');
+			grMember.addQuery('u_bq_user',ItilUser.sys_id);
+			grMember.query();
+			if (grMember.next()){
+				current.u_bq_usergroup = grMember.u_bq_group;
+				current.u_bq_user = ItilUser.sys_id;
+			}
+			else{
+				gs.eventQueue('bq_log_incorrect_assignee', current, ItilUser.name, email.from);
+// 				current.u_bq_state = 'Назначено в группу';
+// 				current.u_bq_user = '';
+					
+				}
+			}
+		
+	}	
+	if (email.subject.toLowerCase().indexOf("назначить на себя") >= 0 && current.u_bq_topic == '46aa161f6f972200724708c6eb3ee4ea') {
+		if (current.u_bq_state != "Закрыто") {
+			current.u_bq_prot_input = email.body_text;
+			var ItilUser = new GlideRecord('sys_user');
+			ItilUser.addQuery('email', email.from);
+			ItilUser.addQuery('active', true);
+			ItilUser.query();
+			if (ItilUser.next()){
+				current.u_bq_user = ItilUser.sys_id;
+				current.u_bq_state = 'Назначено ответственному';
+			}
+		}
+		else {
+			gs.eventQueue('bq_log_new_info', current);
+		}
+		
+	}
+	
+	if (email.subject.toLowerCase().indexOf("решать отдельно") >= 0){
+		current.u_multiple_solution = false;
+		if (current.u_bq_state == 'Назначено в группу' || current.u_bq_state == 'Закрыто')
+			current.u_bq_state = 'Назначено ответственному';
+		if (current.u_bq_state == 'Назначено ответственному' || current.u_bq_state == 'В работе') {
+			var ItilUser = new GlideRecord('sys_user');
+			ItilUser.addQuery('email', email.from);
+			ItilUser.addQuery('active', true);
+			ItilUser.query();
+			if (ItilUser.next()){
+				if (current.u_bq_user != ItilUser.sys_id)
+					current.u_bq_user = ItilUser.sys_id;					
+				else	
+					gs.eventQueue('bq_log_new_info', current);
+			}
+		}
+	}
+	
+	if (current.u_bq_contact_type == 'Интернет-сайт' && email.from.toLowerCase() == current.u_mail.toLowerCase()) {
+	//	gs.log('AV' + current.u_bq_contact_type + email.from.toLowerCase() + current.u_mail.toLowerCase())
+		var sub = new GlideRecord('x_caas_quality_bq_subtopic');
+	//	sub.get(current.u_bq_danger);
+		if (current.u_bq_state == 'Решено' || current.u_bq_state == 'Закрыто' || current.u_bq_usergroup == ''){
+			var addr = '';
+			var op = new GlideRecord('sys_user_has_role');
+			var us;
+			op.addQuery('role', '398f15d4376736005978466754990e44').addOrCondition('role', 'fbdc7aec6f777100724708c6eb3ee4da');
+			op.query();
+			while (op.next()){
+				addr += op.user;
+				addr += ',';
+			}
+			if (addr != '')
+				gs.eventQueue('bq_site_mail_from_caller_to_ops_only', current, addr, email.body_text.replaceAll('\n', '<br>'));
+		}	
+		else {
+			var addr = '';
+			if (current.u_bq_user == '')
+				addr = current.u_bq_usergroup.u_bq_coors;
+			else
+				addr = current.u_bq_user;
+			if (current.u_bq_state == 'На согласовании'){
+				gs.eventQueue('bq_site_mail_from_caller_to_agree', current, current.u_agree_list, email.body_text.replaceAll('\n', '<br>'));
+				gs.eventQueue('bq_site_mail_from_caller_to_assigneeN', current, addr, email.body_text.replaceAll('\n', '<br>'));
+			}
+			else	
+				gs.eventQueue('bq_site_mail_from_caller_to_assignee', current, addr, email.body_text.replaceAll('\n', '<br>'));
+		}
+		if(sub.get(current.u_bq_danger) && !sub.u_autoclose){
+			current.u_autoclose = false;
+			if (current.u_bq_state == 'Закрыто' && current.u_bq_usergroup == '')
+				current.u_bq_state = 'Новое';
+		}
+		var txt = '';
+		txt = email.body_text;
+		current.u_mail_history_txt = txt;
+		
+	}
+	if (current.u_bq_contact_type == 'Интернет-сайт' && email.from.toLowerCase() != current.u_mail.toLowerCase() && email.from.toLowerCase() != current.u_bq_user.email.toLowerCase() && email.from.toLowerCase().indexOf("@baltika.com") == -1 && email.from.toLowerCase().indexOf("baltika.ru") == -1) {
+		var sub = new GlideRecord('x_caas_quality_bq_subtopic');
+		if (current.u_bq_state == 'Закрыто'){
+			var addr = '';
+			var op = new GlideRecord('sys_user_has_role');
+			var us;
+			op.addQuery('role', '398f15d4376736005978466754990e44').addOrCondition('role', 'fbdc7aec6f777100724708c6eb3ee4da');
+			op.query();
+			while (op.next()){
+				addr += op.user;
+				addr += ',';
+			}
+			current.u_alter_mail = email.from.toLowerCase();
+			if (addr != '')
+				gs.eventQueue('bq_site_mail_from_caller_to_ops_only_chg', current, addr, email.body_text.replaceAll('\n', '<br>'));
+			var txt = '';
+			txt = email.body_text;
+			current.u_mail_history_txt = txt;
+		}	
+	}
+	if (email.subject.toLowerCase().indexOf("подтвердить обращение") >= 0){
+		if (checkUsers()){
+			if (email.subject.toLowerCase().indexOf("подтвердить обращение: да") >= 0)
+				current.u_solution_state = 'Да';
+			else if (email.subject.toLowerCase().indexOf("подтвердить обращение: нет") >= 0)
+				current.u_solution_state = 'Нет';
+		}
+		else
+			gs.eventQueue("bq_sender_email", current, email.from, current.u_bq_user.email);
+	}
+	
+	current.update();
+}]]></script>
+        <stop_processing>false</stop_processing>
+        <sys_class_name>sysevent_in_email_action</sys_class_name>
+        <sys_created_by>x-rubesdmi</sys_created_by>
+        <sys_created_on>2015-03-30 08:50:28</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>859ef6266fcbf100724708c6eb3ee451</sys_id>
+        <sys_mod_count>148</sys_mod_count>
+        <sys_name>bq_Update Service Call</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sysevent_in_email_action_859ef6266fcbf100724708c6eb3ee451</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-08-27 12:11:28</sys_updated_on>
+        <table>x_caas_quality_service_call</table>
+        <template/>
+        <type>reply</type>
+    </sysevent_in_email_action>
+</record_update>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_name</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Change Name</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	if (g_form.getValue('u_tree_level') == '1') g_form.setValue('u_country', g_form.getValue('u_name'));
+	if (g_form.getValue('u_tree_level') == '2') g_form.setValue('u_fo', g_form.getValue('u_name'));
+	if (g_form.getValue('u_tree_level') == '3') g_form.setValue('u_subject_rf', g_form.getValue('u_name'));
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-06-07 07:56:03</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>ff7b264037933600b9af806754990e93</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Change Name</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_client_ff7b264037933600b9af806754990e93</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2017-06-07 07:56:57</sys_updated_on>
+        <table>x_caas_quality_bq_city</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_caas_quality_service_call">u_corr_actionISNOTEMPTY^EQ<item endquery="false" field="u_corr_action" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>false</global>
+        <inherit>false</inherit>
+        <isolate_script>false</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+	var sections = g_form.getSections();
+	sections[13].style.display = 'none';
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+	var sections = g_form.getSections();
+	if (g_user.hasRoleFromList("bq_processmanager, bq_operator_quality, admin")) {
+		sections[13].style.display = 'block';
+		var ga1 = new GlideAjax("x_caas_quality.bqAjax"); 
+		ga1.addParam("sysparm_name","getCorrActAttList");
+		ga1.addParam('sysparm_id', g_form.getValue('u_corr_action'));
+		ga1.getXML(ajaxResponse);
+		}
+	else {
+		var ga = new GlideAjax('x_caas_quality.bqAjax');
+		ga.addParam('sysparm_name', 'isMemberOf');
+		ga.addParam('sysparm_user', g_user.userID);
+		ga.addParam('sysparm_group', 'd2d6a5316f2b3100724708c6eb3ee4bb');
+	//	ga.getXML(Parse);
+		ga.getXMLWait(); 
+		if (ga.getAnswer() == 'true'){
+			sections[13].style.display = 'block';
+			var ga1 = new GlideAjax("x_caas_quality.bqAjax"); 
+			ga1.addParam("sysparm_name","getCorrActAttList");
+			ga1.addParam('sysparm_id', g_form.getValue('u_corr_action'));
+			ga1.getXML(ajaxResponse);
+		}
+		else
+			sections[13].style.display = 'none';
+	}
+}
+function ajaxResponse(serverResponse) { 
+	var text = '';
+	var showMessage = serverResponse.responseXML.getElementsByTagName("hasAtt");
+	if (showMessage[0].getAttribute("showMessage") == 'true'){
+		text = 'Корректирующее мероприятие содержит вложения:\n';
+		var res = serverResponse.responseXML.getElementsByTagName("res");
+		for (var i = 0; i < res.length; i++){
+			var link = "<a href='/sys_attachment.do?sys_id=" + res[i].getAttribute("id") + "' target='_blank'>" + res[i].getAttribute("name") + "</a>";
+			text += link;
+			if (i < res.length -1)
+				text += ', ';
+		}
+		g_form.addInfoMessage(text);
+	}
+	
+		
+}
+]]></script_true>
+        <set_values/>
+        <short_description>bq_corrActionTab</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2018-02-05 08:00:14</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>a6c6c61e374093405978466754990e14</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name>bq_corrActionTab</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_ui_policy_a6c6c61e374093405978466754990e14</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-04 10:27:59</sys_updated_on>
+        <table>x_caas_quality_service_call</table>
+        <ui_type>0</ui_type>
+        <view>hotline</view>
+    </sys_ui_policy>
+</record_update>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_caas_quality.bq_toWork</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>bq_toWork</name>
+        <script><![CDATA[var bq_toWork = Class.create();
+bq_toWork.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	toWork: function(){
+		if (current.u_bq_state == 'Запрос дополнительной информации' && current.u_bq_user != '' && current.u_bq_return_count > 0) {
+			current.u_bq_state = 'Назначено ответственному';
+		} 
+		else {
+			var cityGR = new GlideRecord ('x_caas_quality_bq_city');
+			if ((cityGR.get(current.u_bq_usercity) && cityGR.u_tree_level != '') || current.u_bq_usercity == ''){
+				var Topic = current.u_bq_topic;
+				var Danger = current.u_bq_danger;
+				var Factory = current.u_bq_factory;
+				var lvl = 100;
+				var location;
+
+				current.u_bq_user ="";
+
+
+
+				var AM;
+				//Проверка, есть ли хоть 1 запись в матрице по данной теме
+				AM = new GlideRecord ('x_caas_quality_bq_assign_matrix');
+				AM.addQuery('u_bq_topic', Topic);
+				AM.addQuery('u_agree_list', '');
+				AM.addQuery('u_notify_list', '');
+				AM.setLimit(1);
+				AM.query();
+				if (!AM.hasNext()) {//если нет, то назначенаем на группу Другое и поиск по матрице более не производим
+					current.u_bq_usergroup = '8e7247570f86a2004a2757d003050e3c';
+				}
+				else {
+					//Поиск по заводам для темы Качество
+					if (Topic == '9fb910a46f62d20010e00d55eb3ee497'/* && current.u_bq_usergroup != ''*/){
+						AM = new GlideRecord ('x_caas_quality_bq_assign_matrix');
+						AM.addQuery('u_agree_list', '');
+						AM.addQuery('u_notify_list', '');
+						AM.addQuery('u_bq_topic', Topic);
+						AM.addQuery('u_bq_danger', Danger).addOrCondition('u_bq_danger', '');
+						AM.addQuery('u_bq_factory', Factory);
+			//			AM.orderByDesc('u_bq_factory');
+						AM.orderByDesc('u_bq_danger');
+			// 			AM.orderByDesc('u_bq_usercity');
+						AM.query();
+						if (AM.next()){
+							current.u_bq_user = AM.u_bq_user;
+							current.u_bq_usergroup = AM.u_bq_usergroup;
+						}
+					}
+					location = current.u_bq_usercity;
+					var r = 0;
+					//поиск по тема - подтема - город и при необходимости цикличный перебор родительских локаций
+					while (current.u_bq_user == '' && lvl != -1 && r<10){
+						r++;
+						AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+						AM.addQuery('u_agree_list', '');
+						AM.addQuery('u_notify_list', '');
+						AM.addQuery('u_bq_topic', Topic);
+						AM.addQuery('u_bq_danger', Danger);
+						AM.addQuery('u_bq_usercity', location);
+						AM.query();
+
+			//			gs.log('!!!!! '+ Topic + ' -- ' + Danger + '-- ' + location);
+						if (AM.next()){
+							current.u_bq_user = AM.u_bq_user;
+							current.u_bq_usergroup = AM.u_bq_usergroup;
+				//			lvl = -1;
+						}
+						else if (lvl == 0) lvl = -1; 
+						else if (lvl > 0){
+							var loc = new GlideRecord ('x_caas_quality_bq_city');
+							loc.get(location);
+							var newLoc = new GlideRecord ('x_caas_quality_bq_city');
+							if (newLoc.get(loc.u_bq_parent)) {
+						//		gs.log('!!! '+  r + '-- ' + lvl + ' -- ' + loc.sys_id + '-- ' + newLoc.sys_id);
+								lvl = newLoc.u_tree_level;
+								location = newLoc.sys_id;
+							}
+							else {
+								lvl = -1;
+								location = '-1';
+							}
+						}
+					}
+					//поиск по тема - подтема - без локации
+					if (current.u_bq_user == ''){
+						AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+						AM.addQuery('u_agree_list', '');
+						AM.addQuery('u_notify_list', '');
+						AM.addQuery('u_bq_topic', Topic);
+						AM.addQuery('u_bq_danger', Danger);
+						AM.addQuery('u_bq_usercity', '');
+						AM.query();
+						if (AM.next()){
+							current.u_bq_user = AM.u_bq_user;
+							current.u_bq_usergroup = AM.u_bq_usergroup;
+						}
+					}
+					location = current.u_bq_usercity;
+					lvl = 100;
+					r = 0;
+					//поиск по тема - город и при необходимости цикличный перебор родительских локаций
+					while (current.u_bq_user == '' && lvl != -1 && r<10){
+						r++;
+						AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+						AM.addQuery('u_agree_list', '');
+						AM.addQuery('u_notify_list', '');
+						AM.addQuery('u_bq_topic', Topic);
+						AM.addQuery('u_bq_danger', '');
+						AM.addQuery('u_bq_usercity', location);
+						AM.query();
+						if (AM.next()){
+							current.u_bq_user = AM.u_bq_user;
+							current.u_bq_usergroup = AM.u_bq_usergroup;
+						}
+						else if (lvl == 0) lvl = -1; 
+						else if (lvl > 0){
+							var loc = new GlideRecord ('x_caas_quality_bq_city');
+							loc.get(location);
+							var newLoc = new GlideRecord ('x_caas_quality_bq_city');
+							if (newLoc.get(loc.u_bq_parent)) {
+								lvl = newLoc.u_tree_level;
+								location = newLoc.sys_id;
+						}
+							else {
+								lvl = -1;
+								location = '-1';
+							}
+						}
+					}
+					//поиск по тема - без подтемы - без локации
+					if (current.u_bq_user == ''){
+						AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+						AM.addQuery('u_agree_list', '');
+						AM.addQuery('u_notify_list', '');
+						AM.addQuery('u_bq_topic', Topic);
+						AM.addQuery('u_bq_danger', '');
+						AM.addQuery('u_bq_usercity', '');
+						AM.query();
+						if (AM.next()){
+							current.u_bq_user = AM.u_bq_user;
+							current.u_bq_usergroup = AM.u_bq_usergroup;
+						}
+					}
+				}
+				if (current.u_bq_user=='') {
+					current.u_bq_state = 'Назначено в группу';
+				}
+				else {
+					current.u_bq_state = 'Назначено ответственному';
+		// 			if (current.u_bq_user.active == false || current.u_bq_user.u_workstatus == 'Dismiss'){
+		// 				gs.eventQueue('bq_dismissed_assignee', current, current.u_bq_user.name);
+		// 			}
+				}				
+			}
+			else{
+				var Topic = current.u_bq_topic;
+				var CityID = current.u_bq_usercity;
+				var Danger = current.u_bq_danger;
+				var Factory = current.u_bq_factory;
+				var RegionID = "";
+				if (CityID != ''){
+					var City  = new GlideRecord ('x_caas_quality_bq_city');
+					City.addQuery('sys_id',CityID);
+					City.query();
+					if (City.next()){
+						RegionID = City.u_bq_parent;
+					}
+				}
+				var UserID = '-1';
+				current.u_bq_user ="";
+
+				var AMbyRegion1 = new GlideRecord ('x_caas_quality_bq_assign_matrix');
+				AMbyRegion1.addQuery('u_bq_topic', Topic);
+				AMbyRegion1.addQuery('u_bq_usercity', RegionID);
+				var AMbyRegion2 = new GlideRecord ('x_caas_quality_bq_assign_matrix');
+				AMbyRegion2.addQuery('u_bq_topic', Topic);
+				AMbyRegion2.addQuery('u_bq_usercity', RegionID);
+
+				var AM = new GlideRecord ('x_caas_quality_bq_assign_matrix');
+				AM.addQuery('u_bq_topic', Topic);
+				AM.orderByDesc('u_bq_factory');
+				AM.orderByDesc('u_bq_danger');
+				AM.orderByDesc('u_bq_usercity');
+				AM.query();
+				while (AM.next()){
+					if (AM.u_bq_usergroup !='')
+						//сначала указываем группу
+					current.u_bq_usergroup = AM.u_bq_usergroup;
+					// проверяем для качества указан ли завод и есть соответсвующее назначение
+					if (Topic == '9fb910a46f62d20010e00d55eb3ee497' && Factory != '' && AM.u_bq_factory == Factory) {
+						current.u_bq_user = AM.u_bq_user;
+						UserID = AM.u_bq_user;
+					}
+					// ищем далее только по подтеме, городу, региону и целиком назначенных на тему
+					if (UserID =='-1' && AM.u_bq_factory == '') {
+						// ищем по подтеме, городу
+						if (UserID =='-1' && AM.u_bq_danger != '' && AM.u_bq_usercity != '' && AM.u_bq_danger == Danger && AM.u_bq_usercity == CityID) {
+							current.u_bq_user = AM.u_bq_user;
+							UserID = AM.u_bq_user;
+						}
+						// ищем по подтеме, региону
+						if (UserID =='-1' && CityID != '') {
+							AMbyRegion1.addQuery('u_bq_danger', Danger);
+							AMbyRegion1.query();
+							if (AMbyRegion1.next()) {
+								current.u_bq_user = AMbyRegion1.u_bq_user;
+								UserID = AMbyRegion1.u_bq_user;
+							}
+						}
+						// ищем только по подтеме
+						if (UserID =='-1' && AM.u_bq_danger != '' && AM.u_bq_usercity == '' && AM.u_bq_danger == Danger) {
+							current.u_bq_user = AM.u_bq_user;
+							UserID = AM.u_bq_user;
+						}
+						// ищем только по городу
+						if (UserID =='-1' && AM.u_bq_danger == '' && AM.u_bq_usercity != '' && AM.u_bq_usercity == CityID) {
+							current.u_bq_user = AM.u_bq_user;
+							UserID = AM.u_bq_user;
+						}
+						// ищем только по региону
+						if (UserID =='-1' && CityID != '') {
+							AMbyRegion2.addQuery('u_bq_danger', '');
+							AMbyRegion2.query();
+							if (AMbyRegion2.next()) {
+								current.u_bq_user = AMbyRegion2.u_bq_user;
+								UserID = AMbyRegion2.u_bq_user;
+							}
+						}
+						// ищем в целом по теме
+						if (UserID =='-1' && AM.u_bq_danger == '' && AM.u_bq_usercity == '' && AM.u_bq_user != '') {
+							current.u_bq_user = AM.u_bq_user;
+							UserID = AM.u_bq_user;
+						}
+					}
+
+				}		
+				if (current.u_bq_user=='') {
+					current.u_bq_state = 'Назначено в группу';
+				}
+				else {
+					current.u_bq_state = 'Назначено ответственному';
+		// 			if (current.u_bq_user.active == false || current.u_bq_user.u_workstatus == 'Dismiss'){
+		// 				gs.eventQueue('bq_dismissed_assignee', current, current.u_bq_user.name);
+		// 			}
+				}				
+			}
+		}
+//	current.insert();
+	},
+    type: 'bq_toWork'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-06-20 11:49:03</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>c7ac129837e736005978466754990e10</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>bq_toWork</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_include_c7ac129837e736005978466754990e10</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-08-22 08:03:15</sys_updated_on>
+    </sys_script_include>
+</record_update>

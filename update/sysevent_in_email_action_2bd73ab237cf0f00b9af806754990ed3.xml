@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sysevent_in_email_action">
+    <sysevent_in_email_action action="INSERT_OR_UPDATE">
+        <action>record_action</action>
+        <active>true</active>
+        <assignment_operator/>
+        <condition_script/>
+        <description/>
+        <event_name>email.read</event_name>
+        <filter_condition table="sys_email">directLIKEBaltikaHotLine@baltika.com^ORdirectLIKE$spbServiceNowDEV2@baltika.com^EQ<item endquery="false" field="direct" goto="false" newquery="false" operator="LIKE" or="false" value="BaltikaHotLine@baltika.com"/>
+            <item endquery="false" field="direct" goto="false" newquery="false" operator="LIKE" or="true" value="$spbServiceNowDEV2@baltika.com"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <from/>
+        <name>bq_Update Service Call_Sites_FWD</name>
+        <order>100</order>
+        <reply_email/>
+        <required_roles/>
+        <script><![CDATA[var sc;
+var str = email.subject;
+var i = str.indexOf('SC');
+var num = '';
+while (i > -1){
+	num = str.substring(i, i+9);
+	sc = new GlideRecord('x_caas_quality_service_call');
+	if (sc.get('number', num))
+		i = - 1;
+	else{
+		str = str.substring(i+1);
+		i = str.indexOf('SC');
+	}
+}
+
+	if (sc.u_bq_contact_type == 'Интернет-сайт' && email.from.toLowerCase() == sc.u_mail.toLowerCase()) {
+	//	gs.log('AV' + sc.u_bq_contact_type + email.from.toLowerCase() + sc.u_mail.toLowerCase())
+		var sub = new GlideRecord('x_caas_quality_bq_subtopic');
+	//	sub.get(sc.u_bq_danger);
+		if (sc.u_bq_state == 'Решено' || sc.u_bq_state == 'Закрыто' || sc.u_bq_usergroup == ''){
+			var addr = '';
+			var op = new GlideRecord('sys_user_has_role');
+			var us;
+			op.addQuery('role', '398f15d4376736005978466754990e44').addOrCondition('role', 'fbdc7aec6f777100724708c6eb3ee4da');
+			op.query();
+			while (op.next()){
+				addr += op.user;
+				addr += ',';
+			}
+			if (addr != '')
+				gs.eventQueue('bq_site_mail_from_caller_to_ops_only', sc, addr, email.body_text.replaceAll('\n', '<br>'));
+		}	
+		else {
+			var addr = '';
+			if (sc.u_bq_user == '')
+				addr = sc.u_bq_usergroup.u_bq_coors;
+			else
+				addr = sc.u_bq_user;
+			if (sc.u_bq_state == 'На согласовании'){
+				gs.eventQueue('bq_site_mail_from_caller_to_agree', sc, sc.u_agree_list, email.body_text.replaceAll('\n', '<br>'));
+				gs.eventQueue('bq_site_mail_from_caller_to_assigneeN', sc, addr, email.body_text.replaceAll('\n', '<br>'));
+			}
+			else	
+				gs.eventQueue('bq_site_mail_from_caller_to_assignee', sc, addr, email.body_text.replaceAll('\n', '<br>'));
+		}
+		if(sub.get(sc.u_bq_danger) && !sub.u_autoclose){
+			sc.u_autoclose = false;
+			if (sc.u_bq_state == 'Закрыто' && sc.u_bq_usergroup == '')
+				sc.u_bq_state = 'Новое';
+		}
+	
+	var txt = '';
+	//txt = email.body_html.replace(/<[^>]+>/g,'');
+	txt = email.body_text;
+	sc.u_mail_history_txt = txt;
+	sc.update();
+	sys_email.target_table = "x_caas_quality_service_call";  
+	sys_email.instance = sc.getValue("sys_id");  
+	sys_email.update();  
+	
+}
+]]></script>
+        <stop_processing>false</stop_processing>
+        <sys_class_name>sysevent_in_email_action</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-12-19 07:48:49</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>2bd73ab237cf0f00b9af806754990ed3</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>bq_Update Service Call_Sites_FWD</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sysevent_in_email_action_2bd73ab237cf0f00b9af806754990ed3</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-08-20 08:12:03</sys_updated_on>
+        <table>x_caas_quality_service_call</table>
+        <template/>
+        <type>forward</type>
+    </sysevent_in_email_action>
+</record_update>

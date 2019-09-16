@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_caas_quality.bq_ttnFilter</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>bq_ttnFilter</name>
+        <script><![CDATA[function bq_ttnFilter() {
+	if (current.u_log_country == 'BY'){
+		return 'u_ttn_numberSTARTSWITH20';
+	}
+	else{
+		var type = '22';
+		var n = current.u_ttn_number;
+		var pref = n.substring(0,4);
+		if (pref.substring(3) != 'Z'){
+			pref = n.substring(0,3);
+			type = '82';
+		}
+		return 'u_ttn_numberSTARTSWITH'+pref+'^sys_id!='+current.u_ttn + '^u_mrp_demand_type=' + type;
+	}
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-01-17 13:26:02</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>47de2db237187e00b9af806754990ebc</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>bq_ttnFilter</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_include_47de2db237187e00b9af806754990ebc</sys_update_name>
+        <sys_updated_by>x-ruAblPet</sys_updated_by>
+        <sys_updated_on>2018-12-15 09:45:22</sys_updated_on>
+    </sys_script_include>
+</record_update>

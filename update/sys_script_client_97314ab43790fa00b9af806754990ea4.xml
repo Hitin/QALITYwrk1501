@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>sys_created_on</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>bq_настройка накладной для загрузки</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+	if (g_form.getValue('u_ttn_number') == 'UplD000000/00'){
+		g_form.setVisible('u_ttn_number', false);
+		g_form.setVisible('u_ttn_date', false);
+		g_form.setVisible('u_drp_order', false);
+		g_form.setVisible('u_wh_code', false);
+		g_form.setVisible('u_delivery_code', false);
+		g_form.setVisible('u_delivery_address', false);
+		g_form.setVisible('u_buyer_name', false);
+		g_form.setVisible('u_delivery_date', false);
+		g_form.setVisible('u_delivery_time_from', false);
+		g_form.setVisible('u_delivery_time_to', false);
+		g_form.setVisible('u_group', false);
+		g_form.setVisible('u_buyer_code', false);
+		g_form.setVisible('u_tth_short_number', false);
+		g_form.setVisible('u_client_order', false);
+		g_form.setVisible('u_order_number', false);
+		g_form.setVisible('u_assignee', false);
+		g_form.setVisible('u_driver_name', false);
+		g_form.addInfoMessage('Для загрузки списка накладных прикрепите файл в соотвествующем формате к этой форме и нажмите кнопку "Загрузить накладные из файла". Для импорта данных с сервера нажмите кнопку "Загрузить накладные с сервера"');
+	}
+
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-01-11 09:38:58</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>97314ab43790fa00b9af806754990ea4</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>bq_настройка накладной для загрузки</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_client_97314ab43790fa00b9af806754990ea4</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-08-26 15:58:35</sys_updated_on>
+        <table>x_caas_quality_bq_invoices</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

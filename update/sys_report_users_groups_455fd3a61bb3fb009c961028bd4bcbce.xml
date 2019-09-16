@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="INSERT_OR_UPDATE">
+        <group_id/>
+        <report_id display_value="HotLine обращения по ЕГАИС.Не выполненные (pivot)">5d508bd21b3f7b009c961028bd4bcba2</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-09-13 11:23:18</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>455fd3a61bb3fb009c961028bd4bcbce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>5d508bd21b3f7b009c961028bd4bcba2</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_report_users_groups_455fd3a61bb3fb009c961028bd4bcbce</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-13 11:23:18</sys_updated_on>
+        <user_id display_value="Logistics Coordinator">31e42c2f1b67b7809c961028bd4bcbdb</user_id>
+    </sys_report_users_groups>
+</record_update>

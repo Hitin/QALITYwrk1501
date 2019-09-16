@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="expert_ui_policy">
+    <expert_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_to>expert</applies_to>
+        <conditions/>
+        <description/>
+        <expert display_value="Новое обращение по Логистике">c987ff5d37f7a2005978466754990edb</expert>
+        <expert_conditions>IO:01e9df1837a976005978466754990efa=false^ORIO:d33b68c3dbf35b0050c5298a489619aa=no^IO:fc5a135837a976005978466754990e65=false^ORIO:0f5f2f72db735b0050c5298a48961970=no^IO:982a5bd437a976005978466754990e9e=false^ORIO:5fd72fbadb335b0050c5298a4896196f=no^IO:447a935837a976005978466754990e4b=false^ORIO:eebc53fadbff1b0050c5298a48961943=no^EQ</expert_conditions>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>false</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+//	g_form.setValue('u_bq_subtopic', '0f3b1adb6f972200724708c6eb3ee44c');
+	g_form.setValue('u_bq_no_data', 'false');
+	g_form.setValue('u_bq_no_data_yn', 'no');
+	g_form.setValue('u_claim', 'false');
+	g_form.setValue('u_claim_yn', 'no');
+	g_form.setValue('u_bq_other_orders_2', 'no');
+	g_form.setValue('u_bq_subtopic', 'a1474c4c3750ba00b9af806754990e3a');
+//	alert('false');
+	//g_form.setValue('u_parent_sc_by_ttn', '');
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+//	alert(g_form.getValue('u_bq_subtopic'))
+}]]></script_true>
+        <set_values/>
+        <short_description>bq_other_fields</short_description>
+        <sys_class_name>expert_ui_policy</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-03-13 12:21:22</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>903f64e037ad76005978466754990ec0</sys_id>
+        <sys_mod_count>45</sys_mod_count>
+        <sys_name>bq_other_fields</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_ui_policy_903f64e037ad76005978466754990ec0</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-08 18:18:41</sys_updated_on>
+        <table/>
+        <ui_type>0</ui_type>
+        <variable_set/>
+        <view/>
+    </expert_ui_policy>
+</record_update>

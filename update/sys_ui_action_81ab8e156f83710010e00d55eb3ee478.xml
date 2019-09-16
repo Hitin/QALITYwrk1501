@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>CloseSCAction</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2/>
+        <comments/>
+        <condition>gs.hasRole('bq_operator') &amp;&amp; current.u_bq_topic != '46aa161f6f972200724708c6eb3ee4ea' &amp;&amp; current.u_bq_contact_type != 'Интернет-сайт' &amp;&amp; current.u_bq_contact_type != 'miniCRM'</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Завершить Обращение</name>
+        <onclick>CloseSC();</onclick>
+        <order>101</order>
+        <script><![CDATA[function CloseSC() {
+/*	if (g_form.getValue('u_bq_contact_type') == 'Интернет-сайт'){
+		if (g_form.getValue('u_bq_resptext')==''){
+			g_form.setMandatory('u_bq_resptext', 'true');
+			g_form.getControl('u_bq_resptext').focus();
+			alert("Заполните обязательные поля на вкладке Решение");
+		}
+		else{
+	//		closeDialog();
+			
+			var answer = confirm('Подтвердите решение обращения. При нажатии кнопки ОК обращение ' + g_form.getValue('u_bq_number') + ' будет закрыто, а решение будет отправлено инициатору \n\nКому: ' + g_form.getValue('u_mail') +  '\n\nТекст письма:\nДобрый день!\n\n' + g_form.getValue('u_bq_resptext').replace(/<[^>]+>/g,'') + '\n\nС уважением, пивоваренная компания "Балтика".\n\n' + g_form.getValue('u_bq_applicant_info'));
+			if (answer == true){
+				g_form.setValue('u_bq_state', 'Закрыто');
+				gsftSubmit(null, g_form.getFormElement(), 'CloseSCAction');
+			}
+			else return false;
+ 		}
+		
+	}
+	else {*/
+		if (g_form.getValue('u_bq_topic') != '46aa161f6f972200724708c6eb3ee4ea') {
+			g_form.addErrorMessage("Оцените, пожалуйста, насколько вы довольны тем, как ответственный сотрудник решил ваш вопрос по шкале от одного до пяти, где один – совсем не доволен, пять – полностью доволен?");
+		}
+		g_form.setValue('u_bq_state', 'Закрыто');
+		if(g_form.getValue('u_bq_resptext')=='' || (g_form.getValue('u_bq_satisfaction')=='' && g_form.getValue('u_bq_no_satisfaction')=='false')){
+			g_form.setMandatory('u_bq_resptext', 'true');
+			g_form.getControl('u_bq_resptext').focus();
+			//g_form.showFieldMsg('u_bq_resptext','Заполните текст для инициатора','error');
+			alert("Заполните обязательные поля на вкладке Решение");
+		}
+		else {
+			gsftSubmit(null, g_form.getFormElement(), 'CloseSCAction');
+				//gs.setRedirect("navpage.do");
+		}
+//	}
+}
+
+if(typeof window == 'undefined')  
+ runUpdate();
+
+
+function runUpdate(){
+	current.u_bq_state = 'Закрыто';
+	current.update();
+	action.setRedirectURL('home.do');
+}
+// function closeDialog() {
+// 	g_form.modified=false;
+// 	var sc_id = g_form.getUniqueValue();
+// 	var resp = g_form.getValue('u_bq_resptext').replace(/<[^>]+>/g,'');
+// 	var mail = g_form.getValue('u_mail');
+// 	var num = g_form.getValue('u_bq_number');
+// 	var info = g_form.getValue('u_bq_applicant_info');
+// 	var dialog = new GlideDialogWindow("bq_close");
+// 	dialog.setTitle("Необходимо выбрать действие"); //Set the dialog title
+// 	dialog.setPreference("sc_id", sc_id);
+// 	dialog.setPreference("mail", mail);
+// 	dialog.setPreference("resp", resp);
+// 	dialog.setPreference("num", num);
+// 	dialog.setPreference("info", info);
+// 	dialog.render(); //Open the dialog	
+	
+// }
+	
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>x-rushaale</sys_created_by>
+        <sys_created_on>2015-03-26 07:49:21</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>81ab8e156f83710010e00d55eb3ee478</sys_id>
+        <sys_mod_count>74</sys_mod_count>
+        <sys_name>Завершить Обращение</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_ui_action_81ab8e156f83710010e00d55eb3ee478</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2018-02-08 10:51:00</sys_updated_on>
+        <table>x_caas_quality_service_call</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="expert_panel_template">
+    <expert_panel_template action="INSERT_OR_UPDATE">
+        <banner_step/>
+        <complete_message>Завершить</complete_message>
+        <description/>
+        <expert display_value="Новое обращение по Логистике">c987ff5d37f7a2005978466754990edb</expert>
+        <name>submit</name>
+        <next_message>Next</next_message>
+        <order/>
+        <previous_message>Previous</previous_message>
+        <script><![CDATA[var r = new GlideRecord ('x_caas_quality_bq_delivery_close_code');
+var addTTN;
+var sc;
+
+if (wizard.u_bq_inv_number == ''){
+	current.u_ttn_number = wizard.u_bq_preffix + wizard.u_bq_ttn_number_s;
+}
+else {
+	current.u_ttn_number = wizard.u_bq_inv_number.u_ttn_number;
+}
+
+var ttn_number = ' по ТТН ' + current.u_ttn_number;
+current.u_wh_name = wizard.u_bq_wh.u_name;
+current.u_bq_danger = wizard.u_bq_subtopic;
+
+if (wizard.u_bq_subtopic == '90fa1edb6f972200724708c6eb3ee451') //Поломка автомобиля
+	current.u_other_ttn = wizard.u_other_ttn_list;
+else 
+	current.u_ttn_list_thistt = wizard.u_other_ttn_list;
+if (wizard.u_bq_subtopic == '90fa1edb6f972200724708c6eb3ee451' && (wizard.u_other_ttn_list != '' || wizard.u_other_ttn_string != '')) //Поломка автомобиля
+	current.u_bq_other_orders_s = 'yes';
+else
+	current.u_bq_other_orders_s = wizard.u_bq_other_orders;
+
+if (wizard.u_bq_subtopic == '420bdedb6f972200724708c6eb3ee416'){ //Проблема с паллетом
+	current.u_bq_messagers = wizard.u_bq_messagers;
+}
+
+if (wizard.u_bq_self_repallet_yn == 'yes'){
+	current.u_bq_self_repallet = true;
+}
+if (wizard.u_bq_return_qty_yn == 'yes'){
+	current.u_return_qty = true;
+}
+if (wizard.u_bq_no_data_yn == 'yes'){
+	current.u_no_ttn_link = true;
+}
+if (wizard.u_bq_notmatch_qty_yn == 'yes'){
+	current.u_notmatch_qty = true;
+}
+
+if (wizard.u_bq_inv_number.u_group != ''){
+	current.u_bq_usergroup = wizard.u_bq_inv_number.u_group;
+}
+else {
+	current.u_bq_usergroup = '7301949337a722005978466754990e4f'; //Доставка. Неопределено
+}
+
+ if (wizard.u_other_yn == 'yes' || wizard.u_error_call_yn == 'yes' || wizard.u_no_ttn_numOrPref_yn == 'yes' || wizard.u_call_break_yn == 'yes'){
+	
+	current.u_bq_end_call = true;
+	if (wizard.u_no_ttn_numOrPref_yn == 'no') current.u_bq_call_cat = 'Нецелевые звонки. Ошибка';
+	current.u_bq_danger = 'a1474c4c3750ba00b9af806754990e3a'; //- none -
+	current.u_bq_state = 'Закрыто';
+	current.u_bq_contact_phone = '';
+	if (wizard.u_other_yn == 'yes') current.u_bq_prot_input = 'Причина завершения звонка: Другое';
+	if (wizard.u_error_call_yn == 'yes') current.u_bq_prot_input = 'Причина завершения звонка: Ошиблись номером';
+	if (wizard.u_no_ttn_numOrPref_yn == 'yes') current.u_bq_prot_input = 'Причина завершения звонка: Не назвали номер ТТН или префикс ТТН';
+	if (wizard.u_call_break_yn == 'yes') current.u_bq_prot_input = 'Причина завершения звонка: Вызов сорвался до заполнения накладной';	
+	ttn_number = '';
+}
+else if (wizard.u_bq_subtopic == 'e9eadedb6f972200724708c6eb3ee49f' && wizard.u_bq_return_qty_yn == 'yes' && current.u_bq_usergroup != 'c480145737a722005978466754990ec3'){//Бой, потеря товарного вида при транспортировке, НЕДОСТАЧА и Доставка. Локальные клиенты
+	r.get('u_code', 'R_002');
+	current.u_bq_log_reason = r.sys_id;
+	current.u_bq_log_solution = 'Частичный возврат';
+	current.u_bq_state = 'Закрыто';
+}
+else if (wizard.u_bq_subtopic == 'fdca561f6f972200724708c6eb3ee460' && wizard.u_bq_return_qty_yn == 'yes' && current.u_bq_usergroup != 'c480145737a722005978466754990ec3'){//недостача и Доставка. Локальные клиенты
+	r.get('u_code', 'R_004');
+	current.u_bq_log_reason = r.sys_id;
+	current.u_bq_log_solution = 'Частичный возврат';
+	current.u_bq_state = 'Закрыто';
+}
+else if (wizard.u_bq_subtopic == '8eca0f9737d0be00b9af806754990ec5' && wizard.u_bq_return_qty_yn == 'yes' && current.u_bq_usergroup != 'c480145737a722005978466754990ec3'){//осадок мутность и Доставка. Локальные клиенты
+	r.get('u_code', 'R_021');
+	current.u_bq_log_reason = r.sys_id;
+	current.u_bq_log_solution = 'Частичный возврат';
+	current.u_bq_state = 'Закрыто';
+}
+else {
+	current.u_bq_state = 'Назначено в группу';
+}
+
+var ttn = new GlideRecord ('x_caas_quality_bq_invoices');
+if (ttn.get(wizard.u_bq_inv_number)) {
+	ttn.u_linked_to_sc = true;
+	ttn.update();
+}
+var phone = wizard.u_bq_phone.toString();
+phone = phone.replace(/[^\n\d]+/g, '');
+current.u_bq_contact_phone = phone;// = wizard.u_bq_phone.replace(/[^\n\d]+/g, '');
+
+if (wizard.u_bq_subtopic == '90fa1edb6f972200724708c6eb3ee451' && wizard.u_other_ttn_outOfDB_yn == 'yes' && wizard.u_other_ttn_string != '') //Поломка автомобиля
+	current.u_bq_prot_input = 'В машине находятся ТТН, отсутствующие в базе данных: '+ wizard.u_other_ttn_string;
+
+gs.addInfoMessage('Заявка ' + current.number + ttn_number + ' зарегистрирована.');
+wizard.redirect = 'home.do';
+]]></script>
+        <sys_class_name>expert_panel_template</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2016-12-21 13:55:16</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>1082ba4637b3e2005978466754990e43</sys_id>
+        <sys_mod_count>127</sys_mod_count>
+        <sys_name>submit</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_panel_template_1082ba4637b3e2005978466754990e43</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-11 10:49:34</sys_updated_on>
+        <table>x_caas_quality_service_call</table>
+        <template/>
+        <title/>
+        <view/>
+    </expert_panel_template>
+    <sys_translated_text action="delete_multiple" query="documentkey=1082ba4637b3e2005978466754990e43"/>
+</record_update>

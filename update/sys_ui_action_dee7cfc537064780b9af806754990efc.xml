@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>CloseSCAction_S</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2/>
+        <comments/>
+        <condition>gs.hasRole('bq_operator_sites') &amp;&amp; current.u_bq_topic != '46aa161f6f972200724708c6eb3ee4ea' &amp;&amp; current.u_bq_contact_type == 'Интернет-сайт'</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Завершить с ответом</name>
+        <onclick>CloseSC_S();</onclick>
+        <order>101</order>
+        <script><![CDATA[function CloseSC_S() {
+	
+	if (g_form.getValue('u_bq_danger.u_feedback') == 'true'){
+	//	alert (g_form.getValue('u_bq_danger.u_feedback'));
+		var conf = confirm('По выбранной подтеме "' + g_form.getDisplayBox('u_bq_danger').value + '" не предусмотрена отправка ответа инициатору. Закрыть Обращение без отправки ответа?');
+		if (conf == true){
+			g_form.setValue('u_bq_state', 'Закрыто');
+			gsftSubmit(null, g_form.getFormElement(), 'CloseSCAction_S');
+		}
+		else return false;
+	}
+	else if (g_form.getValue('u_bq_resptext')==''){
+		g_form.setMandatory('u_bq_resptext', 'true');
+		g_form.getControl('u_bq_resptext').focus();
+		alert("Заполните обязательные поля на вкладке Решение");
+	}
+	else{
+		var answer;
+		var topConfirm;
+		if (g_form.getValue('u_answer_sent') == 'true')
+			topConfirm = 'По обращению '+ g_form.getValue('u_bq_number') + ' уже был отправлен автоматический ответ. Произвести повторную отправку?';
+		else
+			topConfirm = 'Подтвердите решение обращения. При нажатии кнопки ОК обращение ' + g_form.getValue('u_bq_number') + ' будет закрыто, а решение будет отправлено инициатору';
+		var txt = '';
+		var hist = g_form.getValue('u_mail_history_txt');
+		if (g_form.getValue('u_resp_lang') == 'ru'){
+			txt = topConfirm + '\n\nКому: ' + g_form.getValue('u_mail') +  '\n\nТекст письма:\nДобрый день!\n\n' + g_form.getValue('u_bq_resptext').replace(/<br \/>/g, '\n').replace(/&(l|r)+aquo;/g,'"').replace(/<[^>]+>/g,'').replace(/&[^;]+;/g,'')/*.replace(/<[^>]+>/g,'')*/ + '\n\nС уважением, пивоваренная компания "Балтика".\n\n' + hist.substring(0,1000);
+		}
+		else if (g_form.getValue('u_resp_lang') == 'en')
+			txt = topConfirm + '\n\nКому: ' + g_form.getValue('u_mail') +  '\n\nТекст письма:\nDear ' + g_form.getValue('u_bq_applicant') + ',\n\n' + g_form.getValue('u_bq_resptext').replace(/<br \/>/g, '\n').replace(/&(l|r)+aquo;/g,'"').replace(/<[^>]+>/g,'').replace(/&[^;]+;/g,'') + '\n\nSincerely, Baltika Breweries.\n\n' + hist.substring(0,1000);
+		if (hist.toString().length > 1000)
+			txt += '\n\n*************\nПриведён сокращённый текст истории переписки. Инициатору будет отправлена полная история переписки';
+		answer = confirm(txt);
+		if (answer == true){
+			g_form.setValue('u_bq_state', 'Закрыто');
+			g_form.setValue('u_autoclose', 'true');
+			if (g_form.getValue('u_bq_danger.u_feedback') == 'false' && g_form.getValue('u_bq_danger.u_autoclose') == 'true' && g_form.getValue('u_answer_sent') == 'false')
+				g_form.setValue('u_answer_sent','true');
+			gsftSubmit(null, g_form.getFormElement(), 'CloseSCAction_S');
+		}
+		else return false;
+ 	}
+}
+
+if(typeof window == 'undefined')  
+ runUpdate_S();
+
+
+function runUpdate_S(){
+	current.u_bq_state = 'Закрыто';
+	current.update();
+	if (!current.u_bq_danger.u_feedback)
+		gs.eventQueue('bq_Sites_closed_to_initiator', current);
+	action.setRedirectURL('home.do');
+}
+
+	
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-10-25 05:26:46</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>dee7cfc537064780b9af806754990efc</sys_id>
+        <sys_mod_count>41</sys_mod_count>
+        <sys_name>Завершить с ответом</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_ui_action_dee7cfc537064780b9af806754990efc</sys_update_name>
+        <sys_updated_by>ablyazov_p</sys_updated_by>
+        <sys_updated_on>2019-03-21 06:07:20</sys_updated_on>
+        <table>x_caas_quality_service_call</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

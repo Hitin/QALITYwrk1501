@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="x_caas_quality_service_call" version="2" view="">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Обращение - Default view" name="x_caas_quality_service_call" related_list="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">f1920ff54f5633c0b41f05818110c79a</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>REL:8e99ee714fd233c0b41f05818110c775</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-28 11:48:07</sys_created_on>
+            <sys_id>bd920ff54f5633c0b41f05818110c79a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-28 11:48:07</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Обращение - Default view" name="x_caas_quality_service_call" related_list="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">f1920ff54f5633c0b41f05818110c79a</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>REL:ddc9a2b14fd233c0b41f05818110c79d</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-28 11:48:07</sys_created_on>
+            <sys_id>35920ff54f5633c0b41f05818110c79b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-28 11:48:07</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Обращение - Default view</calculated_name>
+            <filter/>
+            <name>x_caas_quality_service_call</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-28 11:48:07</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>f1920ff54f5633c0b41f05818110c79a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Обращение - Default view</sys_name>
+            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_ui_related_x_caas_quality_service_call_null_3ed34f2b4f808f00d8a900818110c72a</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-28 11:48:07</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

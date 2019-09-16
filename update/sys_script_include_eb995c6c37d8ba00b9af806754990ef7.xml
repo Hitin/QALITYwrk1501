@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_caas_quality.filterLinkedTickets</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>filterLinkedTickets</name>
+        <script><![CDATA[function filterLinkedTickets() {
+	var callType = current.u_caller_type;
+	var ids = [];
+	var refQual = '';
+	var sc = new GlideRecord ('x_caas_quality_service_call');
+	if (callType == '') {
+		sc.addQuery('u_bq_aon_number',current.u_bq_tel);
+	}
+	else if (callType == 'logistic') {
+		sc.addQuery('u_bq_topic', '46aa161f6f972200724708c6eb3ee4ea');
+	}
+		
+	sc.query();
+	while (sc.next()) {
+		ids.push(sc.sys_id.toString());
+	}
+	refQual = 'sys_idIN' + ids.toString();
+	refQual += '^EQ';
+	
+	
+	return refQual;
+	
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-01-10 07:28:23</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>eb995c6c37d8ba00b9af806754990ef7</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>filterLinkedTickets</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_include_eb995c6c37d8ba00b9af806754990ef7</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-17 13:33:24</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_caas_quality_service_call">u_bq_topic!=387a67b76f05ea0010e00d55eb3ee4a0^u_bq_state!=Решено^EQ<item display_table="x_caas_quality_bq_topic" display_value="Администрирование процесса" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="!=" or="false" value="387a67b76f05ea0010e00d55eb3ee4a0"/>
+            <item endquery="false" field="u_bq_state" goto="false" newquery="false" operator="!=" or="false" value="Решено"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>false</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>bq_скрыть причину ошибки выбора</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>x-ruvoyand</sys_created_by>
+        <sys_created_on>2016-09-07 05:28:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>257f04186fb5624010e00d55eb3ee4fa</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>bq_скрыть причину ошибки выбора</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_ui_policy_257f04186fb5624010e00d55eb3ee4fa</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-17 13:09:36</sys_updated_on>
+        <table>x_caas_quality_service_call</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

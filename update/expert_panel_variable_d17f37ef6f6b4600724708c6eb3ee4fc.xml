@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="expert_panel_variable">
+    <expert_panel_variable action="INSERT_OR_UPDATE">
+        <expert_panel display_value="praktika_detal">c58e82bf6f937500724708c6eb3ee487</expert_panel>
+        <expert_variable display_value="Вся информация о возможности прохождения практики расположена на сайте нашей компании. Также на сайте Вы можно  оставить свою заявку и резюме. &#10; http://corporate.baltika.ru/&#10;">bebe7faf6f6b4600724708c6eb3ee4ac</expert_variable>
+        <order>700</order>
+        <sys_class_name>expert_panel_variable</sys_class_name>
+        <sys_created_by>x-rubesdmi</sys_created_by>
+        <sys_created_on>2015-11-12 08:43:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d17f37ef6f6b4600724708c6eb3ee4fc</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>praktika_detal.Вся информация о возможности прохождения практики расположена на сайте нашей компании. Также на сайте Вы можно  оставить свою заявку и резюме. 
+ http://corporate.baltika.ru/
+</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_panel_variable_d17f37ef6f6b4600724708c6eb3ee4fc</sys_update_name>
+        <sys_updated_by>x-rubesdmi</sys_updated_by>
+        <sys_updated_on>2015-11-22 17:58:41</sys_updated_on>
+    </expert_panel_variable>
+</record_update>

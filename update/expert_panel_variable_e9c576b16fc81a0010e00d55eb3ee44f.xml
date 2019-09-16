@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="expert_panel_variable">
+    <expert_panel_variable action="INSERT_OR_UPDATE">
+        <expert_panel display_value="Welcome">66e6289e6fdb3500724708c6eb3ee405</expert_panel>
+        <expert_variable display_value="Населенный пункт/доп информация">070029766f01c200724708c6eb3ee4a1</expert_variable>
+        <order>1100</order>
+        <sys_class_name>expert_panel_variable</sys_class_name>
+        <sys_created_by>x-rubesdmi</sys_created_by>
+        <sys_created_on>2015-12-01 13:23:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e9c576b16fc81a0010e00d55eb3ee44f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Welcome.Населенный пункт/доп информация</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_panel_variable_e9c576b16fc81a0010e00d55eb3ee44f</sys_update_name>
+        <sys_updated_by>x-rubesdmi</sys_updated_by>
+        <sys_updated_on>2015-12-01 13:23:55</sys_updated_on>
+    </expert_panel_variable>
+</record_update>

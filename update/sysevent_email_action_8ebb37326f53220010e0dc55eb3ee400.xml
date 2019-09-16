@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>false</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Обращение" name="Обращение">28627beddb60230002558e68689619e3</category>
+        <collection>x_caas_quality_service_call</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<br><hr><br>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <event_name>bq_incorrect_assignee</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from>ServiceDeskCEE@baltika.com</from>
+        <generation_type>event</generation_type>
+        <group/>
+        <group_field/>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <list/>
+        <list_field/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p>Уважаемый(ая) Коллега!</p>
+<p>Обращение № ${URI_REF} было возвращено в вашу группу, т.к. назначенный вами ответственный ${event.parm1} не найден в вашей группе. Ответственным может быть назначен только состоящий в вашей группе специалист.</p>
+<p><em>Предпринять одно из следующих действий:</em></p>
+<p>${mail_script:bq_service_calls_to_assignee}<br />${mail_script:bq_service_calls_another_group}<br />${mail_script:bq_service_calls_information}<br />${mail_script:bq_service_calls_resolve}</p>
+<p>${mail_script:bq_info}<br />${mail_script:bq_coord_contact}<br />${mail_script:bq_tech_contact}</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>EE_ bq_Назначен некорректный ответственн</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>u_bq_usergroup.u_bq_coors</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Назначенный вами ответственный по обращению № ${number} в вашей группе не найден, предложите другого</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2016-11-29 06:40:27</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>8ebb37326f53220010e0dc55eb3ee400</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>EE_ bq_Назначен некорректный ответственн</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sysevent_email_action_8ebb37326f53220010e0dc55eb3ee400</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-09-15 00:37:26</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template/>
+        <type>email</type>
+        <u_language>ru</u_language>
+        <u_subject/>
+        <user/>
+        <user_field/>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

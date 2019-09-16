@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_kbReviewReminder</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[var user = event.parm1;
+var i = 1;
+var srv = gs.getProperty('instance_name') + '.service-now.com';
+var kb = new GlideRecord ('kb_knowledge');
+var dat = new GlideDate();
+var today = new GlideDate();
+var link = '';
+dat.addDays(12);
+kb.addQuery('kb_knowledge_base','b93f8c7137bae2401c0712c543990ed2'); 
+kb.addQuery('workflow_state', 'published');
+kb.addQuery('u_next_review_date', '<', dat);
+kb.addQuery('u_next_review_date', '>=', today);
+kb.addQuery('u_reviewer_s_name', 'CONTAINS', user);
+kb.orderBy('u_next_review_date');
+kb.query();
+
+template.print('<table border="1" cellpadding="5" cellspacing="0"><tr><td>N</td><td>Номер</td><td>Категория (Согласующие Базы Знаний)');
+
+	//Добавь сюда печать списка менеджеров знаний. не включая владельца и менеджера базу знаний. только категория с учетом иерархии, если текущий уровень пустой
+	
+template.print('</td><td>Тема</td><td>Текст</td><td colspan = "3">Действия</td></tr>');
+while (kb.next()){
+	link = 'https://'+srv+'/kb_knowledge.do?sys_id='+kb.sys_id;
+	template.print('<tr><td valign="top">' + i + '</td><td valign="top"><a href="' + link + '">' + kb.number + '</a></td><td valign="top">' + kb.kb_category.full_category +' (');
+	template.print(kb.u_reviewer_s_name.getDisplayValue());				   
+	template.print(')'+ '</td><td valign="top">' + kb.short_description + '</td><td valign="top">' + kb.text + '</td><td valign="top"><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+kb.number+' продлено&body=Продлить">Продлить</a></td><td valign="top"><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+kb.number+' заархивировано&body=Заархивировать">Заархивировать</a></td>');
+	var desc = kb.description.toString();
+	var arr = kb.description.toString().split('\n');
+	if (desc.length < 950) {
+		template.print('<td valign="top"><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+kb.number+' новая версия&body=');
+		for (var k = 0; k < arr.length; k++){
+			template.print(arr[k] + '%0A');
+		}
+		template.print('">Изменить</a></td></tr>');
+	}
+	else
+		template.print('<td valign="top">Данная статья может быть изменена только через интерфейс системы</td></tr>');
+		i++;
+}
+template.print('</table>');
+]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-02-08 08:08:06</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>6e09313937f47640b9af806754990e06</sys_id>
+        <sys_mod_count>39</sys_mod_count>
+        <sys_name>bq_kbReviewReminder</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_6e09313937f47640b9af806754990e06</sys_update_name>
+        <sys_updated_by>Filippov_as</sys_updated_by>
+        <sys_updated_on>2018-01-18 07:46:10</sys_updated_on>
+    </sys_script_email>
+</record_update>

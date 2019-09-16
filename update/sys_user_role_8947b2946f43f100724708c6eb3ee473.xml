@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>Оператор</description>
+        <elevated_privilege>false</elevated_privilege>
+        <encryption_context/>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>bq_operator</name>
+        <requires_subscription>-1</requires_subscription>
+        <scoped_admin>false</scoped_admin>
+        <suffix/>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>x-rubesdmi</sys_created_by>
+        <sys_created_on>2015-03-23 08:26:13</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8947b2946f43f100724708c6eb3ee473</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>bq_operator</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_user_role_8947b2946f43f100724708c6eb3ee473</sys_update_name>
+        <sys_updated_by>x-rushaale</sys_updated_by>
+        <sys_updated_on>2015-03-31 06:24:05</sys_updated_on>
+    </sys_user_role>
+</record_update>

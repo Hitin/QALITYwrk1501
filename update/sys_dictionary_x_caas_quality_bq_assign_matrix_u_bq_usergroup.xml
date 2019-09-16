@@ -39,7 +39,7 @@
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
-        <reference_qual>javascript:bq_getAssignGroup();</reference_qual>
+        <reference_qual>javascript:x_caas_quality.bq_getAssignGroup();</reference_qual>
         <reference_qual_condition/>
         <reference_type/>
         <sizeclass/>

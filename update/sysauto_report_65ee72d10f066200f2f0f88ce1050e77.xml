@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sysauto_report">
+    <sysauto_report action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <address_list/>
+        <condition/>
+        <conditional>false</conditional>
+        <group_list/>
+        <include_detail>false</include_detail>
+        <include_with/>
+        <name>EE RU SC Проблемы доставки сетевым клиентам</name>
+        <omit_if_no_records>false</omit_if_no_records>
+        <output_type>PDF-landscape</output_type>
+        <page_height_in_pixels>612</page_height_in_pixels>
+        <page_size>Letter</page_size>
+        <page_width_in_pixels>792</page_width_in_pixels>
+        <report display_value="EE RU SC Проблемы доставки сетевым клиентам(gauge)">f38d47876f2396407833bd5dbb3ee439</report>
+        <report_body/>
+        <report_title/>
+        <run_as display_value="Lev Ryabtsev">7eaa6d5adbda0b806e87f1eabf96197d</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2016-09-23 07:03:34</run_start>
+        <run_time>1969-12-31 21:00:00</run_time>
+        <run_type>on_demand</run_type>
+        <sys_class_name>sysauto_report</sys_class_name>
+        <sys_created_by>Filippov_as</sys_created_by>
+        <sys_created_on>2016-09-23 07:04:13</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>65ee72d10f066200f2f0f88ce1050e77</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>EE RU SC Проблемы доставки сетевым клиентам</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sysauto_report_65ee72d10f066200f2f0f88ce1050e77</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-13 14:52:27</sys_updated_on>
+        <u_company display_value="Baltika Brewery LLC">bc09d2c8db8b1b0411e5ffb5ae961938</u_company>
+        <upgrade_safe>false</upgrade_safe>
+        <user_list/>
+        <zip>false</zip>
+    </sysauto_report>
+</record_update>

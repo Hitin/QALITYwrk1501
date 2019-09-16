@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>bq Add temp group members</name>
+        <run_as display_value="">312308716f90220010e00d55eb3ee401</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2019-05-31 15:05:59</run_start>
+        <run_time>1970-01-01 16:30:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[var tempMembers = [];
+var tempGr = new GlideRecord ('x_caas_quality_bq_group_member');
+tempGr.addQuery('u_bq_group','73d17e74db75f70062620e41ca9619ee');
+tempGr.query();
+if(tempGr.getRowCount()>0)
+gs.debug('start add members '+tempGr.getRowCount());
+{
+while(tempGr.next()) {
+tempMembers.push(tempGr.getValue('u_bq_user'));
+}
+tempGr.initialize();
+var addGr = new GlideRecord ('x_caas_quality_bq_usergroup');
+   addGr.addQuery('u_bq_grupnqme','STARTSWITH','Доставка.');
+   addGr.query();
+while(addGr.next()) {
+for (var i = 0; i < tempMembers.length; i++)
+{
+var tempMem = new GlideRecord ('x_caas_quality_bq_group_member');
+tempMem.addQuery('u_bq_group',addGr.sys_id);
+tempMem.addQuery('u_bq_user',tempMembers[i]);
+tempMem.query();
+if(!tempMem.next())
+{
+tempGr.u_bq_user = tempMembers[i];
+tempGr.u_bq_group=addGr.sys_id;
+tempGr.u_temp=true;
+tempGr.insert();
+}
+}
+}
+} 
+gs.print('fin add members');]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>x-ruFedLeo</sys_created_by>
+        <sys_created_on>2019-05-31 15:18:22</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>13532b3cdbf5f70062620e41ca9619e9</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>bq Add temp group members</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sysauto_script_13532b3cdbf5f70062620e41ca9619e9</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-10 09:15:01</sys_updated_on>
+        <u_all>false</u_all>
+        <u_table/>
+        <u_type/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

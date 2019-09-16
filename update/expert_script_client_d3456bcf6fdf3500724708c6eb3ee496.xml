@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="expert_script_client">
+    <expert_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <expert display_value="Новое обращение">7be5a05e6fdb3500724708c6eb3ee44d</expert>
+        <expert_panel display_value="person_data">cfbc64de6fdb3500724708c6eb3ee445</expert_panel>
+        <expert_panel_variable/>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>bq_Новый заявитель</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+
+
+	if (g_form.getValue('new_caller') == 'Yes' && g_form.getValue('caller') == ''){
+		var NewUser = new GlideRecord('x_caas_quality_bq_fio');
+		NewUser.u_name =g_form.getValue('u_name');
+		NewUser.u_mname =g_form.getValue('u_mname');
+		NewUser.u_lname =g_form.getValue('u_lname');		
+		NewUser.u_tel =g_form.getValue('u_tel');	
+		NewUser.u_mail =g_form.getValue('u_mail');
+		NewUser.u_loyalty =g_form.getValue('u_loyalty');
+		NewUser.u_gender =g_form.getValue('u_gender');
+		NewUser.u_age =g_form.getValue('u_age');
+		NewUser.u_description = 'Зарегистрирован новый пользователь: ' + g_form.getValue('u_name') + '. Контактные данные: тел. ' + g_form.getValue('u_tel') + ',почта ' + g_form.getValue('u_mail') + '. Дата регистрации: ' + g_form.nowDateTime();
+		NewUser.insert();
+		var NewUser2 = new GlideRecord('x_caas_quality_bq_fio');
+			NewUser2.addQuery('u_description', NewUser.u_description);
+			NewUser2.query();
+				while (NewUser2.next()){
+					g_form.setValue('caller', NewUser2.sys_id);
+					//g_form.setValue('description', NewUser2.u_lname +'  '+NewUser2.sys_id);
+				}
+		
+		}
+
+		
+}
+
+]]></script>
+        <sys_class_name>expert_script_client</sys_class_name>
+        <sys_created_by>x-rubesdmi</sys_created_by>
+        <sys_created_on>2015-04-13 11:26:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>d3456bcf6fdf3500724708c6eb3ee496</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>bq_Новый заявитель</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_script_client_d3456bcf6fdf3500724708c6eb3ee496</sys_update_name>
+        <sys_updated_by>x-rubesdmi</sys_updated_by>
+        <sys_updated_on>2015-12-01 13:40:45</sys_updated_on>
+        <table/>
+        <type>onSubmit</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </expert_script_client>
+</record_update>

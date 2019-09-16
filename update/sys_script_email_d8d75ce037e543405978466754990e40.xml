@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_notify_assignee_matrix</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[template.print('<table border="1" cellpadding="5" cellspacing="0">');
+template.print('<tr><th>Тема</th><th>Направление/Категория</th><th>Ваша зона ответственности</th><th>Дата назначения</th></tr>');
+// var startDT = new GlideDateTime();
+// startDT.addDays(-1).addSeconds(-1800);
+
+var role = new GlideRecord ('u_bq_role_assignment'); 
+role.addQuery('u_active', true);
+role.addQuery('u_employee', event.parm1);
+role.orderByDesc('sys_updated_on');
+role.query();
+
+while (role.next()){
+	var tm = new GlideDateTime(role.sys_updated_on);
+	tm.addSeconds(10800);
+	var d = tm.getDate();
+	if (role.u_role == 'Ответственный по ОЗС' || role.u_role == 'Согласующий по ОЗС')
+		template.print('<tr><td>' + role.getDisplayValue('u_matrix.u_bq_topic') + '</td><td>' + role.getDisplayValue('u_matrix.u_bq_danger') + ' ' + role.getDisplayValue('u_matrix.u_bq_usercity') + ' ' + role.getDisplayValue('u_matrix.u_bq_factory') + '</td><td>' + role.u_role + '</td><td>' + d + '</td></tr>');
+	else if (role.u_role == 'Координатор по ОЗС')
+		template.print('<tr><td>' + role.getDisplayValue('u_group') + '</td><td></td><td>' + role.u_role + '</td><td>' + d + '</td></tr>');
+	else if (role.u_role == 'Согласующий Базы Знаний')
+		template.print('<tr><td>База знаний</td><td>' + role.u_kb_review.getDisplayValue('u_bq_category_v3') + '</td><td>' + role.u_role + '</td><td>' + d + '</td></tr>');
+}
+template.print('</table>');]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-09-28 06:49:03</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>d8d75ce037e543405978466754990e40</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>bq_notify_assignee_matrix</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_d8d75ce037e543405978466754990e40</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2018-02-28 07:07:51</sys_updated_on>
+    </sys_script_email>
+</record_update>

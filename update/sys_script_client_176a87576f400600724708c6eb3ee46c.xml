@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>sys_created_on</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>bq_OnLoadform</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+
+   //Type appropriate comment here, and begin script below
+	var tel = g_form.getValue('u_bq_tel');
+	var ga1 = new GlideAjax('x_caas_quality.CallsFromThisNumber');
+	ga1.addParam('sysparm_name','сallsFromThisNumber');
+ 	ga1.addParam('sysparm_cNumber',tel);
+	ga1.getXML(getNumber);
+	
+	
+	if (g_form.getValue('u_caller_type') == ''){
+		g_form.addInfoMessage('«Горячая линия пивоваренной компании  «Балтика». Имя здравствуйте!»');
+		g_form.addInfoMessage('«Представьтесь, пожалуйста»');
+		g_form.addInfoMessage('«ПО ВОПРОСАМ КАЧЕСТВА ПРОДУКЦИИ: Абонентом должно быть озвучено хотя бы одно замечание к продукции по категориям качества, т.е. описан вкус, запах, наличие осадка, наличие включений, недолив, дефекты внешнего вида – в этом случае это ЖАЛОБА»');
+	//g_form.showInfoBox('u_bq_fio','список всех инициаторов, звонивших с номера АОН');
+	}
+	else if (g_form.getValue('u_caller_type') == 'logistic')
+		{
+			g_form.setLabelOf('u_bq_sc', 'Поиск обращений');
+			var ga = new GlideAjax('x_caas_quality.GetTimeFrame'); 
+			ga.addParam('sysparm_name','getTimeFrame');  
+			ga.getXML(doSomething);
+ 		}
+	
+			
+}
+function getNumber(response){ 
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	g_form.addErrorMessage('С данного номера было ' + answer + ' обращений');
+}
+
+function doSomething(response){ 
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	g_form.addInfoMessage('«Горячая линия компании "Балтика" для регистрации обращений водителей, ИМЯ, здравствуйте! Вы хотите зарегистрировать новое обращение или у вас вопрос по уже существующей заявке?»');
+	if (answer == 'false'){
+		g_form.addInfoMessage('Если не пришло СМС оповещение, то по контактному номеру телефона найти заявку, сказать: «Номер вашей заявки №***  ожидайте СМС с решением с 8-00 до 11 по МСК времени»');
+	}
+	else {
+		g_form.addInfoMessage('Если не пришло СМС оповещение, то по контактному номеру телефона найти заявку, сказать: «Номер вашей заявки №***  ожидайте СМС с решением в течение 3х часов»');
+	}
+}	
+
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>x-rubesdmi</sys_created_by>
+        <sys_created_on>2015-05-21 10:38:39</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>176a87576f400600724708c6eb3ee46c</sys_id>
+        <sys_mod_count>62</sys_mod_count>
+        <sys_name>bq_OnLoadform</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_client_176a87576f400600724708c6eb3ee46c</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2017-02-10 08:26:32</sys_updated_on>
+        <table>x_caas_quality_bq_call_log</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

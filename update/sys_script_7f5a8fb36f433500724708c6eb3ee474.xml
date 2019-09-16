@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access/>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_label/>
+        <action_name/>
+        <action_query>false</action_query>
+        <action_run_at>server</action_run_at>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <application/>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_caas_quality_bq_group_member</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>bq Group Member Add</name>
+        <onclick/>
+        <order>100</order>
+        <priority>100</priority>
+        <read_access_action>false</read_access_action>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[var roles = new GlideRecord('x_caas_quality_bq_group_role'); 
+roles.addQuery('u_bq_group', current.u_bq_group);
+roles.addQuery('u_inherits', true);
+roles.query(); 
+while (roles.next()) {
+    gs.addInfoMessage(gs.getMessage("Предоставление роли") + ": " + roles.role.name + " = " + roles.inherits);
+    var role = new GlideRecord('sys_user_has_role'); 
+    role.initialize();
+    role.role = roles.u_bq_role; 
+    role.user = current.u_bq_user; 
+    role.granted_by = current.u_bq_group; 
+    role.inherited = roles.u_inherits;    
+    role.insert();
+}
+
+/*if (GlidePluginManager.isRegistered('com.glide.domain')) {
+    gs.include("DomainManager");
+    var dm = new DomainManager(); 
+    dm.groupMemberAdd(current);
+}*/]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>x-rubesdmi</sys_created_by>
+        <sys_created_on>2015-04-03 07:06:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>7f5a8fb36f433500724708c6eb3ee474</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>bq Group Member Add</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_7f5a8fb36f433500724708c6eb3ee474</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-08-27 09:00:30</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+</record_update>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_caas_quality.bqAjax</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>bqAjax</name>
+        <script><![CDATA[var bqAjax = Class.create();
+bqAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	apprRejKBbuttons: function(){
+		var user = gs.getUserID();
+		var appr = new GlideRecord ('sysapproval_approver');
+		appr.addQuery('document_id', current.sys_id);
+		appr.addQuery('state', 'requested');
+		appr.addQuery('approver', user);
+		appr.addQuery('workflow_state', 'review');
+		appr.query();
+		if (appr.hasNext() && current.workflow_state == 'review' && current.kb_knowledge_base == 'b93f8c7137bae2401c0712c543990ed2')
+			return true;
+		else return false;
+	},
+	ttnCheck: function(){
+		var ttn = this.getParameter('sysparm_ttn');
+		var ttngr = new GlideRecord ('x_caas_quality_bq_invoices');
+		var res = '';
+		var result = this.newItem("result");
+		if (ttngr.get(ttn) && ttngr.u_linked_to_sc){
+			var sc = new GlideRecord ('x_caas_quality_service_call');
+			sc.addQuery('u_bq_topic', '46aa161f6f972200724708c6eb3ee4ea'); //Проблемы доставки сетевым клиентам
+			sc.addQuery('u_bq_danger', '!=', '1a0704c43790ba00b9af806754990ebb'); //Жалоба на поведение приемщиков
+			sc.addQuery('u_ttn', ttngr.sys_id);
+			sc.query();
+			if (!sc.hasNext()){
+				result.setAttribute("parent_id", '');
+			}
+			while (sc.next()){
+				res += sc.u_bq_number + ' (' + sc.u_bq_danger.getDisplayValue() + '), ';
+				if (sc.u_parent_by_ttn == ''){
+					result.setAttribute("parent_id", sc.sys_id);
+					result.setAttribute("parent_top", sc.u_bq_danger);
+					//
+					result.setAttribute("name", sc.u_bq_applicant);
+					result.setAttribute("tel", sc.u_bq_contact_phone);
+//					result.setAttribute("letter", sc.u_ttn_number.substring(0,4));
+// 					result.setAttribute("digit", sc.u_ttn);
+// 					result.setAttribute("prod_date", sc.u_bq_prod_date);
+// 					result.setAttribute("prod_name", sc.u_prod_name);
+// 					result.setAttribute("self_repack", sc.u_bq_self_repallet);
+// 					result.setAttribute("send_photo_by", sc.u_bq_messagers);
+// 					result.setAttribute("nomatch5", sc.u_notmatch_qty);
+// 					result.setAttribute("return5", sc.u_return_qty);
+				}
+					
+			}
+			res = res.substring(0, res.length - 2);
+			result.setAttribute("hint", res);
+		}
+		return res;
+	},
+	getSCredirect: function(){
+		var result = this.newItem("result");
+
+		var top = this.getParameter('sysparm_top');
+		var sc_id = this.getParameter('sysparm_parent');
+		//var res = '';
+		var sc = new GlideRecord ('x_caas_quality_service_call');
+		sc.addQuery('sys_id', sc_id).addOrCondition('u_parent_by_ttn', sc_id);
+		sc.addQuery('u_bq_danger', top);
+		sc.query();
+		if (sc.next()){
+			result.setAttribute("sc_id", sc.sys_id);
+			result.setAttribute("num", sc.u_bq_number);
+		}
+		else {
+			result.setAttribute("sc_id", '');
+			result.setAttribute("num", '');
+		}
+		return res;
+	},
+// 	closeSites: function(){
+// 		var sc = new GlideRecord ('x_caas_quality_service_call');
+// 		sc.get(this.getParameter('sysparm_sc_id'));
+// 		var action = this.getParameter('sysparm_action');
+// 		sc.u_bq_state = 'Закрыто';
+// 		if (action == '1')
+// 			gs.eventQueue('bq_Sites_closed_to_initiator', sc);
+// 		sc.update();
+// 	},
+	getAutocloseSuptopic: function(){
+		/**************************/
+		// return 3-digit code
+		// digit 1 - related to text for response:
+		//     0 -no change
+		//     1 - erase
+		//     2 - standard answer
+		// digit 2 - related to autoclosing needed (0-no/1-yes)
+		// digit 3 - related to notification sending needed (0-no/1-yes)
+		/****************************/
+	//	var res = '';
+		
+		var sub_n = new GlideRecord ('x_caas_quality_bq_subtopic');
+		sub_n.get(this.getParameter('sysparm_sub_n'));
+		var result = this.newItem("result");
+		//автозакрытие с ответом
+//		gs.log('av ' + sub_n.getDisplayValue() + ' ' + sub_n.u_autoclose + !sub_n.u_feedback)
+		if (sub_n.u_autoclose && !sub_n.u_feedback)
+			result.setAttribute("answer", "2");
+		//без автозакрытия
+		else if (!sub_n.u_autoclose)
+			result.setAttribute("answer", "1");
+		//без ответа
+		else if (sub_n.u_feedback)
+			result.setAttribute("answer", "0");
+		if (sub_n.u_autoclose)
+			result.setAttribute("autoclose", "1");
+		else
+			result.setAttribute("autoclose", "0");
+// 		if (sub_n.u_feedback)
+// 			result.setAttribute("answerSend", "0");
+// 		else
+// 			result.setAttribute("answerSend", "1");
+		
+		
+	},
+	getTTNFields: function(){
+		var result = this.newItem("result");
+		var ttnGR = new GlideRecord ('x_caas_quality_bq_invoices');
+		if (ttnGR.get(this.getParameter('sysparm_ttn_id'))){
+			result.setAttribute("ttnNum", ttnGR.u_ttn_number);
+			result.setAttribute("wh", ttnGR.u_wh_code.getDisplayValue());
+			result.setAttribute("buyer", ttnGR.u_buyer_name);
+		}
+			
+	},
+	getParentTtn: function(){
+		var sc = new GlideRecord ('x_caas_quality_service_call');
+		sc.get(this.getParameter('sysparm_parent_id'));
+		return sc.u_ttn_number;
+	},
+	getSubtopic: function(){	
+		var sub = new GlideRecord ('x_caas_quality_bq_subtopic');
+		sub.addQuery('u_bq_topic', this.getParameter('sysparm_topic'));
+		sub.addQuery('sys_id','!=', '976a2ac937d4fa00b9af806754990e12');
+		sub.addQuery('sys_id','!=', '1a0704c43790ba00b9af806754990ebb');
+		sub.addQuery('u_inactive', 'false');
+		sub.orderBy('u_bq_order');
+		sub.query();
+		var i = 1;
+		while (sub.next()){
+			this._addValue(sub.sys_id, sub.u_bq_subtopic, i);
+			i++;
+		}
+	},
+	_addValue : function(value, label, sequence) {
+		var ch = this.newItem("choice");
+		ch.setAttribute("value", value);
+		ch.setAttribute("label", label);
+		ch.setAttribute("sequence", sequence);
+	},
+	getCorrActAttList: function(){
+		var hasAtt = this.newItem('hasAtt');
+		var t = new GlideRecord('sys_attachment');
+		t.addQuery('table_sys_id',this.getParameter('sysparm_id'));
+		t.orderBy('file_name');
+		t.query();
+		if (!t.hasNext())
+			hasAtt.setAttribute('showMessage', 'false');
+		else {
+			hasAtt.setAttribute('showMessage', 'true');
+			while (t.next()){
+				var res = this.newItem('res');	
+				res.setAttribute('name',t.file_name);
+				res.setAttribute('id', t.sys_id);
+			}
+		}
+	},
+	isMemberOf: function(){
+		var user = this.getParameter('sysparm_user');
+		var gr = new GlideRecord ('x_caas_quality_bq_usergroup');
+		if (gr.get(this.getParameter('sysparm_group'))){
+			if (gr.u_bq_coors.indexOf(user) > -1){
+				return true;
+			}
+			else{
+				var grm = new GlideRecord ('x_caas_quality_bq_group_member');
+				grm.addQuery('u_bq_group', gr.sys_id);
+				grm.addQuery('u_bq_user', user);
+				grm.setLimit(1);
+				grm.query();
+				if (grm.hasNext())
+					return true;
+				else 
+					return false;
+			}
+		}
+		else 
+			return false;
+	},
+	getFoAndObl: function(){
+		var result = this.newItem("result");
+		
+		var city = new GlideRecord ('x_caas_quality_bq_city');
+		var obl = new GlideRecord ('x_caas_quality_bq_city');
+		//var obl = new GlideRecord ('x_caas_quality_bq_city');
+		if (city.get(this.getParameter('sysparm_city_id'))){
+			if (city.u_tree_level == '4'){
+				result.setAttribute("obl", city.u_bq_parent );
+				if (city.get(city.u_bq_parent)){  //получаем область
+					result.setAttribute("fo", city.u_bq_parent); // родитель области = ФО
+				}
+			}
+			else if (city.u_tree_level == '3'){
+				result.setAttribute("obl", city.getUniqueValue());
+				result.setAttribute("fo", city.u_bq_parent);
+			}
+		}
+	},
+	type: 'bqAjax'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-08-08 10:06:01</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>c6cb5e4437244700b9af806754990e56</sys_id>
+        <sys_mod_count>74</sys_mod_count>
+        <sys_name>bqAjax</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_include_c6cb5e4437244700b9af806754990e56</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-11 08:22:08</sys_updated_on>
+    </sys_script_include>
+</record_update>

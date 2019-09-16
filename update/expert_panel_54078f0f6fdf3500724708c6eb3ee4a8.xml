@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="expert_panel">
+    <expert_panel action="INSERT_OR_UPDATE">
+        <banner_step/>
+        <complete_message>Завершить</complete_message>
+        <description><![CDATA[<p><span style="color: #ff0000;">Поля, отмеченные знаком&nbsp;<img title="" src="/b01.PNGx" alt="" align="bottom" hspace="" border="" vspace="" /><span style="font-size: 12pt; background-color: #c0c0c0;"><strong><span style="background-color: #ffffff;">&nbsp;</span></strong><span style="background-color: #ffffff;"><span style="font-size: 8pt;"><span style="font-size: 10pt;">являются обязательными для</span>&nbsp;<span style="font-size: 10pt;">заполнения. Если Инициатор затрудняется ответить выберите "Нет данных" или поставьте прочерк.</span></span></span></span></span></p>
+<p><span style="color: #000000;"><em><span style="font-size: 12pt; background-color: #c0c0c0;"><span style="background-color: #ffffff;"><span style="font-size: 8pt;"><span style="font-size: 10pt;">Где вам было бы удобно встретиться?</span></span></span></span></em></span></p>]]></description>
+        <expert display_value="Новое обращение">7be5a05e6fdb3500724708c6eb3ee44d</expert>
+        <name>kachestvo_Meet</name>
+        <next_message>Далее</next_message>
+        <order>460</order>
+        <previous_message>Предыдущий шаг</previous_message>
+        <sys_class_name>expert_panel</sys_class_name>
+        <sys_created_by>x-rubesdmi</sys_created_by>
+        <sys_created_on>2015-04-13 08:53:45</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>54078f0f6fdf3500724708c6eb3ee4a8</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>kachestvo_Meet</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_panel_54078f0f6fdf3500724708c6eb3ee4a8</sys_update_name>
+        <sys_updated_by>x-rubesdmi</sys_updated_by>
+        <sys_updated_on>2015-11-22 17:50:11</sys_updated_on>
+        <title>Встреча</title>
+    </expert_panel>
+    <sys_translated_text action="delete_multiple" query="documentkey=54078f0f6fdf3500724708c6eb3ee4a8"/>
+</record_update>

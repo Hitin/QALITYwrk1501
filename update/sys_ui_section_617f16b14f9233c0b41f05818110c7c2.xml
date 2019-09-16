@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="617f16b14f9233c0b41f05818110c7c2" sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="x_caas_quality_service_call" version="3" view="logistic">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_number</element>
+            <position>0</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>7a2c31064f6e3bc0d8a900818110c70b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_state</element>
+            <position>1</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>fe2c31064f6e3bc0d8a900818110c70b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_danger</element>
+            <position>2</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>762c31064f6e3bc0d8a900818110c70c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_prot_list</element>
+            <position>3</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>fa2c31064f6e3bc0d8a900818110c70c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>722c31064f6e3bc0d8a900818110c70d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_topic</element>
+            <position>5</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>f62c31064f6e3bc0d8a900818110c70d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_applicant_info</element>
+            <position>6</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>7e2c31064f6e3bc0d8a900818110c70d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_ctiid</element>
+            <position>7</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>ba2c31064f6e3bc0d8a900818110c71a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_aon_number</element>
+            <position>8</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>322c31064f6e3bc0d8a900818110c71b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_applicant</element>
+            <position>9</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>b62c31064f6e3bc0d8a900818110c71b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_contact_phone</element>
+            <position>10</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>3e2c31064f6e3bc0d8a900818110c71b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>11</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>b22c31064f6e3bc0d8a900818110c71c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>12</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>3a2c31064f6e3bc0d8a900818110c71c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_can_be_late</element>
+            <position>13</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>be2c31064f6e3bc0d8a900818110c71c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ttn</element>
+            <position>14</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>362c31064f6e3bc0d8a900818110c71d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ttn.u_ttn_number</element>
+            <position>15</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>ba2c31064f6e3bc0d8a900818110c71d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ttn.u_ttn_date</element>
+            <position>16</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>322c31064f6e3bc0d8a900818110c71e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ttn.u_delivery_date</element>
+            <position>17</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>b62c31064f6e3bc0d8a900818110c71e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ttn.u_delivery_address</element>
+            <position>18</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>3e2c31064f6e3bc0d8a900818110c71e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ttn.u_delivery_code</element>
+            <position>19</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>b22c31064f6e3bc0d8a900818110c71f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ttn.u_buyer_name</element>
+            <position>20</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>3a2c31064f6e3bc0d8a900818110c71f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ttn.u_buyer_code</element>
+            <position>21</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>be2c31064f6e3bc0d8a900818110c71f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ttn.u_wh_code.u_name</element>
+            <position>22</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>362c31064f6e3bc0d8a900818110c720</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ttn.u_wh_code.u_code</element>
+            <position>23</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>ba2c31064f6e3bc0d8a900818110c720</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ttn_number</element>
+            <position>24</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>322c31064f6e3bc0d8a900818110c721</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_wh_name</element>
+            <position>25</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>b62c31064f6e3bc0d8a900818110c721</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_buyer</element>
+            <position>26</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>3e2c31064f6e3bc0d8a900818110c721</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ttn.u_delivery_city</element>
+            <position>27</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>b22c31064f6e3bc0d8a900818110c722</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_no_ttn_link</element>
+            <position>28</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>3a2c31064f6e3bc0d8a900818110c722</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>29</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>be2c31064f6e3bc0d8a900818110c722</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ttn_list_thistt</element>
+            <position>30</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>362c31064f6e3bc0d8a900818110c723</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_other_orders_s</element>
+            <position>31</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>ba2c31064f6e3bc0d8a900818110c723</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_other_ttn</element>
+            <position>32</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>322c31064f6e3bc0d8a900818110c724</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_reference_service_call</element>
+            <position>33</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>b62c31064f6e3bc0d8a900818110c724</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_parent_by_ttn</element>
+            <position>34</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>3e2c31064f6e3bc0d8a900818110c724</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_arrival_time</element>
+            <position>35</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>b22c31064f6e3bc0d8a900818110c725</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_arrival_time_loc</element>
+            <position>36</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>3a2c31064f6e3bc0d8a900818110c725</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_self_repallet</element>
+            <position>37</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>be2c31064f6e3bc0d8a900818110c725</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_notmatch_qty</element>
+            <position>38</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>362c31064f6e3bc0d8a900818110c726</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_return_qty</element>
+            <position>39</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>ba2c31064f6e3bc0d8a900818110c726</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_messagers</element>
+            <position>40</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>322c31064f6e3bc0d8a900818110c727</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_prod_name</element>
+            <position>41</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>362c31064f6e3bc0d8a900818110c740</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_prod_date</element>
+            <position>42</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>ba2c31064f6e3bc0d8a900818110c740</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_claim_description</element>
+            <position>43</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>322c31064f6e3bc0d8a900818110c741</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>44</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>b62c31064f6e3bc0d8a900818110c741</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>45</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>3e2c31064f6e3bc0d8a900818110c741</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>46</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>b22c31064f6e3bc0d8a900818110c742</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_usergroup</element>
+            <position>47</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>3a2c31064f6e3bc0d8a900818110c742</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_user</element>
+            <position>48</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>be2c31064f6e3bc0d8a900818110c742</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_log_solution</element>
+            <position>49</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>362c31064f6e3bc0d8a900818110c743</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_log_reason</element>
+            <position>50</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>ba2c31064f6e3bc0d8a900818110c743</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_log_reason.u_code</element>
+            <position>51</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>322c31064f6e3bc0d8a900818110c744</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_multiple_solution</element>
+            <position>52</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>b62c31064f6e3bc0d8a900818110c744</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_log_country</element>
+            <position>53</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>3e2c31064f6e3bc0d8a900818110c744</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>54</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>b22c31064f6e3bc0d8a900818110c745</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_resptext</element>
+            <position>55</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-11 11:34:38</sys_created_on>
+            <sys_id>3a2c31064f6e3bc0d8a900818110c745</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_caas_quality_service_call</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-28 09:14:38</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>617f16b14f9233c0b41f05818110c7c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_caas_quality_service_call</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_ui_section_617f16b14f9233c0b41f05818110c7c2</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-28 09:14:38</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Logistic" name="logistic">ad7f16b14f9233c0b41f05818110c7bc</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

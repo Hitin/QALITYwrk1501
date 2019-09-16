@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_action_view">
+    <sys_ui_action_view action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_ui_action_view</sys_class_name>
+        <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-07-18 09:33:52</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d2a3ed904fba7740b41f05818110c7ec</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Обновить форму.Logistic</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_ui_action display_value="Обновить форму">f99be9c56fd80600724708c6eb3ee496</sys_ui_action>
+        <sys_ui_view display_value="Logistic" name="logistic">ad7f16b14f9233c0b41f05818110c7bc</sys_ui_view>
+        <sys_update_name>sys_ui_action_view_d2a3ed904fba7740b41f05818110c7ec</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-18 09:34:15</sys_updated_on>
+        <visibility>exclude</visibility>
+    </sys_ui_action_view>
+</record_update>

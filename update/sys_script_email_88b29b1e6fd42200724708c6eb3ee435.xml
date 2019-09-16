@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_service_calls_information</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[template.print('<a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+current.number+' Запросить доп информацию&body=Запрос дополнительной информации:">Запросить доп. информацию по обращению</a>');]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-rutipali</sys_created_by>
+        <sys_created_on>2016-07-01 11:14:05</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>88b29b1e6fd42200724708c6eb3ee435</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>bq_service_calls_information</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_88b29b1e6fd42200724708c6eb3ee435</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2017-09-29 06:12:22</sys_updated_on>
+    </sys_script_email>
+</record_update>

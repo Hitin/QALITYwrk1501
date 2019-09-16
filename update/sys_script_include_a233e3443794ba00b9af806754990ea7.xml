@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_caas_quality.GetTimeFrame</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>GetTimeFrame</name>
+        <script><![CDATA[var GetTimeFrame = Class.create();
+GetTimeFrame.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getTimeFrame: function(){ 
+ 		var cDay = new GlideDate();
+ 		var cTime = new GlideDateTime();
+		cTime.addSeconds(10800); //+3 hours
+		var tMin = '08:00:00';
+		var tMax = '19:30:00';
+		var ctMin = new GlideDateTime (cDay.toString() + ' ' + tMin);
+		var ctMax = new GlideDateTime (cDay.toString() + ' ' + tMax);
+		if (cTime >= ctMin && cTime < ctMax){
+			return 'true';
+		}
+		else {
+			return 'false';
+		}
+    },
+	type: 'GetTimeFrame'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-01-09 08:51:29</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a233e3443794ba00b9af806754990ea7</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>GetTimeFrame</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_include_a233e3443794ba00b9af806754990ea7</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-11 05:34:27</sys_updated_on>
+    </sys_script_include>
+</record_update>

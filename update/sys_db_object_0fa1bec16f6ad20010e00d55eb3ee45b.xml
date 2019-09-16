@@ -34,7 +34,7 @@
         <sys_updated_by>x-rubesdmi</sys_updated_by>
         <sys_updated_on>2016-04-01 11:56:51</sys_updated_on>
         <update_access>false</update_access>
-        <user_role display_value="">ee7ef8ac6f62d20010e00d55eb3ee4db</user_role>
+        <user_role display_value="bq_list_manager" name="bq_list_manager">ee7ef8ac6f62d20010e00d55eb3ee4db</user_role>
         <ws_access>true</ws_access>
     </sys_db_object>
 </record_update>

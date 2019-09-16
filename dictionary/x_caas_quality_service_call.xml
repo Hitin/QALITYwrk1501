@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="task" label="Обращение" max_length="40" name="x_caas_quality_service_call" type="collection">
+    <element extends="task" label="Обращение" max_length="40" name="x_caas_quality_service_call" sizeclass="163" type="collection">
         <element choice="2" label="bq_fio" max_length="40" name="bq_fio" type="choice">
             <choice/>
         </element>
@@ -99,22 +99,22 @@
         <element label="Причина" max_length="32" name="u_bq_log_reason" reference="x_caas_quality_bq_delivery_close_code" reference_qual="javascript:get_log_code()" type="reference" use_reference_qualifier="advanced"/>
         <element choice="1" label="Решение заявки" max_length="40" name="u_bq_log_solution" type="string">
             <choice>
-                <element dependent_value="RUS" inactive_on_update="false" label="Приемка" value="Приемка"/>
+                <element dependent_value="RUS" inactive="true" inactive_on_update="true" label="Приемка" sequence="0" value="Приемка"/>
                 <element dependent_value="BY" inactive_on_update="false" label="Приемка" sequence="1" value="Приемка"/>
-                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Транспорт" sequence="2" value="Приемка. Транспорт"/>
-                <element dependent_value="BY" inactive_on_update="false" label="Частичный возврат" sequence="2" value="Частичный возврат"/>
-                <element dependent_value="BY" inactive_on_update="false" label="Возврат" sequence="3" value="Возврат"/>
-                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Склад" sequence="3" value="Приемка. Склад"/>
-                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Производство" sequence="4" value="Приемка. Производство"/>
-                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Служба продаж" sequence="5" value="Приемка. Служба продаж"/>
-                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. IT" sequence="6" value="Приемка. IT"/>
-                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Back-Office" sequence="7" value="Приемка. Back-Office"/>
-                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Логистика. Завал паллет (перепаллетка с выездом)" sequence="8" value="Приемка. Логистика. Завал паллет (перепаллетка с выездом)"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Транспорт" sequence="1" value="Приемка. Транспорт"/>
+                <element dependent_value="BY" inactive="true" inactive_on_update="true" label="Частичный возврат" sequence="1" value="Частичный возврат"/>
+                <element dependent_value="BY" inactive="true" inactive_on_update="true" label="Возврат" sequence="2" value="Возврат"/>
+                <element dependent_value="RUS" inactive="true" inactive_on_update="true" label="Приемка. Логистика. Завал паллет (перепаллетка с выездом)" sequence="3" value="Приемка. Логистика. Завал паллет (перепаллетка с выездом)"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Склад" sequence="4" value="Приемка. Склад"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Производство" sequence="5" value="Приемка. Производство"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Служба продаж" sequence="6" value="Приемка. Служба продаж"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. IT" sequence="7" value="Приемка. IT"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Back-Office" sequence="8" value="Приемка. Back-Office"/>
                 <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Логистика. Завал паллет (перепаллетка с выездом)" sequence="9" value="Приемка. Логистика. Завал паллет (перепаллетка с выездом)"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Вывоз пустых кег согласован" sequence="10" value="Вывоз пустых кег согласован"/>
                 <element dependent_value="RUS" inactive_on_update="false" label="Частичный возврат" sequence="10" value="Частичный возврат"/>
                 <element dependent_value="RUS" inactive_on_update="false" label="Возврат" sequence="11" value="Возврат"/>
-                <element dependent_value="RUS" inactive_on_update="false" label="Вывоз пустых кег согласован" sequence="12" value="Вывоз пустых кег согласован"/>
-                <element dependent_value="RUS" inactive_on_update="false" label="Вывоз пустых кег НЕ согласован" sequence="13" value="Вывоз пустых кег НЕ согласован"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Вывоз пустых кег НЕ согласован" sequence="11" value="Вывоз пустых кег НЕ согласован"/>
             </choice>
         </element>
         <element default="0" label="Счетчик обратной связи" max_length="40" name="u_bq_mail_count" read_only="true" type="integer"/>
@@ -136,7 +136,7 @@
         </element>
         <element label="Новый заявитель" max_length="40" name="u_bq_newuser" type="boolean"/>
         <element label="Отказался от оценки" max_length="40" name="u_bq_no_satisfaction" type="boolean"/>
-        <element label="Номер обращения" max_length="40" name="u_bq_number" type="string"/>
+        <element label="Номер обращения" max_length="40" name="u_bq_number" read_only="true" type="string"/>
         <element choice="1" default="no" label="Есть ли заказы на другие адреса в автомобиле?" max_length="40" name="u_bq_other_orders_s" type="choice">
             <choice>
                 <element inactive_on_update="false" label="ДА" value="yes"/>
@@ -157,7 +157,7 @@
         </element>
         <element label="Протокол (Для внутренней переписки)" max_length="4000" name="u_bq_prot" type="journal"/>
         <element label="Протокол (Для внутренней переписки)" max_length="4000" name="u_bq_prot_input" type="journal_input"/>
-        <element label="Протокол (Для внутренней переписки)" max_length="4000" name="u_bq_prot_list" type="journal_list"/>
+        <element dependent="u_bq_prot_input" dependent_on_field="u_bq_prot_input" label="Протокол (Для внутренней переписки)" max_length="4000" name="u_bq_prot_list" type="journal_list" use_dependent_field="true"/>
         <element label="Счетчик переоткрытий" max_length="40" name="u_bq_reopen_count" type="integer"/>
         <element label="Дата Решения" max_length="40" name="u_bq_resolved_on" type="glide_date_time"/>
         <element attributes="knowledge_search=true,edge_encryption_enabled=true" label="Содержание ответа для инциатора" max_length="8000" name="u_bq_resptext" type="html"/>

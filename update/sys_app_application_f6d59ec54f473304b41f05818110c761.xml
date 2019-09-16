@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>u_baltika</name>
+        <order>2</order>
+        <roles>bq_itil,bq_list_manager,bq_operator,bq_user,bq_coordinator,bq_agree_manager,bq_process_manager,bq_operator_delivery,bq_itil_delivery,bq_operator_sites</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+        <sys_created_on>2019-08-02 07:24:19</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>f6d59ec54f473304b41f05818110c761</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Справочники</sys_name>
+        <sys_overrides display_value="Справочники">5a8be4ba6f0cc200724708c6eb3ee4f1</sys_overrides>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_app_application_f6d59ec54f473304b41f05818110c761</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-08-02 07:24:19</sys_updated_on>
+        <title>Справочники</title>
+        <view_name/>
+    </sys_app_application>
+</record_update>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="expert_script_client">
+    <expert_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <expert display_value="Новое обращение">7be5a05e6fdb3500724708c6eb3ee44d</expert>
+        <expert_panel display_value="kachestvo_Buy">85da2e8b6fdf3500724708c6eb3ee499</expert_panel>
+        <expert_panel_variable>8089e68b6fdf3500724708c6eb3ee445</expert_panel_variable>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>bq_meet</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue == '') {
+      return;
+   }
+	if (newValue == 'true' && g_form.getValue('u_bq_tara') == 'true' ){
+	g_form.setValue('u_bq_meet','true');
+}
+	else{
+	g_form.setValue('u_bq_meet','false');}
+	
+   //Type appropriate comment here, and begin script below
+   
+}]]></script>
+        <sys_class_name>expert_script_client</sys_class_name>
+        <sys_created_by>x-rubesdmi</sys_created_by>
+        <sys_created_on>2015-04-13 12:55:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>de4ef3836f137500724708c6eb3ee440</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>bq_meet</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_script_client_de4ef3836f137500724708c6eb3ee440</sys_update_name>
+        <sys_updated_by>x-rubesdmi</sys_updated_by>
+        <sys_updated_on>2015-12-01 13:40:49</sys_updated_on>
+        <table/>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </expert_script_client>
+</record_update>

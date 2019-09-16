@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sysauto_report">
+    <sysauto_report action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <address_list/>
+        <condition/>
+        <conditional>false</conditional>
+        <group_list/>
+        <include_detail>false</include_detail>
+        <include_with/>
+        <name>EE RU HotLine(road safety) обращения по ПДД(list) weekly</name>
+        <omit_if_no_records>true</omit_if_no_records>
+        <output_type>PDF-landscape</output_type>
+        <page_height_in_pixels>612</page_height_in_pixels>
+        <page_size>Letter</page_size>
+        <page_width_in_pixels>792</page_width_in_pixels>
+        <report display_value="HotLine обращения по ПДД.Не выполненные (pivot)">52dfd7d86fe9a2407833bd5dbb3ee48c</report>
+        <report_body><![CDATA[<p>Здравствуйте коллеги, </p>
+<p>во вложении вы найдете список не выполненных обращений по вашей группе (Excel).</p>
+<p>Ваша задача:</p>
+<p>1. Проследить чтобы все обращения в статусе &#34;Назначено в группу&#34; были переназначены на ответственных.</p>
+<p>2. Проследить чтобы все обращения были выполнены в разумный срок.</p>
+<p>Интерактивный отчет доступен по ссылке <a class="linked tabs2_section tabs2_list ng-binding" href="/sys_report_template.do?jvar_report_id&#61;52dfd7d86fe9a2407833bd5dbb3ee48c" rel="nofollow">HotLine обращения по ПДД.Не выполненные (pivot)</a></p>
+<p>По возникающим вопросам обращайтесь к Артему Жолобову  (<a href="mailto:zholobov_aa&#64;baltika.com" rel="nofollow">zholobov_aa&#64;baltika.com</a>) и Диане Кузьменко (<a href="mailto:kuzmenko&#64;baltika.com" rel="nofollow">kuzmenko&#64;baltika.com</a>)</p>
+<p>Горячая линия обращений в ООО &#34;Пивоваренная Компания &#34;Балтика&#34;</p>]]></report_body>
+        <report_title>ГЛ Балтика. Не выполненные обращения по группе ПДД(еженедельный отчет)</report_title>
+        <run_as display_value="Lev Ryabtsev">7eaa6d5adbda0b806e87f1eabf96197d</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>2</run_dayofweek>
+        <run_period/>
+        <run_start>2016-08-26 10:26:19</run_start>
+        <run_time>1969-12-31 21:17:00</run_time>
+        <run_type>weekly</run_type>
+        <sys_class_name>sysauto_report</sys_class_name>
+        <sys_created_by>Filippov_as</sys_created_by>
+        <sys_created_on>2016-08-26 10:28:29</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>92c0eb1c6fe9a2407833bd5dbb3ee4b6</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>EE RU HotLine(road safety) обращения по ПДД(list) weekly</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sysauto_report_92c0eb1c6fe9a2407833bd5dbb3ee4b6</sys_update_name>
+        <sys_updated_by>ryabtsev_lf</sys_updated_by>
+        <sys_updated_on>2018-03-12 12:02:31</sys_updated_on>
+        <u_company/>
+        <upgrade_safe>false</upgrade_safe>
+        <user_list>60e4a9ec6fe3420010e00d55eb3ee45b,39d59fe06f239e007833bd5dbb3ee4a7,c8675c4f6f8b710010e00d55eb3ee47f,cb2a2b5c981aa500e335d47480f467f2,4787d21a6fab3100724708c6eb3ee4f2,ce351fa06f239e007833bd5dbb3ee478,fdf9cfbcdb5ebe002f89ffc41d96197c,4f87d21a6fab3100724708c6eb3ee4ea,c387d21a6fab3100724708c6eb3ee4eb,208517e06f239e007833bd5dbb3ee4a8</user_list>
+        <zip>false</zip>
+    </sysauto_report>
+</record_update>

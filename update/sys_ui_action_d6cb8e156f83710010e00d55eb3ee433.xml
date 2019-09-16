@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>RunSCAction</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>gs.hasRole('bq_operator') || gs.hasRole('bq_coordinator') || gs.hasRole('bq_operator_delivery') || gs.hasRole('bq_operator_sites')</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint>Назначение по таблице ответственных</hint>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>На исполнение</name>
+        <onclick>RunSCclient();</onclick>
+        <order>200</order>
+        <script><![CDATA[function RunSCclient(){
+	if (g_form.getValue ('u_bq_contact_type') == 'Интернет-сайт' && g_form.getValue('u_bq_danger.u_feedback') == 'false' && g_form.getValue('u_bq_danger.u_autoclose') == 'true'){
+		var answer;
+		var topConfirm;
+		if (g_form.getValue('u_answer_sent') == 'true')
+			topConfirm = 'По обращению '+ g_form.getValue('u_bq_number') + ' уже был отправлен автоматический ответ. Произвести повторную отправку?';
+		else
+			topConfirm = 'Подтвердите решение обращения. При нажатии кнопки ОК обращение ' + g_form.getValue('u_bq_number') + ' будет закрыто, а решение будет отправлено инициатору';
+		var txt = '';
+		var hist = g_form.getValue('u_mail_history_txt');
+		if (g_form.getValue('u_resp_lang') == 'ru'){
+			txt = topConfirm + '\n\nКому: ' + g_form.getValue('u_mail') +  '\n\nТекст письма:\nДобрый день!\n\n' + g_form.getValue('u_bq_resptext').replace(/<br \/>/g, '\n').replace(/&(l|r)+aquo;/g,'"').replace(/<[^>]+>/g,'').replace(/&[^;]+;/g,'') + '\n\nС уважением, пивоваренная компания "Балтика".\n\n' + hist.substring(0,1000);
+		}
+		else if (g_form.getValue('u_resp_lang') == 'en')
+			txt = topConfirm + '\n\nКому: ' + g_form.getValue('u_mail') +  '\n\nТекст письма:\nDear ' + g_form.getValue('u_bq_applicant') + ',\n\n' + g_form.getValue('u_bq_resptext').replace(/<br \/>/g, '\n').replace(/&(l|r)+aquo;/g,'"').replace(/<[^>]+>/g,'').replace(/&[^;]+;/g,'') + '\n\nSincerely, Baltika Breweries.\n\n' + hist.substring(0,1000);
+		if (hist.toString().length > 1000)
+			txt += '\n\n*************\nПриведён сокращённый текст истории переписки. Инициатору будет отправлена полная история переписки';
+		answer = confirm(txt);
+		if (answer == true){
+			g_form.setValue('u_needed_answer','true');
+		}
+		gsftSubmit(null, g_form.getFormElement(), 'RunSCAction');
+	}
+	else{
+		var confirmChild = true;
+		if (g_form.getValue('u_bq_topic') == '46aa161f6f972200724708c6eb3ee4ea' && g_form.getValue('u_multiple_solution')=='true'){
+			var parent = g_form.getDisplayBox('u_reference_service_call').value;
+			var ga = new GlideAjax('x_caas_quality.bqAjax');
+			ga.addParam('sysparm_name', 'getParentTtn');
+			ga.addParam('sysparm_parent_id', g_form.getValue('u_reference_service_call'));
+			ga.getXMLWait(); 
+			var parTtn = ga.getAnswer();
+			confirmChild = confirm('Эта заявка зависима о заявки ' + parent + ' по накладной ' + parTtn + ' \nЕсли проблема справедлива для ВСЕХ накладных в машине, то нажмите «Отмена» и откройте только главную заявку ' + parent + ' \nЕсли проблема справедлива ТОЛЬКО для текущей накладной, то нажмите ОК, текущая заявка будет переоткрыта');
+			if (confirmChild)
+				g_form.setValue('u_multiple_solution','false');
+		}
+		if (confirmChild){
+			if (g_form.getValue('u_bq_topic') == '46aa161f6f972200724708c6eb3ee4ea' && g_form.getValue('u_bq_prot_input')=='' && (g_form.getValue('u_bq_state') == 'Закрыто' || g_form.getValue('u_bq_state') == 'Запрос дополнительной информации')){
+				g_form.setMandatory('u_bq_prot_input', 'true');
+				g_form.getControl('u_bq_prot_input').focus();
+				alert('Для возврата ответственному или в группу нужно заполнить поле Протокол');
+			}
+			else {
+				gsftSubmit(null, g_form.getFormElement(), 'RunSCAction');
+			}
+		}
+	}
+}
+if(typeof window == 'undefined')  
+	RunSC();
+
+
+function RunSC(){
+	gs.info('BQ_Logging: -1- Button pressed by '+gs.getUser().name+' on '+ current.u_bq_number+ ' Subject: '+current.u_bq_topic.u_bq_name + ' State: ' + current.u_bq_state + ' Assignee: ' + current.u_bq_user.name);
+
+	if (current.u_bq_topic == '46aa161f6f972200724708c6eb3ee4ea'){
+		if (current.u_multiple_solution == true) current.u_multiple_solution = false;
+		
+		current.u_sent_to_work = true;
+		if (current.u_sent_to_work == true) gs.debug('BQ_Logging: -2- Flag for sending email was raised on '+ current.u_bq_number);
+		else gs.debug('BQ_Logging: -2- ERROR!!! Flag for sending email was NOT raised on '+ current.u_bq_number);
+		if (current.u_bq_state == 'Закрыто'){
+			current.u_bq_reopen_count ++;
+			if (current.u_log_country == 'RUS' || current.u_log_country == '')
+				current.u_bq_user = '';
+			if (current.u_bq_user == '')
+				current.u_bq_state = 'Назначено в группу';
+			else 
+				current.u_bq_state = 'Назначено ответственному';
+
+		}
+		else if (current.u_bq_state == 'Запрос дополнительной информации' && current.u_bq_user != '' && current.u_bq_return_count > 0) {
+			current.u_bq_state = 'Назначено ответственному';
+		}
+		else if (current.u_bq_state == 'Назначено в группу' && current.u_bq_user != '')	{
+			current.u_bq_state = 'Назначено ответственному';
+		}
+	}
+	else {
+		if (current.u_bq_contact_type == 'Интернет-сайт' && !current.u_bq_danger.u_feedback && !current.u_bq_danger.u_autoclose && (current.u_bq_state == 'Решено' || current.u_bq_state == 'Закрыто')){
+			var addr = '';
+			if (current.u_bq_user == '')
+				addr = current.u_bq_usergroup.u_bq_coors;
+			else
+				addr = current.u_bq_user;
+			var rep = new x_caas_quality.bqFunctions().replaceAll(current.u_mail_history_txt, '\n', '<br>');
+			gs.eventQueue('bq_site_mail_from_caller_to_assignee', current, addr, rep);
+		//	gs.eventQueue('bq_site_mail_from_caller_to_assignee', current, addr, current.u_mail_history_txt.replaceAll('\n', '<br>'));
+
+		}
+		if (current.u_bq_state == 'Запрос дополнительной информации' && current.u_bq_user != '' && current.u_bq_return_count > 0) {
+			current.u_bq_state = 'Назначено ответственному';
+		} 
+		else {
+			var cityGR = new GlideRecord('x_caas_quality_bq_city');
+			if ((cityGR.get(current.u_bq_usercity) && cityGR.u_tree_level != '') || current.u_bq_usercity == ''){
+				var Topic = current.u_bq_topic;
+				var Danger = current.u_bq_danger;
+				var Factory = current.u_bq_factory;
+				var lvl = 100;
+				var location;
+
+				current.u_bq_user ="";
+
+
+
+				var AM;
+				//Проверка, есть ли хоть 1 запись в матрице по данной теме
+				AM = new GlideRecord('x_caas_quality_bq_assign_matrix');
+				AM.addQuery('u_bq_topic', Topic);
+				AM.addQuery('u_agree_list', '');
+				AM.addQuery('u_notify_list', '');
+				AM.setLimit(1);
+				AM.query();
+				if (!AM.hasNext()) {//если нет, то назначенаем на группу Другое и поиск по матрице более не производим
+					current.u_bq_usergroup = '8e7247570f86a2004a2757d003050e3c';
+				}
+				else {
+					//Поиск по заводам для темы Качество
+					if (Topic == '9fb910a46f62d20010e00d55eb3ee497'/* && current.u_bq_usergroup != ''*/){
+						AM = new GlideRecord('x_caas_quality_bq_assign_matrix');
+						AM.addQuery('u_agree_list', '');
+						AM.addQuery('u_notify_list', '');
+						AM.addQuery('u_bq_topic', Topic);
+						AM.addQuery('u_bq_danger', Danger).addOrCondition('u_bq_danger', '');
+						AM.addQuery('u_bq_factory', Factory);
+			//			AM.orderByDesc('u_bq_factory');
+						AM.orderByDesc('u_bq_danger');
+			// 			AM.orderByDesc('u_bq_usercity');
+						AM.query();
+						if (AM.next()){
+							current.u_bq_user = AM.u_bq_user;
+							current.u_bq_usergroup = AM.u_bq_usergroup;
+						}
+					}
+					location = current.u_bq_usercity;
+					var r = 0;
+					//поиск по тема - подтема - город и при необходимости цикличный перебор родительских локаций
+					while (current.u_bq_user == '' && lvl != -1 && r<10){
+						r++;
+						AM = new GlideRecord('x_caas_quality_bq_assign_matrix'); 
+						AM.addQuery('u_agree_list', '');
+						AM.addQuery('u_notify_list', '');
+						AM.addQuery('u_bq_topic', Topic);
+						AM.addQuery('u_bq_danger', Danger);
+						AM.addQuery('u_bq_usercity', location);
+						AM.query();
+
+						if (AM.next()){
+							current.u_bq_user = AM.u_bq_user;
+							current.u_bq_usergroup = AM.u_bq_usergroup;
+						}
+						else if (lvl == 0) lvl = -1; 
+						else if (lvl > 0){
+							var loc = new GlideRecord('x_caas_quality_bq_city');
+							loc.get(location);
+							var newLoc = new GlideRecord('x_caas_quality_bq_city');
+							if (newLoc.get(loc.u_bq_parent)) {
+								lvl = newLoc.u_tree_level;
+								location = newLoc.sys_id;
+							}
+							else {
+								lvl = -1;
+								location = '-1';
+							}
+						}
+					}
+					//поиск по тема - подтема - без локации
+					if (current.u_bq_user == ''){
+						AM = new GlideRecord('x_caas_quality_bq_assign_matrix'); 
+						AM.addQuery('u_agree_list', '');
+						AM.addQuery('u_notify_list', '');
+						AM.addQuery('u_bq_topic', Topic);
+						AM.addQuery('u_bq_danger', Danger);
+						AM.addQuery('u_bq_usercity', '');
+						AM.query();
+						if (AM.next()){
+							current.u_bq_user = AM.u_bq_user;
+							current.u_bq_usergroup = AM.u_bq_usergroup;
+						}
+					}
+					location = current.u_bq_usercity;
+					lvl = 100;
+					r = 0;
+					//поиск по тема - город и при необходимости цикличный перебор родительских локаций
+					while (current.u_bq_user == '' && lvl != -1 && r<10){
+						r++;
+						AM = new GlideRecord('x_caas_quality_bq_assign_matrix'); 
+						AM.addQuery('u_agree_list', '');
+						AM.addQuery('u_notify_list', '');
+						AM.addQuery('u_bq_topic', Topic);
+						AM.addQuery('u_bq_danger', '');
+						AM.addQuery('u_bq_usercity', location);
+						AM.query();
+						if (AM.next()){
+							current.u_bq_user = AM.u_bq_user;
+							current.u_bq_usergroup = AM.u_bq_usergroup;
+						}
+						else if (lvl == 0) lvl = -1; 
+						else if (lvl > 0){
+							var loc = new GlideRecord('x_caas_quality_bq_city');
+							loc.get(location);
+							var newLoc = new GlideRecord('x_caas_quality_bq_city');
+							if (newLoc.get(loc.u_bq_parent)) {
+								lvl = newLoc.u_tree_level;
+								location = newLoc.sys_id;
+						}
+							else {
+								lvl = -1;
+								location = '-1';
+							}
+						}
+					}
+					//поиск по тема - без подтемы - без локации
+					if (current.u_bq_user == ''){
+						AM = new GlideRecord('x_caas_quality_bq_assign_matrix'); 
+						AM.addQuery('u_agree_list', '');
+						AM.addQuery('u_notify_list', '');
+						AM.addQuery('u_bq_topic', Topic);
+						AM.addQuery('u_bq_danger', '');
+						AM.addQuery('u_bq_usercity', '');
+						AM.query();
+						if (AM.next()){
+							current.u_bq_user = AM.u_bq_user;
+							current.u_bq_usergroup = AM.u_bq_usergroup;
+						}
+					}
+				}
+				if (current.u_bq_user=='') {
+					current.u_bq_state = 'Назначено в группу';
+				}
+				else {
+					current.u_bq_state = 'Назначено ответственному';
+				}				
+			}
+			else{
+				var Topic = current.u_bq_topic;
+				var CityID = current.u_bq_usercity;
+				var Danger = current.u_bq_danger;
+				var Factory = current.u_bq_factory;
+				var RegionID = "";
+				if (CityID != ''){
+					var City  = new GlideRecord('x_caas_quality_bq_city');
+					City.addQuery('sys_id',CityID);
+					City.query();
+					if (City.next()){
+						RegionID = City.u_bq_parent;
+					}
+				}
+				var UserID = '-1';
+				current.u_bq_user ="";
+
+				var AMbyRegion1 = new GlideRecord('x_caas_quality_bq_assign_matrix');
+				AMbyRegion1.addQuery('u_bq_topic', Topic);
+				AMbyRegion1.addQuery('u_bq_usercity', RegionID);
+				var AMbyRegion2 = new GlideRecord('x_caas_quality_bq_assign_matrix');
+				AMbyRegion2.addQuery('u_bq_topic', Topic);
+				AMbyRegion2.addQuery('u_bq_usercity', RegionID);
+
+				var AM = new GlideRecord('x_caas_quality_bq_assign_matrix');
+				AM.addQuery('u_bq_topic', Topic);
+				AM.orderByDesc('u_bq_factory');
+				AM.orderByDesc('u_bq_danger');
+				AM.orderByDesc('u_bq_usercity');
+				AM.query();
+				while (AM.next()){
+					if (AM.u_bq_usergroup !='')
+						//сначала указываем группу
+					current.u_bq_usergroup = AM.u_bq_usergroup;
+					// проверяем для качества указан ли завод и есть соответсвующее назначение
+					if (Topic == '9fb910a46f62d20010e00d55eb3ee497' && Factory != '' && AM.u_bq_factory == Factory) {
+						current.u_bq_user = AM.u_bq_user;
+						UserID = AM.u_bq_user;
+					}
+					// ищем далее только по подтеме, городу, региону и целиком назначенных на тему
+					if (UserID =='-1' && AM.u_bq_factory == '') {
+						// ищем по подтеме, городу
+						if (UserID =='-1' && AM.u_bq_danger != '' && AM.u_bq_usercity != '' && AM.u_bq_danger == Danger && AM.u_bq_usercity == CityID) {
+							current.u_bq_user = AM.u_bq_user;
+							UserID = AM.u_bq_user;
+						}
+						// ищем по подтеме, региону
+						if (UserID =='-1' && CityID != '') {
+							AMbyRegion1.addQuery('u_bq_danger', Danger);
+							AMbyRegion1.query();
+							if (AMbyRegion1.next()) {
+								current.u_bq_user = AMbyRegion1.u_bq_user;
+								UserID = AMbyRegion1.u_bq_user;
+							}
+						}
+						// ищем только по подтеме
+						if (UserID =='-1' && AM.u_bq_danger != '' && AM.u_bq_usercity == '' && AM.u_bq_danger == Danger) {
+							current.u_bq_user = AM.u_bq_user;
+							UserID = AM.u_bq_user;
+						}
+						// ищем только по городу
+						if (UserID =='-1' && AM.u_bq_danger == '' && AM.u_bq_usercity != '' && AM.u_bq_usercity == CityID) {
+							current.u_bq_user = AM.u_bq_user;
+							UserID = AM.u_bq_user;
+						}
+						// ищем только по региону
+						if (UserID =='-1' && CityID != '') {
+							AMbyRegion2.addQuery('u_bq_danger', '');
+							AMbyRegion2.query();
+							if (AMbyRegion2.next()) {
+								current.u_bq_user = AMbyRegion2.u_bq_user;
+								UserID = AMbyRegion2.u_bq_user;
+							}
+						}
+						// ищем в целом по теме
+						if (UserID =='-1' && AM.u_bq_danger == '' && AM.u_bq_usercity == '' && AM.u_bq_user != '') {
+							current.u_bq_user = AM.u_bq_user;
+							UserID = AM.u_bq_user;
+						}
+					}
+
+				}		
+				if (current.u_bq_user=='') {
+					current.u_bq_state = 'Назначено в группу';
+				}
+				else {
+					current.u_bq_state = 'Назначено ответственному';
+				}				
+			}
+		}
+	}
+	if (current.u_bq_prot_input.changes()) gs.debug('BQ_Logging: -3- Button code processed by '+gs.getUser().name+' on '+ current.u_bq_number+ ' Subject: '+current.u_bq_topic.u_bq_name + ' State: ' + current.u_bq_state + ' Assignee: ' + current.u_bq_user.name+ ' protocol changes');
+	else gs.debug('BQ_Logging: -3- Button code processed by '+gs.getUser().name+' on '+ current.u_bq_number+ ' Subject: '+current.u_bq_topic.u_bq_name + ' State: ' + current.u_bq_state + ' Assignee: ' + current.u_bq_user.name+ ' protocol DOES NOT change');
+	current.update();
+	gs.debug('BQ_Logging: -4- Code execution finished on '+ current.u_bq_number);
+	action.setRedirectURL('home.do');
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>x-rushaale</sys_created_by>
+        <sys_created_on>2015-03-26 07:50:00</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>d6cb8e156f83710010e00d55eb3ee433</sys_id>
+        <sys_mod_count>170</sys_mod_count>
+        <sys_name>На исполнение</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_ui_action_d6cb8e156f83710010e00d55eb3ee433</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-04 10:28:42</sys_updated_on>
+        <table>x_caas_quality_service_call</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

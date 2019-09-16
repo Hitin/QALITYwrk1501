@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="false" label="Доставка. Накладные" max_length="40" name="x_caas_quality_bq_invoices" type="collection">
+    <element audit="false" label="Доставка. Накладные" max_length="40" name="x_caas_quality_bq_invoices" sizeclass="71377" type="collection">
         <element attributes="edge_encryption_enabled=true" audit="false" label="Ответственный" max_length="32" name="u_assignee" reference="sys_user" type="reference"/>
         <element audit="false" label="Код покупателя" max_length="40" name="u_buyer_code" type="string"/>
         <element audit="false" label="Название покупателя" max_length="250" name="u_buyer_name" type="string"/>

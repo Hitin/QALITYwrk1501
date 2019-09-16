@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="bq_Invoices">06c47cf1373fa2005978466754990e6e</map>
+        <order>100</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+	var ttn = source.u_номер_документа.toString();
+	if (ttn.length == 13)
+		target.u_tth_short_number = ttn.substring(4);
+	else if (ttn.length == 12)
+		target.u_tth_short_number = ttn.substring(3);
+	else /*if (ttn.length == 9)*/
+		target.u_tth_short_number = ttn;//.substring(2);
+
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-12-13 07:31:44</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>417973f4378f47005978466754990e37</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>onBefore</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_transform_script_417973f4378f47005978466754990e37</sys_update_name>
+        <sys_updated_by>ablyazov_p</sys_updated_by>
+        <sys_updated_on>2019-01-15 12:53:15</sys_updated_on>
+        <when>onBefore</when>
+    </sys_transform_script>
+</record_update>

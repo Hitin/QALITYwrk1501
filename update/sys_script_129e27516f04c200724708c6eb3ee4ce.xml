@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access/>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_label/>
+        <action_name/>
+        <action_query>false</action_query>
+        <action_run_at>server</action_run_at>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <application/>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_caas_quality_service_call</collection>
+        <condition>current.u_bq_state.changesTo('Закрыто') &amp;&amp; current.u_bq_knowledge == true</condition>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>bq_SC Create Knowledge</name>
+        <onclick/>
+        <order>100</order>
+        <priority>100</priority>
+        <read_access_action>false</read_access_action>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[var sub = gs.getProperty('glide.knowman.submission.workflow');
+
+if (sub == 'true')
+    submitCandidate();
+else
+    submitDirect();
+
+function submitDirect() {
+    var kb = new GlideRecord("kb_knowledge");
+    kb.source = current.sys_id;
+    //kb.short_description = current.short_description;
+    kb.sys_domain = current.sys_domain;
+    kb.text = current.u_bq_resptext.getHTMLValue();
+	kb.short_description = current.u_bq_applicant_info;
+	kb.kb_knowledge_base = 'b93f8c7137bae2401c0712c543990ed2';
+	kb.kb_category = current.u_bq_kb_category_v3;
+	kb.u_type = 'Вопрос';
+	kb.u_country_affected = '185fd5718d9b9180e33580438a7d10d5';
+	
+// 	var kb_cat = new GlideRecord("u_bq_kb_category");
+// 		kb_cat.addQuery('u_bq_category',current.u_bq_kb_category);
+// 		kb_cat.query();
+// 		if (kb_cat.next()){
+// 		kb.u_publisher_name = kb_cat.u_bq_publishers;
+// 		kb.u_reviewer_s_name = kb_cat.u_bq_publishers;
+// 		}
+	kb.workflow_state = 'draft';
+	kb.short_description = current.u_bq_kb_short_description;
+	kb.u_publisher_name = new bqFunctions().getKBreviewers_byCat(current.u_bq_kb_category_v3);
+ 	kb.u_reviewer_s_name = kb.u_publisher_name;	
+	//gs.log('AV ' + kb.u_publisher_name);
+	kb.insert();
+	if (kb.kb_knowledge_base.kb_version == "3" && new KBWorkflow().startWorkflow(kb, "workflow")) {
+		gs.addInfoMessage(new KBKnowledge().getStateMessage(kb.getValue("workflow_state")));
+		kb.update();
+	}
+ //   kb.workflow_state = 'review';
+ 
+    gs.addInfoMessage(gs.getMessage('Статья в базе знаний') + ':  ' + kb.number + ' ' + gs.getMessage('создана на основе выполненного обращения') + ': ' + current.number);
+}
+
+function submitCandidate() {
+    var gr = new GlideRecord('kb_submission');
+    gr.parent = current.sys_id;
+    //gr.short_description = current.short_description;
+    gr.sys_domain = current.sys_domain;
+    gr.text = current.u_bq_resptext.getHTMLValue();
+    gr.insert();
+    gs.addInfoMessage(gs.getMessage('Knowledge Submission created') + ':  ' + gr.number + ' ' + gs.getMessage('based on closure of Incident') + ': ' + current.number);
+
+}]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>x-rubesdmi</sys_created_by>
+        <sys_created_on>2015-05-15 08:04:05</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>129e27516f04c200724708c6eb3ee4ce</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>bq_SC Create Knowledge</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_129e27516f04c200724708c6eb3ee4ce</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-08-27 10:27:10</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+</record_update>

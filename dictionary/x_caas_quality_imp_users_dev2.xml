@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="false" extends="sys_import_set_row" label="Imp Users Dev2" max_length="40" name="x_caas_quality_imp_users_dev2" sizeclass="5109" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Email" audit="false" label="Email" max_length="40" name="u_email" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Employee number" audit="false" label="Employee number" max_length="40" name="u_employee_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Sys ID" audit="false" label="Sys ID" max_length="40" name="u_sys_id" type="string"/>
+    </element>
+</database>

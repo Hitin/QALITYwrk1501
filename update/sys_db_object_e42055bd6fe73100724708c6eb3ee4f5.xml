@@ -7,7 +7,7 @@
         <configuration_access>false</configuration_access>
         <create_access>true</create_access>
         <create_access_controls>false</create_access_controls>
-        <delete_access>false</delete_access>
+        <delete_access>true</delete_access>
         <extension_model/>
         <is_extendable>false</is_extendable>
         <label>Таблица назначений</label>
@@ -24,17 +24,17 @@
         <sys_created_on>2015-04-21 13:19:06</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e42055bd6fe73100724708c6eb3ee4f5</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Таблица назначений</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_db_object_e42055bd6fe73100724708c6eb3ee4f5</sys_update_name>
-        <sys_updated_by>x-rubesdmi</sys_updated_by>
-        <sys_updated_on>2016-04-01 11:38:32</sys_updated_on>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-08-02 12:09:42</sys_updated_on>
         <update_access>true</update_access>
-        <user_role display_value="">e8ca71346f36b100724708c6eb3ee4c9</user_role>
+        <user_role display_value="bq_user" name="bq_user">e8ca71346f36b100724708c6eb3ee4c9</user_role>
         <ws_access>true</ws_access>
     </sys_db_object>
 </record_update>

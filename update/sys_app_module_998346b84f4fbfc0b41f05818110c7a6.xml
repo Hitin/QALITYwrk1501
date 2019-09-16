@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Управление обращениями">9d8306b84f4fbfc0b41f05818110c706</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter table="kb_knowledge">kb_knowledge_base=b93f8c7137bae2401c0712c543990ed2^EQ<item display_table="kb_knowledge_base" display_value="EE Call Center" endquery="false" field="kb_knowledge_base" goto="false" newquery="false" operator="=" or="false" value="b93f8c7137bae2401c0712c543990ed2"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Редактирование Базы знаний</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>kb_knowledge</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>bq_process_manager</roles>
+        <survey/>
+        <survey_overwrite>true</survey_overwrite>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+        <sys_created_on>2019-08-01 11:25:44</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>998346b84f4fbfc0b41f05818110c7a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Редактирование Базы знаний</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_app_module_998346b84f4fbfc0b41f05818110c7a6</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-08-01 11:25:44</sys_updated_on>
+        <timeline_page/>
+        <title>Редактирование Базы знаний</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

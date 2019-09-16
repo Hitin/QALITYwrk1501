@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_att</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+          /* Optional GlideRecord */ event) {
+	var att = new GlideRecord('sys_attachment');
+	att.addQuery('table_name', 'x_caas_quality_service_call');
+	att.addQuery('table_sys_id', current.sys_id);
+	att.orderByDesc('sys_created_on');
+	att.query();
+	if (att.hasNext()){
+		if (current.u_resp_lang == 'en')
+			template.print('Email has attachments:<br />');
+		else
+			template.print('Письмо содержит вложения:<br />');
+	
+		while (att.next())
+			template.print(att.file_name + '<br />');
+		template.print('<br />');
+	}
+
+
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-12-06 05:50:51</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>994d1ba2377a43005978466754990eac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>bq_att</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_994d1ba2377a43005978466754990eac</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2017-12-06 05:50:51</sys_updated_on>
+    </sys_script_email>
+</record_update>

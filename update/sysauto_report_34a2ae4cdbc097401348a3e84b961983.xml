@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sysauto_report">
+    <sysauto_report action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <address_list/>
+        <condition/>
+        <conditional>false</conditional>
+        <group_list/>
+        <include_detail>false</include_detail>
+        <include_with/>
+        <name>EE RU HotLine(Quality-Качество) J Завод «Балтика – Ярославль» _list_daily</name>
+        <omit_if_no_records>true</omit_if_no_records>
+        <output_type>XLSX</output_type>
+        <page_height_in_pixels>612</page_height_in_pixels>
+        <page_size>Letter</page_size>
+        <page_width_in_pixels>792</page_width_in_pixels>
+        <report display_value="ГЛ Балтика. Качество продукции. J Завод «Балтика – Ярославль»">0bb0eec4dbc097401348a3e84b9619ee</report>
+        <report_body><![CDATA[<p><span style="font-family: verdana, geneva;">Здравствуйте коллеги, </span></p>
+<p>Для информации.</p>
+<p>За истекшие сутки на Горячую линию Компании были зарегистрированы новые обращения на качество продукции по вашему заводу. </p>
+<p><span style="font-family: verdana, geneva;">По возникающим вопросам обращайтесь к ответственному по качеству и пищевой безопасности продукции вашего завода либо к Елене Захаровой</span> (<a title="zaharova&#64;baltika.com" href="mailto:zaharova&#64;baltika.com" rel="nofollow">zaharova&#64;baltika.com</a>) </p>
+<p>Горячая линия обращений в ООО &#34;Пивоваренная Компания &#34;Балтика&#34;</p>]]></report_body>
+        <report_title>ГЛ Балтика. Качество продукции - список обращений за сутки. J Ярославль</report_title>
+        <run_as display_value="Lev Ryabtsev">7eaa6d5adbda0b806e87f1eabf96197d</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2018-01-29 10:15:35</run_start>
+        <run_time>1969-12-31 21:01:00</run_time>
+        <run_type>daily</run_type>
+        <sys_class_name>sysauto_report</sys_class_name>
+        <sys_created_by>Filippov_as</sys_created_by>
+        <sys_created_on>2018-01-29 10:16:27</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>34a2ae4cdbc097401348a3e84b961983</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>EE RU HotLine(Quality-Качество) J Завод «Балтика – Ярославль» _list_daily</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sysauto_report_34a2ae4cdbc097401348a3e84b961983</sys_update_name>
+        <sys_updated_by>ryabtsev_lf</sys_updated_by>
+        <sys_updated_on>2018-05-23 07:27:22</sys_updated_on>
+        <u_company/>
+        <upgrade_safe>false</upgrade_safe>
+        <user_list>9d6553e06f239e007833bd5dbb3ee43a,866553e06f239e007833bd5dbb3ee4f1,f78557e06f239e007833bd5dbb3ee49c,4905adec6fe3420010e00d55eb3ee431,0615b1aadb817e002eb8f3651d96192a,83055ba06f239e007833bd5dbb3ee401</user_list>
+        <zip>false</zip>
+    </sysauto_report>
+</record_update>

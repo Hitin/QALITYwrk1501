@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_группа_сетевых_клиентов" label="Группа_сетевых_клиентов" language="en" table="x_caas_quality_invoices_import_table">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_группа_сетевых_клиентов</element>
+            <help/>
+            <hint/>
+            <label>Группа_сетевых_клиентов</label>
+            <language>en</language>
+            <name>x_caas_quality_invoices_import_table</name>
+            <plural>Группа_сетевых_клиентовs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-08-26 11:02:16</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>55edee701be7f7409c961028bd4bcb9e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Группа_сетевых_клиентов</sys_name>
+            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_documentation_x_caas_quality_invoices_import_table_u_группа_сетевых_клиентов_en</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-08-26 11:02:16</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

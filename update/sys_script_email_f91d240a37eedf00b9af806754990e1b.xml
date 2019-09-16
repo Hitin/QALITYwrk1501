@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_notify_logistic_groups</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[var link = '<a href="' + gs.getProperty('glide.servlet.uri') + 'nav_to.do?uri=x_caas_quality_service_call.do?sys_id='; 
+
+var scall = new GlideRecord('x_caas_quality_service_call');
+scall.addQuery('u_bq_state', '!=', 'Закрыто');
+scall.addQuery('u_bq_topic', '46aa161f6f972200724708c6eb3ee4ea');
+scall.addQuery('u_bq_usergroup', '7301949337a722005978466754990e4f').addOrCondition('u_bq_usergroup', current.u_bq_usergroup);
+scall.addQuery('u_log_country', 'RUS');
+scall.orderBy('sys_created_on');
+scall.query();
+
+var i = 1;
+template.print('<table border="1" cellpadding="5" cellspacing="0">');
+template.print('<tr><th>N</th><th>Номер</th><th>Дата открытия</th><th>Статус</th><th>Ответственный</th><th>Юр.лицо</th><th>Тема</th><th>Группа сетевых клиентов</th></tr>');
+while (scall.next()) {
+	var created_tz = new bqFunctions().getTimeZone(scall.sys_created_on, 3);
+	template.print('<tr><th>' + i + '</th><td>' + link + scall.sys_id + '">' + scall.number + '</a></td><td>' + created_tz + '</td><td>' + scall.u_bq_state + '</td><td>' + scall.getDisplayValue('u_bq_user') + '</td><td>' + scall.u_buyer + '</td><td>' + scall.getDisplayValue('u_bq_danger') + '</td><td>' + scall.getDisplayValue('u_bq_usergroup') + '</td></tr>');
+	i++;
+}
+
+template.print('</table>');]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2018-06-08 13:26:49</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>f91d240a37eedf00b9af806754990e1b</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>bq_notify_logistic_groups</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_f91d240a37eedf00b9af806754990e1b</sys_update_name>
+        <sys_updated_by>x-ruAblPet</sys_updated_by>
+        <sys_updated_on>2018-09-11 06:18:02</sys_updated_on>
+    </sys_script_email>
+</record_update>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_created_CETtoMSK_subject</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[var tm = new GlideDateTime(current.sys_created_on);
+tm.addSeconds(10800);
+// if (email_action.sys_id == '7a477d1437a736005978466754990e27')
+// 	email.subject = 'Обращение ' + current.u_bq_number + ' от ' + tm + ' MSK в Горячую линию Балтика';
+// if (email_action.sys_id == '1d8bf19437a736005978466754990e6c')
+	email.subject = 'ГЛ Балтика - Доп. Информация по обращению ' + current.u_bq_number + ' от ' + tm + ' MSK';]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-08-07 06:31:38</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>52216cbb371083005978466754990ef6</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>bq_created_CETtoMSK_subject</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_52216cbb371083005978466754990ef6</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2018-01-24 07:49:21</sys_updated_on>
+    </sys_script_email>
+</record_update>

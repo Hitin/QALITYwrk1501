@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Ход работ" section_id="731944c04f7aff00b41f05818110c7c4" sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="x_caas_quality_service_call" version="3" view="hotlinetest">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_contact_type</element>
+            <position>0</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-17 08:27:48</sys_created_on>
+            <sys_id>b8fa04c04fbaff00b41f05818110c775</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Ход работ" display_value="Ход работ" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6f198c804f7aff00b41f05818110c75a">731944c04f7aff00b41f05818110c7c4</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-17 08:27:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_prot_input</element>
+            <position>1</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-17 08:27:48</sys_created_on>
+            <sys_id>30fa04c04fbaff00b41f05818110c776</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Ход работ" display_value="Ход работ" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6f198c804f7aff00b41f05818110c75a">731944c04f7aff00b41f05818110c7c4</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-17 08:27:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>activity.xml</element>
+            <position>2</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-17 08:27:48</sys_created_on>
+            <sys_id>b4fa04c04fbaff00b41f05818110c776</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="Activities (filtered)">444ea5c6bf310100e628555b3f0739d6</sys_ui_formatter>
+            <sys_ui_section caption="Ход работ" display_value="Ход работ" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6f198c804f7aff00b41f05818110c75a">731944c04f7aff00b41f05818110c7c4</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-17 08:27:48</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>12M.x_caas_quality_service_call.x_caas_quality_bq_call_log.u_bq_sc</element>
+            <position>3</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-17 08:27:48</sys_created_on>
+            <sys_id>bcfa04c04fbaff00b41f05818110c776</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Ход работ" display_value="Ход работ" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6f198c804f7aff00b41f05818110c75a">731944c04f7aff00b41f05818110c7c4</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-17 08:27:48</sys_updated_on>
+            <sys_user/>
+            <type>list</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_mod_count</element>
+            <position>4</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-17 08:27:48</sys_created_on>
+            <sys_id>34fa04c04fbaff00b41f05818110c777</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Ход работ" display_value="Ход работ" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6f198c804f7aff00b41f05818110c75a">731944c04f7aff00b41f05818110c7c4</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-17 08:27:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Ход работ</caption>
+            <header>false</header>
+            <name>x_caas_quality_service_call</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-17 08:19:49</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>731944c04f7aff00b41f05818110c7c4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Ход работ</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_ui_section_731944c04f7aff00b41f05818110c7c4</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-17 08:19:49</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Hot" name="hotlinetest">6f198c804f7aff00b41f05818110c75a</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

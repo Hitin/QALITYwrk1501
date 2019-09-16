@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_caas_quality_service_call">u_bq_topic=b1a5702adb8636002f89ffc41d961955^u_autoclose=false^EQ<item display_table="x_caas_quality_bq_topic" display_value="Экспортные продажи" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="false" value="b1a5702adb8636002f89ffc41d961955"/>
+            <item endquery="false" field="u_autoclose" goto="false" newquery="false" operator="=" or="false" value="false"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>false</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>bq_view_product</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>x-ruChePol</sys_created_by>
+        <sys_created_on>2017-07-11 12:38:01</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>d4b17e833773f640b9af806754990e3c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>bq_view_product</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_ui_policy_d4b17e833773f640b9af806754990e3c</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-17 13:10:08</sys_updated_on>
+        <table>x_caas_quality_service_call</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

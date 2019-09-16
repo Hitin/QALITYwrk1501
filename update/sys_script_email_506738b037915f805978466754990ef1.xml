@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_log_carProblem_solution</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+          /* Optional GlideRecord */ event) {
+	template.print('Решение: ' + current.u_bq_log_solution + '<br />');
+	if (current.u_bq_log_reason != '') 
+		template.print('Код: ' + current.u_bq_log_reason.u_code + ' - ' + current.u_bq_log_reason.u_name + '<br />');
+	if (current.u_bq_resptext != '')
+		template.print('Содержание ответа для инциатора: ' + current.u_bq_resptext);
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2018-04-03 13:44:17</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>506738b037915f805978466754990ef1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>bq_log_carProblem_solution</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_506738b037915f805978466754990ef1</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2018-04-11 06:10:59</sys_updated_on>
+    </sys_script_email>
+</record_update>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_service_calls_to_approver</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+          /* Optional GlideRecord */ event) {
+if (email_action.sys_id == 'c98af0486fb37100724708c6eb3ee49f' || email_action.sys_id == '6f4ab4486fb37100724708c6eb3ee4ba')
+	template.print('<a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+current.number+' Согласовать ответ&body=Комментарий для согласующего:">Согласовать</a> - <em> дать ответ не разглашающий конфиденциальных данных и по возможности повышающий лояльность инициатора (обратившегося). Укажите текст ответа <b>в теле</b> появившегося письма. Рекомендованный объем ответа – не более 5-6 предложений (~1500 символов). Предложенный ответ будет отправлен на согласование.</em>');
+else
+	template.print('<a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+current.number+' Согласовать ответ&body=Комментарий для согласующего:">Новое решение</a>' + '<em> - предложенное решение будет отправлено на согласование. </em>');
+})(current, template, email, email_action, event);
+
+]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-rutipali</sys_created_by>
+        <sys_created_on>2016-07-01 11:15:58</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>ff13975e6fd42200724708c6eb3ee4b6</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>bq_service_calls_to_approver</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_ff13975e6fd42200724708c6eb3ee4b6</sys_update_name>
+        <sys_updated_by>Filippov_as</sys_updated_by>
+        <sys_updated_on>2018-02-06 08:47:13</sys_updated_on>
+    </sys_script_email>
+</record_update>

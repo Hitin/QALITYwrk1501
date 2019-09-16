@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_service_calls_additional_info</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+          /* Optional GlideRecord */ event) {
+//if (email_action.sys_id == 'f32e7f376fa37100724708c6eb3ee405')
+	template.print('<a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+current.number+' Запросить доп информацию&body=' + event.parm2 + '">Подтвердить</a> – <em> запрос дополнительной информации будет направлен инициатору обращения, вы сможете отредактировать предложенный текст в теле появившегося письма. После получения ответа от инициатора содержание обращения будет дополнено, обновленное обращение будет вновь назначено на вас..</em>');
+//Запрос дополнительной информации:
+})(current, template, email, email_action, event);
+]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>ablyazov_p</sys_created_by>
+        <sys_created_on>2019-04-17 10:29:55</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>8a3e7766dbb03f0050c5298a489619d9</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>bq_service_calls_additional_info</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_8a3e7766dbb03f0050c5298a489619d9</sys_update_name>
+        <sys_updated_by>ablyazov_p</sys_updated_by>
+        <sys_updated_on>2019-04-17 11:45:33</sys_updated_on>
+    </sys_script_email>
+</record_update>

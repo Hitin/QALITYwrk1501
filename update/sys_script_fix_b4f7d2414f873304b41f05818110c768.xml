@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description/>
+        <flush_cache>false</flush_cache>
+        <name>console</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[var current = new GlideRecord('x_caas_quality_service_call');
+current.get('8e6aab6d1b537b009c961028bd4bcbb9');
+var txt = '';
+		txt = 'Заявка ' + current.u_bq_number + ' по ТТН ' + current.u_ttn_number + ' принята. ';
+		var cDay = new GlideDate();
+		var cTime = new GlideDateTime();
+		//cTime.addSeconds(69600); cDay.addDaysUTC(1); //+11 hours 
+		cTime.addSeconds(46800); cDay.addDaysUTC(2); cTime.addDaysUTC(2);//+3 hours
+		//cTime.addSeconds(-7200); //-2 hours
+		//var isHoliday = new x_caas_quality.bqFunctions().isHoliday(cTime);
+		gs.info('holiday? ' + new x_caas_quality.bqFunctions().isHoliday(cTime));
+		gs.info('cTime =' + cTime);
+			if (new x_caas_quality.bqFunctions().isHoliday(cTime))
+				var tMin = '08:00:00';
+			else 
+				var tMin = '06:00:00';
+			gs.info('tMin =' + tMin);
+			var tMax = '19:30:00';
+			var ctMin = new GlideDateTime (cDay.toString() + ' ' + tMin);
+			var ctMax = new GlideDateTime (cDay.toString() + ' ' + tMax);
+			gs.info('ctMin =' + ctMin);
+			gs.info('ctMax =' + ctMax);
+			if (cTime >= ctMin && cTime < ctMax){
+				cTime.addSeconds(1800);
+				var t1 = cTime.toString().substring(11,16);
+				txt += 'Ожидайте решения между ' + t1 + ' и ';
+				cTime.addSeconds(9000);
+				var t2 = cTime.toString().substring(11,16);
+				txt += t2;
+				}
+			else {
+				txt += 'Она будет обработана ';
+				if (cTime < ctMin){
+					ctMin.addSeconds(1800);
+					txt += 'c ' + ctMin.toString().substring(11,16) + ' до ';
+					ctMin.addSeconds(10800);
+					txt += ctMin.toString().substring(11,16) + '. ';
+					
+				} else if(cTime > ctMax) {
+					cTime.addDaysUTC(1);
+					gs.info('cTime+1 =' + cTime);				
+					if (new x_caas_quality.bqFunctions().isHoliday(cTime))
+						txt += 'с 8:30 до 11:30. ';
+					else 
+						txt += 'с 6:30 до 9:30. ';
+				}
+				txt += 'Ожидайте SMS или звонка оператора.';
+			}
+	gs.info(txt);
+
+/*var email = new GlideRecord('sys_email');
+email.get('87209917db70bf0050c5298a489619ee');
+var current = new GlideRecord('u_service_call');
+current.get('5fe484acdb78370050c5298a489619d9');
+gs.eventQueue("bq_sender_email", current, 'petr.ablyazov@softline.com', email.body_text);
+//gs.eventQueue("bq_review_solution", current, current.u_bq_user.sys_id, email.body_text);
+
+gs.info('return= ' + email.user_id);
+gs.info('return= ' + current.u_bq_number);
+
+/*var em = 'trokhon_ka@carlsbergee.com';
+var ItilUser = new GlideRecord('sys_user');
+			ItilUser.addQuery('email', em);
+			ItilUser.addQuery('active', true);
+			ItilUser.query();
+			if (ItilUser.next()){ //&& (current.u_bq_user == ItilUser.sys_id || current.u_bq_usergroup.u_bq_coors.indexOf(ItilUser.sys_id) > -1)){
+					gs.info('return= ' + ItilUser.sys_id);
+			}
+			else{
+				gs.info('return= ' + 'No');
+	
+			}
+
+/*
+function checkUsers(){
+	var ItilUser = new GlideRecord('sys_user');
+			//ItilUser.addQuery('email', email.from);
+			ItilUser.addQuery('sys_id', email.user_id);
+			ItilUser.query();
+			if (ItilUser.next() && (current.u_bq_user == ItilUser.sys_id || current.u_bq_usergroup.u_bq_coors.indexOf(ItilUser.sys_id) > -1)){
+				current.u_bq_closed_by = ItilUser.sys_id;
+				current.u_bq_state = "Решено";
+				current.u_bq_resptext = email.body_text;
+			}else
+				gs.info('no')
+}
+
+checkUsers();
+
+gs.info('return= ' + email.user_id);
+gs.info('return= ' + current.u_bq_number);
+*/
+
+
+
+/*var gdt = new GlideDateTime("2019-08-28 12:00:00");
+var holidays = [6, 7];
+var curentDayOfWeek = gdt.getDayOfWeekUTC();
+//holidays.contains(curentDayOfWeek)
+gs.info(gdt.getDayOfWeekUTC());
+gs.info(gdt.getDayOfWeekUTC() == 3);
+
+(curentDayOfWeek == 6 || curentDayOfWeek == 7) ? gs.info('da') : gs.info('net') ;
+*/
+/*u_sys_id = 'd65a66766ff712807833bd5dbb3ee40f';
+var u_employee_number = '089836';
+var user = new GlideRecord ('sys_user');
+if( user.get('employee_number', u_employee_number)){
+	var gr = new GlideRecord ('sys_user_has_role');
+		gr.addQuery('user', 'CONTAINS', u_sys_id);
+		gr.query();
+		while(gr.next()) {
+			if(gr.user != ''){
+				if (gr.user.toString() == u_sys_id ){
+					gr.user = user.sys_id;
+				}
+			}
+			gr.update();
+		}
+	gs.info('Update - OK')
+}*/]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+        <sys_created_on>2019-08-02 07:33:39</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b4f7d2414f873304b41f05818110c768</sys_id>
+        <sys_mod_count>57</sys_mod_count>
+        <sys_name>console</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_fix_b4f7d2414f873304b41f05818110c768</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-08-30 07:20:02</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

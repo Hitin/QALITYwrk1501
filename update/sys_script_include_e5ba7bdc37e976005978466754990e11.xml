@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>false</active>
+        <api_name>x_caas_quality.cti_bq_log_class</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>cti_bq_log_class</name>
+        <script><![CDATA[var cti_bq_log_class = Class.create();
+cti_bq_log_class.prototype = {
+    initialize: function() {
+    },
+	cti_bq_log_srv: function() {
+	//	gs.log('ctiargs phone :'+cti_caller_phone);
+		
+		gs.info('PA1123')
+		gs.info('cti_task_id ' + cti_taskID);
+		gs.info('PA!!!2 ');
+		var phoneID = '-1';
+		var telAON = new GlideRecord ('x_caas_quality_bq_tel');
+		telAON.addQuery('u_bq_tel', cti_caller_phone);
+		telAON.query();
+		while (telAON.next()){
+			phoneID = telAON.sys_id;
+	//		gs.log('!!! '+ phoneID + this.phone);
+		}
+		if (phoneID == '-1'){
+			var telAON_new = new GlideRecord ('x_caas_quality_bq_tel');
+			telAON_new.initialize();
+			telAON_new.u_bq_tel = cti_caller_phone;
+		//	phoneID = telAON_new.sys_id;
+			phoneID = telAON_new.insert();
+//			gs.log('!!! '+ phoneID);
+		}
+	//	gs.log('cti_log_class');
+		
+		//gs.log('Full Name :'+this.phone);
+		//gs.log('Name :'+this.caller_type);
+		gs.info('PA2222 = ' + phoneID)
+		var callnum = new GlideRecord ('x_caas_quality_bq_call_log');
+		// callnum.newRecord();
+ 		callnum.initialize();
+		callnum.u_bq_operator = gs.getUserID();
+ 		callnum.u_bq_ctiid = cti_taskID;
+		callnum.u_bq_tel = phoneID;
+ 		callnum.u_caller_type = cti_caller_type;
+		var ans = callnum.insert();
+		gs.info('!!! callnum inserted '+ callnum.sys_id);
+		
+		return callnum.sys_id;
+	},
+    type: 'cti_bq_log_class'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-03-13 08:38:23</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>e5ba7bdc37e976005978466754990e11</sys_id>
+        <sys_mod_count>63</sys_mod_count>
+        <sys_name>cti_bq_log_class</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_include_e5ba7bdc37e976005978466754990e11</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-17 05:55:24</sys_updated_on>
+    </sys_script_include>
+</record_update>

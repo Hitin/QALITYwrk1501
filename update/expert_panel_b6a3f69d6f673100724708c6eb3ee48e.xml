@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="expert_panel">
+    <expert_panel action="INSERT_OR_UPDATE">
+        <banner_step/>
+        <complete_message>Завершить</complete_message>
+        <description><![CDATA[<p><em>Проверить корректность принятой информации.<br /></em></p>
+<p><strong>Ваша заявка отправлена и будет рассмотрена сотрудниками. С Вами свяжутся по телефону, который Вы указали как контактный, пожалуйста, по возможности оставайтесь на связи. Заявки рассматриваются в течение 7 дней </strong><em>(говорить, только если абонент спросит).</em></p>]]></description>
+        <expert display_value="Новое обращение">7be5a05e6fdb3500724708c6eb3ee44d</expert>
+        <name>resume</name>
+        <next_message>Далее</next_message>
+        <order>500</order>
+        <previous_message>Предыдущий шаг</previous_message>
+        <sys_class_name>expert_panel</sys_class_name>
+        <sys_created_by>x-rubesdmi</sys_created_by>
+        <sys_created_on>2015-04-20 07:16:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b6a3f69d6f673100724708c6eb3ee48e</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>resume</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_panel_b6a3f69d6f673100724708c6eb3ee48e</sys_update_name>
+        <sys_updated_by>x-rubesdmi</sys_updated_by>
+        <sys_updated_on>2015-11-22 17:50:11</sys_updated_on>
+        <title>Резюме звонка</title>
+    </expert_panel>
+    <sys_translated_text action="delete_multiple" query="documentkey=b6a3f69d6f673100724708c6eb3ee48e"/>
+</record_update>

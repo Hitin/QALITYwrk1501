@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>bq_kbReviewReminder</name>
+        <run_as display_value="">312308716f90220010e00d55eb3ee401</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>2</run_dayofweek>
+        <run_period/>
+        <run_start>2017-02-07 12:16:59</run_start>
+        <run_time>1970-01-01 04:00:00</run_time>
+        <run_type>weekly</run_type>
+        <script><![CDATA[var kb = new GlideRecord ('kb_knowledge');
+var dat = new GlideDate();
+var today = new GlideDate();
+var allRev = '';
+var shortRev = '';
+dat.addDays(12);
+kb.addQuery('kb_knowledge_base','b93f8c7137bae2401c0712c543990ed2');
+kb.addQuery('workflow_state', 'published');
+kb.addQuery('u_next_review_date', '<', dat);
+kb.addQuery('u_next_review_date', '>=', today);
+kb.orderBy('u_next_review_date');
+kb.query();
+var flag = false;
+if (kb.hasNext())
+	flag = true;
+while (kb.next()){
+	kb.u_publisher_name = new bqFunctions().getKBreviewers(kb.sys_id);
+	kb.u_reviewer_s_name = kb.u_publisher_name;	
+	kb.update();
+	allRev += kb.u_reviewer_s_name;
+	allRev += ',';
+
+}
+if (flag){
+	//	gs.log ('! ' + allRev);
+	var allRevArr = allRev.split(',');
+	for (var i = 0; i < allRevArr.length; i++){
+		if (shortRev.indexOf(allRevArr[i]) < 0){
+			shortRev += allRevArr[i];
+			shortRev += ',';
+		}
+	}
+	if (shortRev.substring(shortRev.length - 1)){
+		shortRev = shortRev.substring(0,shortRev.length - 1);
+	}
+	//	gs.log ('!! ' + shortRev);
+	var shortRevArr = shortRev.split(',');
+	for (var j = 0; j < shortRevArr.length; j++){
+		gs.eventQueue('bq_kbReviewReminder', kb, shortRevArr[j]);
+	//	gs.log ('!!! ' + shortRevArr[j]);
+	}
+
+	gs.eventQueue('bq_kbReviewReminderToKBOwners', kb);	
+}
+
+
+
+
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-02-07 12:17:41</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>5078ed6d37b07640b9af806754990ed4</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>bq_kbReviewReminder</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sysauto_script_5078ed6d37b07640b9af806754990ed4</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2018-01-23 12:47:28</sys_updated_on>
+        <u_all>false</u_all>
+        <u_table/>
+        <u_type/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

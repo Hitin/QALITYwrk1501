@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>bq_4Hours report for 3PL WH</name>
+        <run_as display_value="">312308716f90220010e00d55eb3ee401</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period>1970-01-01 01:30:00</run_period>
+        <run_start>2017-03-01 21:05:00</run_start>
+        <run_time>1969-12-31 21:00:00</run_time>
+        <run_type>periodically</run_type>
+        <script><![CDATA[var wh3pl = new GlideRecord ('x_caas_quality_bq_warehouses');
+wh3pl.addQuery('u_3pl',true);
+wh3pl.query();
+var sc;
+var nowDT = new GlideDateTime();
+var endDT = new GlideDateTime(nowDT.toString().substring(0, 14) + '00:00');//.addSeconds(10800);
+var beginDT = new GlideDateTime(endDT);
+var type;
+
+if (nowDT.toString().substring(11, 13) == '21') type = 2;
+else type = 1;
+
+// beginDT.addSeconds(3600);
+// endDT.addSeconds(10800);
+if (type == 1) beginDT.addSeconds(-5400);
+if (type == 2) beginDT.addDaysUTC(-1);
+
+while (wh3pl.next()){
+	sc = new GlideRecord ('x_caas_quality_service_call');
+	sc.addQuery('u_bq_topic', '46aa161f6f972200724708c6eb3ee4ea');
+	sc.addQuery('u_ttn.u_wh_code', wh3pl.sys_id);
+	sc.addQuery('sys_created_on','>=',beginDT);
+	sc.addQuery('sys_created_on','<',endDT);	
+	sc.query();
+	if (sc.next()){
+		if (type == 1) gs.eventQueue('bq_4Hours_3PL_Notification', sc, 'за последние 1,5 часа', 'За последние 1,5 часа');
+		if (type == 2) gs.eventQueue('bq_4Hours_3PL_Notification', sc, 'за последние сутки', 'За последние сутки');
+
+	}
+}
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-03-02 07:57:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c47603bc37d1be40b9af806754990e81</sys_id>
+        <sys_mod_count>34</sys_mod_count>
+        <sys_name>bq_4Hours report for 3PL WH</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sysauto_script_c47603bc37d1be40b9af806754990e81</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-09 15:02:38</sys_updated_on>
+        <u_all>false</u_all>
+        <u_table/>
+        <u_type/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

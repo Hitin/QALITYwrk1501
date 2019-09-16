@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="expert_panel_variable">
+    <expert_panel_variable action="INSERT_OR_UPDATE">
+        <expert_panel display_value="new_logistic">4bd66d4e3733e2005978466754990e2d</expert_panel>
+        <expert_variable display_value="Грузополучатель">a8a99a4e3773e2005978466754990e30</expert_variable>
+        <order>1700</order>
+        <sys_class_name>expert_panel_variable</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-03-20 07:26:49</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>653f2bae3761fa005978466754990e98</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>new_logistic.Грузополучатель</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_panel_variable_653f2bae3761fa005978466754990e98</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2017-03-20 07:26:49</sys_updated_on>
+    </expert_panel_variable>
+</record_update>

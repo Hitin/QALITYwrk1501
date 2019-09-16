@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_caas_quality.CheckArrivalTime</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>CheckArrivalTime</name>
+        <script><![CDATA[var CheckArrivalTime = Class.create();
+CheckArrivalTime.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    checkArrivalTime: function(){ 
+ 		var cTime = new GlideDateTime();
+ 		cTime.addSeconds(10800); //+3 hours
+ 		var tTime = this.getParameter('sysparm_t');
+
+		var fTime = tTime;//.substring(6,10) + '-' + tTime.substring(3,5) + '-' + tTime.substring(0,2) + tTime.substring(10);
+
+		//return this.getParameter('sysparm_t') + fTime + cTime;
+ 		if (fTime<=cTime) return 'true';
+ 		else return 'false';
+	},
+	type: 'CallsFromThisNumber'
+	
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-01-12 11:04:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>71cd174d3718fa00b9af806754990ea7</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_name>CheckArrivalTime</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_include_71cd174d3718fa00b9af806754990ea7</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-18 11:36:07</sys_updated_on>
+    </sys_script_include>
+</record_update>

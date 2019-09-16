@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="expert_script_client">
+    <expert_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <expert display_value="Новое обращение по Логистике">c987ff5d37f7a2005978466754990edb</expert>
+        <expert_panel display_value="new_logistic">4bd66d4e3733e2005978466754990e2d</expert_panel>
+        <expert_panel_variable>d33b68c3dbf35b0050c5298a489619aa</expert_panel_variable>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>bq_log_end_call_1</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+	//if (!isLoading && newValue == 'true'){
+	if (!isLoading && newValue == 'yes'){
+		if (g_form.getValue('u_other') == 'true') g_form.setValue('u_other', 'false');
+		if (g_form.getValue('u_error_call') == 'true') g_form.setValue('u_error_call', 'false');
+		if (g_form.getValue('u_no_ttn_numOrPref') == 'true') g_form.setValue('u_no_ttn_numOrPref', 'false');
+		
+		if (g_form.getValue('u_other_yn') == 'yes') g_form.setValue('u_other_yn', 'no');
+		if (g_form.getValue('u_error_call_yn') == 'yes') g_form.setValue('u_error_call_yn', 'no');
+		if (g_form.getValue('u_no_ttn_numOrPref_yn') == 'yes') g_form.setValue('u_no_ttn_numOrPref_yn', 'no');
+		
+	}
+	if (!isLoading && newValue == 'no'){
+		g_form.setValue('u_bq_no_data_yn', 'no');
+		g_form.setValue('u_claim_yn', 'no');
+		g_form.setValue('u_bq_subtopic', 'a1474c4c3750ba00b9af806754990e3a');
+	}
+}
+//u_call_break]]></script>
+        <sys_class_name>expert_script_client</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-03-13 12:06:34</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>999aa42037ad76005978466754990ec2</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>bq_log_end_call_1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_script_client_999aa42037ad76005978466754990ec2</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-10 10:24:25</sys_updated_on>
+        <table/>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </expert_script_client>
+</record_update>

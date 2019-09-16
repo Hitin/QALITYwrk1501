@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>bq_notifyAssigneeMatrix</name>
+        <run_as display_value="">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2017-09-28 06:20:13</run_start>
+        <run_time>1970-01-01 14:30:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[var user = '';
+var startDT = new GlideDateTime();
+startDT.addDays(-1).addSeconds(-1800);
+//startDT.addSeconds(-7200);
+
+var role = new GlideRecord('x_caas_quality_bq_role_assignment'); // ответственные по матрице
+role.addQuery('sys_updated_on', '>=', startDT);
+role.addQuery('u_active', true);
+role.orderBy('u_employee');
+role.query();
+
+while (role.next()) {
+	if (user == '' || user != role.u_employee) {
+		user = role.getValue('u_employee');
+		gs.eventQueue('bq_notify_agree_matrix', role, user, role.getDisplayValue('u_employee'));
+	} 
+}
+
+// matrix = new GlideRecord('x_caas_quality_bq_assign_matrix'); // поиск любой записи матрици для генерации события
+// matrix.setLimit(1);
+// matrix.query();
+// if (matrix.next()){
+// 	for (var i = 0; i< uniqs.length; i++){
+// 		var user = new GlideRecord('sys_user');
+// 		user.get(uniqs[i]);
+// 		gs.eventQueue('bq_notify_assignee_matrix', matrix, uniqs[i], user.getDisplayValue());
+// 	}
+// }
+
+// /////////
+// while (matrix.next()){
+// 	users.push(matrix.getValue('u_bq_user'));
+// }
+
+
+// matrix = new GlideRecord('x_caas_quality_bq_assign_matrix'); // согласующие по матрице
+// matrix.addQuery('sys_updated_on', '>=', startDT);
+// matrix.addQuery('u_bq_user', '');
+// matrix.addQuery('u_agree_list', '!=', '');
+// matrix.query();
+// tArr = [];
+// while (matrix.next()) {
+// 	if (matrix.u_agree_list != matrix.u_agree_list_old){
+// 		var aCurrent = matrix.u_agree_list.split(',');
+// 		var aOldIsEmpty = false;
+// 		var aOld;
+// 		if (matrix.u_agree_list_old == '')
+// 			aOldIsEmpty = true;
+// 		else{
+// 			aOld = matrix.u_agree_list_old.split(',');
+// 			for (var i = 0; i < aOld.length; i++){
+// 				if (aCurrent.indexOf(aOld[i]) >= 0){
+// 					tArr.push(aOld[i]);
+// 				}	
+// 			}
+// 			matrix.u_agree_list_old = tArr.toString();
+// 			matrix.update();
+// 		}
+// 		for (var i = 0; i < aCurrent.length; i++){
+// 			if (aOld.indexOf(aCurrent[i]) < 0 || aOldIsEmpty){
+// 				users.push(aCurrent[i]);
+// 			}
+// 		}
+// // 	matrix.u_agree_list_old = matrix.u_agree_list;
+// // 	matrix.update();
+// 	}
+// }
+
+
+// var group = new GlideRecord('x_caas_quality_bq_usergroup'); // координаторы
+// group.addQuery('sys_updated_on', '>=', startDT);
+// group.addQuery('u_bq_coors', '!=', '');
+// group.query();
+// tArr = [];
+// while (group.next()) {
+// 	if (group.u_bq_coors != group.u_bq_coors_old){
+// 		var aCurrent = group.u_bq_coors.split(',');
+// 		var aOldIsEmpty = false;
+// 		var aOld;
+// 		if (group.u_bq_coors_old == '')
+// 			aOldIsEmpty = true;
+// 		else{
+// 			aOld = group.u_bq_coors_old.split(',');
+// 			for (var i = 0; i < aOld.length; i++){
+// 				if (aCurrent.indexOf(aOld[i]) >= 0){
+// 					tArr.push(aOld[i]);
+// 				}	
+// 			}
+// 			group.u_bq_coors_old = tArr.toString();
+// 			group.update();
+// 		}
+// 		for (var i = 0; i < aCurrent.length; i++){
+// 			if (aOld.indexOf(aCurrent[i]) < 0 || aOldIsEmpty){
+// 				users.push(aCurrent[i]);
+// 			}
+// 		}
+	
+// // 	group.u_bq_coors_old = group.u_bq_coors;
+// // 	group.update();
+// 	}
+// }
+
+
+// var kbCat = new GlideRecord('x_caas_quality_bq_kb_category'); //согласующие KB
+// kbCat.addQuery('sys_updated_on', '>=', startDT);
+// kbCat.addQuery('u_bq_publishers', '!=', '');
+// kbCat.query();
+// tArr = [];
+// while (kbCat.next()) {
+// 	if (kbCat.u_bq_publishers != kbCat.u_bq_publishers_old){
+// 		var aCurrent = kbCat.u_bq_publishers.split(',');
+// 		var aOldIsEmpty = false;
+// 		var aOld;
+// 		if (kbCat.u_bq_publishers_old == '')
+// 			aOldIsEmpty = true;
+// 		else{
+// 			aOld = kbCat.u_bq_publishers_old.split(',');
+// 			for (var i = 0; i < aOld.length; i++){
+// 				if (aCurrent.indexOf(aOld[i]) >= 0){
+// 					tArr.push(aOld[i]);
+// 				}	
+// 			}
+// 			kbCat.u_bq_publishers_old = tArr.toString();
+// 			kbCat.update();
+// 		}
+// 		for (var i = 0; i < aCurrent.length; i++){
+// 			if (aOld.indexOf(aCurrent[i]) < 0 || aOldIsEmpty){
+// 				users.push(aCurrent[i]);
+// 			}
+// 		}
+// // 		kbCat.u_bq_publishers_old = kbCat.u_bq_publishers;
+// // 		kbCat.update();
+// 	}
+// }
+// //формрование unique массива
+// var uniqs = [];
+// for (var i = 0; i< users.length; i++){
+// 	if (uniqs.indexOf(users[i]) < 0)
+// 		uniqs.push(users[i]);
+// }
+
+// //gs.log('av ' + users.toString() + '!!!' + uniqs.toString())
+
+// matrix = new GlideRecord('x_caas_quality_bq_assign_matrix'); // поиск любой записи матрици для генерации события
+// matrix.setLimit(1);
+// matrix.query();
+// if (matrix.next()){
+// 	for (var i = 0; i< uniqs.length; i++){
+// 		var user = new GlideRecord('sys_user');
+// 		user.get(uniqs[i]);
+// 		gs.eventQueue('bq_notify_assignee_matrix', matrix, uniqs[i], user.getDisplayValue());
+// 	}
+// }]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-09-28 06:27:42</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>4631d86037e543405978466754990eeb</sys_id>
+        <sys_mod_count>67</sys_mod_count>
+        <sys_name>bq_notifyAssigneeMatrix</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sysauto_script_4631d86037e543405978466754990eeb</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-09 14:28:24</sys_updated_on>
+        <u_all>false</u_all>
+        <u_table/>
+        <u_type/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

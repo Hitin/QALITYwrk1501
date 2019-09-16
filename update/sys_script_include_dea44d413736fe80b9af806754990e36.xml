@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_caas_quality.bq_getEmailDirect</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>bq_getEmailDirect</name>
+        <script><![CDATA[var bq_getEmailDirect = Class.create();
+bq_getEmailDirect.prototype = {
+    initialize: function() {
+    },
+	hotline: function() {
+		if (email.direct.toLowerCase().indexOf('$spbqualityhl@baltika.com') >= 0 ||
+		   email.direct.toLowerCase().indexOf('bqualityhotline@baltika.com') >= 0 ||
+		   email.direct.toLowerCase().indexOf('bqualityhotline_sites@baltika.com') >= 0 ||
+		   email.direct.toLowerCase().indexOf('bqualityhotline_app@baltika.com') >= 0 ||
+		   email.direct.toLowerCase().indexOf('baltikahotline@baltika.com') >= 0 ||
+		   email.direct.toLowerCase().indexOf('$spbservicenowdev2@baltika.com') >= 0 ||
+		   email.direct.toLowerCase().indexOf('rusdit_test_dhl_app@baltika.com') >= 0 ||
+		   email.direct.toLowerCase().indexOf('rusdit_test_hl_site@baltika.com') >= 0 ||
+		   email.direct.toLowerCase().indexOf('rusdsc_dhl_app@baltika.com') >= 0 ){
+			return true;
+		}
+		else return false;
+	},
+    type: 'bq_getEmailDirect'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-05-16 06:38:44</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>dea44d413736fe80b9af806754990e36</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>bq_getEmailDirect</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_include_dea44d413736fe80b9af806754990e36</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-17 13:33:23</sys_updated_on>
+    </sys_script_include>
+</record_update>

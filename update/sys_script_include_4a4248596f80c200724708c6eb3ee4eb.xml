@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access/>
+        <active>true</active>
+        <api_name>x_caas_quality.relFIO</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>relFIO</name>
+        <script><![CDATA[ function relFIO() {
+   var Phone = current.u_bq_tel;
+	    var ids = [];
+var refQual = '';
+		 
+				var caller = new GlideRecord ('x_caas_quality_bq_fio'); //подписки заявителя
+						 caller.addQuery('u_bq_phones', 'CONTAINS', Phone);
+						 caller.query();
+				        while (caller.next()) {
+						       ids.push(caller.sys_id.toString());
+			            }
+var all_id = ids.toString();
+	 if (all_id == ''){
+				var callerAll = new GlideRecord ('x_caas_quality_bq_fio'); //подписки заявителя
+				callerAll.query();
+				while (callerAll.next()) {
+				ids.push(callerAll.sys_id.toString());
+			}
+	 
+	 }
+	 
+refQual = 'sys_idIN' + ids.toString();
+	
+	 var id = ids.toString();
+	 
+	return refQual;
+
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>x-rubesdmi</sys_created_by>
+        <sys_created_on>2015-05-14 14:57:03</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4a4248596f80c200724708c6eb3ee4eb</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>relFIO</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_include_4a4248596f80c200724708c6eb3ee4eb</sys_update_name>
+        <sys_updated_by>x-rubesdmi</sys_updated_by>
+        <sys_updated_on>2015-05-18 09:02:59</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sysauto_report">
+    <sysauto_report action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <address_list/>
+        <condition/>
+        <conditional>false</conditional>
+        <group_list>1a0048e8db0e32c02eb8f3651d9619a3</group_list>
+        <include_detail>false</include_detail>
+        <include_with/>
+        <name>EE SC DeliveryIssues_Baltika_All_4hours_3PL_СГП-Сети Гатчина 3PL</name>
+        <omit_if_no_records>true</omit_if_no_records>
+        <output_type>XLSX</output_type>
+        <page_height_in_pixels>612</page_height_in_pixels>
+        <page_size>Letter</page_size>
+        <page_width_in_pixels>792</page_width_in_pixels>
+        <report display_value="DeliveryIssues_Baltika_3PL_СГП-Сети Гатчина 3PL">11222eabdb3136442f89ffc41d961927</report>
+        <report_body><![CDATA[<p><span style="font-size: 10.0pt; color: black;">Уважаемые коллеги,</span></p>
+<p><span style="font-size: 10.0pt; color: black;">По вложении вы найдете список заявок зарегистрированных по сервису проблемы доставки сетевым клиентам ООО &#34;Пивоваренная Компания &#34;Балтика&#34;</span></p>
+<p><span style="font-size: 13.3333px;">По вопросам добавления/ удаления получателей переписки обращайтесь</span><span style="font-size: 13.3333px;"> к Супервайзеру вашего склада</span></p>
+<p>По вопросам, связанным с заявками, обращайтесь к сотрудникам, которые закреплены за соответствующим клиентом: </p>
+<table style="border: 1px dashed #bbbbbb;" width="899"><tbody><tr><td style="border: solid windowtext 1.0pt;" rowspan="2" width="132">
+<p style="text-align: center;"><span style="color: black;">Сеть</span></p>
+</td><td style="border: solid windowtext 1.0pt;" rowspan="2" width="312">
+<p style="text-align: center;"><strong><span style="color: black;">Юр.лица</span></strong></p>
+</td><td style="border: solid windowtext 1.0pt;" rowspan="2" width="454">
+<p style="text-align: center;"><strong><span style="color: black;">email</span></strong></p>
+</td><td style="border: 1px dashed #bbbbbb;" width="0"> </td></tr><tr><td style="border: 1px dashed #bbbbbb;" width="0"> </td></tr><tr><td style="border: solid windowtext 1.0pt;" width="132">
+<p><span style="color: black;">Метро</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="312">
+<p><span style="color: black;">ООО&#34;МЕТРО Кэш  энд Керри&#34;</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="454">
+<p><span style="color: black;"><a href="mailto:metro&#64;baltika.com" rel="nofollow"><span style="color: blue;">metro&#64;baltika.com</span></a></span></p>
+</td><td style="border: 1px dashed #bbbbbb;" width="0"> </td></tr><tr><td style="border: solid windowtext 1.0pt;" width="132">
+<p><span style="color: black;">Лента</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="312">
+<p><span style="color: black;">ООО ЛЕНТА</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="454">
+<p><span style="color: black;"><a href="mailto:lenta&#64;baltika.com" rel="nofollow"><span style="color: blue;">lenta&#64;baltika.com</span></a></span></p>
+</td><td style="border: 1px dashed #bbbbbb;" width="0"> </td></tr><tr><td style="border: solid windowtext 1.0pt;" width="132">
+<p><span style="color: black;">Окей</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="312">
+<p><span style="color: black;">ООО &#34;О&#96;КЕЙ&#34;; ООО &#34;Фреш Маркет&#34;</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="454">
+<p><span style="color: black;"><a href="mailto:okey&#64;baltika.com" rel="nofollow"><span style="color: blue;">okey&#64;baltika.com</span></a></span></p>
+</td><td style="border: 1px dashed #bbbbbb;" width="0"> </td></tr><tr><td style="border: solid windowtext 1.0pt;" width="132">
+<p><span style="color: black;">Ашан</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="312">
+<p><span style="color: black;">ООО &#34;АШАН&#34;; ООО &#34;АТАК&#34;</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="454">
+<p><span style="color: black;"><a href="mailto:auchan&#64;baltika.com" rel="nofollow"><span style="color: blue;">auchan&#64;baltika.com</span></a></span></p>
+</td><td style="border: 1px dashed #bbbbbb;" width="0"> </td></tr><tr><td style="border: solid windowtext 1.0pt;" width="132">
+<p><span style="color: black;">Х5</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="312">
+<p><span style="color: black;">ЗАО «ТД Перекресток»; ООО «Агроторг»; ООО «Агроаспект»; ООО «Копейка-Москва»; ООО «Копейка М.О.»; ООО «Сладкая Жизнь»; ООО «Компания Урал-Агро-Торг»</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="454">
+<p><span style="font-size: 10.0pt; color: black;"><a href="mailto:x5&#64;baltika.com" rel="nofollow"><span style="color: #993300;">x5&#64;baltika.com</span></a></span></p>
+</td><td style="border: 1px dashed #bbbbbb;" width="0"> </td></tr><tr><td style="border: solid windowtext 1.0pt;" width="132">
+<p><span style="color: black;">Седьмой Континент</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="312">
+<p><span style="color: black;">ОАО «Седьмой Континент»</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="454">
+<p><span style="color: black;"><a href="mailto:7cont&#64;baltika.com" rel="nofollow"><span style="color: blue;">7cont&#64;baltika.com</span></a></span></p>
+</td><td style="border: 1px dashed #bbbbbb;" width="0"> </td></tr><tr><td style="border: solid windowtext 1.0pt;" width="132">
+<p><span style="color: black;">Билла</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="312">
+<p><span style="color: black;">ООО «Билла»</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="454">
+<p><span style="color: black;"><a href="mailto:billa&#64;baltika.com" rel="nofollow"><span style="color: blue;">billa&#64;baltika.com</span></a></span></p>
+</td><td style="border: 1px dashed #bbbbbb;" width="0"> </td></tr><tr><td style="border: solid windowtext 1.0pt;" width="132">
+<p><span style="color: black;">Магнит</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="312">
+<p><span style="color: black;">АО «Тандер»</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="454">
+<p><span style="color: black;"><a href="mailto:tander_int&#64;baltika.com" rel="nofollow"><span style="color: #993300;">tander_int&#64;baltika.com</span></a></span></p>
+</td><td style="border: 1px dashed #bbbbbb;" width="0"> </td></tr><tr><td style="border: solid windowtext 1.0pt;" width="132">
+<p><span style="color: black;">Дикси</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="312">
+<p><span style="color: black;">АО &#34;ДИКСИ Юг&#34;</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="454">
+<p><span style="color: black;"><a href="mailto:dixy&#64;baltika.com" rel="nofollow"><span style="color: blue;">dixy&#64;baltika.com</span></a></span></p>
+</td><td style="border: 1px dashed #bbbbbb;" width="0"> </td></tr><tr><td style="border: solid windowtext 1.0pt;" width="132">
+<p><span style="color: black;">Виктория</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="312">
+<p><span style="color: black;">ООО «Виктория Балтия»</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="454">
+<p><span style="color: black;"><a href="mailto:victoriya&#64;baltika.com" rel="nofollow"><span style="color: blue;">victoriya&#64;baltika.com</span></a></span></p>
+</td><td style="border: 1px dashed #bbbbbb;" width="0"> </td></tr><tr><td style="border: solid windowtext 1.0pt;" width="132">
+<p><span style="color: black;">Бристоль</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="312">
+<p><span style="color: black;">ООО «Альбион -2002», «Бристоль ритейл Логистикс»</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="454">
+<p><span style="color: black;"><a href="mailto:albion&#64;baltika.com" rel="nofollow"><span style="color: #993300;">albion</span><span style="color: #993300;">&#64;baltika.com</span></a></span></p>
+</td><td style="border: 1px dashed #bbbbbb;" width="0"> </td></tr><tr><td style="border: solid windowtext 1.0pt;" width="132">
+<p><span style="color: black;">Монетка</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="312">
+<p><span style="color: black;">ООО «Элемент-Трейд», ООО «Инвестпроект», ООО «Фокус-ритейл»</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="454">
+<p><span style="color: black;"><a href="mailto:monetka&#64;baltika.com" rel="nofollow"><span style="color: blue;">monetka&#64;baltika.com</span></a></span></p>
+</td><td style="border: 1px dashed #bbbbbb;" width="0"> </td></tr><tr><td style="border: solid windowtext 1.0pt;" width="132">
+<p><span style="color: black;">Верный</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="312">
+<p><span style="color: black;">ООО «Союз святого Иоанна Воина»</span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="454">
+<p><span style="color: black;"><a href="mailto:vernui&#64;baltika.com" rel="nofollow"><span style="color: #993300;">vernui&#64;baltika.com</span></a></span></p>
+</td><td style="border: 1px dashed #bbbbbb;" width="0">
+<p> </p>
+</td></tr><tr><td style="border: solid windowtext 1.0pt;" width="132">
+<p><span style="color: black;">Красное и Белое</span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+<p><span style="color: black;"> </span></p>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="312">
+<table style="height: 689px;" width="172"><tbody><tr><td style="border: 1px dashed #bbbbbb;" rowspan="2" width="211">
+<p>OOO &#34;Лабиринт-Уфа&#34;</p>
+<p>ООО &#34;Альбион&#34;<br />ООО Аврора<br />ООО &#34;Авангард&#34;<br />ООО &#34;Айсберг&#34;<br />ООО &#34;АЛЛЕГРО&#34;<br />ООО &#34;Альтаир&#34;<br />ООО &#34;Альфа Владимир&#34;<br />ООО &#34;Альфа Пенза&#34;<br />ООО &#34;Альфа Рязань&#34;<br />ООО &#34;Альфа-М&#34;<br />ООО &#34;Апогей&#34;<br />ООО &#34;АПОЛЛОН&#34;<br />ООО &#34;АРХИПЕЛАГ&#34;<br />ООО &#34;АТЛАНТ&#34;<br />ООО &#34;АТЛАС&#34;<br />ООО &#34;БАРГУЗИН&#34;<br />ООО &#34;Барк&#34;<br />ООО &#34;Бета-М&#34;<br />ООО &#34;БОРЕЙ&#34;<br />ООО &#34;ГАНИМЕД&#34;<br />ООО &#34;ГРАД&#34;<br />ООО &#34;Градус&#34;<br />ООО &#34;ГРАДУСНИК&#34;<br />ООО &#34;Залесье&#34;<br />ООО &#34;ЛАБИРИНТ&#34;<br />ООО &#34;Лабиринт-Волга&#34;<br />ООО &#34;Лабиринт-Екатеринбург&#34;<br />ООО &#34;Ледник&#34;<br />ООО &#34;Навигатор&#34;<br />ООО &#34;Триумф&#34;<br />ООО «Альфа Омск»<br />ООО «Альфа Пермь»<br />ООО «Бета Пермь»<br />ООО «Лабиринт-М»<br />ООО «Оазис»<br />ООО «Одиссей»<br />ООО АБСОЛЮТ<br />ООО Анкор<br />ООО БАРАУС<br />ООО Бахус<br />ООО БРИЗ<br />ООО ГЕЛИОС<br />ООО Дионис<br />ООО Лабиринт-С<br />ООО Лабиринт-Урал<br />ООО Лабиринт-Челябинск<br />ООО Сателлит<br />ООО ТД &#34;АЗИМУТ&#34;</p>
+</td></tr></tbody></table>
+</td><td style="border: 1pt solid #000000; width: 312px;" width="454">
+<p><span style="color: black;"><a href="mailto:KiB_int&#64;baltika.com" rel="nofollow"><span style="color: #993300;">KiB_int&#64;baltika.com</span></a></span></p>
+</td><td style="border: 1px dashed #bbbbbb;" width="0"> </td></tr><tr><td style="border: solid windowtext 1.0pt;" width="132">
+<p><span style="color: black;">LKA</span></p>
+</td><td style="border: 1pt solid windowtext; width: 312px;" width="312">
+<p>ЗАО &#34;Вегат Плюс&#34;<br />ООО &#34;Наша Марка-Батайск&#34;<br />ООО &#34;Авоська - два&#34;<br />ООО &#34;Апекс плюс&#34;<br />ООО &#34;Ассорти - Дон&#34;<br />ООО &#34;Ассорти&#34;<br />ООО &#34;Ассорти-Альянс&#34;<br />ООО &#34;Ассорти-Вест&#34;<br />ООО &#34;Ассорти-Зверево&#34;<br />ООО &#34;Ассорти-Продукт&#34;<br />ООО &#34;Ассорти-Трейдинг&#34;<br />ООО &#34;Ассорти-Шахты&#34;<br />ООО &#34;АССОРТИ-ЭКСПРЕСС&#34;<br />ООО &#34;Атланткосметик&#34;<br />ООО &#34;Биллион&#34;<br />ООО &#34;Городской супермаркет&#34;<br />ООО &#34;Елакс&#34;<br />ООО &#34;ЛАЙТ&#34;<br />ООО &#34;ЛОГИСТИК ЦЕНТР&#34;<br />ООО &#34;ЛОГИСТИК-ДОН&#34;<br />ООО &#34;Логистик-Сервис&#34;<br />ООО &#34;Миллениум-Продукт&#34;<br />ООО &#34;Надежда-М51&#34;<br />ООО &#34;УСПЕХ&#34;<br />ООО «Бэст Прайс»</p>
+</td><td style="border: 1pt solid windowtext; width: 312px;" width="454">
+<p><span style="color: black;"><a href="mailto:lka&#64;baltika.com" rel="nofollow"><span style="color: blue;">lka&#64;baltika.com</span></a></span></p>
+</td><td style="border: 1px dashed #bbbbbb;" width="0"> </td></tr></tbody></table>
+<p><span style="font-size: 10.0pt; color: black;"> </span></p>
+<p><strong>Команда проекта CreateNow </strong></p>]]></report_body>
+        <report_title>Отчет проблемы доставки (нарастающим итогом) - СГП-Сети Гатчина</report_title>
+        <run_as display_value="Lev Ryabtsev">7eaa6d5adbda0b806e87f1eabf96197d</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period>1970-01-01 01:00:00</run_period>
+        <run_start>2017-04-10 05:04:00</run_start>
+        <run_time>1969-12-31 21:00:00</run_time>
+        <run_type>periodically</run_type>
+        <sys_class_name>sysauto_report</sys_class_name>
+        <sys_created_by>Filippov_as</sys_created_by>
+        <sys_created_on>2017-04-10 10:28:45</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>5ed1a4a1dbce36c02eb8f3651d961922</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>EE SC DeliveryIssues_Baltika_All_4hours_3PL_СГП-Сети Гатчина 3PL</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sysauto_report_5ed1a4a1dbce36c02eb8f3651d961922</sys_update_name>
+        <sys_updated_by>maximov_as</sys_updated_by>
+        <sys_updated_on>2018-12-11 11:20:00</sys_updated_on>
+        <u_company/>
+        <upgrade_safe>false</upgrade_safe>
+        <user_list/>
+        <zip>false</zip>
+    </sysauto_report>
+</record_update>

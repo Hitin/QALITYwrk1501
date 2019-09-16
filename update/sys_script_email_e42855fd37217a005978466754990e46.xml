@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_coord_contact</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[if (current.u_bq_usergroup != ''){
+	template.print('По организационным вопросам обращайтесь к координаторам: <br /><br />');
+	var coordList = current.u_bq_usergroup.u_bq_coors;
+	var coordArr = coordList.split(",");
+
+	var coord;
+	for (var i=0; i<coordArr.length; i++){
+		coord = new GlideRecord ('sys_user');
+		coord.get(coordArr[i]);
+		template.print(coord.name + ' <a href="mailto:' + coord.email + '">' + coord.email + '</a><br />');
+	}
+	//template.print('<br />');
+}
+
+]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-03-17 12:31:31</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>e42855fd37217a005978466754990e46</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>bq_coord_contact</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_e42855fd37217a005978466754990e46</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2017-10-04 06:14:51</sys_updated_on>
+    </sys_script_email>
+</record_update>

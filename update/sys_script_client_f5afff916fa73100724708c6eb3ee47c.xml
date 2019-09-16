@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>short_description</field>
+        <global>false</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>bq_On SC load</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+	//g_form.setMandatory('u_bq_satisfaction', 'false');
+	g_form.showErrorBox("u_bq_usergroup", "Поля заполняются автоматически");
+	g_form.showFieldMsg('u_product_type','Что абонент хочет экспортировать');
+	if(g_user.hasRole('bq_operator') && g_form.getValue('sys_mod_count') == '0' && g_form.getValue('u_bq_contact_type') == 'Звонок'){
+		
+	g_form.addErrorMessage("Проверьте корректность введенных Вами данных");
+
+	
+	
+	}
+ 		if (g_user.hasRole('bq_operator') && g_form.getValue('u_bq_satisfaction')!=''){
+		g_form.setDisabled('u_bq_satisfaction',true);
+		}
+}
+
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>x-rubesdmi</sys_created_by>
+        <sys_created_on>2015-04-20 12:51:13</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>f5afff916fa73100724708c6eb3ee47c</sys_id>
+        <sys_mod_count>64</sys_mod_count>
+        <sys_name>bq_On SC load</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_client_f5afff916fa73100724708c6eb3ee47c</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-08-09 11:54:42</sys_updated_on>
+        <table>x_caas_quality_service_call</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view>hotline</view>
+    </sys_script_client>
+</record_update>

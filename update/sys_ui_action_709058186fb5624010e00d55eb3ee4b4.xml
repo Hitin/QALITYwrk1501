@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>BackToOperatorAction</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>current.u_bq_topic == "387a67b76f05ea0010e00d55eb3ee4a0"</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Вернуть оператору</name>
+        <onclick>BackToOperator();</onclick>
+        <order>100</order>
+        <script><![CDATA[function BackToOperator()
+{
+	if(g_form.getValue('u_bq_error_reason')=='') {
+	g_form.setMandatory('u_bq_error_reason', 'true');
+	g_form.getControl('u_bq_error_reason').focus();
+	g_form.showFieldMsg('u_bq_error_reason','Нельзя вернуть заявку оператору, не указав причину в поле Причины ошибок в выборе темы','error');
+}
+	else {
+	gsftSubmit(null, g_form.getFormElement(), 'BackToOperatorAction');
+	}
+}
+
+if(typeof window == 'undefined')  
+ runUpdate();
+
+function runUpdate(){
+var parent = new GlideRecord ('x_caas_quality_service_call');
+var t = ''; 
+parent.addQuery('sys_id',current.u_reference_service_call);
+parent.query();
+
+
+if (parent.next()){
+	t = current.u_bq_resptext.replace(/<[^>]+>/g,'');
+	t = t.replace('"','\"');
+	if (t != undefined)
+		parent.u_bq_prot_input += "Содержание ответа для инициатора: " + "\n\n" + t;
+	parent.u_bq_state = 'Новое';
+	parent.update();
+	current.u_bq_state = 'Решено';
+	current.update();
+	}
+}
+//parent.save();
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>x-ruvoyand</sys_created_by>
+        <sys_created_on>2016-09-07 05:32:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>709058186fb5624010e00d55eb3ee4b4</sys_id>
+        <sys_mod_count>36</sys_mod_count>
+        <sys_name>Вернуть оператору</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_ui_action_709058186fb5624010e00d55eb3ee4b4</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-08-30 10:40:22</sys_updated_on>
+        <table>x_caas_quality_service_call</table>
+        <ui11_compatible>false</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

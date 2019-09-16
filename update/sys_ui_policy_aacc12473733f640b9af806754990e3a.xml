@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_caas_quality_service_call">u_bq_topic=ba1a10a46f62d20010e00d55eb3ee4d6^ORu_bq_topic=387a67b76f05ea0010e00d55eb3ee4a0^ORu_bq_topic=9fb910a46f62d20010e00d55eb3ee497^ORu_bq_topic=033aeab1dbcbf2882eb8f3651d9619a7^EQ<item display_table="x_caas_quality_bq_topic" display_value="Продажи" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="false" value="ba1a10a46f62d20010e00d55eb3ee4d6"/>
+            <item display_table="x_caas_quality_bq_topic" display_value="Администрирование процесса" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="true" value="387a67b76f05ea0010e00d55eb3ee4a0"/>
+            <item display_table="x_caas_quality_bq_topic" display_value="Качество продукции" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="true" value="9fb910a46f62d20010e00d55eb3ee497"/>
+            <item display_table="x_caas_quality_bq_topic" display_value="ПЭТ-кеги" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="true" value="033aeab1dbcbf2882eb8f3651d9619a7"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>false</global>
+        <inherit>false</inherit>
+        <isolate_script>false</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+	var sections = g_form.getSections();
+	sections[10].style.display = 'none';
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+	var sections = g_form.getSections();
+	sections[10].style.display = 'block';
+
+}]]></script_true>
+        <set_values/>
+        <short_description>bq_hide_addres_section</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>x-ruChePol</sys_created_by>
+        <sys_created_on>2017-07-11 11:06:10</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>aacc12473733f640b9af806754990e3a</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name>bq_hide_addres_section</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_ui_policy_aacc12473733f640b9af806754990e3a</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-17 13:26:17</sys_updated_on>
+        <table>x_caas_quality_service_call</table>
+        <ui_type>0</ui_type>
+        <view>hotline</view>
+    </sys_ui_policy>
+</record_update>

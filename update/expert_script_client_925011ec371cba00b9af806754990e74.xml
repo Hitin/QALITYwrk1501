@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="expert_script_client">
+    <expert_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <expert display_value="Новое обращение по Логистике">c987ff5d37f7a2005978466754990edb</expert>
+        <expert_panel display_value="new_logistic">4bd66d4e3733e2005978466754990e2d</expert_panel>
+        <expert_panel_variable>299e6c47dbf35b0050c5298a489619ec</expert_panel_variable>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>bq_return5</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+	if (!isLoading){ 
+		if (newValue == 'yes'){
+			var ga = new GlideAjax('x_caas_quality.bq_getTTNgroup'); 
+			ga.addParam('sysparm_name','getTTNgroup');  
+			ga.addParam('sysparm_ttn', g_form.getValue('u_bq_inv_number'));
+			ga.getXML(getTTN);
+		}
+
+		if (newValue == 'no'){
+			if (g_form.getValue('u_bq_subtopic') =='1a0704c43790ba00b9af806754990ebb'){ //Жалоба на поведение приемщиков
+				g_form.setValue('u_response', 'Ваша проблема зарегистрирована. Спасибо за звонок');
+			}
+			else {
+				g_form.setValue('u_response', 'Ваша заявка принята. Ожидайте СМС с номером заявки в течение 30 минут.');
+			}
+		}
+	}	
+}
+
+function getTTN(response){ 
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	if (answer == 'c480145737a722005978466754990ec3'){ //Доставка. Локальные клиенты
+		g_form.setValue('u_response', 'Ваша заявка принята. Ожидайте СМС с номером заявки в течение 30 минут.');
+	}
+	else{
+		g_form.setValue('u_response', 'Вам согласован возврат в пределах пяти упаковок. Вы можете вернуть эту продукцию на завод, с которого отгружались. В ближайшее время вам придет СМС с номером вашей заявки и кодом возврата, который вы должны будете сообщить диспетчеру при оформлении акта возврата');
+	}
+}]]></script>
+        <sys_class_name>expert_script_client</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-01-10 11:26:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>925011ec371cba00b9af806754990e74</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>bq_return5</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_script_client_925011ec371cba00b9af806754990e74</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-11 05:47:51</sys_updated_on>
+        <table/>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </expert_script_client>
+</record_update>

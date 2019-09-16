@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sysauto_report">
+    <sysauto_report action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <address_list/>
+        <condition/>
+        <conditional>false</conditional>
+        <group_list/>
+        <include_detail>false</include_detail>
+        <include_with/>
+        <name>EE SC BY DeliveryIssues_Olivaria Беларусь</name>
+        <omit_if_no_records>true</omit_if_no_records>
+        <output_type>XLSX</output_type>
+        <page_height_in_pixels>612</page_height_in_pixels>
+        <page_size>Letter</page_size>
+        <page_width_in_pixels>792</page_width_in_pixels>
+        <report display_value="">a1ec1856dbbb8f001348a3e84b96197f</report>
+        <report_body><![CDATA[<p>отчет по проблемам доставки Беларусь зарегистрированным за прошедший день</p>]]></report_body>
+        <report_title>отчет по проблемам доставки Беларусь за прошедший день</report_title>
+        <run_as display_value="Lev Ryabtsev">7eaa6d5adbda0b806e87f1eabf96197d</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2018-01-23 14:03:35</run_start>
+        <run_time>1969-12-31 21:05:00</run_time>
+        <run_type>daily</run_type>
+        <sys_class_name>sysauto_report</sys_class_name>
+        <sys_created_by>Filippov_as</sys_created_by>
+        <sys_created_on>2018-01-23 14:03:45</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>224d9096dbbb8f001348a3e84b961961</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>EE SC BY DeliveryIssues_Olivaria Беларусь</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sysauto_report_224d9096dbbb8f001348a3e84b961961</sys_update_name>
+        <sys_updated_by>ryabtsev_lf</sys_updated_by>
+        <sys_updated_on>2018-03-12 12:20:42</sys_updated_on>
+        <u_company/>
+        <upgrade_safe>false</upgrade_safe>
+        <user_list>2286c6210f696200f2f0f88ce1050e05,6c96c6210f696200f2f0f88ce1050eaf,256606210f696200f2f0f88ce1050e10,cb2a2b5c981aa500e335d47480f467f2</user_list>
+        <zip>false</zip>
+    </sysauto_report>
+</record_update>

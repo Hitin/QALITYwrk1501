@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_notify_assignee</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[var scall = new GlideRecord('x_caas_quality_service_call');
+scall.addQuery('u_bq_user',event.parm1);
+scall.addQuery('u_bq_state','Назначено ответственному').addOrCondition('u_bq_state','В работе');
+scall.orderByDesc('u_bq_danger.u_bq_need_agree');
+scall.orderByDesc('u_bq_created_on');
+scall.query();
+var i = 1;
+template.print('<table border="1" cellpadding="5" cellspacing="0">');
+template.print('<tr><th>N</th><th>Обращение</th><th>Город</th><th colspan="2">Направление</th><th>Первая категория опасности</th></tr>');
+while (scall.next()) {
+	template.print('<tr><th>' + i + '</th><td>' + scall.number + '</td><td>' + scall.getDisplayValue('u_bq_usercity') + '</td><td colspan="2">' + scall.getDisplayValue('u_bq_danger') + '</td><td>');
+	if (scall.u_bq_danger != '' && scall.u_bq_danger.u_bq_need_agree)
+		template.print('Да</td></tr>');
+	else
+		template.print('</td></tr>');
+	if (scall.u_bq_topic == '46aa161f6f972200724708c6eb3ee4ea'){
+		template.print('<tr><th>Резюме/Протокол:</th><td colspan="5">');
+		if (scall.u_bq_applicant_info != '') template.print(scall.u_bq_applicant_info.substring(0,500) + '<br />');
+		var notes = scall.u_bq_prot_list.getJournalEntry(-1);
+		var na = notes.split("\n\n");
+		var c = 0;
+		for (var j = 0; (j < ( na.length + c) && j < (3 + c)); j++) {
+			template.print(na[j] + '<br />');
+			if (na[i].indexOf('Содержание ответа для инициатора:') > -1){
+				c++;
+			}
+		}
+		template.print('</td></tr>');
+	}
+	else {
+		template.print('<tr><th>Резюме:</th><td colspan="5">' + scall.u_bq_applicant_info.substring(0,500) + '</td></tr>');
+	}
+	template.print('<tr><th>Действия:</th>');
+	template.print('<td></td>');
+	if (scall.u_bq_topic == '46aa161f6f972200724708c6eb3ee4ea'){
+		if (scall.u_log_country == 'BY'){
+			if (scall.u_multiple_solution){
+				template.print('<td><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+scall.u_bq_number+' - Решать отдельно&body=Решать отдельно">Решать отдельно</a></td>');
+				template.print('<td></td>');
+				template.print('<td></td>');
+				template.print('<td></td>');
+			}
+			else{
+				template.print('<td><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+scall.number+' Предоставить решение&body=Решение по заявке: [приемка] %0A%0A~***********ниже напишите в свободной форме комментарий по решению в скобках при необходимости*********%0A%0AДополнительная информация для водителя (при необходимости):[]">Решение заявки: Приемка</a></td>');
+				template.print('<td><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+scall.number+' Предоставить решение&body=Код решения: [R_001] %0A%0AРешение по заявке: [частичный возврат] %0A%0A~***********ниже напишите в свободной форме комментарий по решению в скобках при необходимости*********%0A%0AДополнительная информация для водителя (при необходимости):[]">Решение заявки: Частичный возврат</a></td>');
+				template.print('<td><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+scall.number+' Предоставить решение&body=Код решения: [R_001] %0A%0AРешение по заявке: [возврат] %0A%0A~***********ниже напишите в свободной форме комментарий по решению в скобках при необходимости*********%0A%0AДополнительная информация для водителя (при необходимости):[]">Решение заявки: Возврат</a></td>');
+				template.print('<td></td>');
+			}
+		}
+		else{
+			template.print('<td></td>');
+			template.print('<td></td>');
+			template.print('<td></td>');
+			template.print('<td></td>');
+		}
+	}
+	else {
+		template.print('<td><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+scall.number+' Запросить доп информацию&body=Запрос дополнительной информации:">Запросить доп информацию по обращению</a></td>');
+		template.print('<td><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+scall.number+' Вернуть координатору группы&body=Причина возврата для руководителя группы:">Вернуть координатору</a></td>');
+		if (scall.u_bq_danger.u_bq_need_agree == true) {
+		template.print('<td><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+scall.number+' Согласовать ответ&body=Комментарий для согласующего:">Согласовать ответ</a></td><td></td></tr>');
+		} 
+		else {
+			template.print('<td><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+scall.number+' Решено/ приняты меры&body=Содержание ответа для инициатора:">Решить</a></td><td></td></tr>');
+		}
+	}
+	
+	
+	template.print('<tr><td colspan="6" style="background-color: #c0c0c0" height="25"></td></tr>');
+	i++;
+}
+template.print('</table>');]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-rutipali</sys_created_by>
+        <sys_created_on>2016-07-29 12:04:29</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>eca8a7536f7ce60010e00d55eb3ee4a4</sys_id>
+        <sys_mod_count>54</sys_mod_count>
+        <sys_name>bq_notify_assignee</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_eca8a7536f7ce60010e00d55eb3ee4a4</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2018-06-21 11:10:52</sys_updated_on>
+    </sys_script_email>
+</record_update>

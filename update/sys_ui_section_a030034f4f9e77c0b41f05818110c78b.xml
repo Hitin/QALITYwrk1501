@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="a030034f4f9e77c0b41f05818110c78b" sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="x_caas_quality_bq_invoices" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ttn_number</element>
+            <position>0</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>9ccfc6044fea7780d8a900818110c70c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_ttn_date</element>
+            <position>1</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>1ccfc6044fea7780d8a900818110c70d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_drp_order</element>
+            <position>2</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>90cfc6044fea7780d8a900818110c70e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_client_order</element>
+            <position>3</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>18cfc6044fea7780d8a900818110c70e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_wh_code</element>
+            <position>4</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>9ccfc6044fea7780d8a900818110c70e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_delivery_code</element>
+            <position>5</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>14cfc6044fea7780d8a900818110c70f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_delivery_address</element>
+            <position>6</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>98cfc6044fea7780d8a900818110c70f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_buyer_code</element>
+            <position>7</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>10cfc6044fea7780d8a900818110c710</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_buyer_name</element>
+            <position>8</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>94cfc6044fea7780d8a900818110c710</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_delivery_date</element>
+            <position>9</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>1ccfc6044fea7780d8a900818110c710</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_delivery_time_from</element>
+            <position>10</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>90cfc6044fea7780d8a900818110c711</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_delivery_time_to</element>
+            <position>11</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>18cfc6044fea7780d8a900818110c711</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_group</element>
+            <position>12</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>9ccfc6044fea7780d8a900818110c711</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_tth_short_number</element>
+            <position>13</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>14cfc6044fea7780d8a900818110c712</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_order_number</element>
+            <position>14</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>98cfc6044fea7780d8a900818110c712</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_assignee</element>
+            <position>15</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>10cfc6044fea7780d8a900818110c713</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_driver_name</element>
+            <position>16</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>94cfc6044fea7780d8a900818110c713</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_mrp_demand_type</element>
+            <position>17</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>1ccfc6044fea7780d8a900818110c713</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_delivery_city</element>
+            <position>18</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>90cfc6044fea7780d8a900818110c714</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_region_code</element>
+            <position>19</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>18cfc6044fea7780d8a900818110c714</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>20</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>9ccfc6044fea7780d8a900818110c714</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>21</position>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 07:52:21</sys_created_on>
+            <sys_id>14cfc6044fea7780d8a900818110c715</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_bq_invoices" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a030034f4f9e77c0b41f05818110c78b</sys_ui_section>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 07:52:21</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_caas_quality_bq_invoices</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-02 08:50:04</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>a030034f4f9e77c0b41f05818110c78b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_caas_quality_bq_invoices</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_ui_section_a030034f4f9e77c0b41f05818110c78b</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-02 08:50:04</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

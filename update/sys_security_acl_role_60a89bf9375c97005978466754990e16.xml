@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2018-02-16 10:57:45</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>60a89bf9375c97005978466754990e16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_caas_quality_bq_tel.bq_operator_quality</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_security_acl display_value="x_caas_quality_bq_tel">dbdbbbd66f88c200724708c6eb3ee4e7</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_60a89bf9375c97005978466754990e16</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2018-02-16 10:57:45</sys_updated_on>
+        <sys_user_role display_value="bq_operator_quality" name="bq_operator_quality">b78ffd92374093405978466754990ebd</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

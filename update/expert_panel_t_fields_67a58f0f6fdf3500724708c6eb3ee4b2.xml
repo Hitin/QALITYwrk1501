@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="expert_panel_t_fields">
+    <expert_panel_t_fields action="INSERT_OR_UPDATE">
+        <field>u_bq_meet</field>
+        <pretty_name>Set u_bq_meet to the value of u_bq_meet</pretty_name>
+        <sys_class_name>expert_panel_t_fields</sys_class_name>
+        <sys_created_by>x-rubesdmi</sys_created_by>
+        <sys_created_on>2015-04-13 08:47:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>67a58f0f6fdf3500724708c6eb3ee4b2</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Set u_bq_meet to the value of u_bq_meet</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_panel_t_fields_67a58f0f6fdf3500724708c6eb3ee4b2</sys_update_name>
+        <sys_updated_by>x-rubesdmi</sys_updated_by>
+        <sys_updated_on>2015-11-22 17:16:23</sys_updated_on>
+        <template display_value="Регистрация обращения">10344f0f6fdf3500724708c6eb3ee4eb</template>
+        <type>variable</type>
+        <value/>
+        <variable>IO:a0a9e68b6fdf3500724708c6eb3ee446</variable>
+    </expert_panel_t_fields>
+</record_update>

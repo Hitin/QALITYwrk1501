@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_info</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[template.print('<strong>Информация об обращении:</strong><hr />');
+template.print('<table border="1" cellpadding="5" cellspacing="0"><tr bgcolor="#dbd7d2"><td>Подтема</td><td>Номер обращения</td><td>Место покупки</td><td>Личные данные инициатора (город, имя)</td></tr>');
+template.print('<tr bgcolor="#dbd7d2"><td>' + current.u_bq_danger.u_bq_subtopic + '</td><td>' + current.u_bq_number + '</td><td>' + current.u_bq_buycity.u_name + '</td><td>');
+if (current.u_bq_usercity != ''){
+	template.print('Город: ' + current.u_bq_usercity.u_name + '<br />');
+}
+else template.print('Город не указан <br />');
+if (current.u_bq_applicant != 'Аноним'){
+	template.print('Имя: ' + current.u_bq_applicant + '<br />');
+}
+else 
+	template.print('Имя не указано <br />');
+if (current.u_mail != '')
+	template.print('E-mail: ' + current.u_mail + '<br />');
+if (current.u_alter_mail != '' && (current.u_bq_state == 'Решено' || current.u_bq_state == 'Закрыто'))
+	template.print('<span style="color: #FF0000;">Альтернативный E-mail: ' + current.u_alter_mail + '</span><br />');
+	// + current.u_loyalty + '<br />' + current.u_age + '<br />' + current.u_gender + '<br /></td></tr>');
+//template.print('<tr><td>Резюме обращения</td><td colspan = "3">' + current.u_bq_applicant_info.replaceAll('\n', '<br>') + '</td></tr>');
+template.print('<tr><td>Резюме обращения</td><td colspan = "3">' + new x_caas_quality.bqFunctions().replaceAll(current.u_bq_applicant_info, '\n', '<br>') + '</td></tr>');
+template.print('<tr><td>Протокол</td><td colspan = "3">');
+var notes = current.u_bq_prot_list.getJournalEntry(-1); 
+var na = notes.split("\n\n");   
+var ind = 23;
+for (var i = 0; i < na.length; i++) {	
+	//na[i] = na[i].replaceAll('(Протокол (Для внутренней переписки))', '-');
+	na[i] = new x_caas_quality.bqFunctions().replaceAll(na[i], '(Протокол (Для внутренней переписки))', '-');
+
+	//	if (i == 0 || na[i-1].indexOf('Содержание ответа для инициатора') == -1)
+	if (na[i].substring(0,2) == '20' && na[i].indexOf('-') == 4)
+		template.print('<b>' + na[i].substring(0,ind)+ '</b>' + na[i].substring(ind) + '<br />');
+		
+	else
+		template.print(na[i] + '<br />');
+}    			  
+template.print('</td></tr>');
+
+	var scall = new GlideRecord ('x_caas_quality_service_call');
+	if (current.u_bq_topic == '387a67b76f05ea0010e00d55eb3ee4a0')
+		scall.get(current.u_reference_service_call);
+	else 
+		scall.get(current.sys_id);
+	var disableSpecFields = false;
+	if (scall.u_bq_danger.u_autoclose)
+		disableSpecFields = true;
+	if (!disableSpecFields){
+		//пдд
+		if (scall.u_bq_topic == '20f91c646f62d20010e00d55eb3ee473' && (scall.u_bq_danger == '5a30ace46f62d20010e00d55eb3ee445' || scall.u_bq_danger == 'da20e8e46f62d20010e00d55eb3ee454' || scall.u_bq_danger == 'a0306ce46f62d20010e00d55eb3ee45b' || scall.u_bq_danger == '1bd5d529db1432402eb8f3651d9619a0')){ 
+			template.print('<tr><td>Номер машины</td><td colspan = "3">' + scall.u_bq_dtp_auto + '</td></tr>');
+			template.print('<tr><td>Адрес ДТП</td><td colspan = "3">' + scall.u_bq_dtp_addr + '</td></tr>');
+			template.print('<tr><td>Время ДТП</td><td colspan = "3">' + scall.u_bq_dtp_time + '</td></tr>');
+		}
+		//качество - дефект укупоривания, осадок, недолив, внешний вид, вкус/аромат, Посторонние включения стекло, Посторонние включения разное, опасность, Коррозия, Пенообразование, Травмы причиненные упаковкой (взрывы и т.д.)
+		else if (scall.u_bq_topic == '9fb910a46f62d20010e00d55eb3ee497' && (scall.u_bq_danger == '20a0eb876f91ee0032cc4a6aea3ee422' || scall.u_bq_danger == '3c902b876f91ee0032cc4a6aea3ee4be' || scall.u_bq_danger == 'ccb06f876f91ee0032cc4a6aea3ee4ae' || scall.u_bq_danger == '1cef5b476f91ee0032cc4a6aea3ee49d' || scall.u_bq_danger == 'f9cf97476f91ee0032cc4a6aea3ee4b4' || scall.u_bq_danger == '2d5063876f91ee0032cc4a6aea3ee49d' || scall.u_bq_danger == '6d80ab876f91ee0032cc4a6aea3ee4c3' || scall.u_bq_danger == 'a3ef9b476f91ee0032cc4a6aea3ee415' || scall.u_bq_danger == 'f8c9864bdb9f4b80c3712ded0b961913' || scall.u_bq_danger == 'd2a9464bdb9f4b80c3712ded0b9619ed' || scall.u_bq_danger == 'bc734a87db89c3002f89ffc41d9619e6')){
+			template.print('<tr><td>Бренд</td><td colspan = "3">' + scall.u_bq_brand.u_name + '</td></tr>');
+			template.print('<tr><td>Дата/время розлива</td><td colspan = "3">' + scall.u_bq_make_data + '</td></tr>');
+			template.print('<tr><td>SKU</td><td colspan = "3">' + scall.u_bq_sku + '</td></tr>');
+			template.print('<tr><td>Букв. Код завода-производителя</td><td colspan = "3">' + scall.u_bq_factory.u_bq_factory + '</td></tr>');
+			template.print('<tr><td>Номер линии розлива</td><td colspan = "3">' + scall.u_bq_bottling_line + '</td></tr>');
+			template.print('<tr><td>Годен до</td><td colspan = "3">' + scall.u_bq_exp_date + '</td></tr>');
+			if (scall.u_photo_requested)
+				template.print('<tr><td>Запрошено фото</td><td colspan = "3">' + 'Да</td></tr>');
+			else
+				template.print('<tr><td>Запрошено фото</td><td colspan = "3">' + 'Нет</td></tr>');
+		}
+
+		//Логистика -перевозки - обращения Перевозчиков, обращение Поставщика о ЦМС, По поставке Дистрибьютору и в ТТ, Ж/Д перевозки (включая коммерческие)
+		else if (scall.u_bq_topic == '464a90a46f62d20010e00d55eb3ee455' && (scall.u_bq_danger == '438f58e46f62d20010e00d55eb3ee4a1' || scall.u_bq_danger == '748fd8e46f62d20010e00d55eb3ee450' || scall.u_bq_danger == 'd97f10e46f62d20010e00d55eb3ee441' || scall.u_bq_danger == '4b50273edb16ba402f89ffc41d961947')) {
+			template.print('<tr><td>ФИО водителя</td><td colspan = "3">' + scall.u_driver_name + '</td></tr>');
+			template.print('<tr><td>Транспортная компания</td><td colspan = "3">' + scall.u_transport_company + '</td></tr>');
+			template.print('<tr><td>Пункт погрузки</td><td colspan = "3">' + scall.u_start_point + '</td></tr>');
+			template.print('<tr><td>Пункт разгрузки</td><td colspan = "3">' + scall.u_finish_point + '</td></tr>');
+			template.print('<tr><td>Номер авто</td><td colspan = "3">' + scall.u_bq_auto + '</td></tr>');
+			template.print('<tr><td>Наименование клиента</td><td colspan = "3">' + scall.u_buyer + '</td></tr>');
+			template.print('<tr><td>Номер накладной</td><td colspan = "3">' + scall.u_ttn_number + '</td></tr>');
+		}
+		//Маркетинг - Бренды продукции Компании, Изменение объема (Стекло: 0,45л, 0,47л, 0,48л, Банка: 0,45л, 0,9л),Условия Про-мо Акции, Запросы о Рекламных мероприятиях и товаро-продвигающей продукции, Коммерческие, рекламные предложения, Лига Чемпионов
+		else if (scall.u_bq_topic == 'd11a1c646f62d20010e00d55eb3ee49b' && (scall.u_bq_danger == '9baf58e46f62d20010e00d55eb3ee4a1' || scall.u_bq_danger == '4d69e37e0f9aaa004a2757d003050e5b' || scall.u_bq_danger == '79bfd4e46f62d20010e00d55eb3ee4e2' || scall.u_bq_danger == 'f7bf50e46f62d20010e00d55eb3ee4dd' || scall.u_bq_danger == '0a210cb46fa82a007833bd5dbb3ee42e' || scall.u_bq_danger == '6a5e53226f9b5a007833bd5dbb3ee450')) {
+			template.print('<tr><td>Бренд</td><td colspan = "3">' + scall.u_bq_brand.u_name + '</td></tr>');
+			template.print('<tr><td>Акции</td><td colspan = "3">' + scall.u_bq_promo_new.u_bq_promo_name + '</td></tr>');
+			template.print('<tr><td>Буквенный код\ завод произв.</td><td colspan = "3">' + scall.u_bq_factory.u_bq_factory + '</td></tr>');
+		}
+
+		//ОТ, ППБ и ГО 
+		else if (scall.u_bq_danger == 'f506bf60dbc872802eb8f3651d961927' || scall.u_bq_danger == 'dd24f76cdb8872802eb8f3651d961944') {
+			template.print('<tr><td>ОТ, ППБ и ГО</td><td colspan = "3">');
+			template.print('Откуда звонок: ' + scall.u_caller_location + '<br />');
+			template.print('Звонивший: ' + scall.u_caller + '<br />');
+			template.print('Голос: ' + scall.u_voice + '<br />');
+			template.print('Шумы: ' + scall.u_noise + '<br />');
+			template.print('Речь: ' + scall.u_speech + '<br />');
+			template.print('Язык: ' + scall.u_language + '<br />');
+			template.print('Акцент: ' + scall.u_accent + '<br />');
+			template.print('Говорит: ' + scall.u_speak + '</td></tr>');
+		}
+
+		// Продажи - Отсутствие продукции в ТТ/Рекламные материалы в точке - отсутствуют/не актуальные/Продукция на полке - не аккуратный вид/не видна этикетка/нет ценников/ХО - заполнено менее 80%/ХО - содержит чужую продукцию/ХО - нет планограммы/ХО - грязное / не /Сотрудничество - разливное/Сотрудничество - тарированное/Жалоба от ТТ - истек срок годности продукции /Жалоба от ТТ - другое/Жалоба на ТТ - истек срок годности продукции/Жалоба на ТТ – другое/Жалоба на ТТ - продажа несовершеннолетним/Жалоба от ТТ на сотрудников службы продаж/Фальсификат
+
+	//пэт кеги
+		else if ((scall.u_bq_topic == 'ba1a10a46f62d20010e00d55eb3ee4d6' && (scall.u_bq_danger == 'e268f14ddb25b6802f89ffc41d9619a9' || scall.u_bq_danger == '2552b6716f192e0032cc4a6aea3ee450' || scall.u_bq_danger == 'd94276716f192e0032cc4a6aea3ee432' || scall.u_bq_danger == 'e10232716f192e0032cc4a6aea3ee426' || scall.u_bq_danger == 'c42272716f192e0032cc4a6aea3ee49d' || scall.u_bq_danger == '444276716f192e0032cc4a6aea3ee4c6' || scall.u_bq_danger == 'f03236716f192e0032cc4a6aea3ee4ad' || scall.u_bq_danger == '3b52b6716f192e0032cc4a6aea3ee453' || scall.u_bq_danger == '0262b6716f192e0032cc4a6aea3ee4b1' || scall.u_bq_danger == '9672f6716f192e0032cc4a6aea3ee47b' || scall.u_bq_danger == '1a82b6716f192e0032cc4a6aea3ee494' || scall.u_bq_danger == 'dda2ba716f192e0032cc4a6aea3ee43c' || scall.u_bq_danger == '1f92ba716f192e0032cc4a6aea3ee42a' || scall.u_bq_danger == '1482b6716f192e0032cc4a6aea3ee4f3' || scall.u_bq_danger == '6ab23e716f192e0032cc4a6aea3ee477' || scall.u_bq_danger == 'f092f6716f192e0032cc4a6aea3ee440')) || scall.u_bq_danger ==	'b26aaef1dbcbf2882eb8f3651d96190b') {	
+			template.print('<tr><td>Адрес ТТ</td><td colspan = "3">');
+			if (scall.u_fo != '')
+				template.print('Федеральный Округ: ' + scall.u_fo.getDisplayValue() + '<br />');
+			if (scall.u_cf != '')
+				template.print('Область: ' + scall.u_cf.getDisplayValue() + '<br />');
+			if (scall.u_bq_usercity != '')
+				template.print('Город: ' + scall.u_bq_usercity.getDisplayValue() + '<br />');	
+			if (scall.u_street != '')
+				template.print('Улица: ' + scall.u_street.getDisplayValue() + '<br />');		
+			if (scall.u_house != '')
+				template.print('Дом (корпус): ' + scall.u_house.getDisplayValue() + '<br />');
+			if (scall.u_tt_name != '')
+				template.print('Наименование ТТ: ' + scall.u_tt_name.getDisplayValue() + '<br />');
+			template.print('</td></tr>');
+			template.print('<tr><td>Контактные телефоны</td><td colspan = "3">' + scall.u_bq_contact_phone + '</td></tr>');
+			if (scall.u_bq_danger == 'f092f6716f192e0032cc4a6aea3ee440' || scall.u_bq_danger == '1f92ba716f192e0032cc4a6aea3ee42a' || scall.u_bq_danger == 'dda2ba716f192e0032cc4a6aea3ee43c'){
+				template.print('<tr><td>Дата покупки</td><td colspan = "3">' + scall.u_bq_buydate + '</td></tr>');
+				if (scall.u_bq_expertise) 
+					template.print('<tr><td>Готовность передать на экспертизу</td><td colspan = "3">' + 'Да' + '</td></tr>');
+				else 
+					template.print('<tr><td>Готовность передать на экспертизу</td><td colspan = "3">' + 'Нет' + '</td></tr>');
+				if (scall.u_bq_tara) 
+					template.print('<tr><td>Тару необходимо сохранить</td><td colspan = "3">' + 'Да' + '</td></tr>');
+				else 
+					template.print('<tr><td>Тару необходимо сохранить</td><td colspan = "3">' + 'Нет' + '</td></tr>');
+			}
+			if (scall.u_bq_danger == '1482b6716f192e0032cc4a6aea3ee4f3'){
+				template.print('<tr><td>ФИО ТП </td><td colspan = "3">' + scall.u_tp_fio + '</td></tr>');
+			}
+			if (scall.u_bq_danger == '6ab23e716f192e0032cc4a6aea3ee477'){
+				if (scall.u_photo_requested)
+					template.print('<tr><td>Запрошено фото</td><td colspan = "3">' + 'Да</td></tr>');
+				else
+					template.print('<tr><td>Запрошено фото</td><td colspan = "3">' + 'Нет</td></tr>');
+				template.print('<tr><td>Дата покупки</td><td colspan = "3">' + scall.u_bq_buydate + '</td></tr>');	
+				if (scall.u_bq_expertise) 
+					template.print('<tr><td>Готовность передать на экспертизу</td><td colspan = "3">' + 'Да' + '</td></tr>');
+				else 
+					template.print('<tr><td>Готовность передать на экспертизу</td><td colspan = "3">' + 'Нет' + '</td></tr>');
+				if (scall.u_bq_tara) 
+					template.print('<tr><td>Тару необходимо сохранить</td><td colspan = "3">' + 'Да' + '</td></tr>');
+				else 
+					template.print('<tr><td>Тару необходимо сохранить</td><td colspan = "3">' + 'Нет' + '</td></tr>');
+			}
+			if (scall.u_bq_danger ==	'b26aaef1dbcbf2882eb8f3651d96190b'){
+				if (scall.u_photo_requested)
+					template.print('<tr><td>Запрошено фото</td><td colspan = "3">' + 'Да</td></tr>');
+				else
+					template.print('<tr><td>Запрошено фото</td><td colspan = "3">' + 'Нет</td></tr>');
+			}
+		}
+
+		// Экскурсии
+		else if (scall.u_bq_danger == 'a0a6528bdbd4fa402eb8f3651d96196b'){
+			template.print('<tr><td>Город экскурсии</td><td colspan = "3">' + scall.u_bq_excursion_city.u_name + '</td></tr>');
+			template.print('<tr><td>Запись на экскурсию</td><td colspan = "3">' + scall.u_bq_excursion + '</td></tr>');
+		}
+		// Экспортные продажи
+		else if (scall.u_bq_topic == 'b1a5702adb8636002f89ffc41d961955'){
+			template.print('<tr><td>Контактный телефон</td><td colspan = "3">' + scall.u_bq_contact_phone + '</td></tr>');
+			template.print('<tr><td>Вид продукта</td><td colspan = "3">' + scall.u_product_type + '</td></tr>');
+		}
+	}
+template.print('</table>');]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-03-17 11:27:38</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>7c7985f137217a005978466754990eaa</sys_id>
+        <sys_mod_count>66</sys_mod_count>
+        <sys_name>bq_info</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_7c7985f137217a005978466754990eaa</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-08-30 11:01:17</sys_updated_on>
+    </sys_script_email>
+</record_update>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_log_service_calls_resolution_table</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[var ch = new GlideRecord('sys_choice');
+var chArr = [];
+ch.addQuery('element', 'u_bq_log_solution');
+ch.addQuery('dependent_value', current.u_log_country);
+ch.orderBy('sequence');
+ch.query();
+while (ch.next()){
+	chArr.push(ch.getValue('value'));
+}
+
+codeBY = 'R_001';
+template.print('<table border="1" cellpadding="5" cellspacing="0">');
+
+
+
+
+// if (current.u_log_country == 'BY'){
+// 	template.print('<tr><td colspan="3"><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+current.number+' Предоставить решение&body=Решение по заявке: [приемка] %0A%0A~***********ниже напишите в свободной форме комментарий по решению в скобках при необходимости*********%0A%0AДополнительная информация для водителя (при необходимости):[]">1) Решение заявки: Приемка</a></td></tr>');
+// 	template.print('<tr><td colspan="3"><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+current.number+' Предоставить решение&body=Код решения: [R_001] %0A%0AРешение по заявке: [частичный возврат] %0A%0A~***********ниже напишите в свободной форме комментарий по решению в скобках при необходимости*********%0A%0AДополнительная информация для водителя (при необходимости):[]">2) Решение заявки: Частичный возврат</a></td></tr>');
+// 	template.print('<tr><td><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+current.number+' Предоставить решение&body=Код решения: [R_001] %0A%0AРешение по заявке: [возврат] %0A%0A~***********ниже напишите в свободной форме комментарий по решению в скобках при необходимости*********%0A%0AДополнительная информация для водителя (при необходимости):[]">3) Решение заявки: Возврат</a></td></tr>');
+// }
+// else {
+if (current.u_bq_state != 'Закрыто' && current.u_log_country != 'BY') {
+	template.print('<tr><td colspan="3"><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+current.number+' Запросить доп информацию&body=Запрос дополнительной информации:">Запросить доп информацию</a></td></tr>');
+	template.print('<tr><td colspan="3"><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+ current.number+' Назначение другого ответственного&body=Внимание: для назначения ответственного добавьте его почтовый адрес В КОПИЮ этого письма %0AУкажите текст для ответственного:">Назначить другого ответственного</a>' + ' - после перехода по ссылке «Назначить другого ответственного», необходимо добавить почтовый адрес нужного ответственного В КОПИЮ появившегося письма.</td></tr>');
+}
+for (var i = 0; i < chArr.length; i++){
+	var codes = new GlideRecord('x_caas_quality_bq_delivery_close_code');
+	if (chArr[i] == 'Возврат')
+		codes.addQuery('u_solution', chArr[i]).addOrCondition('u_solution', 'Частичный возврат');
+	else														  
+		codes.addQuery('u_solution', chArr[i]);
+	codes.addQuery('u_archive', false);
+	codes.orderBy('u_code');
+	codes.query();
+	if (!codes.hasNext() || current.u_log_country == 'BY'){
+		template.print('<tr><td colspan="3"><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+current.number+' Предоставить решение&body=');
+		if (current.u_log_country == 'BY' && codes.hasNext())
+			template.print('Код решения: [R_001] %0A%0A');
+		template.print('Решение по заявке: [' + chArr[i].toLowerCase() + '] %0A%0A~***********ниже напишите в свободной форме комментарий по решению в скобках при необходимости*********%0A%0AДополнительная информация для водителя (при необходимости):[]">' + (i+1) + ') Решение заявки: ' + chArr[i] + '</a></td></tr>');
+	}
+	else if (codes.hasNext() && current.u_log_country == 'RUS'){
+		template.print('<tr><td colspan="3">' + (i+1) + ') Решение заявки: ' + chArr[i] + '</td></tr>');
+		while (codes.next()){
+			template.print('<tr><td><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+current.number+' Предоставить решение&body=Код решения: [' + codes.u_code + '] %0A%0AРешение по заявке: [' + chArr[i].toLowerCase() + '] %0A%0A~***********ниже напишите в свободной форме комментарий по решению в скобках при необходимости*********%0A%0AДополнительная информация для водителя (при необходимости):[]">' + codes.u_code + '</a></td><td>' + codes.u_name + '</td><td>' + codes.u_comments + '</td></tr>');
+		}
+	}
+	if (current.u_log_country == 'RUS' && i != chArr.length - 1)
+		template.print('<tr><td colspan="3" height="5"></td></tr>');
+}
+// 	template.print('<tr><td colspan="3"><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+current.number+' Предоставить решение&body=Решение по заявке: [приемка] %0A%0A~***********ниже напишите в свободной форме комментарий по решению в скобках при необходимости*********%0A%0AДополнительная информация для водителя (при необходимости):[]">1) Решение заявки: Приемка</a></td></tr>');
+// 	template.print('<tr><td colspan="3" height="5"></td></tr>');
+// 	template.print('<tr><td colspan="3">2) Решение заявки: Частичный возврат</td></tr>');
+// 	template.print('<tr><td>Код</td><td>Наименование</td><td>Комментарий</td></tr>');
+// 	var reason = new GlideRecord ('u_delivery_close_code');
+// 	reason.addQuery('u_solution','Частичный возврат');
+// 	reason.addQuery('u_archive', false);
+// 	reason.orderBy('u_code');
+// 	reason.query();
+// 	while (reason.next()){
+// 		template.print('<tr><td><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+current.number+' Предоставить решение&body=Код решения: [' + reason.u_code + '] %0A%0AРешение по заявке: [частичный возврат] %0A%0A~***********ниже напишите в свободной форме комментарий по решению в скобках при необходимости*********%0A%0AДополнительная информация для водителя (при необходимости):[]">' + reason.u_code + '</a></td><td>' + reason.u_name + '</td><td>' + reason.u_comments + '</td></tr>');
+// 	}
+// 	template.print('<tr><td colspan="3" height="5"></td></tr>');
+// 	template.print('<tr><td colspan="3">3) Решение заявки: Возврат</td></tr>');
+// 	template.print('<tr><td>Код</td><td>Наименование</td><td>Комментарий</td></tr>');
+// 	reason = new GlideRecord ('u_delivery_close_code');
+// 	//reason.addQuery('u_solution','Возврат');
+// 	reason.addQuery('u_archive', false);
+// 	reason.orderBy('u_code');
+// 	reason.query();
+// 	while (reason.next()){
+// 		template.print('<tr><td><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+current.number+' Предоставить решение&body=Код решения: [' + reason.u_code + '] %0A%0AРешение по заявке: [возврат] %0A%0A~***********ниже напишите в свободной форме комментарий по решению в скобках при необходимости*********%0A%0AДополнительная информация для водителя (при необходимости):[]">' + reason.u_code + '</a></td><td>' + reason.u_name + '</td><td>' + reason.u_comments + '</td></tr>');
+// //	}
+//}
+template.print('</table>');
+
+]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-01-25 10:23:05</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>c7a15a9137283240b9af806754990ec5</sys_id>
+        <sys_mod_count>57</sys_mod_count>
+        <sys_name>bq_log_service_calls_resolution_table</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_c7a15a9137283240b9af806754990ec5</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2018-04-04 07:38:35</sys_updated_on>
+    </sys_script_email>
+</record_update>

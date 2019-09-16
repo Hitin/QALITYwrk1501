@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="expert_panel_t_fields">
+    <expert_panel_t_fields action="INSERT_OR_UPDATE">
+        <field>u_arrival_time</field>
+        <pretty_name>Set u_arrival_time to the value of u_bq_arrival_time</pretty_name>
+        <sys_class_name>expert_panel_t_fields</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2016-12-22 06:23:19</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>45b4ded63777e2005978466754990ecc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set u_arrival_time to the value of u_bq_arrival_time</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_panel_t_fields_45b4ded63777e2005978466754990ecc</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2016-12-22 06:23:19</sys_updated_on>
+        <template display_value="submit">1082ba4637b3e2005978466754990e43</template>
+        <type>variable</type>
+        <value/>
+        <variable>IO:edf9d24e3773e2005978466754990ee1</variable>
+    </expert_panel_t_fields>
+</record_update>

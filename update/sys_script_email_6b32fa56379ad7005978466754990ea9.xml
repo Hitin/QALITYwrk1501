@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_hotline_report</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+          /* Optional GlideRecord */ event) {
+	// Configuration variables
+//	var t = 'y'; // m/y
+//	var correction = -1; //0 - этот месяц, -1 - прошлый месяц
+//	var date = new GlideDateTime('2018-04-01 09:00:00'); 
+	var date = new GlideDateTime(); 
+	
+	/*!!!---!!!*/
+	
+	//template.print('!!! Признак периода формирования отчёта (для теста):'+date.getDate()+'</br></br>')
+	
+
+	mainFunction('m',0, date, true); // короткий
+	template.print('<br /><br />');
+	//if (date.getMonthUTC() != 1){
+		mainFunction('y',-1,date,false); // прошлый год
+		template.print('<br /><br />');
+//	}
+	if (date.getMonthUTC() >= 3){
+		mainFunction('y',0,date,false); // текущий год
+		template.print('<br /><br />');
+	}
+	mainFunction('m',-1,date,false); // позапрошлый месяц
+	template.print('<br /><br />');
+	mainFunction('m',0,date,false); //прошлый месяц
+	template.print('<br /><br />');
+
+})(current, template, email, email_action, event);
+
+
+function mainFunction(t,correction,date,isShort){
+	var y = date.getYear();
+	var per = 'Период:';
+	var i = 0;
+	var L0Header = 'Статистика обращений на горячую линию';
+	var L1Header;
+	var mNumber;
+	var mNumberPrev;
+	
+	
+	
+	if (t == 'y')
+		L1Header = ['Тематика обращений', 'Количество обращений', 'Время предоставления ОС', 'Оценка качества ОС','Просроченные запросы'];
+	else
+		L1Header = ['Тематика обращений', 'Количество обращений в отчетном месяце', 'Динамика по сравнению с прошлым месяцем', 'Время предоставления ОС', 'Оценка качества ОС','Просроченные запросы'];
+	var L2Header;
+	if (isShort)
+		L2Header = ['Зарегистрировано в отчетном месяце','Обработано внутри компании','Динамика количества обращений по сравнению с прошлым месяцем','Кол-во просроченных обращений','Средняя оценка обратной связи, баллы','Просроченные запросы'];
+	else if (t == 'y')
+		L2Header = ['Зарегистрировано','Обработано операторами (предоставлен стандартный ответ)','Обработано внутри компании', 'Кол-во просроченных обращений (ОС  предоставлялась дольше 10 календарных дней*)','% просроченных обращений (от обработанных внутри компании)','%  обращений  по которым обратившиеся дали оценку (от 1 до 5) качества предоставленной обратной связи','Средняя оценка обратной связи, баллы','Просроченные запросы'];
+	else
+		L2Header = ['Зарегистрировано в отчетном месяце','Обработано операторами (предоставлен стандартный ответ)','Обработано внутри компании','Зарегистрировано в прошлом месяце','Динамика количества обращений по сравнению с прошлым месяцем','Кол-во просроченных обращений (ОС  предоставлялась дольше 10 календарных дней*)','% просроченных обращений (от обработанных внутри компании)','%  обращений  по которым обратившиеся дали оценку (от 1 до 5) качества предоставленной обратной связи','Средняя оценка обратной связи, баллы','Просроченные запросы'];
+	var mArr = ['Декабрь','Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
+	var mArr1 = ['Декабре','Январе','Феврале','Марте','Апреле','Мае','Июне','Июле','Августе','Сентябре','Октябре','Ноябре','Декабре'];
+	var mHeader;
+//	var lastM;
+	var thisGT;
+	var lastGT;
+	if (t == 'y'){
+		if (date.getMonthUTC() == 1 || correction == -1){
+			correction = -1;
+			thisGT = new GlideDateTime(y+'-01-01');
+			y--;
+			mHeader = mArr[1] + ' - ' + mArr[12];
+			
+		}
+		else{
+			mHeader = mArr[1] + ' - ' + mArr[date.getMonthUTC() - 1];
+			thisGT = new GlideDateTime(y+'-'+(date.getMonthUTC()) +'-01');
+		}
+		lastGT = new GlideDateTime(y+'-01-01');
+	}
+	else if (t == 'm'){
+		if (date.getMonthUTC() + correction == 0){
+			thisGT = new GlideDateTime((y-1)+'-'+ '12' +'-01');
+			lastGT = new GlideDateTime((y-1)+'-'+ '11' +'-01');
+		}
+		else if (date.getMonthUTC() + correction == 1){
+			thisGT = new GlideDateTime((y)+'-'+ '01' +'-01');
+			lastGT = new GlideDateTime((y-1)+'-'+ '12' +'-01');			
+		}
+		else{
+			thisGT = new GlideDateTime(y+'-'+ (date.getMonthUTC() + correction) +'-01');
+			lastGT = new GlideDateTime(y+'-'+ (date.getMonthUTC() + correction - 1) +'-01');			
+		}
+		if (date.getMonthUTC() == 1 || (correction == -1 && date.getMonthUTC() == 2)){
+			y--;
+		}
+		if ((date.getMonthUTC() + correction - 1) < 0)
+			mNumber = date.getMonthUTC() + (12 - 1) + correction;
+		else 
+			mNumber = date.getMonthUTC() - 1 + correction;
+		mNumberPrev = mNumber -1;
+		if (mNumberPrev == -1)
+			mNumberPrev = 11;
+		mHeader = mArr[mNumber];
+	}
+	var curAggr = getAgr(thisGT.getDate(),t,isShort);
+	var prevAggr;
+	var percAggr =[];
+	if (t == 'm'){
+		prevAggr = getAgr(lastGT.getDate(),t,isShort);
+		for (var k = 0; k < curAggr.length; k++){
+			if (curAggr[k] != 'missed' && curAggr[k] != 'n/a' && prevAggr[k] != 'n/a' && prevAggr[k] != 0)
+				percAggr.push(((curAggr[k] - prevAggr[k]) / prevAggr[k]) * 100);
+			else if(curAggr[k] == 'missed')
+				percAggr.push(curAggr[k]);
+			else
+				percAggr.push('n/a');
+		}
+	}
+	
+	var colNumber;
+	if (isShort)
+		colNumber = 7;  //6
+	else if (t == 'y')
+		colNumber = 9; //8
+	else
+		colNumber = 11; //10
+		
+	if (isShort){//----------header printing
+		template.print('Уважаемые коллеги, добрый день.<br />Готов очередной отчет по работе горячей линии.<br />Данные за ' + mHeader.toLowerCase() + ' ' + y + ' года приведены ниже, более подробная версия отчета, а так же накопительный итог за ');
+		if (date.getMonthUTC() == 2)
+			template.print(y-1);
+		else
+			template.print(y);
+		template.print(' год и ' + mArr[mNumberPrev].toLowerCase() + ' ');
+		if (date.getMonthUTC() == 2)
+			template.print(y-1);
+		else
+			template.print(y);
+		template.print(' года во вложении<br /><br />Как и ранее, готов прокомментировать, ответить на вопросы.<br /><br />');
+		template.print('В ' + mArr1[mNumber].toLowerCase() + ' ' + y + ' количество обращений составило<b>  ' + curAggr[0] + '</b>, что ');
+		if (percAggr[0] > 0)
+			template.print('на <b>' + Math.abs(percAggr[0]).toFixed(2) + '% больше</b>, чем в ');
+		else if (percAggr[0] < 0)
+			template.print('на <b>' + Math.abs(percAggr[0]).toFixed(2) + '% меньше</b>, чем в ');
+		else
+			template.print('равно количеству обращений в ');
+		template.print(mArr1[mNumberPrev].toLowerCase() + ' ');
+		if (date.getMonthUTC() <= 2)
+			template.print(y-1);
+		else
+			template.print(y);
+		
+		template.print(', при этом количество обращений, обработанных внутри компании ');
+		if (percAggr[2] > 0)
+			template.print('<b>увеличилось на ' + Math.abs(percAggr[2]).toFixed(2) + '%</b>');
+		else if (percAggr[2] < 0)
+			template.print('<b>уменьшилось на ' + Math.abs(percAggr[2]).toFixed(2) + '%</b>');
+		else
+			template.print('не изменилось');
+		//Рост связан с подключением обращений с корпоративного сайта к общей схеме обработки.
+		
+		
+		var stat = new GlideRecord('x_caas_quality_bq_hotline_stats');
+		stat.addQuery('u_top_inc', 1);
+		stat.addQuery('u_interval_type','m');
+		stat.addQuery('u_calculated_on', thisGT.getDate());
+		stat.addQuery('u_topic.u_inactive', false);
+		stat.orderByDesc('u_inc');
+	//	stat.setLimit(3);
+		stat.query();
+	//	var countTo3 = 1;
+		var tempString = '';
+		if (stat.hasNext())
+			template.print('. <b>Наибольший рост</b> количества обращений отмечен по темам ');
+		while (stat.next()){
+			tempString += '<b>' + stat.getDisplayValue('u_topic') + '</b> (' + stat.u_inc + '), ';
+		}
+		tempString = tempString.substring(0,tempString.length-2);
+		template.print(tempString + '</b></span>');
+		
+		template.print('. Количество обращений, на которые <b>обратная связь была предоставлена с опозданием</b> ');
+		if (percAggr[5] > 0)
+			template.print('<span style="color: red;"><b>увеличилось на ' + Math.abs(percAggr[5]).toFixed(2) + '%</b></span>');
+		else if (percAggr[5] < 0)
+			template.print('<span style="color: blue;"><b>уменьшилось на ' + Math.abs(percAggr[5]).toFixed(2) + '%</b></span>');
+		else
+			template.print('не изменилось');
+	//	
+		
+		stat = new GlideRecord('x_caas_quality_bq_hotline_stats');
+		stat.addQuery('u_breached_qty', '>', 0);
+		stat.addQuery('u_interval_type','m');
+		stat.addQuery('u_calculated_on', thisGT.getDate());
+		stat.addQuery('u_topic.u_inactive', false);
+		stat.orderByDesc('u_breached_qty');
+		stat.setLimit(3);
+		stat.query();
+	//	countTo3 = 1;
+		if (stat.hasNext()){
+			template.print(', при этом просроченные сообщения были по темам ');
+		}
+		tempString = '';
+		while (stat.next()){
+		//	if (countTo3 > 1)
+		//	tempString += ', ';
+			tempString += '<span style="color: red;"><b>' + stat.getDisplayValue('u_topic') + '</b></span> (' + stat.u_breached_qty + '), ';
+// 			if (countTo3 == 1)
+// 				template.print(', ');
+// 			else if(countTo3 == 2)
+// 				template.print(' и ');
+//			countTo3++;
+		}
+		tempString = tempString.substring(0,tempString.length-2);
+		template.print(tempString + '</b></span>');
+		template.print('. Средняя <b>оценка обратной связи</b> ');
+		if (percAggr[8] > 0)
+			template.print('<span style="color: blue;"><b>увеличилась на ' + Math.abs(percAggr[8]).toFixed(2) + '%</b></span>');
+		else if (percAggr[8] < 0)
+			template.print('<span style="color: red;"><b>уменьшилась на ' + Math.abs(percAggr[8]).toFixed(2) + '%</b></span>');
+		else
+			template.print('не изменилась');
+		stat = new GlideRecord('x_caas_quality_bq_hotline_stats');
+		stat.addQuery('u_feedback_qty', '>', 0);
+		stat.addQuery('u_interval_type','m');
+		stat.addQuery('u_calculated_on', thisGT.getDate());
+		stat.addQuery('u_topic.u_inactive', false);
+		stat.orderBy('u_avg_fb');
+		stat.setLimit(3);
+		stat.query();
+		if (stat.hasNext())
+			template.print(', <b>самая низкая удовлетворенность</b> обратной связью по темам ');
+		tempString = '';
+		while (stat.next()){
+			tempString += '<span style="color: red;"><b>' + stat.getDisplayValue('u_topic') + '</b></span> (' + stat.u_avg_fb + '), ';
+		}
+		tempString = tempString.substring(0,tempString.length-2);
+		template.print(tempString + '</b></span>');
+		template.print('.<br /><br />');
+	}
+	
+	
+	template.print('<table style="background-color: #d3deed; text-align: center;" bordercolor="black" border="1" cellpadding="5" cellspacing="0">');//border="1" cellpadding="5" cellspacing="0" 
+	template.print('<tr style="text-align: left;"><th style="font: 22px; text-align: left;">' + per + '</th><th style="font: 20px; text-align: left;">' + mHeader + '</th><th style="font: 22px; text-align: left;">' + y + '</th><td colspan="' + (colNumber - 6) + '"></td><td colspan="3">*для тематики "качество" - 7 рабочих дней</td></tr>');
+	/*template.print('<tr style="text-align: left;"><th style="font: 22px; text-align: left;">' + per + '</th><th style="font: 20px; text-align: left;">' + mHeader + '</th><th style="font: 22px; text-align: left;">' + y + '</th>');
+	if (t == 'y')
+		template.print('<td colspan="' + (colNumber - 5) + '"></td><td colspan="2">*для тематики "качество" - 7 рабочих дней</td></tr>');
+	else
+		template.print('<td colspan="' + (colNumber - 6) + '"></td><td colspan="3">*для тематики "качество" - 7 рабочих дней</td></tr>'); 
+	*/
+	template.print('<tr><th style="font: 18px;" colspan="' + colNumber + '">' + L0Header + '</th></tr>');
+	template.print('<tr>');
+//	gs.log('av T')
+	for (i = 0; i < L1Header.length; i++){
+		if (i == 0){
+			template.print('<td rowspan="2">' + L1Header[i] + '</td>');
+		}
+		else if (i==1 && !isShort)
+			template.print('<th colspan="3">' + L1Header[i] + '</th>');
+		else if (isShort && i >=2)
+			template.print('<th>' + L1Header[i] + '</th>');
+		else if (((L1Header.length - i) == 1) ) //&& (t == 'm')
+			template.print('<th>' + L1Header[i] + '</th>');
+		else 
+			template.print('<th colspan="2">' + L1Header[i] + '</th>');
+	}
+	template.print('</tr>');
+	template.print('<tr>');
+	for (i = 0; i < L2Header.length; i++){
+		template.print('<td>' + L2Header[i] + '</td>');
+	}
+	template.print('</tr>');
+	
+	
+	var st = new GlideRecord('x_caas_quality_bq_hotline_stats');
+	st.addQuery('u_interval_type',t);
+	st.addQuery('u_calculated_on', thisGT.getDate());
+	st.addQuery('u_topic.u_inactive', false);
+	st.orderBy('u_topic');
+	st.query();
+	var strN=1;
+	var intBreachKPI = 25;
+	var hasFBKPI = 40;
+
+	var FB = [4.95, 4.99];
+	while (st.next()){
+		if (st.u_topic == '9fb910a46f62d20010e00d55eb3ee497')
+			template.print('<tr>');
+		else if (strN % 2 == 0)
+			template.print('<tr style="background-color: #ffffff; text-align: center;">');
+		else
+			template.print('<tr style="background-color: #d0d0d0; text-align: center;">');
+		template.print('<td style="text-align: left;">' + st.getDisplayValue('u_topic') + '</td>');
+		//1
+		if (st.u_top_qty == 1)
+			template.print('<td><b>' + st.u_qty + '</b></td>');
+		else
+			template.print('<td>' + st.u_qty + '</td>');
+		//2
+		if(!isShort)
+			template.print('<td>' + (st.u_qty - st.u_internal_qty) + '</td>');
+		//3
+		if (st.u_top_int == 1)
+			template.print('<td><b>' + st.u_internal_qty + '</b></td>');
+		else
+			template.print('<td>' + st.u_internal_qty + '</td>');
+		//4
+		if (!isShort && t == 'm')
+			template.print('<td>' + (st.u_qty - st.u_inc) + '</td>');
+		//5
+		if (st.u_top_inc == 1 && t == 'm')
+			template.print('<td><b>' + st.u_inc + '</b></td>');
+		else if (t == 'm')
+			template.print('<td>' + st.u_inc + '</td>');
+		//6
+		//if (st.u_top_br == 1)
+		if (st.u_internal_qty == 0)
+			template.print('<td>' + st.u_breached_qty + '</td>');
+		else if ((st.u_breached_qty / st.u_internal_qty)*100 >= intBreachKPI)
+			template.print('<td style="color: red;"><b>' + st.u_breached_qty + '</b></td>');
+		else
+			template.print('<td>' + st.u_breached_qty + '</td>');
+		//7
+		if (!isShort){
+			var prev_st = new GlideRecord('x_caas_quality_bq_hotline_stats');
+			prev_st.addQuery('u_interval_type',t);
+			prev_st.addQuery('u_calculated_on', lastGT.getDate());
+			prev_st.addQuery('u_topic', st.u_topic);
+			prev_st.query();
+			var color = '';
+			if (prev_st.next()){
+				var thisPerc;
+				if (st.u_internal_qty == 0)
+					thisPerc = 0;
+				else
+					thisPerc = (st.u_breached_qty / st.u_internal_qty);
+				var prevPerc;
+				if (prev_st.u_internal_qty == 0)
+					prevPerc = 0;
+				else
+					prevPerc = (prev_st.u_breached_qty / prev_st.u_internal_qty);
+				if (prevPerc > thisPerc || thisPerc == 0)
+					color = 'blue';
+				else
+					color = 'red';
+			//	if (t == 'y' && correction == -1)
+			//	gs.log('av ' + lastGT.getDate() + ' ' + color + ' ' + prevPerc + ' ' + thisPerc + ' ' + prev_st.getDisplayValue('u_topic')) 
+			}
+			if (st.u_internal_qty == 0)
+				template.print('<td> - </td>');
+			else if (color != '')
+				template.print('<td style="color: ' + color + ';"><b>' + ((st.u_breached_qty / st.u_internal_qty)*100).toFixed(2) + ' % </b></td>');
+			else
+				template.print('<td>' + ((st.u_breached_qty / st.u_internal_qty)*100).toFixed(2) + ' % </td>');
+		}
+		if (st.u_feedback_qty > 0){
+			//8
+			if ((st.u_feedback_qty/st.u_qty)*100 < hasFBKPI && !isShort)
+				template.print('<td><b>' + ((st.u_feedback_qty/st.u_qty)*100).toFixed(2) + ' % </b></td>');
+			else if (!isShort)
+				template.print('<td>' + ((st.u_feedback_qty/st.u_qty)*100).toFixed(2) + ' % </td>');
+			//9
+			if (st.u_avg_fb < FB[0])
+				template.print('<td style="color: red;"><b>' + parseFloat(st.u_avg_fb).toFixed(2) + ' б</b></td>');
+			else if(st.u_avg_fb >= FB[1])
+				template.print('<td style="color: blue;"><b>' + parseFloat(st.u_avg_fb).toFixed(2) + ' б</b></td>');
+			else
+				template.print('<td>' + parseFloat(st.u_avg_fb).toFixed(2) + ' б</td>');
+		}
+		else if (isShort)
+			template.print('<td> n/a </td>');
+		else
+			template.print('<td colspan="2"> n/a </td>');
+		//10
+			template.print('<td>');
+			var link = '<a href="' + gs.getProperty('glide.servlet.uri') ;
+			if (st.u_breached_sc != ''){			
+				arrSC = st.u_breached_sc.split(',');
+				var scall = new GlideRecord('x_caas_quality_service_call');
+				if (arrSC.length < 10){
+					link += 'nav_to.do?uri=x_caas_quality_service_call.do?sys_id='; 
+					for (var j = 0; j < arrSC.length; j++){
+						if (scall.get(arrSC[j]))
+							template.print(link + scall.sys_id + '">' + scall.number + '</a><br>');
+					}
+				}
+				else{
+					link += 'x_caas_quality_service_call_list.do?sysparm_query=numberIN';
+					var scall = new GlideRecord('x_caas_quality_service_call');
+					for (var j = 0; j < arrSC.length; j++){
+						if (scall.get(arrSC[j]))
+							link += scall.number + ',';
+						if (j % 150 == 0 && j != 0){
+							template.print(link + '&sysparm_first_row=1&sysparm_view=">Список запросов</a><br>');
+							link = '<a href="' + gs.getProperty('glide.servlet.uri') + 'x_caas_quality_service_call_list.do?sysparm_query=numberIN';
+						}
+					}
+					template.print(link + '&sysparm_first_row=1&sysparm_view=">Список запросов</a><br>');
+				}					
+			}
+			template.print('</td>');	
+			//}
+		template.print('</tr>');
+		strN++;
+	}
+
+// 	var curAggr =  getAgr(thisGT.getDate(),t,isShort);
+// 	var prevAggr;
+// 	if (t == 'm')
+// 		prevAggr =  getAgr(lastGT.getDate(),t,isShort);
+	aggPrint('Итог', '#9e9e9e', curAggr, 'cur');
+	if (t == 'm'){
+		template.print('<tr style="background-color: #ffffff;"><td colspan="' + colNumber + '" height="18"></td></tr>');
+		aggPrint('Данные за прошлый месяц', '', prevAggr, 'prev');
+		aggPrint('Динамика по сравнению с прошлым месяцем', '#ffffff', percAggr, 'perc');
+	}
+	template.print('</table>');
+}
+
+/*function printBreachedSc(header, bgcolor, ar, type){
+}*/
+function getAgr(parm_date,per,isShort){
+	var resArr = [];
+	var ga = new GlideAggregate('u_bq_hotline_stats');
+	ga.addQuery('u_interval_type',per);
+	ga.addQuery('u_calculated_on', parm_date);
+	ga.addQuery('u_topic.u_inactive', false);
+	ga.setGroup(false);
+	ga.addAggregate('SUM', 'u_qty');
+	ga.addAggregate('SUM', 'u_internal_qty');
+	ga.addAggregate('SUM', 'u_inc');
+	ga.addAggregate('SUM', 'u_breached_qty');
+	ga.addAggregate('SUM', 'u_feedback_qty');
+ 	ga.addAggregate('SUM', 'u_feedback_sum');
+	ga.query();
+	
+// 	var ga1 = new GlideAggregate('u_bq_hotline_stats');
+// 	ga1.addQuery('u_interval_type',per);
+// 	ga1.addQuery('u_calculated_on', parm_date);
+// 	ga1.setGroup(false);
+// 	ga1.addAggregate('SUM', 'u_feedback_qty');
+// 	ga1.addAggregate('SUM', 'u_feedback_sum');
+// 	ga1.query();
+	
+	if (ga.next()){
+	//	if (ga1.next()){
+			resArr.push(ga.getAggregate('SUM', 'u_qty'));
+			if(!isShort)
+				resArr.push(ga.getAggregate('SUM', 'u_qty') - ga.getAggregate('SUM', 'u_internal_qty'));
+			else 
+				resArr.push('missed');
+			resArr.push(ga.getAggregate('SUM', 'u_internal_qty'));
+			if (!isShort && per == 'm')
+				resArr.push(ga.getAggregate('SUM', 'u_qty') - ga.getAggregate('SUM', 'u_inc'));
+			else 
+				resArr.push('missed');
+			if (per == 'm')
+				resArr.push(ga.getAggregate('SUM', 'u_inc'));
+			else 
+				resArr.push('missed');
+			resArr.push(ga.getAggregate('SUM', 'u_breached_qty'));
+			if (!isShort){
+				if (ga.getAggregate('SUM', 'u_internal_qty') == 0)
+					resArr.push('n/a');
+				else
+					resArr.push((ga.getAggregate('SUM', 'u_breached_qty') / ga.getAggregate('SUM', 'u_internal_qty')) * 100);
+				if (ga.getAggregate('SUM', 'u_qty') == 0)
+					resArr.push('n/a');
+				else
+					resArr.push((ga.getAggregate('SUM', 'u_feedback_qty')/ga.getAggregate('SUM', 'u_qty')*100));
+			}
+			else {
+				resArr.push('missed');
+				resArr.push('missed');
+			}
+			if (ga.getAggregate('SUM', 'u_feedback_qty') == 0)
+				resArr.push('n/a');
+			else
+				resArr.push(ga.getAggregate('SUM', 'u_feedback_sum')/ga.getAggregate('SUM', 'u_feedback_qty'));
+			if (per == 'm')
+				resArr.push('n/a');
+			//}
+// 		else
+// 			resArr.push(-1);
+		
+		return resArr;
+	}
+}
+function aggPrint(header, bgcolor, ar, type){
+	var incrLevel = 25;
+	if (bgcolor)
+		template.print('<tr style="background-color: ' + bgcolor + '; text-align: center;">');
+	else
+		template.print('<tr style="text-align: center;">');
+	template.print('<td style="text-align: left;">' + header + '</td>');
+	var val;
+	for (var i = 0; i < ar.length; i++){
+		if((type=='cur' || type=='prev') && ar[i] != 'missed'){
+			val = ar[i];
+			if (val == 'n/a')
+				template.print('<td>' + val + '</td>');
+			else if (i >=6 && i <=7)
+				template.print('<td>' + val.toFixed(2) + ' % </td>');
+			else if (i == 8)
+				template.print('<td>' + val.toFixed(2) + ' б</td>');
+			else
+				template.print('<td>' + val + '</td>');
+		}
+		else if (type == 'perc' && ar[i] != 'missed'){
+			if (i == 3 || i == 4)
+				template.print('<td></td>');
+			else{
+				val = ar[i];
+				if (val == 'n/a')
+					template.print('<td>' + val + '</b></td>');
+				else if (i <= 2 && Math.abs(val) > incrLevel)
+					template.print('<td><b>' + val.toFixed(2) + ' % </b></td>');
+				else if (i <= 2)
+					template.print('<td>' + val.toFixed(2) + ' % </b></td>');
+				else if (val >= 0 || (val < 0 && (i == 5 || i == 6)))
+					template.print('<td style="color: blue;"><b>' + val.toFixed(2) + ' % </b></td>');
+				else 
+					template.print('<td style="color: red;"><b>' + val.toFixed(2) + ' % </b></td>');
+			}
+		}
+		
+	}
+	template.print('</tr>');
+}
+]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2018-05-28 07:31:33</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>6b32fa56379ad7005978466754990ea9</sys_id>
+        <sys_mod_count>439</sys_mod_count>
+        <sys_name>bq_hotline_report</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_6b32fa56379ad7005978466754990ea9</sys_update_name>
+        <sys_updated_by>x-ruAblPet</sys_updated_by>
+        <sys_updated_on>2018-09-20 05:28:48</sys_updated_on>
+    </sys_script_email>
+</record_update>

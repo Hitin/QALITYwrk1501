@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="INSERT_OR_UPDATE">
+        <choice_action>create</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>dd/MM/yyyy hh:mm:ss</date_format>
+        <map display_value="bq_Invoices">06c47cf1373fa2005978466754990e6e</map>
+        <reference_value_field/>
+        <source_field>[Script]</source_field>
+        <source_script>answer = (function transformEntry(source) {&#13;
+&#13;
+var t = source.u_дата_и_время_заказа_в_drp.toString();&#13;
+if(t.indexOf('-') &lt;0)&#13;
+{&#13;
+	return t; &#13;
+}&#13;
+else&#13;
+{&#13;
+var y = t.substring(0,4);&#13;
+var m = t.substring(5,7);&#13;
+var d = t.substring(8,10);&#13;
+var time = t.substring(11,19);&#13;
+var d = d+'/'+m+'/'+y+' '+time;&#13;
+return d;&#13;
+}&#13;
+})(source);</source_script>
+        <source_table>x_caas_quality_invoices_import_table</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2016-12-26 08:11:44</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>aab31b27377b26005978466754990e17</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>[Script]</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_transform_entry_aab31b27377b26005978466754990e17</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-08-28 11:38:28</sys_updated_on>
+        <target_field>u_drp_order</target_field>
+        <target_table>x_caas_quality_bq_invoices</target_table>
+        <u_baghira_master/>
+        <use_source_script>true</use_source_script>
+    </sys_transform_entry>
+</record_update>

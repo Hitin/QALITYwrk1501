@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="expert_script_client">
+    <expert_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <expert display_value="Новое обращение по Логистике">c987ff5d37f7a2005978466754990edb</expert>
+        <expert_panel display_value="new_logistic">4bd66d4e3733e2005978466754990e2d</expert_panel>
+        <expert_panel_variable>123a1e4e3773e2005978466754990ef9</expert_panel_variable>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>bq_setSCforRedirect</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+	if (isLoading)
+		return;
+	g_form.hideFieldMsg('u_bq_subtopic', true);
+	if (newValue == 'a1474c4c3750ba00b9af806754990e3a') //- none -
+		g_form.setValue('u_sc_for_redirect', '');
+	else if ((g_form.getValue('u_ref_found') == 'true') || (g_form.getValue('u_ref_found_yn') == 'yes')) {
+		var ga = new GlideAjax('x_caas_quality.bqAjax');
+		ga.addParam('sysparm_name','getSCredirect');
+		ga.addParam('sysparm_top', g_form.getValue('u_bq_subtopic'));
+		ga.addParam('sysparm_parent', g_form.getValue('u_parent_sc_by_ttn'));
+		ga.getXML(getLink);
+	}
+	var v1 = g_form.getValue('u_bq_inv_number');
+	if (newValue == '90fa1edb6f972200724708c6eb3ee451'){	//Поломка автомобиля
+		v2 = 'u_ttn_numberSTARTSWITH' + g_form.getValue('u_bq_preffix') + '^u_ttn_date>=javascript:gs.daysAgoStart(3)' + '^sys_id!=' + v1;
+		buckets(v2);
+	}
+	else{
+		var ga1 = new GlideAjax ('x_caas_quality.GetTTNThisAddress');
+		ga1.addParam('sysparm_name','getTTNThisQual');
+		ga1.addParam('sysparm_this_ttn', v1);
+		ga1.getXML(condition);
+	}
+}
+
+function buckets(v2){
+		window['u_other_ttn_list' + 'g_filter'].reset();  
+		window['u_other_ttn_list' + 'g_filter'].setQuery(v2);  
+		window['u_other_ttn_list' + 'acRequest'](null); 
+
+		var varName = 'u_other_ttn_list';
+		var leftBucket = gel(varName + '_select_0');
+		var rightBucket = gel(varName + '_select_1');
+		var selectedOptions = rightBucket.options;
+		var selectedIDs = [];
+		var index = 0;
+		for(var i = 0; i < selectedOptions.length; i++){
+			selectedIDs[index] = i;
+			index++;
+		}
+		moveSelectedOptions(selectedIDs, rightBucket, leftBucket, '--None--');
+
+		sortSelect(leftBucket);
+	}
+
+function getLink(servResponse) {
+	var result = servResponse.responseXML.getElementsByTagName("result");
+	var sc_id = result[0].getAttribute("sc_id");
+	var num = result[0].getAttribute("num");
+	g_form.setValue('u_sc_for_redirect', sc_id);
+	if (num != '') 
+		g_form.showFieldMsg('u_bq_subtopic', 'По данной проблеме создано Обращение ' + num + '. Будет произведён переход на форму данного Обращения.', 'error');
+}
+
+function condition(response){
+		answer = response.responseXML.documentElement.getAttribute("answer");
+		var v2 = answer.toString();
+		buckets(v2);
+	}]]></script>
+        <sys_class_name>expert_script_client</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-10-17 06:26:46</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>0dd80ae237fd8f405978466754990ebd</sys_id>
+        <sys_mod_count>35</sys_mod_count>
+        <sys_name>bq_setSCforRedirect</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_script_client_0dd80ae237fd8f405978466754990ebd</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-11 06:14:03</sys_updated_on>
+        <table/>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </expert_script_client>
+</record_update>

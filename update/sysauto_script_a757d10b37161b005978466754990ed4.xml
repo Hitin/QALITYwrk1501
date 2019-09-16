@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>bq Hotline Stats population</name>
+        <run_as display_value="">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2018-05-30 08:49:45</run_start>
+        <run_time>1970-01-01 07:00:00</run_time>
+        <run_type>monthly</run_type>
+        <script><![CDATA[//var period = 0; // 0 - для пересчёт прошлого месяца/текущего года, -1 - для позапрошлого месяца и прошлого года
+var pStartKey;
+var pEndKey;
+var pPrevStartKey;
+var pPrevEndKey;
+var st;
+var arrSC = [];
+var tops = new GlideRecord('x_caas_quality_bq_topic');
+
+var styles = ['u_top_br', 'u_top_inc', 'u_top_int', 'u_top_qty'];
+	
+
+var gdt = new GlideDateTime();
+//var gdt = new GlideDateTime('2018-02-01');
+pEndKey = new GlideDateTime(gdt.getYearUTC() + '-' + gdt.getMonthUTC() + '-01');
+if (gdt.getMonthUTC() == 1){
+	pStartKey = new GlideDateTime((gdt.getYearUTC()-1) + '-01-01');
+	pEndKey = new GlideDateTime(gdt.getYearUTC() + '-01-01');	
+}
+else {
+	pStartKey = new GlideDateTime((gdt.getYearUTC()) + '-01-01');
+	pPrevStartKey = new GlideDateTime((gdt.getYearUTC() - 1) + '-01-01');
+	pPrevEndKey = new GlideDateTime(gdt.getYearUTC() + '-01-01');		
+}
+//gs.log('av y' + pPrevStartKey + ' ' + pPrevEndKey + ' ' + pStartKey + ' ' + pEndKey);
+populate ('y');
+
+if (gdt.getMonthUTC() == 1){
+	pStartKey = new GlideDateTime((gdt.getYearUTC()-1) + '-12-01');
+	pPrevStartKey = new GlideDateTime((gdt.getYearUTC() - 1) + '-11-01');
+	pPrevEndKey = new GlideDateTime((gdt.getYearUTC() - 1) + '-12-01');		
+	}
+else {
+	pStartKey = new GlideDateTime((gdt.getYearUTC()) + '-' + (gdt.getMonthUTC() -1) + '-01');
+	if (gdt.getMonthUTC() == 2){
+		pPrevStartKey = new GlideDateTime((gdt.getYearUTC() - 1) + '-12-01');
+		pPrevEndKey = new GlideDateTime(gdt.getYearUTC() + '-01-01');	
+	}
+	else{
+		pPrevStartKey = new GlideDateTime((gdt.getYearUTC()) + '-' + (gdt.getMonthUTC() - 2) + '-01');
+		pPrevEndKey = new GlideDateTime(gdt.getYearUTC() + '-' + (gdt.getMonthUTC() - 1) + '-01');	
+	}
+}
+//gs.log('av m' + pPrevStartKey + ' ' + pPrevEndKey + ' ' + pStartKey + ' ' + pEndKey);
+populate ('m');
+
+st = new GlideRecord('x_caas_quality_bq_hotline_stats');
+st.orderByDesc('u_calculated_on');
+st.setLimit(1);
+st.query();
+if (st.next())
+	gs.eventQueue('bq_stats_send',st);
+
+var stDel = new GlideRecord('x_caas_quality_bq_hotline_stats');
+var delBefore = new GlideDateTime();
+delBefore.addDaysUTC(-1100);
+stDel.addQuery('u_calculated_on', '<', delBefore.getDate());
+stDel.deleteMultiple();
+
+function populate(ptype){
+	
+	tops.addQuery('sys_id', 'NOT IN', '387a67b76f05ea0010e00d55eb3ee4a0,46aa161f6f972200724708c6eb3ee4ea,fb42d6530f82a2004a2757d003050eb6');
+	tops.addQuery('u_inactive', false);
+	tops.orderBy('u_bq_name');
+	tops.query();
+
+	while (tops.next()){
+		st = new GlideRecord('x_caas_quality_bq_hotline_stats');
+		st.initialize();
+		st.u_topic = tops.sys_id;
+		st.u_interval_type = ptype;
+		st.u_qty = setQty('all',pStartKey,pEndKey);
+			gs.info('Test type = ' + ptype);
+		if (ptype == 'm' || gdt.getMonthUTC() != 1){
+			var st_prev = new GlideRecord('x_caas_quality_bq_hotline_stats');
+			st_prev.addQuery('u_interval_type',ptype);
+			st_prev.addQuery('u_topic',	st.u_topic);
+		//	st_prev.addQuery('sys_id', '!=', st.sys_id);
+			st_prev.addQuery('u_calculated_on', pStartKey.getDate());
+			st_prev.query();
+			if (st_prev.next()){
+				if (ptype == 'm')
+					st.u_inc = st.u_qty - st_prev.u_qty;
+				st_prev.u_qty = setQty('all',pPrevStartKey,pPrevEndKey);
+				st_prev.u_internal_qty = setQty('internal',pPrevStartKey,pPrevEndKey);
+				arrSC = setValByGR('brCount',pPrevStartKey,pPrevEndKey);
+				st_prev.u_breached_qty = arrSC.length;
+				st_prev.u_breached_sc = arrSC.toString();
+				st_prev.u_feedback_qty = setQty('hasFB',pPrevStartKey,pPrevEndKey);
+				st_prev.u_feedback_sum = setQty('avgFB',pPrevStartKey,pPrevEndKey);
+				st_prev.u_avg_fb = st_prev.u_feedback_sum/st_prev.u_feedback_qty;
+				st_prev.update();
+			}
+			else
+				st.u_inc = st.u_qty;
+		}
+	    arrSC = setValByGR('brCount',pStartKey,pEndKey);
+		st.u_internal_qty = setQty('internal',pStartKey,pEndKey);
+		st.u_breached_qty = arrSC.length;
+		st.u_breached_sc = arrSC.toString();
+		st.u_feedback_qty = setQty('hasFB',pStartKey,pEndKey);
+ 		st.u_feedback_sum = setQty('avgFB',pStartKey,pEndKey);
+		st.u_avg_fb = st.u_feedback_sum/st.u_feedback_qty;
+			gs.info('Все посчиталось = ' );
+		st.u_calculated_on = pEndKey.getDate();
+		st.insert();
+	}
+//!!!!!!
+	for (var i = 0; i<styles.length; i++){
+		if (ptype == 'm' || styles[i] != 'u_top_inc'){
+			fillStyles(styles[i],ptype,pEndKey);
+			if (pPrevEndKey){
+				fillStyles(styles[i],ptype,pPrevEndKey);
+			}
+		}
+	}
+}
+
+function setQty(type,start,end){
+	var agg = new GlideAggregate('x_caas_quality_service_call');
+	agg.addQuery('u_bq_state', 'IN', 'Закрыто,Решено');
+	agg.addQuery('u_bq_topic', tops.sys_id);
+	agg.addQuery('u_bq_contact_type','IN','Звонок,Интернет-сайт');
+	if (type == 'internal'){
+		agg.addQuery('u_bq_usergroup', '!=', '');
+	}
+	if (type == 'hasFB' || type == 'avgFB'){
+		agg.addQuery('u_bq_no_satisfaction', false);
+		agg.addQuery('u_bq_satisfaction', '!=', '');
+		agg.addQuery('u_bq_satisfaction', '!=', 0);
+	}
+	agg.addQuery('sys_created_on', '>=', start);
+	agg.addQuery('sys_created_on', '<=', end);
+	if (type == 'avgFB'){
+		agg.setGroup(false);
+		agg.addAggregate('SUM','u_bq_satisfaction');
+	}
+	agg.addAggregate('COUNT');
+	agg.query();
+	if (agg.next()){
+		if (type == 'avgFB')
+			return agg.getAggregate('SUM','u_bq_satisfaction');
+		else
+			return agg.getAggregate('COUNT');
+	}
+	else
+		return 0;
+}
+
+function setValByGR(type,start,end){ //brCount //avgFB
+	var dif = 0;
+	var res = [];
+	var sc = new GlideRecord('x_caas_quality_service_call');
+	sc.addQuery('u_bq_topic', tops.sys_id);
+	sc.addQuery('u_bq_state', 'IN', 'Закрыто,Решено');
+	sc.addQuery('u_bq_no_satisfaction', false);
+	sc.addQuery('u_bq_satisfaction', '!=', '');
+	sc.addQuery('u_bq_satisfaction', '!=', 0);
+	sc.addQuery('u_bq_contact_type','IN','Звонок,Интернет-сайт');
+	sc.addQuery('sys_created_on', '>=', start);
+	sc.addQuery('sys_created_on', '<=', end);
+	sc.query();
+	if (type == 'brCount'){
+		while (sc.next()){
+			var gr = new GlideRecord('metric_instance');
+			gr.addQuery('id', sc.sys_id);
+			gr.addQuery('calculation_complete', false);
+			gr.addQuery('definition.type', 'field_value_duration'); //
+			//gr.addQuery('definition', '7dc4a86ddb64230050c5298a489619c8');
+			gr.query();
+			if (gr.next())
+				dif = GlideDateTime.subtract(new GlideDateTime(gr.sys_created_on),new GlideDateTime(sc.u_bq_resolved_on)); //10 d = 864000c 7 d = 604800
+				//dif = gs.dateDiff(gr.sys_created_on,sc.u_bq_resolved_on,true); //10 d = 864000c 7 d = 604800
+			else 
+				dif = GlideDateTime.subtract(new GlideDateTime(sc.sys_created_on),new GlideDateTime(sc.u_bq_resolved_on)); //10 d = 864000c 7 d = 604800
+				//dif = gs.dateDiff(sc.sys_created_on,sc.u_bq_resolved_on,true); //10 d = 864000c 7 d = 604800
+			if ((tops.sys_id == '9fb910a46f62d20010e00d55eb3ee497' && dif > 604800) || dif > 864000)
+				res.push(sc.getValue('sys_id'));
+				//res++;
+		}
+	}
+	
+	return res;
+}
+function fillStyles(style,ptype,dateOn){
+	var st = new GlideRecord('x_caas_quality_bq_hotline_stats');
+	st.addQuery('u_calculated_on', dateOn.getDate());
+	st.addQuery('u_interval_type', ptype);
+	var orderedBy;
+	if (style == 'u_top_br')
+		orderedBy = 'u_breached_qty';
+	else if (style == 'u_top_inc')
+		orderedBy = 'u_inc';
+	else if (style == 'u_top_int')
+		orderedBy = 'u_internal_qty';
+	else if (style == 'u_top_qty')
+		orderedBy = 'u_qty';
+	st.orderByDesc(orderedBy);
+	st.query();
+	var j = 0;
+	var prevVal = -1;
+	var top3processed = false;
+ 	while (st.next()){
+		if  (j < 3 && st.getValue(orderedBy) > 1)
+			st.setValue(style, 1);
+		else if (j >= 3 && st.getValue(orderedBy) == prevVal && st.getValue(orderedBy) > 1 && !top3processed)
+			st.setValue(style, 1);
+		else {
+			st.setValue(style, 0);
+			top3processed = true;
+		}
+		prevVal = st.getValue(orderedBy);
+		st.update();
+		j++;
+	}
+}
+
+
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2018-05-30 08:50:00</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>a757d10b37161b005978466754990ed4</sys_id>
+        <sys_mod_count>157</sys_mod_count>
+        <sys_name>bq Hotline Stats population</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sysauto_script_a757d10b37161b005978466754990ed4</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-09 11:48:26</sys_updated_on>
+        <u_all>false</u_all>
+        <u_table/>
+        <u_type/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

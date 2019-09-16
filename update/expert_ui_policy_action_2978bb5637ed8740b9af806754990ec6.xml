@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="expert_ui_policy_action">
+    <expert_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <expert display_value="Новое обращение по Логистике">c987ff5d37f7a2005978466754990edb</expert>
+        <expert_variable>IO:8c8daf9e37ad8740b9af806754990ea1</expert_variable>
+        <field/>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>expert_ui_policy_action</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-10-04 09:40:11</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>2978bb5637ed8740b9af806754990ec6</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>IO:8c8daf9e37ad8740b9af806754990ea1</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_ui_policy_action_2978bb5637ed8740b9af806754990ec6</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2018-03-26 10:07:54</sys_updated_on>
+        <table/>
+        <ui_policy display_value="bq_CTI field">f252fe4d37d4fa00b9af806754990ed7</ui_policy>
+        <variable>u_ref_found</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </expert_ui_policy_action>
+</record_update>

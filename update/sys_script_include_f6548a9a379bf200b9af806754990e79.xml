@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_caas_quality.bq_getParmFromCall</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>bq_getParmFromCall</name>
+        <script><![CDATA[var bq_getParmFromCall = Class.create();
+bq_getParmFromCall.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getParms : function() {
+		// build new response xml element for result
+		var aon = this.newItem("aon");
+		var id = this.newItem("id");
+		var fio = this.newItem("fio");
+		
+		var callnum = new GlideRecord ('x_caas_quality_bq_call_log');
+		var op = this.getParameter('sysparm_op');
+		var dt = new GlideDateTime();
+		dt.addSeconds(-1200);
+		callnum.addQuery('u_bq_operator', op);
+		callnum.addQuery('u_bq_ansvered', false);
+		callnum.addQuery('sys_created_on', '>=', dt);
+		callnum.orderByDesc('sys_created_on');
+		callnum.query();
+		if (callnum.next()){
+			aon.setAttribute('value',callnum.u_bq_tel);
+			id.setAttribute('value',callnum.sys_id);
+			fio.setAttribute('value',callnum.u_bq_fio);
+			callnum.u_bq_ansvered = true;
+			callnum.update();
+		}
+	},
+
+    type: 'bq_getParmFromCall'
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-06-14 05:05:15</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>f6548a9a379bf200b9af806754990e79</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>bq_getParmFromCall</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_include_f6548a9a379bf200b9af806754990e79</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-16 09:04:45</sys_updated_on>
+    </sys_script_include>
+</record_update>

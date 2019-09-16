@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_label/>
+        <action_name/>
+        <action_query>false</action_query>
+        <action_run_at>server</action_run_at>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <application/>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_caas_quality_service_call</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_caas_quality_service_call">u_ttn_list_thisttVALCHANGES^u_ttn_list_thisttISNOTEMPTY^u_parent_by_ttnISEMPTY^EQ<item endquery="false" field="u_ttn_list_thistt" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="false" field="u_ttn_list_thistt" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="false" field="u_parent_by_ttn" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>bq_log_createChild</name>
+        <onclick/>
+        <order>100</order>
+        <priority>100</priority>
+        <read_access_action>false</read_access_action>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {	
+	var sc;
+	var ttn;
+	var str = current.u_ttn_list_thistt.toString();
+
+	var arr = str.split(',');
+	
+	for (var i=0; i<arr.length; i++){
+		sc = new GlideRecord ('x_caas_quality_service_call');
+		ttn = new GlideRecord ('x_caas_quality_bq_invoices');
+		ttn.get(arr[i]);
+			
+
+		sc.u_ttn = ttn.sys_id;
+	
+		sc.u_ttn_number = ttn.u_ttn_number;
+		sc.u_wh_name = ttn.u_wh_code.u_name;
+		sc.u_buyer = ttn.u_buyer_name;
+		sc.u_bq_danger = current.u_bq_danger;
+		sc.u_bq_close_reason = current.u_bq_close_reason;
+		sc.u_bq_messagers = current.u_bq_messagers;
+		if (ttn.u_group != '') sc.u_bq_usergroup = ttn.u_group;
+		else sc.u_bq_usergroup = '7301949337a722005978466754990e4f';
+		sc.u_bq_log_reason = current.u_bq_log_reason;
+		sc.u_bq_log_solution = current.u_bq_log_solution;
+		sc.u_bq_state = current.u_bq_state;
+
+		sc.u_multiple_solution = true;
+		
+		sc.u_bq_contact_phone = current.u_bq_contact_phone;
+		sc.u_bq_applicant_info = current.u_bq_applicant_info;
+		sc.u_bq_self_repallet = current.u_bq_self_repallet;
+		sc.u_bq_applicant = current.u_bq_applicant;
+		sc.u_arrival_time = current.u_arrival_time;
+		sc.u_notmatch_qty = current.u_notmatch_qty;
+		sc.u_bq_topic = '46aa161f6f972200724708c6eb3ee4ea';
+		sc.u_claim_description = current.u_claim_description;
+		sc.u_bq_aon_number = current.u_bq_aon_number;
+		sc.u_bq_prod_date = current.u_bq_prod_date;
+		sc.u_employee_name = current.u_employee_name;
+		sc.u_bq_contact_type = current.u_bq_contact_type;
+		sc.u_return_qty = current.u_return_qty;
+		sc.u_prod_name = current.u_prod_name;
+		sc.u_bq_ctiid = current.u_bq_ctiid;
+		sc.u_bq_other_orders_s = current.u_bq_other_orders;
+		sc.u_buyer = ttn.u_buyer_name;
+		sc.u_reference_service_call = current.sys_id;
+		sc.u_log_country = current.u_log_country;
+		sc.u_bq_user = current.u_bq_user;
+	//	sc.setWorkflow(false);
+		sc.insert();
+		if (sc.u_bq_contact_type == 'Monolit-Drive') {
+			var txt = '';
+			var cDay = new GlideDate();
+			var cTime = new GlideDateTime();
+			cTime.addSeconds(10800); //+3 hours
+			var tMin = '08:00:00';
+			var tMax = '19:30:00';
+			var ctMin = new GlideDateTime (cDay.toString() + ' ' + tMin);
+			var ctMax = new GlideDateTime (cDay.toString() + ' ' + tMax);
+			if (sc.u_log_country == 'BY'){
+				if (cTime >= ctMin && cTime < ctMax){
+					var t1 = cTime.toString().substring(11,16);
+					txt = 'c ' + t1 + ' до ';
+					cTime.addSeconds(600);
+					var t2 = cTime.toString().substring(11,16);
+					txt += t2;
+				}
+				else {
+					txt += 'с 8:00 до 8:10.';
+				}
+			}
+			else{
+				if (cTime >= ctMin && cTime < ctMax){
+					cTime.addSeconds(1800);
+					var t1 = cTime.toString().substring(11,16);
+					txt = 'c ' + t1 + ' до ';
+					cTime.addSeconds(9000);
+					var t2 = cTime.toString().substring(11,16);
+					txt += t2;
+				}
+				else {
+					txt += 'с 8:30 до 11:30.';
+				}
+			}
+			gs.eventQueue('bq_log_sc_registred_to_app', sc, '$spbcrmdrive@baltika.com', txt);
+		}
+		ttn.u_linked_to_sc = true;
+		ttn.setWorkflow(false);
+		ttn.update();
+	}
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-03-20 11:25:12</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>10352c3237a5fa005978466754990e4d</sys_id>
+        <sys_mod_count>49</sys_mod_count>
+        <sys_name>bq_log_createChild</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_10352c3237a5fa005978466754990e4d</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-25 06:29:45</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+</record_update>

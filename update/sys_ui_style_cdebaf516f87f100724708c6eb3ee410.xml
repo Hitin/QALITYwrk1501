@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_style">
+    <sys_ui_style action="INSERT_OR_UPDATE">
+        <alt/>
+        <element>u_bq_state</element>
+        <name>x_caas_quality_service_call</name>
+        <style>background-color: Red</style>
+        <sys_class_name>sys_ui_style</sys_class_name>
+        <sys_created_by>x-rubesdmi</sys_created_by>
+        <sys_created_on>2015-03-26 14:49:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cdebaf516f87f100724708c6eb3ee410</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>x_caas_quality_service_call</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_ui_style_cdebaf516f87f100724708c6eb3ee410</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-17 11:05:50</sys_updated_on>
+        <value>дубль javascript: current.u_bq_state == "Новое" &amp;&amp; gs.hasRole("bq_operator")</value>
+    </sys_ui_style>
+</record_update>

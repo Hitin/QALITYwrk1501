@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>BQ Knowledge V3 - Request_Approval_Script</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+          /* Optional GlideRecord */ event) {
+
+if(current.document_id.u_kb_parent!=''){
+	template.print('По статье <a href="' + gs.getProperty('glide.servlet.uri') + gs.generateURL('kb_knowledge', current.document_id.u_kb_parent)+ '">' + current.document_id.u_kb_parent.number +'</a> категории: '+ current.document_id.u_kb_parent.kb_category.label +' требуется обновление<br />');
+	template.print('Была создана новая версия статьи <a href="' + gs.getProperty('glide.servlet.uri') + gs.generateURL('kb_knowledge', current.document_id)+ '">' + current.document_id.number +'</a> категории: ' + current.document_id.kb_category.label);
+}
+else{
+	template.print('Была создана новая статья БЗ <a href="' + gs.getProperty('glide.servlet.uri') + gs.generateURL('kb_knowledge', current.document_id)+ '">' + current.document_id.number +'</a> категории: ' + current.document_id.kb_category.label);
+}
+template.print('<br />Тема статьи БЗ: ' + current.document_id.short_description + '<br />');
+template.print('Текст статьи БЗ: ' + current.document_id.text);
+
+	
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-04-06 07:06:48</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>dead030c378ef6405978466754990e5e</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>BQ Knowledge V3 - Request_Approval_Script</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_dead030c378ef6405978466754990e5e</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2017-09-25 11:24:35</sys_updated_on>
+    </sys_script_email>
+</record_update>

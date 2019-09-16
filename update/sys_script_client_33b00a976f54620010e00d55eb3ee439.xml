@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_remind</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>bq_Remind_me</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading) {
+		return;
+	}
+	if (newValue == 'true') {
+		g_form.setValue('u_remind_to',g_user.userID);		
+		var ajax = new GlideAjax('x_caas_quality.bq_GetDataAjax');
+		ajax.addParam('sysparm_name', 'getRemindDate');
+		ajax.addParam('sysparm_add', 3);
+		ajax.getXML(setDate);
+	} else {
+		g_form.setValue('u_remind_to','');
+		g_form.setValue('u_remind_when', '');
+	}
+}
+function setDate(response) {
+	var result = response.responseXML.documentElement.getAttribute("answer");
+	g_form.setValue('u_remind_when', result);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>x-rutipali</sys_created_by>
+        <sys_created_on>2016-07-04 08:14:34</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>33b00a976f54620010e00d55eb3ee439</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>bq_Remind_me</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_client_33b00a976f54620010e00d55eb3ee439</sys_update_name>
+        <sys_updated_by>x-rutipali</sys_updated_by>
+        <sys_updated_on>2016-07-04 08:20:00</sys_updated_on>
+        <table>x_caas_quality_service_call</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

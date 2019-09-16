@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_log_3PL_4H</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[var sc = new GlideRecord('x_caas_quality_service_call');
+var nowDT = new GlideDateTime();
+var endDT = new GlideDateTime(nowDT.toString().substring(0, 14) + '00:00');//.addSeconds(10800);
+var beginDT = new GlideDateTime(endDT);
+
+var type;
+
+if (nowDT.toString().substring(11, 13) == '21') type = 2;
+else type = 1;
+
+if (type == 1) beginDT.addSeconds(-5400);
+if (type == 2) beginDT.addDaysUTC(-1);
+
+sc.addQuery('u_bq_topic', '46aa161f6f972200724708c6eb3ee4ea');
+sc.addQuery('u_ttn.u_wh_code', current.u_ttn.u_wh_code.sys_id);
+sc.addQuery('sys_created_on','>=',beginDT);
+sc.addQuery('sys_created_on','<',endDT);	
+sc.query();
+
+var tcre; 
+var tres;
+var trstr;
+var retQ = '';
+
+template.print('<table border="1" cellpadding="5" cellspacing="0">');
+template.print('<tr><td>№ Обращения</td><td>ФИО инициатора обращения</td><td>Дата создания обращения</td><td>Телефон инициатора обращения</td><td>Подгруппа КС</td><td>Ответственный сотрудник</td><td>Причина обращения</td><td>Комментарий к обращению</td><td>Статус обращения</td><td>Дата Решения</td><td>Решение по заявке</td><td>Код  причины возврата</td><td>Содержание ответа (свободная форма)</td><td>Склад отгрузки</td><td>Номер ТТН</td><td>Наименование клиента</td><td>Возврат <6 уп.</td></tr>');
+
+while (sc.next()){
+	tcre = new GlideDateTime(sc.sys_created_on);
+	tcre.addSeconds(10800);
+	if (sc.u_bq_resolved_on != ''){
+		tres = new GlideDateTime(sc.u_bq_resolved_on);
+		tres.addSeconds(10800);
+		trstr = tres.toString() + ' MSK';
+	}
+	else trstr = '';
+	
+	if (sc.u_return_qty == false) retQ = 'НЕТ';
+	else retQ = 'ДА';
+	
+	var notes = sc.u_bq_prot_list.getJournalEntry(-1); 
+	var na = notes.split("\n\n");                      
+ 
+          
+			  
+	template.print('<tr><td>' + sc.u_bq_number + '</td><td>' + sc.u_bq_applicant + '</td><td>' + tcre + ' MSK</td><td>' + sc.u_bq_contact_phone + '</td><td>' + sc.getDisplayValue('u_bq_usergroup') + '</td><td>' + sc.getDisplayValue('u_bq_user') + '</td><td>' + sc.getDisplayValue('u_bq_danger') + '</td><td>' + sc.u_bq_applicant_info + '</td><td>' + sc.u_bq_state + '</td><td>' + trstr + '</td><td>' + sc.u_bq_log_solution + '</td><td>' + sc.u_bq_log_reason.u_code + '</td><td>' + sc.u_bq_resptext + '</td><td>' + sc.u_ttn.u_wh_code.u_name + '</td><td>' + sc.u_ttn.u_ttn_number + '</td><td>' + sc.u_ttn.u_buyer_name + '</td><td>' + retQ + '</td></tr>');
+	template.print('<tr><td>Протокол</td><td colspan ="16"> ');
+	for (var i = 0; i < na.length; i++) {
+		template.print(na[i] + '<br />');
+	}    			  
+	template.print('</td></tr>');
+}
+
+
+template.print('</table>');
+]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-03-02 09:33:41</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>727f9ff43715be40b9af806754990e45</sys_id>
+        <sys_mod_count>54</sys_mod_count>
+        <sys_name>bq_log_3PL_4H</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_727f9ff43715be40b9af806754990e45</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2018-06-21 11:10:28</sys_updated_on>
+    </sys_script_email>
+</record_update>

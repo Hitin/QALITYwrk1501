@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>u_bq_kb_category_v3</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-02-08 07:30:44</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1970353537f47640b9af806754990e90</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>u_bq_kb_category_v3</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_ui_policy_action_1970353537f47640b9af806754990e90</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2017-02-08 07:31:21</sys_updated_on>
+        <table>x_caas_quality_service_call</table>
+        <ui_policy display_value="bq_Категория БЗ">bebef6096f6ad20010e00d55eb3ee407</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+</record_update>

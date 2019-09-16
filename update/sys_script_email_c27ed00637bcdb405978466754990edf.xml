@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_print_satisfaction</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+          /* Optional GlideRecord */ event) {
+
+if (current.u_bq_no_satisfaction)
+	template.print('Отказался от оценки');
+else
+	template.print(current.u_bq_satisfaction);
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2018-03-13 12:34:51</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>c27ed00637bcdb405978466754990edf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>bq_print_satisfaction</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_c27ed00637bcdb405978466754990edf</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2018-03-13 12:34:51</sys_updated_on>
+    </sys_script_email>
+</record_update>

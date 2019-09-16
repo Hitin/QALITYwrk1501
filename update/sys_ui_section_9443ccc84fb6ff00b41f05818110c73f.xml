@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Покупка" section_id="9443ccc84fb6ff00b41f05818110c73f" sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="x_caas_quality_service_call" version="3" view="hotline">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_buydate</element>
+            <position>0</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-17 07:54:13</sys_created_on>
+            <sys_id>f043000c4fb6ff00b41f05818110c789</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Покупка" display_value="Покупка" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="a1710c004fb6ff00b41f05818110c78e">9443ccc84fb6ff00b41f05818110c73f</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-17 07:54:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_buycity</element>
+            <position>1</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-17 07:54:13</sys_created_on>
+            <sys_id>7843000c4fb6ff00b41f05818110c789</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Покупка" display_value="Покупка" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="a1710c004fb6ff00b41f05818110c78e">9443ccc84fb6ff00b41f05818110c73f</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-17 07:54:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-17 07:54:13</sys_created_on>
+            <sys_id>fc43000c4fb6ff00b41f05818110c789</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Покупка" display_value="Покупка" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="a1710c004fb6ff00b41f05818110c78e">9443ccc84fb6ff00b41f05818110c73f</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-17 07:54:13</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_expertise</element>
+            <position>3</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-17 07:54:13</sys_created_on>
+            <sys_id>7443000c4fb6ff00b41f05818110c78a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Покупка" display_value="Покупка" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="a1710c004fb6ff00b41f05818110c78e">9443ccc84fb6ff00b41f05818110c73f</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-17 07:54:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_bq_tara</element>
+            <position>4</position>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-17 07:54:13</sys_created_on>
+            <sys_id>f843000c4fb6ff00b41f05818110c78a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Покупка" display_value="Покупка" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="a1710c004fb6ff00b41f05818110c78e">9443ccc84fb6ff00b41f05818110c73f</sys_ui_section>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-17 07:54:13</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Покупка</caption>
+            <header>false</header>
+            <name>x_caas_quality_service_call</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-17 07:54:11</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>9443ccc84fb6ff00b41f05818110c73f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Покупка</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_ui_section_9443ccc84fb6ff00b41f05818110c73f</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-17 07:54:11</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="hotline" name="hotline">a1710c004fb6ff00b41f05818110c78e</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

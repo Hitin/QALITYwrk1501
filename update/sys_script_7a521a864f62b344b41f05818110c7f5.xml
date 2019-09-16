@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>public</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_label/>
+        <action_name/>
+        <action_query>false</action_query>
+        <action_run_at>server</action_run_at>
+        <action_update>false</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <application/>
+        <change_fields>false</change_fields>
+        <client_callable>true</client_callable>
+        <collection/>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>true</is_rest>
+        <message/>
+        <name>bq cti_bq_log</name>
+        <onclick/>
+        <order>100</order>
+        <priority>100</priority>
+        <read_access_action>true</read_access_action>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[function cti_bq_log() {
+            var url = null;
+            var name = sysparm_caller_name;
+            eid = sysparm_caller_id;
+            var phone = sysparm_caller_phone;
+            var taskID = sysparm_task_id;
+            var fQuery = sysparm_query;
+			var caller_type = sysparm_caller_type;
+            if (fQuery == null)
+               fQuery = '';
+            var view = sysparm_view;
+            if (view == null || view == '')
+            	view = "itil";
+	var ctiArgs = {};  // JavaScript object to pass name/value pairs to CTIEvaluator with
+//ctiArgs.cti_caller_name = sysparm_caller_name;
+ctiArgs.cti_caller_phone = sysparm_caller_phone;
+ctiArgs.cti_taskID = sysparm_task_id;
+ctiArgs.cti_caller_type=sysparm_caller_type;
+	
+//	gs.log('CtiArgs from BR :'+ctiArgs);
+//ctiArgs.cti_userID = userID;
+//additional statements to accommodate any other incoming values needed
+	
+
+	var ctiEvaluator = new global.CTIEvaluator("new x_caas_quality.cti_bq_log_class().cti_bq_log_srv()", ctiArgs);
+    var result = ctiEvaluator.evaluate();
+	
+//	gs.log('New Sys_id :'+result);
+	
+            if (url == null) {
+            //	url = "expert_shell.do?sysparm_sys_id=7be5a05e6fdb3500724708c6eb3ee44d&sysparm_initial=true&sysparm_view=";
+			//	url = "u_bq_call_log.do?sys_id="+callnum.sys_id;
+				url = "x_caas_quality_bq_call_log.do?sys_id="+result;
+            	if (fQuery != null)
+            	   url += "&sysparm_query=" + fQuery;
+            }
+            answer = url;
+            return url;
+}]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+        <sys_created_on>2019-07-11 13:13:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>7a521a864f62b344b41f05818110c7f5</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>bq cti_bq_log</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_7a521a864f62b344b41f05818110c7f5</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-17 05:56:44</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+</record_update>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>bq_remind_coords</name>
+        <run_as/>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2016-07-04 08:42:17</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[// var coord = new GlideRecord ('sys_user_has_role');
+// coord.addQuery('role.name', 'bq_coordinator');
+// coord.query();
+// while (coord.next()){
+// 	var scall = new GlideRecord('x_caas_quality_service_call'); 
+// 	scall.addQuery('u_bq_state','Назначено в группу');
+// 	scall.addQuery('u_bq_usergroup', '!=', '');
+// 	scall.addQuery('u_bq_user', '');
+// 	scall.addQuery('u_bq_usergroup.u_bq_coors', 'CONTAINS', coord.user);
+// 	scall.query();
+// 	if (scall.next()){
+// 		gs.eventQueue('bq_notify_coord', scall, coord.user);
+// 	}
+// }
+
+
+var assGr = '';
+var calls = [];
+var scall = new GlideRecord('x_caas_quality_service_call');
+scall.addQuery('u_bq_state','Назначено в группу');
+// scall.addQuery('u_bq_usergroup', '!=', '');
+// scall.addQuery('u_bq_user', '');
+scall.addQuery('u_bq_topic', '!=', '46aa161f6f972200724708c6eb3ee4ea');
+scall.orderBy('u_bq_usergroup');
+scall.query();
+
+while (scall.next()) {
+	if (assGr == '' || assGr != scall.u_bq_usergroup) {
+		assGr = scall.getValue('u_bq_usergroup');
+		gs.eventQueue('bq_notify_coord', scall, scall.u_bq_usergroup.u_bq_coors, scall.u_bq_usergroup);
+	} 
+}
+]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-09-28 05:03:02</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>af8f379437a543405978466754990e6f</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>bq_remind_coords</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sysauto_script_af8f379437a543405978466754990e6f</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-10 09:15:13</sys_updated_on>
+        <u_all>false</u_all>
+        <u_table/>
+        <u_type/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

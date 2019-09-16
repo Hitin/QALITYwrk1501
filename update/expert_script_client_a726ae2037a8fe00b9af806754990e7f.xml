@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="expert_script_client">
+    <expert_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <expert display_value="Новое обращение по Логистике">c987ff5d37f7a2005978466754990edb</expert>
+        <expert_panel display_value="new_logistic">4bd66d4e3733e2005978466754990e2d</expert_panel>
+        <expert_panel_variable>5a9906eadbfb1b0062620e41ca961904</expert_panel_variable>
+        <field/>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>bq_aon_copy</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+	if (isLoading){
+		return;
+	}
+	//if (newValue == 'true'){
+	if (newValue == 'yes'){
+		var ga = new GlideAjax('x_caas_quality.GetAON');
+		ga.addParam('sysparm_name','getAON');
+		ga.addParam('sysparm_aon', g_form.getValue('u_bq_aon_number'));
+		ga.getXML(copy);
+		
+	
+	}
+}
+function copy(response){
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	g_form.setValue('u_bq_phone',answer);
+
+}]]></script>
+        <sys_class_name>expert_script_client</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-01-23 04:01:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_id>a726ae2037a8fe00b9af806754990e7f</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>bq_aon_copy</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>expert_script_client_a726ae2037a8fe00b9af806754990e7f</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-10 12:38:23</sys_updated_on>
+        <table/>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </expert_script_client>
+</record_update>

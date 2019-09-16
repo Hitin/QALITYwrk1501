@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_caas_quality.bq_CallCountIncrement</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>bq_CallCountIncrement</name>
+        <script><![CDATA[var bq_CallCountIncrement = Class.create();
+bq_CallCountIncrement.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    bq_callCountIncrement: function(){ 
+		var sc = new GlideRecord ('x_caas_quality_service_call');
+		sc.get(this.getParameter('sysparm_sysid'));
+		if (sc.u_bq_topic == '46aa161f6f972200724708c6eb3ee4ea'){
+			sc.u_call_counter ++;
+			sc.update();
+		}
+
+		return;
+	},
+	type: 'bq_CallCountIncrement'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-02-06 10:13:39</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>4822801d373c3640b9af806754990ef1</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>bq_CallCountIncrement</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_include_4822801d373c3640b9af806754990ef1</sys_update_name>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-18 11:32:12</sys_updated_on>
+    </sys_script_include>
+</record_update>

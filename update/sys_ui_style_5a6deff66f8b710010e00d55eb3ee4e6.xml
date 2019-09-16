@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_style">
+    <sys_ui_style action="INSERT_OR_UPDATE">
+        <alt/>
+        <element>u_bq_state</element>
+        <name>x_caas_quality_service_call</name>
+        <style>background-color: grey</style>
+        <sys_class_name>sys_ui_style</sys_class_name>
+        <sys_created_by>x-rushaale</sys_created_by>
+        <sys_created_on>2015-03-31 06:47:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>5a6deff66f8b710010e00d55eb3ee4e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_caas_quality_service_call</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_ui_style_5a6deff66f8b710010e00d55eb3ee4e6</sys_update_name>
+        <sys_updated_by>x-rushaale</sys_updated_by>
+        <sys_updated_on>2015-03-31 06:47:36</sys_updated_on>
+        <value>javascript: current.u_bq_state == "На согласовании" &amp;&amp; gs.hasRole("bq_itil")</value>
+    </sys_ui_style>
+</record_update>

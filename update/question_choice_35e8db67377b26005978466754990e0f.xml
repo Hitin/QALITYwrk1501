@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <misc>0</misc>
+        <order>700</order>
+        <question display_value="Назовите буквы из номера ТТН">3c87e98e3733e2005978466754990e30</question>
+        <rec_misc>0</rec_misc>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2016-12-26 08:33:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>35e8db67377b26005978466754990e0f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>HbrZ</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>question_choice_35e8db67377b26005978466754990e0f</sys_update_name>
+        <sys_updated_by>x-ruAblPet</sys_updated_by>
+        <sys_updated_on>2018-12-15 07:26:46</sys_updated_on>
+        <text>HbrZ</text>
+        <value>HbrZ</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=35e8db67377b26005978466754990e0f"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>misc</field>
+        <id>35e8db67377b26005978466754990e0f</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="EUR">EUR</reference_currency>
+        <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+        <sys_created_on>2019-07-04 10:33:46</sys_created_on>
+        <sys_id>8f1b25bf4fda7bc0b41f05818110c7cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-04 10:33:46</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>rec_misc</field>
+        <id>35e8db67377b26005978466754990e0f</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="EUR">EUR</reference_currency>
+        <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+        <sys_created_on>2019-07-04 10:34:27</sys_created_on>
+        <sys_id>594b61ff4fda7bc0b41f05818110c7d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-07-04 10:34:27</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

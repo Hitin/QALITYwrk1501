@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Новое обращение">ca94e62a37e70380b9af806754990e92</catalog_item>
+        <catalog_variable>IO:a9d0de39375897005978466754990ec4</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>ignore</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2018-02-16 05:44:35</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>4d311679375897005978466754990e49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_type</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_4d311679375897005978466754990e49</sys_update_name>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2018-02-16 05:44:35</sys_updated_on>
+        <table/>
+        <ui_policy display_value="hide type">b021d279375897005978466754990e40</ui_policy>
+        <variable>u_type</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+</record_update>

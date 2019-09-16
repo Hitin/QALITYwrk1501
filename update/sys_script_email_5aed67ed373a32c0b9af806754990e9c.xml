@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>bq_log_info_delay</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[// var tm = new GlideDateTime(current.u_arrival_time);
+// tm.addSeconds(10800);
+// var tm1;
+// if (current.u_no_ttn_link == false) {
+// 	tm1 = new GlideDateTime(current.u_ttn.u_client_order);
+// 	tm1.addSeconds(10800);
+// }
+
+var tm;
+if (current.u_arrival_time == '')
+	tm = new GlideDateTime();
+else
+	tm = new GlideDateTime(current.u_arrival_time);
+tm.addSeconds(10800);
+var tm1;
+var tm2;
+if (current.u_no_ttn_link == false && current.u_ttn != '') {
+	if (current.u_ttn.u_client_order == '')
+		tm1 = new GlideDateTime();
+	else
+		tm1 = new GlideDateTime(current.u_ttn.u_client_order);
+	tm1.addSeconds(10800);
+	tm2 = new bqFunctions().getTimeZone(current.u_arrival_time_loc, 3);
+}
+template.print('<strong>Данные инициатора</strong><br /><br />');
+template.print('ФИО: ${current.u_bq_applicant}<br />');
+template.print('Контактные телефоны: ${current.u_bq_contact_phone}<br /><br />');
+
+template.print('<strong>Данные по накладной</strong><br /><br />');
+if (current.u_no_ttn_link == false){
+	template.print('Накладная: ${current.u_ttn_number} от ${current.u_ttn.u_ttn_date}<br />');
+	//template.print('Время прибытия на точку: ' + tm + ' MSK<br />');
+	template.print('Время прибытия на точку: ' + tm2 + ' MSK / Время прибытия на точку местное: '+ tm  + '<br />');
+	template.print('Клиент: ${current.u_ttn.u_buyer_code} - ${current.u_buyer}<br />');
+	template.print('Окно доставки: ${current.u_ttn.u_delivery_date} с ${current.u_ttn.u_delivery_time_from} по ${current.u_ttn.u_delivery_time_to}<br />');
+	template.print('Загружено: ${current.u_ttn.u_wh_code.u_code} - ${current.u_wh_name}<br />');
+	template.print('Адрес доставки: ${current.u_ttn.u_delivery_code} - ${current.u_ttn.u_delivery_address}<br />');
+	template.print('Заказ клиента: ' + current.u_ttn.u_order_number + ' от ' + tm1 + ' MSK<br />');
+}
+else{
+	template.print('Накладная: ${current.u_ttn_number}<br />');
+	//template.print('Время прибытия на точку: ' + tm + ' MSK<br />');
+	template.print('Время прибытия на точку: ' + tm2 + ' MSK / Время прибытия на точку местное: '+ tm  + '<br />');
+	template.print('Клиент: ${current.u_buyer}<br />');
+	template.print('Загружено: ${current.u_wh_name}<br />');
+}
+
+if (current.u_bq_danger == '1a0704c43790ba00b9af806754990ebb') template.print('Суть жалобы: ${current.u_claim_description}<br />');
+if (current.u_bq_danger == '1a0704c43790ba00b9af806754990ebb') template.print('Имя приемщика: ${current.u_employee_name}<br />');
+if (current.u_bq_danger == 'e9eadedb6f972200724708c6eb3ee49f' || current.u_bq_danger == '1e1b121f6f972200724708c6eb3ee49a' || current.u_bq_danger == 'fdca561f6f972200724708c6eb3ee460' || current.u_bq_danger == '8eca0f9737d0be00b9af806754990ec5'){
+	if (current.u_notmatch_qty == true) template.print('Количество несоответствующей продукции меньше или равно пяти упаковкам?  ДА<br />');
+	else template.print('Количество несоответствующей продукции меньше или равно пяти упаковкам?  НЕТ<br />');
+}
+if (current.u_bq_danger == 'e9eadedb6f972200724708c6eb3ee49f' || current.u_bq_danger == 'fdca561f6f972200724708c6eb3ee460' || current.u_bq_danger == '8eca0f9737d0be00b9af806754990ec5'){
+	if (current.u_return_qty == true) template.print('Объем возврата от клиента меньше или равен пяти упаковкам? ДА<br />');
+	else template.print('Объем возврата от клиента меньше или равен пяти упаковкам? НЕТ<br />');
+}
+if (current.u_bq_danger == '1e1b121f6f972200724708c6eb3ee49a')template.print('Наименование продукции: ${current.u_prod_name}<br />');
+if (current.u_bq_danger == '1e1b121f6f972200724708c6eb3ee49a')template.print('Дата производства с упаковки: ${current.u_bq_prod_date}<br />');
+if (current.u_bq_danger == '420bdedb6f972200724708c6eb3ee416'){
+	if (current.u_bq_self_repallet == true) template.print('Есть ли возможность, при согласии ТТ, перепаллетировать самому:  ДА<br />');
+	else template.print('Есть ли возможность, при согласии ТТ, перепаллетировать самому:  НЕТ<br />');
+}
+if (current.u_bq_danger == '420bdedb6f972200724708c6eb3ee416')template.print('Есть ли возможность отправить фото паллета одним из перечисленных способов? ${current.u_bq_messagers}<br />');
+if (current.u_bq_danger == '501bdedb6f972200724708c6eb3ee432')template.print('Причина закрытия: ${current.u_bq_close_reason}<br />');
+
+template.print('<strong>Есть ли другие заказы на текущий адрес в автомобиле?  </strong>');	
+if (current.u_ttn_list_thistt != '' || current.u_reference_service_call.u_ttn_list_thistt != '') template.print('ДА<br />');
+else template.print('НЕТ<br />');
+	
+template.print('<strong>Есть ли заказы на другие адреса в автомобиле?  </strong>');
+if (current.u_bq_other_orders_s == 'yes' || current.u_reference_service_call.u_bq_other_orders_s == 'yes' ) template.print('ДА<br />');
+else template.print('НЕТ<br />');
+template.print('Резюме звонка: ' + current.u_bq_applicant_info + '<br />');
+template.print('Описание/Протокол: <br />');
+var notes = current.u_bq_prot_list.getJournalEntry(-1); 
+var na = notes.split("\n\n"); 
+for (var i = 0; i < na.length; i++) {
+	template.print(na[i] + '<br />');
+}    			  
+template.print('<br />');
+if (current.u_ttn_list_thistt != '' || current.u_other_ttn != '' || (current.u_reference_service_call != '' && current.u_reference_service_call.u_ttn_list_thistt != '') || current.u_claim_description != '' || current.u_reference_service_call.u_claim_description != ''){
+	template.print('<table border="1" cellpadding="5" cellspacing="0">');
+	template.print('<tr><td>ТТН</td><td>Заявка</td><td>Клиент</td><td>Группа</td><td>Ответственный</td><td>Статус</td><td>Другие обращения по ТТН</td>');
+	template.print('</tr>');
+	if (current.u_ttn_list_thistt != '' || (current.u_reference_service_call != '' && current.u_reference_service_call.u_ttn_list_thistt != '')){
+		template.print('<tr><td colspan ="7">Информация по накладным для текущего адреса</td></tr>');
+		var sc1 = new GlideRecord ('x_caas_quality_service_call');
+		sc1.addQuery('u_reference_service_call', current.sys_id);
+		sc1.orderBy('u_bq_number');
+		sc1.query();
+		while (sc1.next()){
+			template.print('<tr><td>' + sc1.u_ttn.u_ttn_number + ' от ' + sc1.u_ttn.u_ttn_date + '</td><td>' + sc1.u_bq_number + ' от ' + sc1.sys_created_on + '</td><td>' + sc1.u_ttn.u_buyer_code + '<br />' + sc1.u_ttn.u_buyer_name + '</td><td>' + sc1.getDisplayValue('u_bq_usergroup') + '</td><td>' + sc1.getDisplayValue('u_bq_user') + '</td><td>' + sc1.u_bq_state + '</td><td>');
+			var sc2 = new GlideRecord ('x_caas_quality_service_call');
+			sc2.addQuery('u_other_ttn', 'CONTAINS', sc1.u_ttn.sys_id);
+			sc2.query();
+			while (sc2.next()){
+				template.print(sc2.u_bq_number+'<br />');
+			}
+			template.print('</td></tr>');
+		}
+	}
+	if (current.u_other_ttn != ''){
+		template.print('<tr><td colspan ="7">Информация по накладным для других адресов</td></tr>');
+		var ttn = current.u_other_ttn;
+		var ar = ttn.split(',');
+		for (var j=0; j<ar.length; j++){
+			var ttn1 = new GlideRecord('x_caas_quality_bq_invoices');
+			ttn1.get(ar[j]);
+			template.print('<tr><td>' + ttn1.u_ttn_number + ' от ' + ttn1.u_ttn_date + '</td><td>' + '' + '</td><td>' + ttn1.u_buyer_code + '<br />' + ttn1.u_buyer_name + '</td><td>' + ttn1.getDisplayValue('u_group') + '</td><td>' + '' + '</td><td>' + '' + '</td><td>');
+			
+			var sc2 = new GlideRecord ('x_caas_quality_service_call');
+			sc2.addQuery('u_other_ttn', 'CONTAINS', ttn1.sys_id);
+			sc2.addQuery('sys_id', '!=', current.sys_id);
+			sc2.query();
+			while (sc2.next()){
+				template.print(sc2.u_bq_number+'<br />');
+			}			   
+			template.print('</td></tr>');
+		}
+	}
+	if (current.u_claim_description != '' || current.u_reference_service_call.u_claim_description != ''){
+		template.print('<tr><td colspan ="7">Жалобы на приёмщиков</td></tr>');
+		var sc3 = new GlideRecord ('x_caas_quality_service_call');
+		if (current.u_reference_service_call == '') sc3.addQuery('u_reference_service_call', current.sys_id);
+		else sc3.addQuery('u_reference_service_call', current.u_reference_service_call);
+		sc3.addQuery('u_bq_danger', '1a0704c43790ba00b9af806754990ebb');
+		sc3.query();
+		while (sc3.next()){
+			template.print('<tr><td>' + sc3.u_ttn.u_ttn_number + ' от ' + sc3.u_ttn.u_ttn_date + '</td><td>' + sc3.u_bq_number + ' от ' + sc3.sys_created_on + '</td><td>' + sc3.u_ttn.u_buyer_code + '<br />' + sc3.u_ttn.u_buyer_name + '</td><td></td><td></td><td>' + sc3.u_bq_state + '</td><td>');
+			var sc2 = new GlideRecord ('x_caas_quality_service_call');
+			sc2.addQuery('u_other_ttn', 'CONTAINS', sc3.u_ttn.sys_id);
+			sc2.query();
+			while (sc2.next()){
+				template.print(sc2.u_bq_number+'<br />');
+			}
+			template.print('</td></tr>');
+		}
+	}
+	template.print('</table>');	
+}
+
+
+
+]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-05-18 08:05:42</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>5aed67ed373a32c0b9af806754990e9c</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>bq_log_info_delay</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_script_email_5aed67ed373a32c0b9af806754990e9c</sys_update_name>
+        <sys_updated_by>ablyazov_p</sys_updated_by>
+        <sys_updated_on>2019-04-30 11:10:07</sys_updated_on>
+    </sys_script_email>
+</record_update>
