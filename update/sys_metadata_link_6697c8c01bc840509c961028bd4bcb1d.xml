@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>1cee53c6dbddf6802eb8f3651d961944</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_delivery_close_code">
+    <x_caas_quality_bq_delivery_close_code action="INSERT_OR_UPDATE">
+        <sys_created_by>Filippov_As</sys_created_by>
+        <sys_created_on>2017-03-06 00:00:00</sys_created_on>
+        <sys_id>1cee53c6dbddf6802eb8f3651d961944</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_updated_by>Filippov_as</sys_updated_by>
+        <sys_updated_on>2017-04-03 12:44:11</sys_updated_on>
+        <u_archive>true</u_archive>
+        <u_code>R_006</u_code>
+        <u_comments>Поставка по накладной SKU, отсутствующих в заказе или в базе клиента</u_comments>
+        <u_name>Расхождение с заказом клиента по ассортименту, в т.ч. отсутствие в матрице продаж</u_name>
+        <u_solution>Частичный возврат</u_solution>
+    </x_caas_quality_bq_delivery_close_code>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-09-17 11:31:40</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6697c8c01bc840509c961028bd4bcb1d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Расхождение с заказом клиента по ассортименту, в т.ч. отсутствие в матрице продаж</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_6697c8c01bc840509c961028bd4bcb1d</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-17 11:31:40</sys_updated_on>
+        <tablename>x_caas_quality_bq_delivery_close_code</tablename>
+    </sys_metadata_link>
+</record_update>

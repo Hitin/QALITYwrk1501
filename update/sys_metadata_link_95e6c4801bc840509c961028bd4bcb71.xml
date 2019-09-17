@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>0218fa781b2bf7409c961028bd4bcba3</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_invoices">
+    <x_caas_quality_bq_invoices action="INSERT_OR_UPDATE">
+        <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+        <sys_created_on>2019-08-26 11:46:50</sys_created_on>
+        <sys_id>0218fa781b2bf7409c961028bd4bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-08-26 11:46:50</sys_updated_on>
+        <u_assignee display_value="Andreas Schlößer">23613eaa4f2e23c0f7a205818110c760</u_assignee>
+        <u_buyer_code>9346</u_buyer_code>
+        <u_buyer_name>ООО ЛЕНТА</u_buyer_name>
+        <u_client_order>2019-08-15 22:00:00</u_client_order>
+        <u_delivery_address>170032, Тверская обл, Тверь г, Московско</u_delivery_address>
+        <u_delivery_city display_value="Тверь">e5398e566fab3100724708c6eb3ee4b6</u_delivery_city>
+        <u_delivery_code>934653</u_delivery_code>
+        <u_delivery_date>2019-08-21</u_delivery_date>
+        <u_delivery_time_from>10:00</u_delivery_time_from>
+        <u_delivery_time_to>10:30</u_delivery_time_to>
+        <u_driver_name/>
+        <u_drp_order>2019-08-20 22:00:00</u_drp_order>
+        <u_group display_value="Доставка. Гипермаркеты">a4d0105737a722005978466754990e71</u_group>
+        <u_linked_to_sc>false</u_linked_to_sc>
+        <u_mrp_demand_type>22</u_mrp_demand_type>
+        <u_order_number>4538706607</u_order_number>
+        <u_region_code>69</u_region_code>
+        <u_tth_short_number>157795/19</u_tth_short_number>
+        <u_ttn_date>2019-08-20</u_ttn_date>
+        <u_ttn_number>TulZ157795/19</u_ttn_number>
+        <u_wh_code display_value="СГП-Сети Тула">7c3a2d18db95ba402eb8f3651d96190c</u_wh_code>
+    </x_caas_quality_bq_invoices>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-09-17 11:28:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>95e6c4801bc840509c961028bd4bcb71</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>157795/19</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_95e6c4801bc840509c961028bd4bcb71</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-17 11:28:35</sys_updated_on>
+        <tablename>x_caas_quality_bq_invoices</tablename>
+    </sys_metadata_link>
+</record_update>

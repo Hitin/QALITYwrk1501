@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>010c2d731b673b809c961028bd4bcbd4</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_invoices">
+    <x_caas_quality_bq_invoices action="INSERT_OR_UPDATE">
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2019-09-04 13:56:13</sys_created_on>
+        <sys_id>010c2d731b673b809c961028bd4bcbd4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-09-04 13:56:13</sys_updated_on>
+        <u_assignee display_value="Andreas Schlößer">23613eaa4f2e23c0f7a205818110c760</u_assignee>
+        <u_buyer_code>*55642</u_buyer_code>
+        <u_buyer_name>ООО "Альбион - 2002"</u_buyer_name>
+        <u_client_order>2019-09-03 22:00:00</u_client_order>
+        <u_delivery_address>625046, Тюменская обл, Тюмень г, Широтна</u_delivery_address>
+        <u_delivery_city display_value="Тюмень">25398e566fab3100724708c6eb3ee4b4</u_delivery_city>
+        <u_delivery_code>*556424071</u_delivery_code>
+        <u_delivery_date>2019-09-05</u_delivery_date>
+        <u_delivery_time_from>09:00</u_delivery_time_from>
+        <u_delivery_time_to>18:00</u_delivery_time_to>
+        <u_driver_name/>
+        <u_drp_order>2019-09-04 22:00:00</u_drp_order>
+        <u_group display_value="Доставка. Супермаркеты">25e0501737a722005978466754990eae</u_group>
+        <u_linked_to_sc>false</u_linked_to_sc>
+        <u_mrp_demand_type>22</u_mrp_demand_type>
+        <u_order_number>ЦО-03403351</u_order_number>
+        <u_region_code>72</u_region_code>
+        <u_tth_short_number>344788/19</u_tth_short_number>
+        <u_ttn_date>2019-09-05</u_ttn_date>
+        <u_ttn_number>ChbZ344788/19</u_ttn_number>
+        <u_wh_code display_value="СГП-Сети Тюмень 3PL">c23a2d18db95ba402eb8f3651d9619a5</u_wh_code>
+    </x_caas_quality_bq_invoices>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-09-17 11:22:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a985c8cc1b8840509c961028bd4bcb27</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>344788/19</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_a985c8cc1b8840509c961028bd4bcb27</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-17 11:22:35</sys_updated_on>
+        <tablename>x_caas_quality_bq_invoices</tablename>
+    </sys_metadata_link>
+</record_update>

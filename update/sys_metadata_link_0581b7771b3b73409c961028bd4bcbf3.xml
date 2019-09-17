@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>0a4b9781dba45300ad2315784b96198b</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_assign_matrix">
+    <x_caas_quality_bq_assign_matrix action="INSERT_OR_UPDATE">
+        <sys_created_by>Filippov_as</sys_created_by>
+        <sys_created_on>2018-02-26 13:29:31</sys_created_on>
+        <sys_id>0a4b9781dba45300ad2315784b96198b</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+        <sys_updated_on>2019-08-02 12:36:36</sys_updated_on>
+        <u_agree_list>b9c55fe06f239e007833bd5dbb3ee400</u_agree_list>
+        <u_bq_danger display_value="Угроза обращения в СМИ и/ или в контролирующие органы">aefed4e46f62d20010e00d55eb3ee4de</u_bq_danger>
+        <u_bq_factory/>
+        <u_bq_topic display_value="Из СМИ -PR">0b2a10a46f62d20010e00d55eb3ee4d8</u_bq_topic>
+        <u_bq_user/>
+        <u_bq_usercity/>
+        <u_bq_usergroup/>
+        <u_notify_list>eb08b0fd4faeb3c0d8a900818110c7f7,56726cb54f2ebb04b41f05818110c7bb,4787d21a6fab3100724708c6eb3ee4f2,b9c55fe06f239e007833bd5dbb3ee400,7d5174714f2eb3c0d8a900818110c70e,daef14354feabb04b41f05818110c77e,b5b0107d4f26bb04b41f05818110c77e,3a1a14bd4f62b3c0d8a900818110c725,21e168b14f2ebb04b41f05818110c7f5,af9990f94f62b3c0d8a900818110c71a</u_notify_list>
+    </x_caas_quality_bq_assign_matrix>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-09-17 09:55:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>0581b7771b3b73409c961028bd4bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2018-02-26 14:29:31</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_0581b7771b3b73409c961028bd4bcbf3</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-17 09:55:11</sys_updated_on>
+        <tablename>x_caas_quality_bq_assign_matrix</tablename>
+    </sys_metadata_link>
+</record_update>

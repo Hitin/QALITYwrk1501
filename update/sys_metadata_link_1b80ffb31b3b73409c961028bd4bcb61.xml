@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>73d17e74db75f70062620e41ca9619ee</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_usergroup">
+    <x_caas_quality_bq_usergroup action="INSERT_OR_UPDATE">
+        <sys_created_by>x-ruFedLeo</sys_created_by>
+        <sys_created_on>2019-05-31 11:30:08</sys_created_on>
+        <sys_id>73d17e74db75f70062620e41ca9619ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>x-ruFedLeo</sys_updated_by>
+        <sys_updated_on>2019-05-31 11:30:08</sys_updated_on>
+        <u_bq_coors/>
+        <u_bq_dir/>
+        <u_bq_grupnqme>Доп.группа.Доставка</u_bq_grupnqme>
+        <u_bq_managers/>
+    </x_caas_quality_bq_usergroup>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-09-17 09:50:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1b80ffb31b3b73409c961028bd4bcb61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Доп.группа.Доставка</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_1b80ffb31b3b73409c961028bd4bcb61</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-17 09:50:58</sys_updated_on>
+        <tablename>x_caas_quality_bq_usergroup</tablename>
+    </sys_metadata_link>
+</record_update>

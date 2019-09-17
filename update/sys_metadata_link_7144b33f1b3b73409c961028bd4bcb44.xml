@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>f829ab24db860700ad2315784b961999</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_warehouses">
+    <x_caas_quality_bq_warehouses action="INSERT_OR_UPDATE">
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-10-23 18:34:58</sys_created_on>
+        <sys_id>f829ab24db860700ad2315784b961999</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-10-23 18:34:58</sys_updated_on>
+        <u_3pl>false</u_3pl>
+        <u_code>97271</u_code>
+        <u_name>СГП-Сети Самара Земеца</u_name>
+        <u_notify>false</u_notify>
+        <u_notify_list/>
+    </x_caas_quality_bq_warehouses>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-09-17 10:07:15</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7144b33f1b3b73409c961028bd4bcb44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>СГП-Сети Самара Земеца</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_7144b33f1b3b73409c961028bd4bcb44</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-17 10:07:15</sys_updated_on>
+        <tablename>x_caas_quality_bq_warehouses</tablename>
+    </sys_metadata_link>
+</record_update>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>ecc87e5d37418300b9af806754990ea4</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_site_matrix">
+    <x_caas_quality_bq_site_matrix action="INSERT_OR_UPDATE">
+        <sys_created_by>x-ruVoyAnd</sys_created_by>
+        <sys_created_on>2017-09-06 05:56:15</sys_created_on>
+        <sys_id>ecc87e5d37418300b9af806754990ea4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>x-ruVoyAnd</sys_updated_by>
+        <sys_updated_on>2017-09-06 06:09:11</sys_updated_on>
+        <u_auto_assign>true</u_auto_assign>
+        <u_auto_close>false</u_auto_close>
+        <u_category/>
+        <u_city/>
+        <u_mail_subject_en/>
+        <u_mail_subject_ru>corporate.baltika.ru - Сообщение из раздела дистрибуции</u_mail_subject_ru>
+        <u_region>Грузия</u_region>
+        <u_subtopic display_value="Страны Закавказья, Прикасп. рег и Турция">6156bc2adb8636002f89ffc41d9619b7</u_subtopic>
+        <u_topic display_value="Экспортные продажи">b1a5702adb8636002f89ffc41d961955</u_topic>
+    </x_caas_quality_bq_site_matrix>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-09-17 11:34:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a848c8041bc840509c961028bd4bcb9d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>corporate.baltika.ru - Сообщение из раздела дистрибуции</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_a848c8041bc840509c961028bd4bcb9d</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-17 11:34:32</sys_updated_on>
+        <tablename>x_caas_quality_bq_site_matrix</tablename>
+    </sys_metadata_link>
+</record_update>

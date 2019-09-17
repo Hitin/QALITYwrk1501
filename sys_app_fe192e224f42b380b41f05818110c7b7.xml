@@ -17,16 +17,16 @@
         <scoped_administration>false</scoped_administration>
         <short_description/>
         <source>x_caas_quality</source>
-        <store_correlation_id/>
+        <store_correlation_id>REPOAPP0000148968</store_correlation_id>
         <store_url/>
         <sys_class_name>sys_app</sys_class_name>
         <sys_code/>
         <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
         <sys_created_on>2019-06-18 07:36:32</sys_created_on>
         <sys_id>fe192e224f42b380b41f05818110c7b7</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
-        <sys_updated_on>2019-07-05 11:40:02</sys_updated_on>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-17 09:05:46</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role display_value="x_caas_quality.user" name="x_caas_quality.user">43196e224f42b380b41f05818110c71e</user_role>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>65da903a6f0cc200724708c6eb3ee4e1</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_assign_matrix">
+    <x_caas_quality_bq_assign_matrix action="INSERT_OR_UPDATE">
+        <sys_created_by>x-rushaale</sys_created_by>
+        <sys_created_on>2015-05-19 08:29:46</sys_created_on>
+        <sys_id>65da903a6f0cc200724708c6eb3ee4e1</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>RANJITHKUMAR S</sys_updated_by>
+        <sys_updated_on>2016-04-20 13:50:38</sys_updated_on>
+        <u_agree_list/>
+        <u_bq_danger/>
+        <u_bq_factory/>
+        <u_bq_topic display_value="ПДД">20f91c646f62d20010e00d55eb3ee473</u_bq_topic>
+        <u_bq_user/>
+        <u_bq_usercity display_value="Владивосток">ca39ce566fab3100724708c6eb3ee400</u_bq_usercity>
+        <u_bq_usergroup display_value="ПДД">5ad6a5316f2b3100724708c6eb3ee4bb</u_bq_usergroup>
+        <u_notify_list/>
+    </x_caas_quality_bq_assign_matrix>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-09-17 09:52:45</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>65f073371b3b73409c961028bd4bcb31</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2015-05-19 10:29:46</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_65f073371b3b73409c961028bd4bcb31</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-17 09:52:45</sys_updated_on>
+        <tablename>x_caas_quality_bq_assign_matrix</tablename>
+    </sys_metadata_link>
+</record_update>

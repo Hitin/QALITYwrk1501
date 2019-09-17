@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>c0e5234d3702ba405978466754990e56</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_city">
+    <x_caas_quality_bq_city action="INSERT_OR_UPDATE">
+        <sys_created_by>Filippov_as</sys_created_by>
+        <sys_created_on>2017-04-09 11:26:32</sys_created_on>
+        <sys_id>c0e5234d3702ba405978466754990e56</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>egorov_dv</sys_updated_by>
+        <sys_updated_on>2017-10-09 15:13:29</sys_updated_on>
+        <u_bq_parent display_value="Центральный">d68aaec8db7d47442eb8f3651d961943</u_bq_parent>
+        <u_bq_region/>
+        <u_country>Россия</u_country>
+        <u_fo>Центральный</u_fo>
+        <u_name>Костромская область</u_name>
+        <u_subject_rf>Костромская область</u_subject_rf>
+        <u_timezone/>
+        <u_tree_level>3</u_tree_level>
+    </x_caas_quality_bq_city>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-09-17 09:33:30</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a38ce33b1bf773409c961028bd4bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Костромская область</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_a38ce33b1bf773409c961028bd4bcb82</sys_update_name>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-17 09:33:30</sys_updated_on>
+        <tablename>x_caas_quality_bq_city</tablename>
+    </sys_metadata_link>
+</record_update>
