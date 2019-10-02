@@ -54,7 +54,7 @@
         <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
         <sys_created_on>2019-06-27 11:41:28</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>ef57f5654f1ebf80b41f05818110c79a</sys_id>
+        <sys_id>cc58b4641bd0cc109c961028bd4bcb09</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Родительское обращение</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
@@ -62,8 +62,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_dictionary_x_caas_quality_service_call_u_reference_service_call</sys_update_name>
-        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
-        <sys_updated_on>2019-06-27 11:41:28</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-10-01 14:39:30</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

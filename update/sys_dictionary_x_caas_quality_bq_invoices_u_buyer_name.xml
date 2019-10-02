@@ -54,7 +54,7 @@
         <sys_created_by>x-ruVoyAnd</sys_created_by>
         <sys_created_on>2016-12-19 08:31:33</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>54a293d137f7a2005978466754990ee9</sys_id>
+        <sys_id>834834641bd0cc109c961028bd4bcb42</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Название покупателя</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
@@ -62,8 +62,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_dictionary_x_caas_quality_bq_invoices_u_buyer_name</sys_update_name>
-        <sys_updated_by>X-DKMADBOL</sys_updated_by>
-        <sys_updated_on>2018-01-25 10:22:40</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-10-01 14:38:15</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

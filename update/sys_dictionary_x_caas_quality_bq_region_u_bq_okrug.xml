@@ -49,7 +49,7 @@
         <sys_created_by>x-rubesdmi</sys_created_by>
         <sys_created_on>2015-04-22 10:58:18</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>709939c26f6b3100724708c6eb3ee46c</sys_id>
+        <sys_id>6648f0641bd0cc109c961028bd4bcbbe</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Федеральный округ (РФ)</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
@@ -57,8 +57,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_dictionary_x_caas_quality_bq_region_u_bq_okrug</sys_update_name>
-        <sys_updated_by>x-rubesdmi</sys_updated_by>
-        <sys_updated_on>2015-04-22 10:58:18</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-10-01 14:38:26</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

@@ -5,7 +5,7 @@
         <active>true</active>
         <advanced_condition/>
         <affected_field_on_event/>
-        <category display_value="Обращение" name="Обращение">28627beddb60230002558e68689619e3</category>
+        <category display_value="">28627beddb60230002558e68689619e3</category>
         <collection>x_caas_quality_service_call</collection>
         <condition table="x_caas_quality_service_call">u_bq_usergroupCHANGESTO91039b56373a4300b9af806754990ec6^u_bq_topic=46aa161f6f972200724708c6eb3ee4ea^u_multiple_solution=false^u_log_country=BY^u_bq_userISEMPTY^EQ<item display_table="x_caas_quality_bq_usergroup" display_value="Доставка. Беларусь Неопределено" endquery="false" field="u_bq_usergroup" goto="false" newquery="false" operator="CHANGESTO" or="false" value="91039b56373a4300b9af806754990ec6"/>
             <item display_table="x_caas_quality_bq_topic" display_value="Проблемы доставки сетевым клиентам" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="false" value="46aa161f6f972200724708c6eb3ee4ea"/>

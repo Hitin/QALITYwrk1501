@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="false" extends="sys_import_set_row" label="bq_MID_ttn" max_length="40" name="x_caas_quality_invoices_import_table" sizeclass="607665" type="collection">
+    <element audit="false" extends="sys_import_set_row" label="bq_MID_ttn" max_length="40" name="x_caas_quality_invoices_import_table" type="collection">
         <element attributes="edge_encryption_enabled=true,import_attribute_name=CityID" audit="false" label="CityID" max_length="40" name="u_cityid" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=CityName" audit="false" label="CityName" max_length="255" name="u_cityname" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=DefDriverName" audit="false" label="DefDriverName" max_length="255" name="u_defdrivername" type="string"/>

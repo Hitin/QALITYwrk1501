@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="x_caas_quality_bq_call_log" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_bq_ansvered</element>
+            <list_id display_value="x_caas_quality_bq_call_log" element="NULL" name="x_caas_quality_bq_call_log" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">ace6aa3a4f9abf40d8a900818110c7c1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-01 12:21:00</sys_created_on>
+            <sys_id>2ce6aa3a4f9abf40d8a900818110c7c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-01 12:21:00</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_bq_call_duration</element>
+            <list_id display_value="x_caas_quality_bq_call_log" element="NULL" name="x_caas_quality_bq_call_log" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">ace6aa3a4f9abf40d8a900818110c7c1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-01 12:21:00</sys_created_on>
+            <sys_id>a4e6aa3a4f9abf40d8a900818110c7c4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-01 12:21:00</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_bq_ctiid</element>
+            <list_id display_value="x_caas_quality_bq_call_log" element="NULL" name="x_caas_quality_bq_call_log" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">ace6aa3a4f9abf40d8a900818110c7c1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-01 12:21:00</sys_created_on>
+            <sys_id>28e6aa3a4f9abf40d8a900818110c7c4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-01 12:21:00</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_bq_fio</element>
+            <list_id display_value="x_caas_quality_bq_call_log" element="NULL" name="x_caas_quality_bq_call_log" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">ace6aa3a4f9abf40d8a900818110c7c1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-01 12:21:00</sys_created_on>
+            <sys_id>a8e6aa3a4f9abf40d8a900818110c7c4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-01 12:21:00</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_bq_operator</element>
+            <list_id display_value="x_caas_quality_bq_call_log" element="NULL" name="x_caas_quality_bq_call_log" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">ace6aa3a4f9abf40d8a900818110c7c1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-01 12:21:00</sys_created_on>
+            <sys_id>2ce6aa3a4f9abf40d8a900818110c7c4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-01 12:21:00</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_bq_sc</element>
+            <list_id display_value="x_caas_quality_bq_call_log" element="NULL" name="x_caas_quality_bq_call_log" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">ace6aa3a4f9abf40d8a900818110c7c1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-01 12:21:00</sys_created_on>
+            <sys_id>ace6aa3a4f9abf40d8a900818110c7c4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-01 12:21:00</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_bq_tel</element>
+            <list_id display_value="x_caas_quality_bq_call_log" element="NULL" name="x_caas_quality_bq_call_log" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">ace6aa3a4f9abf40d8a900818110c7c1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-01 12:21:00</sys_created_on>
+            <sys_id>20e6aa3a4f9abf40d8a900818110c7c5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-01 12:21:00</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_caller_type</element>
+            <list_id display_value="x_caas_quality_bq_call_log" element="NULL" name="x_caas_quality_bq_call_log" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">ace6aa3a4f9abf40d8a900818110c7c1</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-01 12:21:00</sys_created_on>
+            <sys_id>a0e6aa3a4f9abf40d8a900818110c7c5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-01 12:21:00</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_caas_quality_bq_call_log</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-07-01 12:21:00</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>ace6aa3a4f9abf40d8a900818110c7c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_caas_quality_bq_call_log</sys_name>
+            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_ui_list_x_caas_quality_bq_call_log_null_ace6aa3a4f9abf40d8a900818110c7c1</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-01 12:21:00</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

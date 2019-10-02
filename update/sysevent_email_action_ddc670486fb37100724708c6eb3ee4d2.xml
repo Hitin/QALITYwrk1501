@@ -5,7 +5,7 @@
         <active>true</active>
         <advanced_condition/>
         <affected_field_on_event/>
-        <category display_value="Обращение" name="Обращение">28627beddb60230002558e68689619e3</category>
+        <category display_value="">28627beddb60230002558e68689619e3</category>
         <collection>x_caas_quality_service_call</collection>
         <condition table="x_caas_quality_service_call">u_bq_stateCHANGESTOНа согласовании^EQ<item endquery="false" field="u_bq_state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="На согласовании"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>

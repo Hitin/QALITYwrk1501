@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="x_caas_quality_bq_city" version="2" view="">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Город - Default view" name="x_caas_quality_bq_city" related_list="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">1cf69d884f267780d8a900818110c76b</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>REL:ba15a63d4f9233c0b41f05818110c7f9</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 03:44:08</sys_created_on>
+            <sys_id>14f69d884f267780d8a900818110c76d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 03:44:08</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Город - Default view" name="x_caas_quality_bq_city" related_list="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">1cf69d884f267780d8a900818110c76b</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>REL:0ed822714fd233c0b41f05818110c728</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 03:44:08</sys_created_on>
+            <sys_id>5cf69d884f267780d8a900818110c77a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 03:44:08</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Город - Default view" name="x_caas_quality_bq_city" related_list="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">1cf69d884f267780d8a900818110c76b</list_id>
+            <order_by/>
+            <position>2</position>
+            <related_list>REL:1e1966714fd233c0b41f05818110c732</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 03:44:08</sys_created_on>
+            <sys_id>d0f69d884f267780d8a900818110c77b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 03:44:08</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Город - Default view</calculated_name>
+            <filter/>
+            <name>x_caas_quality_bq_city</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>Alexander.Podkopaev@softline.com</sys_created_by>
+            <sys_created_on>2019-07-05 03:44:08</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_id>1cf69d884f267780d8a900818110c76b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Город - Default view</sys_name>
+            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_ui_related_x_caas_quality_bq_city_null_1cf69d884f267780d8a900818110c76b</sys_update_name>
+            <sys_updated_by>Alexander.Podkopaev@softline.com</sys_updated_by>
+            <sys_updated_on>2019-07-05 03:44:08</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

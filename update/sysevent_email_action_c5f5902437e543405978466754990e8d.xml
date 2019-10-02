@@ -5,7 +5,7 @@
         <active>true</active>
         <advanced_condition/>
         <affected_field_on_event/>
-        <category display_value="Таблица назначений" name="Таблица назначений">4962bbeddb60230002558e68689619e3</category>
+        <category display_value="">4962bbeddb60230002558e68689619e3</category>
         <collection>x_caas_quality_bq_assign_matrix</collection>
         <condition/>
         <content_type>text/html</content_type>

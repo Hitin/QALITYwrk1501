@@ -5,7 +5,7 @@
         <active>true</active>
         <advanced_condition><![CDATA[new bq_getSMS().getSMS() == 't1';]]></advanced_condition>
         <affected_field_on_event/>
-        <category display_value="Обращение" name="Обращение">28627beddb60230002558e68689619e3</category>
+        <category display_value="">28627beddb60230002558e68689619e3</category>
         <collection>x_caas_quality_service_call</collection>
         <condition/>
         <content_type>text/plain</content_type>

@@ -49,16 +49,16 @@
         <sys_created_by>x-rubesdmi</sys_created_by>
         <sys_created_on>2015-05-14 12:27:44</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>9a116b056f80c200724708c6eb3ee4c2</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_id>a95838641bd0cc109c961028bd4bcb2d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Связанные телефоны</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_dictionary_x_caas_quality_bq_fio_u_bq_phones</sys_update_name>
-        <sys_updated_by>x-rubesdmi</sys_updated_by>
-        <sys_updated_on>2015-05-19 14:06:15</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-10-01 14:38:05</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

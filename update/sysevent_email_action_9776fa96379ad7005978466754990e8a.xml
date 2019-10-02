@@ -5,7 +5,7 @@
         <active>true</active>
         <advanced_condition/>
         <affected_field_on_event/>
-        <category display_value="Статистика ГЛ" name="Статистика ГЛ">8162bbeddb60230002558e68689619a9</category>
+        <category display_value="">8162bbeddb60230002558e68689619a9</category>
         <collection>x_caas_quality_bq_hotline_stats</collection>
         <condition/>
         <content_type>text/html</content_type>

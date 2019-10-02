@@ -6,7 +6,7 @@
         <conditional>false</conditional>
         <group_list/>
         <include_detail>false</include_detail>
-        <include_with display_value="EE RU HotLine(EGAIS) обращения по ЕГАИС(list) weekly">0553ae03db7f83401348a3e84b9619e2</include_with>
+        <include_with display_value="">0553ae03db7f83401348a3e84b9619e2</include_with>
         <name>EE RU HotLine(EGAIS) обращения по ЕГАИС(pivot) weekly</name>
         <omit_if_no_records>true</omit_if_no_records>
         <output_type>PDF</output_type>
@@ -16,7 +16,7 @@
         <report display_value="HotLine обращения по ЕГАИС.Не выполненные (pivot) 2">15255a03dbfb83401348a3e84b9619bf</report>
         <report_body/>
         <report_title>BQ обращения по ЕГАИС(pivot)</report_title>
-        <run_as display_value="Lev Ryabtsev">7eaa6d5adbda0b806e87f1eabf96197d</run_as>
+        <run_as display_value="Ryabtsev Lev F.">7eaa6d5adbda0b806e87f1eabf96197d</run_as>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>1</run_dayofweek>

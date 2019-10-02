@@ -49,7 +49,7 @@
         <sys_created_by>x-rubesdmi</sys_created_by>
         <sys_created_on>2015-04-27 13:33:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>7b298cf36f637100724708c6eb3ee441</sys_id>
+        <sys_id>b24834641bd0cc109c961028bd4bcb18</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Телефонный номер</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
@@ -57,8 +57,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_dictionary_x_caas_quality_bq_call_log_u_bq_tel</sys_update_name>
-        <sys_updated_by>RANJITHKUMAR S</sys_updated_by>
-        <sys_updated_on>2015-12-16 09:22:37</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-10-01 14:37:55</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

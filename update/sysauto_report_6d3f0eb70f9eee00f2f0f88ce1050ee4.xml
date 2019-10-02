@@ -20,7 +20,7 @@
 <p>отчет отправляется 1 числа.</p>
 <p>Команда ServiceNow</p>]]></report_body>
         <report_title>Ежемес. отчет по заявкам</report_title>
-        <run_as display_value="Lev Ryabtsev">7eaa6d5adbda0b806e87f1eabf96197d</run_as>
+        <run_as display_value="Ryabtsev Lev F.">7eaa6d5adbda0b806e87f1eabf96197d</run_as>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>1</run_dayofweek>

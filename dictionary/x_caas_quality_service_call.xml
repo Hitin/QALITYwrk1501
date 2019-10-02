@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="task" label="Обращение" max_length="40" name="x_caas_quality_service_call" sizeclass="164" type="collection">
+    <element extends="task" label="Обращение" max_length="40" name="x_caas_quality_service_call" type="collection">
         <element choice="2" label="bq_fio" max_length="40" name="bq_fio" type="choice">
             <choice/>
         </element>
@@ -386,5 +386,83 @@
             </choice>
         </element>
         <element label="Название склада" max_length="40" name="u_wh_name" type="string"/>
+        <index name="index">
+            <element name="u_bq_ctiid"/>
+        </index>
+        <index name="index2">
+            <element name="u_parent_by_ttn"/>
+        </index>
+        <index name="index3">
+            <element name="u_bq_promo_new"/>
+        </index>
+        <index name="index4">
+            <element name="u_bq_user"/>
+        </index>
+        <index name="index5">
+            <element name="u_bq_error_reason"/>
+        </index>
+        <index name="index6">
+            <element name="u_bq_closed_by"/>
+        </index>
+        <index name="index7">
+            <element name="u_bq_usercity"/>
+        </index>
+        <index name="index8">
+            <element name="u_bq_kb_category_v3"/>
+        </index>
+        <index name="index9">
+            <element name="u_bq_buycity"/>
+        </index>
+        <index name="index10">
+            <element name="u_cf"/>
+        </index>
+        <index name="index11">
+            <element name="u_bq_aon_number"/>
+        </index>
+        <index name="index12">
+            <element name="u_bq_brand"/>
+        </index>
+        <index name="index13">
+            <element name="u_bq_dir"/>
+        </index>
+        <index name="index14">
+            <element name="u_bq_meet_city"/>
+        </index>
+        <index name="index15">
+            <element name="u_fo"/>
+        </index>
+        <index name="index16">
+            <element name="u_corr_action"/>
+        </index>
+        <index name="index17">
+            <element name="u_remind_to"/>
+        </index>
+        <index name="index18">
+            <element name="u_reference_service_call"/>
+        </index>
+        <index name="index19">
+            <element name="u_bq_usergroup"/>
+        </index>
+        <index name="index20">
+            <element name="u_bq_danger"/>
+        </index>
+        <index name="index21">
+            <element name="u_bq_excursion_city"/>
+        </index>
+        <index name="index22">
+            <element name="u_bq_topic"/>
+        </index>
+        <index name="index23">
+            <element name="u_bq_factory"/>
+        </index>
+        <index name="index24">
+            <element name="u_bq_approve_group"/>
+        </index>
+        <index name="index25">
+            <element name="u_bq_log_reason"/>
+        </index>
+        <index name="index26">
+            <element name="u_ttn"/>
+        </index>
     </element>
 </database>
