@@ -7,17 +7,17 @@
         <sys_created_by>Filippov_as</sys_created_by>
         <sys_created_on>2018-02-26 14:33:13</sys_created_on>
         <sys_id>58b92309dbe45300ad2315784b961966</sys_id>
-        <sys_mod_count>11</sys_mod_count>
-        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
-        <sys_updated_on>2019-08-02 12:36:36</sys_updated_on>
-        <u_agree_list>daef14354feabb04b41f05818110c77e</u_agree_list>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_updated_by>egorov_dv</sys_updated_by>
+        <sys_updated_on>2019-10-14 10:55:37</sys_updated_on>
+        <u_agree_list>dd9597e06f239e007833bd5dbb3ee41a</u_agree_list>
         <u_bq_danger display_value="Запросы из СМИ">060b344c0f0366004a2757d003050ed0</u_bq_danger>
         <u_bq_factory/>
         <u_bq_topic display_value="Экология">9af950a46f62d20010e00d55eb3ee405</u_bq_topic>
         <u_bq_user/>
         <u_bq_usercity/>
         <u_bq_usergroup/>
-        <u_notify_list>3a1a14bd4f62b3c0d8a900818110c725,cb87d21a6fab3100724708c6eb3ee4ed,1471d8b14f66bb04b41f05818110c78a,7d5174714f2eb3c0d8a900818110c70e,4787d21a6fab3100724708c6eb3ee4f2,21e168b14f2ebb04b41f05818110c7f5,56726cb54f2ebb04b41f05818110c7bb,daef14354feabb04b41f05818110c77e,b5b0107d4f26bb04b41f05818110c77e,af9990f94f62b3c0d8a900818110c71a</u_notify_list>
+        <u_notify_list>88afccf4db73fe402f89ffc41d961988,4787d21a6fab3100724708c6eb3ee4f2,86e5dfe06f239e007833bd5dbb3ee4fa,c8675c4f6f8b710010e00d55eb3ee47f,b1c971686fcd2a4032cc4a6aea3ee4fc,64051ba06f239e007833bd5dbb3ee461,104875cddb8873c01f53d29c689619df,df3cd96fdb6e3704b3d82aea4b96199b,8f87d21a6fab3100724708c6eb3ee4f7,dd9597e06f239e007833bd5dbb3ee41a,00b23f02db8c0f042f89ffc41d9619e0,9f5513e06f239e007833bd5dbb3ee475,da16d187dbde7740ad2315784b961935</u_notify_list>
     </x_caas_quality_bq_assign_matrix>
 </record_update>
 ]]></payload>
@@ -26,15 +26,15 @@
         <sys_created_on>2019-09-17 09:54:12</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>aa417f371b3b73409c961028bd4bcbff</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Created 2018-02-26 15:33:13</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_metadata_link_aa417f371b3b73409c961028bd4bcbff</sys_update_name>
-        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
-        <sys_updated_on>2019-09-17 09:54:12</sys_updated_on>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-21 12:16:05</sys_updated_on>
         <tablename>x_caas_quality_bq_assign_matrix</tablename>
     </sys_metadata_link>
 </record_update>

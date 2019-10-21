@@ -49,7 +49,7 @@
         <sys_created_by>x-rubesdmi</sys_created_by>
         <sys_created_on>2016-04-01 11:59:57</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>db4834641bd0cc109c961028bd4bcba1</sys_id>
+        <sys_id>fa4dfab61b6cc8509c961028bd4bcbcc</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Категория БЗ-old</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
@@ -58,7 +58,7 @@
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_dictionary_x_caas_quality_bq_kb_category_u_bq_category</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-10-01 14:38:21</sys_updated_on>
+        <sys_updated_on>2019-10-21 10:21:36</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

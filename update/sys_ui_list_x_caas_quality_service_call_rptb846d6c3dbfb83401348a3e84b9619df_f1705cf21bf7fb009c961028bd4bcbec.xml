@@ -3,7 +3,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>number</element>
-            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d5a97c6c1bd0cc109c961028bd4bcb13">f1705cf21bf7fb009c961028bd4bcbec</list_id>
+            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6fde36fe1b6cc8509c961028bd4bcbd4">f1705cf21bf7fb009c961028bd4bcbec</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -18,7 +18,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sys_created_on</element>
-            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d5a97c6c1bd0cc109c961028bd4bcb13">f1705cf21bf7fb009c961028bd4bcbec</list_id>
+            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6fde36fe1b6cc8509c961028bd4bcbd4">f1705cf21bf7fb009c961028bd4bcbec</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
@@ -33,7 +33,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_state</element>
-            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d5a97c6c1bd0cc109c961028bd4bcb13">f1705cf21bf7fb009c961028bd4bcbec</list_id>
+            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6fde36fe1b6cc8509c961028bd4bcbd4">f1705cf21bf7fb009c961028bd4bcbec</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
@@ -48,7 +48,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_topic</element>
-            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d5a97c6c1bd0cc109c961028bd4bcb13">f1705cf21bf7fb009c961028bd4bcbec</list_id>
+            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6fde36fe1b6cc8509c961028bd4bcbd4">f1705cf21bf7fb009c961028bd4bcbec</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
@@ -63,7 +63,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_danger</element>
-            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d5a97c6c1bd0cc109c961028bd4bcb13">f1705cf21bf7fb009c961028bd4bcbec</list_id>
+            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6fde36fe1b6cc8509c961028bd4bcbd4">f1705cf21bf7fb009c961028bd4bcbec</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
@@ -78,7 +78,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_usercity</element>
-            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d5a97c6c1bd0cc109c961028bd4bcb13">f1705cf21bf7fb009c961028bd4bcbec</list_id>
+            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6fde36fe1b6cc8509c961028bd4bcbd4">f1705cf21bf7fb009c961028bd4bcbec</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
@@ -93,7 +93,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_user</element>
-            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d5a97c6c1bd0cc109c961028bd4bcb13">f1705cf21bf7fb009c961028bd4bcbec</list_id>
+            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6fde36fe1b6cc8509c961028bd4bcbd4">f1705cf21bf7fb009c961028bd4bcbec</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>6</position>
@@ -108,7 +108,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_applicant_info</element>
-            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d5a97c6c1bd0cc109c961028bd4bcb13">f1705cf21bf7fb009c961028bd4bcbec</list_id>
+            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6fde36fe1b6cc8509c961028bd4bcbd4">f1705cf21bf7fb009c961028bd4bcbec</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>7</position>
@@ -123,7 +123,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>comments</element>
-            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d5a97c6c1bd0cc109c961028bd4bcb13">f1705cf21bf7fb009c961028bd4bcbec</list_id>
+            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6fde36fe1b6cc8509c961028bd4bcbd4">f1705cf21bf7fb009c961028bd4bcbec</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>8</position>
@@ -138,7 +138,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>comments_and_work_notes</element>
-            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d5a97c6c1bd0cc109c961028bd4bcb13">f1705cf21bf7fb009c961028bd4bcbec</list_id>
+            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6fde36fe1b6cc8509c961028bd4bcbd4">f1705cf21bf7fb009c961028bd4bcbec</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>9</position>
@@ -153,7 +153,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_resptext</element>
-            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d5a97c6c1bd0cc109c961028bd4bcb13">f1705cf21bf7fb009c961028bd4bcbec</list_id>
+            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6fde36fe1b6cc8509c961028bd4bcbd4">f1705cf21bf7fb009c961028bd4bcbec</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>10</position>
@@ -168,7 +168,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_meri</element>
-            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d5a97c6c1bd0cc109c961028bd4bcb13">f1705cf21bf7fb009c961028bd4bcbec</list_id>
+            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6fde36fe1b6cc8509c961028bd4bcbd4">f1705cf21bf7fb009c961028bd4bcbec</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>11</position>
@@ -183,7 +183,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_call_cat</element>
-            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d5a97c6c1bd0cc109c961028bd4bcb13">f1705cf21bf7fb009c961028bd4bcbec</list_id>
+            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6fde36fe1b6cc8509c961028bd4bcbd4">f1705cf21bf7fb009c961028bd4bcbec</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>12</position>
@@ -198,7 +198,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_closed_by</element>
-            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d5a97c6c1bd0cc109c961028bd4bcb13">f1705cf21bf7fb009c961028bd4bcbec</list_id>
+            <list_id display_value="x_caas_quality_service_call" element="NULL" name="x_caas_quality_service_call" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="6fde36fe1b6cc8509c961028bd4bcbd4">f1705cf21bf7fb009c961028bd4bcbec</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>13</position>
@@ -237,7 +237,7 @@
             <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
             <sys_updated_on>2019-09-13 14:57:59</sys_updated_on>
             <sys_user/>
-            <view display_value="Rptb846d6c3dbfb83401348a3e84b9619df" name="RPTb846d6c3dbfb83401348a3e84b9619df">d5a97c6c1bd0cc109c961028bd4bcb13</view>
+            <view display_value="Rptb846d6c3dbfb83401348a3e84b9619df" name="RPTb846d6c3dbfb83401348a3e84b9619df">6fde36fe1b6cc8509c961028bd4bcbd4</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>

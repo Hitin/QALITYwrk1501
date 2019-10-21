@@ -7,13 +7,13 @@
         <sys_created_by>egorov_dv</sys_created_by>
         <sys_created_on>2017-05-22 13:06:11</sys_created_on>
         <sys_id>a4f811c3dbb232482eb8f3651d96191e</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>egorov_dv</sys_updated_by>
-        <sys_updated_on>2018-01-31 10:47:23</sys_updated_on>
-        <u_bq_coors>b40f66a7db9032802eb8f3651d961961,27ec3307db7272482eb8f3651d9619f1</u_bq_coors>
+        <sys_updated_on>2019-07-01 14:05:51</sys_updated_on>
+        <u_bq_coors>27ec3307db7272482eb8f3651d9619f1</u_bq_coors>
         <u_bq_dir/>
         <u_bq_grupnqme>Экскурсии</u_bq_grupnqme>
-        <u_bq_managers>b40f66a7db9032802eb8f3651d961961</u_bq_managers>
+        <u_bq_managers/>
     </x_caas_quality_bq_usergroup>
 </record_update>
 ]]></payload>
@@ -22,15 +22,15 @@
         <sys_created_on>2019-09-17 09:51:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3380ffb31b3b73409c961028bd4bcbcb</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Экскурсии</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_metadata_link_3380ffb31b3b73409c961028bd4bcbcb</sys_update_name>
-        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
-        <sys_updated_on>2019-09-17 09:51:00</sys_updated_on>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-21 12:08:16</sys_updated_on>
         <tablename>x_caas_quality_bq_usergroup</tablename>
     </sys_metadata_link>
 </record_update>

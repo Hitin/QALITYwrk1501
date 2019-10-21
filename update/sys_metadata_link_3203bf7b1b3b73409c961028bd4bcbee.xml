@@ -7,13 +7,13 @@
         <sys_created_by>kuzmenko</sys_created_by>
         <sys_created_on>2016-12-29 13:05:08</sys_created_on>
         <sys_id>b7c27ba8db8872802eb8f3651d961921</sys_id>
-        <sys_mod_count>10</sys_mod_count>
-        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
-        <sys_updated_on>2019-08-22 10:02:49</sys_updated_on>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_updated_by>Filippov_as</sys_updated_by>
+        <sys_updated_on>2018-02-26 13:55:52</sys_updated_on>
         <u_autoclose>false</u_autoclose>
         <u_bq_agree_list/>
         <u_bq_need_agree>false</u_bq_need_agree>
-        <u_bq_notif_list>56726cb54f2ebb04b41f05818110c7bb,c5625cf94fae73c0d8a900818110c7b3,0b636c7d4f2ebb04b41f05818110c7e9,eb08b0fd4faeb3c0d8a900818110c7f7,ekimov_aa@baltika.com,8b87d21a6fab3100724708c6eb3ee4f8,88329b26dbdc72402f89ffc41d961902,1471d8b14f66bb04b41f05818110c78a</u_bq_notif_list>
+        <u_bq_notif_list>c8675c4f6f8b710010e00d55eb3ee47f,bessonov@baltika.com,lozhkin@baltika.com,39d59fe06f239e007833bd5dbb3ee4a7,ekimov_aa@baltika.com,8b87d21a6fab3100724708c6eb3ee4f8,88329b26dbdc72402f89ffc41d961902,0387d21a6fab3100724708c6eb3ee4f8</u_bq_notif_list>
         <u_bq_notification>true</u_bq_notification>
         <u_bq_order/>
         <u_bq_subtopic>Природные катастрофы (землетрясение/наводнение и пр.)</u_bq_subtopic>
@@ -28,15 +28,15 @@
         <sys_created_on>2019-09-17 10:01:51</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3203bf7b1b3b73409c961028bd4bcbee</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Природные катастрофы (землетрясение/наводнение и пр.)</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_metadata_link_3203bf7b1b3b73409c961028bd4bcbee</sys_update_name>
-        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
-        <sys_updated_on>2019-09-17 10:01:51</sys_updated_on>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-21 12:36:43</sys_updated_on>
         <tablename>x_caas_quality_bq_subtopic</tablename>
     </sys_metadata_link>
 </record_update>

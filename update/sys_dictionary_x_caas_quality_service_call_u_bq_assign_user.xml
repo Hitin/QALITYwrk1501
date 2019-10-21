@@ -54,7 +54,7 @@
         <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
         <sys_created_on>2019-06-20 09:37:54</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>ff4874641bd0cc109c961028bd4bcb7a</sys_id>
+        <sys_id>734d3eb61b6cc8509c961028bd4bcb89</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Просрочено назначение ответственному</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
@@ -63,7 +63,7 @@
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_dictionary_x_caas_quality_service_call_u_bq_assign_user</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-10-01 14:38:57</sys_updated_on>
+        <sys_updated_on>2019-10-21 10:22:14</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

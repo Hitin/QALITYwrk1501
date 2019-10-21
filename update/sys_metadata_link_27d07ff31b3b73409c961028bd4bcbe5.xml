@@ -7,15 +7,15 @@
         <sys_created_by>egorov_dv</sys_created_by>
         <sys_created_on>2018-07-04 08:06:24</sys_created_on>
         <sys_id>2bfcd196dbcf930002558e686896195c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
-        <sys_updated_on>2019-08-02 12:36:10</sys_updated_on>
-        <u_agree_list>eb08b0fd4faeb3c0d8a900818110c7f7,b5b0107d4f26bb04b41f05818110c77e</u_agree_list>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>egorov_dv</sys_updated_by>
+        <sys_updated_on>2018-07-04 08:06:24</sys_updated_on>
+        <u_agree_list>39d59fe06f239e007833bd5dbb3ee4a7,b1c971686fcd2a4032cc4a6aea3ee4fc</u_agree_list>
         <u_bq_danger/>
         <u_bq_factory/>
         <u_bq_topic display_value="Экология">9af950a46f62d20010e00d55eb3ee405</u_bq_topic>
         <u_bq_user/>
-        <u_bq_usercity display_value="Уральский">18e5234d3702ba405978466754990e7e</u_bq_usercity>
+        <u_bq_usercity display_value="Уральский регион">18e5234d3702ba405978466754990e7e</u_bq_usercity>
         <u_bq_usergroup/>
         <u_notify_list/>
     </x_caas_quality_bq_assign_matrix>
@@ -26,15 +26,15 @@
         <sys_created_on>2019-09-17 09:52:21</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>27d07ff31b3b73409c961028bd4bcbe5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Created 2018-07-04 10:06:24</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_metadata_link_27d07ff31b3b73409c961028bd4bcbe5</sys_update_name>
-        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
-        <sys_updated_on>2019-09-17 09:52:21</sys_updated_on>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-21 12:14:45</sys_updated_on>
         <tablename>x_caas_quality_bq_assign_matrix</tablename>
     </sys_metadata_link>
 </record_update>

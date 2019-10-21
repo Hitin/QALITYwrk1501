@@ -8,7 +8,7 @@
         <sys_created_on>2017-01-18 11:42:44</sys_created_on>
         <sys_id>40c0aa47dbdc76402f89ffc41d961924</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>egorov_dv</sys_updated_by>
+        <sys_updated_by>lfedorovich</sys_updated_by>
         <sys_updated_on>2017-01-18 11:42:44</sys_updated_on>
         <u_bq_value>Неясна тематика</u_bq_value>
     </x_caas_quality_bq_error_reason>
@@ -19,15 +19,15 @@
         <sys_created_on>2019-09-17 09:28:56</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e08ba7f31bf773409c961028bd4bcbcb</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Неясна тематика</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_metadata_link_e08ba7f31bf773409c961028bd4bcbcb</sys_update_name>
-        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
-        <sys_updated_on>2019-09-17 09:28:56</sys_updated_on>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-21 11:10:58</sys_updated_on>
         <tablename>x_caas_quality_bq_error_reason</tablename>
     </sys_metadata_link>
 </record_update>

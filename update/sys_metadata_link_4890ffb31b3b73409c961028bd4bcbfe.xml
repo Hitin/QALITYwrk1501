@@ -7,13 +7,13 @@
         <sys_created_by>Filippov_as</sys_created_by>
         <sys_created_on>2017-12-15 07:20:14</sys_created_on>
         <sys_id>b9facaa93783c7005978466754990ee8</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
-        <sys_updated_on>2019-08-22 09:12:19</sys_updated_on>
-        <u_bq_coors>0797bcf94faeb3c0d8a900818110c7d6,3a122c354f66b3c0d8a900818110c753</u_bq_coors>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>Filippov_as</sys_updated_by>
+        <sys_updated_on>2018-01-29 10:59:31</sys_updated_on>
+        <u_bq_coors>648686210f696200f2f0f88ce1050e6d,6c96c6210f696200f2f0f88ce1050eaf</u_bq_coors>
         <u_bq_dir/>
         <u_bq_grupnqme>Доставка.SV Полоцк 2</u_bq_grupnqme>
-        <u_bq_managers>3a122c354f66b3c0d8a900818110c753,9dee64314fa2fb04b41f05818110c78c,5dc7b07d4faeb3c0d8a900818110c7ff</u_bq_managers>
+        <u_bq_managers>6c96c6210f696200f2f0f88ce1050eaf,256606210f696200f2f0f88ce1050e10,2286c6210f696200f2f0f88ce1050e05</u_bq_managers>
     </x_caas_quality_bq_usergroup>
 </record_update>
 ]]></payload>
@@ -22,15 +22,15 @@
         <sys_created_on>2019-09-17 09:51:01</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>4890ffb31b3b73409c961028bd4bcbfe</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Доставка.SV Полоцк 2</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_metadata_link_4890ffb31b3b73409c961028bd4bcbfe</sys_update_name>
-        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
-        <sys_updated_on>2019-09-17 09:51:01</sys_updated_on>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-21 12:08:19</sys_updated_on>
         <tablename>x_caas_quality_bq_usergroup</tablename>
     </sys_metadata_link>
 </record_update>

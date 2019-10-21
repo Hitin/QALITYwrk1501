@@ -273,7 +273,7 @@
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-21 05:55:25</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
-            <sys_id>b5f838281bd0cc109c961028bd4bcbeb</sys_id>
+            <sys_id>b60e32ba1b6cc8509c961028bd4bcb28</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>u_bq_state</sys_name>
             <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>

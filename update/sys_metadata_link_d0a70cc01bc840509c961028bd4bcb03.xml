@@ -7,14 +7,14 @@
         <sys_created_by>gorbulinskaya_ai</sys_created_by>
         <sys_created_on>2018-02-07 12:10:49</sys_created_on>
         <sys_id>6a429d8fdbc4d3801348a3e84b96199a</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>gorbulinskaya_ai</sys_updated_by>
-        <sys_updated_on>2018-08-29 08:06:05</sys_updated_on>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>antonova_kn</sys_updated_by>
+        <sys_updated_on>2019-07-02 12:54:11</sys_updated_on>
         <u_archive>false</u_archive>
-        <u_code>R_015</u_code>
+        <u_code>R_15</u_code>
         <u_comments>Частичное или полное отсутствие комплекта документов</u_comments>
         <u_name>Частичное или полное отсутствие комплекта документов</u_name>
-        <u_solution>Возврат</u_solution>
+        <u_solution>Частичный возврат</u_solution>
     </x_caas_quality_bq_delivery_close_code>
 </record_update>
 ]]></payload>
@@ -23,15 +23,15 @@
         <sys_created_on>2019-09-17 11:31:47</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>d0a70cc01bc840509c961028bd4bcb03</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Частичное или полное отсутствие комплекта документов</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_metadata_link_d0a70cc01bc840509c961028bd4bcb03</sys_update_name>
-        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
-        <sys_updated_on>2019-09-17 11:31:47</sys_updated_on>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-21 14:12:27</sys_updated_on>
         <tablename>x_caas_quality_bq_delivery_close_code</tablename>
     </sys_metadata_link>
 </record_update>

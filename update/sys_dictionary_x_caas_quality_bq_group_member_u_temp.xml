@@ -54,7 +54,7 @@
         <sys_created_by>x-ruFedLeo</sys_created_by>
         <sys_created_on>2019-05-31 14:12:51</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>3b4874641bd0cc109c961028bd4bcb33</sys_id>
+        <sys_id>e74d3eb61b6cc8509c961028bd4bcb5b</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Временный</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
@@ -63,7 +63,7 @@
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_dictionary_x_caas_quality_bq_group_member_u_temp</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-10-01 14:38:09</sys_updated_on>
+        <sys_updated_on>2019-10-21 10:21:22</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

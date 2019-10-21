@@ -7,13 +7,13 @@
         <sys_created_by>Filippov_as</sys_created_by>
         <sys_created_on>2016-12-12 13:05:20</sys_created_on>
         <sys_id>a4d0105737a722005978466754990e71</sys_id>
-        <sys_mod_count>19</sys_mod_count>
-        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
-        <sys_updated_on>2019-08-22 09:11:53</sys_updated_on>
-        <u_bq_coors>4f231cbd4f66bb04b41f05818110c745,8c8190f14f66bb04b41f05818110c70c,60ba6cb14f22fb04b41f05818110c72b,a87ee07d4f62fb04b41f05818110c737,4ccae0f14f22fb04b41f05818110c794</u_bq_coors>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_updated_by>shablinskaya_ks</sys_updated_by>
+        <sys_updated_on>2019-02-27 11:35:48</sys_updated_on>
+        <u_bq_coors>cda51be06f239e007833bd5dbb3ee4f0,73b51fe06f239e007833bd5dbb3ee447,0cc51fe06f239e007833bd5dbb3ee45c,01d59fe06f239e007833bd5dbb3ee459,e395d7e06f239e007833bd5dbb3ee4f1</u_bq_coors>
         <u_bq_dir/>
         <u_bq_grupnqme>Доставка. Гипермаркеты</u_bq_grupnqme>
-        <u_bq_managers>4f231cbd4f66bb04b41f05818110c745</u_bq_managers>
+        <u_bq_managers>cda51be06f239e007833bd5dbb3ee4f0,01d59fe06f239e007833bd5dbb3ee459</u_bq_managers>
     </x_caas_quality_bq_usergroup>
 </record_update>
 ]]></payload>
@@ -22,15 +22,15 @@
         <sys_created_on>2019-09-17 09:51:00</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>3f80ffb31b3b73409c961028bd4bcbaf</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Доставка. Гипермаркеты</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_metadata_link_3f80ffb31b3b73409c961028bd4bcbaf</sys_update_name>
-        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
-        <sys_updated_on>2019-09-17 09:51:00</sys_updated_on>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-21 12:08:15</sys_updated_on>
         <tablename>x_caas_quality_bq_usergroup</tablename>
     </sys_metadata_link>
 </record_update>

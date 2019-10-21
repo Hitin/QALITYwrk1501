@@ -12,7 +12,7 @@
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-26 11:36:21</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
-            <sys_id>6858f4641bd0cc109c961028bd4bcb1d</sys_id>
+            <sys_id>645dbeb61b6cc8509c961028bd4bcb3d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Закрытие после регистрации</sys_name>
             <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>

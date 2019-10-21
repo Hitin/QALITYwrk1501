@@ -10,7 +10,7 @@
         <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>x-ruVoyAnd</sys_updated_by>
         <sys_updated_on>2017-06-06 10:10:31</sys_updated_on>
-        <u_bq_parent display_value="Северо-Кавказский">54e5234d3702ba405978466754990e7b</u_bq_parent>
+        <u_bq_parent display_value="Северо-Кавказский регион">54e5234d3702ba405978466754990e7b</u_bq_parent>
         <u_bq_region/>
         <u_country>Россия</u_country>
         <u_fo>Северо-Кавказский</u_fo>
@@ -26,15 +26,15 @@
         <sys_created_on>2019-09-17 09:34:20</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>73bceb3b1bf773409c961028bd4bcb92</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Республика Ингушетия</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_metadata_link_73bceb3b1bf773409c961028bd4bcb92</sys_update_name>
-        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
-        <sys_updated_on>2019-09-17 09:34:20</sys_updated_on>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-21 11:48:19</sys_updated_on>
         <tablename>x_caas_quality_bq_city</tablename>
     </sys_metadata_link>
 </record_update>

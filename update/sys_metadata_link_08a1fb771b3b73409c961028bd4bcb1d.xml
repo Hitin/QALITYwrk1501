@@ -7,9 +7,9 @@
         <sys_created_by>Filippov_as</sys_created_by>
         <sys_created_on>2018-02-26 13:50:14</sys_created_on>
         <sys_id>c8dfd7c5dba45300ad2315784b961949</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
-        <sys_updated_on>2019-08-02 12:36:36</sys_updated_on>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>egorov_dv</sys_updated_by>
+        <sys_updated_on>2019-10-14 10:50:00</sys_updated_on>
         <u_agree_list/>
         <u_bq_danger display_value="Похищение/др. серьезное преступление с упоминанием Балтики (сотрудника/подрядчика/партнера Балтики)">dd24f76cdb8872802eb8f3651d961944</u_bq_danger>
         <u_bq_factory/>
@@ -17,7 +17,7 @@
         <u_bq_user/>
         <u_bq_usercity/>
         <u_bq_usergroup/>
-        <u_notify_list>56726cb54f2ebb04b41f05818110c7bb,eb08b0fd4faeb3c0d8a900818110c7f7,c5625cf94fae73c0d8a900818110c7b3,0b636c7d4f2ebb04b41f05818110c7e9,daef14354feabb04b41f05818110c77e,1471d8b14f66bb04b41f05818110c78a,cb87d21a6fab3100724708c6eb3ee4ed</u_notify_list>
+        <u_notify_list>c8675c4f6f8b710010e00d55eb3ee47f,39d59fe06f239e007833bd5dbb3ee4a7,5a45dfa06f239e007833bd5dbb3ee420,da159ba06f239e007833bd5dbb3ee405,8b87d21a6fab3100724708c6eb3ee4f8,8f87d21a6fab3100724708c6eb3ee4f7,00b23f02db8c0f042f89ffc41d9619e0,da16d187dbde7740ad2315784b961935</u_notify_list>
     </x_caas_quality_bq_assign_matrix>
 </record_update>
 ]]></payload>
@@ -26,15 +26,15 @@
         <sys_created_on>2019-09-17 09:55:39</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>08a1fb771b3b73409c961028bd4bcb1d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Created 2018-02-26 14:50:14</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_metadata_link_08a1fb771b3b73409c961028bd4bcb1d</sys_update_name>
-        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
-        <sys_updated_on>2019-09-17 09:55:39</sys_updated_on>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-21 12:18:18</sys_updated_on>
         <tablename>x_caas_quality_bq_assign_matrix</tablename>
     </sys_metadata_link>
 </record_update>

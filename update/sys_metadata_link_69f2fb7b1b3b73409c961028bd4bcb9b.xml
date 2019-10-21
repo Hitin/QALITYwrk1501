@@ -7,13 +7,13 @@
         <sys_created_by>x-rubesdmi</sys_created_by>
         <sys_created_on>2016-03-30 11:54:10</sys_created_on>
         <sys_id>3400e4e46f62d20010e00d55eb3ee414</sys_id>
-        <sys_mod_count>13</sys_mod_count>
-        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
-        <sys_updated_on>2019-08-22 10:02:48</sys_updated_on>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_updated_by>Filippov_as</sys_updated_by>
+        <sys_updated_on>2018-02-26 13:53:40</sys_updated_on>
         <u_autoclose>false</u_autoclose>
         <u_bq_agree_list/>
         <u_bq_need_agree>false</u_bq_need_agree>
-        <u_bq_notif_list>56726cb54f2ebb04b41f05818110c7bb,0b636c7d4f2ebb04b41f05818110c7e9,eb08b0fd4faeb3c0d8a900818110c7f7,c5625cf94fae73c0d8a900818110c7b3,cb87d21a6fab3100724708c6eb3ee4ed,8b87d21a6fab3100724708c6eb3ee4f8,88329b26dbdc72402f89ffc41d961902,4cbd55906fb7164032cc4a6aea3ee421,1471d8b14f66bb04b41f05818110c78a</u_bq_notif_list>
+        <u_bq_notif_list>c8675c4f6f8b710010e00d55eb3ee47f,lozhkin@baltika.com,39d59fe06f239e007833bd5dbb3ee4a7,bessonov@baltika.com,cb87d21a6fab3100724708c6eb3ee4ed,8b87d21a6fab3100724708c6eb3ee4f8,88329b26dbdc72402f89ffc41d961902,4cbd55906fb7164032cc4a6aea3ee421,0387d21a6fab3100724708c6eb3ee4f8</u_bq_notif_list>
         <u_bq_notification>true</u_bq_notification>
         <u_bq_order/>
         <u_bq_subtopic>Смертельный случай/серьезные травмы (в любой ситуации где фигурирует Балтика)</u_bq_subtopic>
@@ -28,15 +28,15 @@
         <sys_created_on>2019-09-17 10:01:29</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>69f2fb7b1b3b73409c961028bd4bcb9b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Смертельный случай/серьезные травмы (в любой ситуации где фигурирует Балтика)</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_metadata_link_69f2fb7b1b3b73409c961028bd4bcb9b</sys_update_name>
-        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
-        <sys_updated_on>2019-09-17 10:01:29</sys_updated_on>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-21 12:36:00</sys_updated_on>
         <tablename>x_caas_quality_bq_subtopic</tablename>
     </sys_metadata_link>
 </record_update>

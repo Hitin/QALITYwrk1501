@@ -12,7 +12,7 @@
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-26 07:31:11</sys_created_on>
             <sys_customer_update>false</sys_customer_update>
-            <sys_id>3a4834641bd0cc109c961028bd4bcb0e</sys_id>
+            <sys_id>ee4dfab61b6cc8509c961028bd4bcb79</sys_id>
             <sys_mod_count>1</sys_mod_count>
             <sys_name>Фиксация звонков</sys_name>
             <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>

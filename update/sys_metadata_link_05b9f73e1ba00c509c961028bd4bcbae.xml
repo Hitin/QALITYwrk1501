@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>786c262adb4e7700b3d82aea4b96196b</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_role_assignment">
+    <x_caas_quality_bq_role_assignment action="INSERT_OR_UPDATE">
+        <sys_created_by>egorov_dv</sys_created_by>
+        <sys_created_on>2019-06-18 07:50:52</sys_created_on>
+        <sys_id>786c262adb4e7700b3d82aea4b96196b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>egorov_dv</sys_updated_by>
+        <sys_updated_on>2019-06-18 07:50:52</sys_updated_on>
+        <u_active>true</u_active>
+        <u_employee display_value="">cb87d21a6fab3100724708c6eb3ee4ea</u_employee>
+        <u_group/>
+        <u_kb_review/>
+        <u_matrix display_value="Created 2016-12-06 14:23:24">e66b91110feb22c04a2757d003050e80</u_matrix>
+        <u_role>Ответственный по ОЗС</u_role>
+    </x_caas_quality_bq_role_assignment>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-21 14:44:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>05b9f73e1ba00c509c961028bd4bcbae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2019-06-18 09:50:52</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_05b9f73e1ba00c509c961028bd4bcbae</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-21 14:44:07</sys_updated_on>
+        <tablename>x_caas_quality_bq_role_assignment</tablename>
+    </sys_metadata_link>
+</record_update>

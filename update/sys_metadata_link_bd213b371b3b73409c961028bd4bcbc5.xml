@@ -7,14 +7,14 @@
         <sys_created_by>egorov_dv</sys_created_by>
         <sys_created_on>2017-09-05 11:22:26</sys_created_on>
         <sys_id>cdc9be8ddbc9cb40f1dffb041d96193c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>egorov_dv</sys_updated_by>
-        <sys_updated_on>2017-09-05 11:22:26</sys_updated_on>
+        <sys_updated_on>2019-02-08 13:58:24</sys_updated_on>
         <u_agree_list/>
         <u_bq_danger/>
         <u_bq_factory/>
         <u_bq_topic display_value="ПДД">20f91c646f62d20010e00d55eb3ee473</u_bq_topic>
-        <u_bq_user/>
+        <u_bq_user display_value="">3e19902fdb08c7442f89ffc41d9619b1</u_bq_user>
         <u_bq_usercity display_value="Республика Бурятия">33d5234d3702ba405978466754990e14</u_bq_usercity>
         <u_bq_usergroup display_value="ПДД">5ad6a5316f2b3100724708c6eb3ee4bb</u_bq_usergroup>
         <u_notify_list/>
@@ -26,15 +26,15 @@
         <sys_created_on>2019-09-17 09:53:35</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>bd213b371b3b73409c961028bd4bcbc5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Created 2017-09-05 13:22:26</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_metadata_link_bd213b371b3b73409c961028bd4bcbc5</sys_update_name>
-        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
-        <sys_updated_on>2019-09-17 09:53:35</sys_updated_on>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-21 12:18:49</sys_updated_on>
         <tablename>x_caas_quality_bq_assign_matrix</tablename>
     </sys_metadata_link>
 </record_update>

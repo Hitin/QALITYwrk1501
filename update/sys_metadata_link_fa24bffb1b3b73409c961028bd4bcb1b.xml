@@ -7,14 +7,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2017-02-28 11:43:38</sys_created_on>
         <sys_id>603ae918db95ba402eb8f3651d9619bd</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_updated_by>zahezina</sys_updated_by>
-        <sys_updated_on>2017-05-10 11:09:35</sys_updated_on>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>antonova_kn</sys_updated_by>
+        <sys_updated_on>2019-08-23 07:45:00</sys_updated_on>
         <u_3pl>true</u_3pl>
         <u_code>66264</u_code>
         <u_name>СГП-Сети Самара</u_name>
         <u_notify>false</u_notify>
-        <u_notify_list>d77517e06f239e007833bd5dbb3ee42a,13a55be06f239e007833bd5dbb3ee4b7,0b87d21a6fab3100724708c6eb3ee4fc</u_notify_list>
+        <u_notify_list>d77517e06f239e007833bd5dbb3ee42a,13a55be06f239e007833bd5dbb3ee4b7,0b87d21a6fab3100724708c6eb3ee4fc,41259ba06f239e007833bd5dbb3ee4cc</u_notify_list>
     </x_caas_quality_bq_warehouses>
 </record_update>
 ]]></payload>
@@ -23,15 +23,15 @@
         <sys_created_on>2019-09-17 10:06:46</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>fa24bffb1b3b73409c961028bd4bcb1b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>СГП-Сети Самара</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_metadata_link_fa24bffb1b3b73409c961028bd4bcb1b</sys_update_name>
-        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
-        <sys_updated_on>2019-09-17 10:06:46</sys_updated_on>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-21 12:44:12</sys_updated_on>
         <tablename>x_caas_quality_bq_warehouses</tablename>
     </sys_metadata_link>
 </record_update>
