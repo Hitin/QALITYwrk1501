@@ -5,7 +5,7 @@
         <assessment/>
         <content_page/>
         <device_type/>
-        <filter table="kb_knowledge">kb_knowledge_base=b93f8c7137bae2401c0712c543990ed2^EQ<item endquery="false" field="kb_knowledge_base" goto="false" newquery="false" operator="=" or="false" value="b93f8c7137bae2401c0712c543990ed2"/>
+        <filter table="kb_knowledge">kb_knowledge_base=b93f8c7137bae2401c0712c543990ed2^EQ<item display_table="kb_knowledge_base" display_value="EE Call Center" endquery="false" field="kb_knowledge_base" goto="false" newquery="false" operator="=" or="false" value="b93f8c7137bae2401c0712c543990ed2"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter>
         <hint/>

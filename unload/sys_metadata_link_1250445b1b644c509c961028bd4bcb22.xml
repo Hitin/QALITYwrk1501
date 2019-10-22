@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>b93f8c7137bae2401c0712c543990ed2</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="kb_knowledge_base">
+    <kb_knowledge_base action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <approval_description/>
+        <card_color/>
+        <data_policy display_value="">948f4c3137bae2401c0712c543990e41</data_policy>
+        <description/>
+        <disable_category_editing>true</disable_category_editing>
+        <disable_commenting>false</disable_commenting>
+        <disable_suggesting>false</disable_suggesting>
+        <enable_socialqa>false</enable_socialqa>
+        <icon/>
+        <kb_managers>39d59fe06f239e007833bd5dbb3ee4a7,4787d21a6fab3100724708c6eb3ee4f2</kb_managers>
+        <kb_version>3</kb_version>
+        <mandatory_fields/>
+        <order/>
+        <owner display_value="Kuzmenko Diana I.">8a20a5d81ba77300f89632e2cd4bcb88</owner>
+        <question_annotation/>
+        <retire_workflow display_value="Knowledge - Instant Retire">3d18ef12c30031000096dfdc64d3aeb6</retire_workflow>
+        <sys_created_by>DKFOKCHR</sys_created_by>
+        <sys_created_on>2016-10-31 14:21:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b93f8c7137bae2401c0712c543990ed2</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-09-04 11:05:34</sys_updated_on>
+        <table>kb_knowledge</table>
+        <template/>
+        <title>EE Call Center</title>
+        <workflow display_value="Knowledge - Approval Publish">111b7b119f113100d8f8700c267fcfa0</workflow>
+    </kb_knowledge_base>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-22 09:51:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1250445b1b644c509c961028bd4bcb22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EE Call Center</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_1250445b1b644c509c961028bd4bcb22</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-22 09:51:37</sys_updated_on>
+        <tablename>kb_knowledge_base</tablename>
+    </sys_metadata_link>
+</record_update>

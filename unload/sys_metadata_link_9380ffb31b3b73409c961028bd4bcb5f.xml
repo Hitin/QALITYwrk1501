@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>7301949337a722005978466754990e4f</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_usergroup">
+    <x_caas_quality_bq_usergroup action="INSERT_OR_UPDATE">
+        <sys_created_by>Filippov_as</sys_created_by>
+        <sys_created_on>2016-12-12 13:06:25</sys_created_on>
+        <sys_id>7301949337a722005978466754990e4f</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-22 14:04:02</sys_updated_on>
+        <u_bq_coors>a5dfcd5c1be773003cdfa64fad4bcbac,b79269501baf73003cdfa64fad4bcb3a,281235dc1ba3b3003cdfa64fad4bcb1a,21f969941b6b7300f89632e2cd4bcb4d,c4cd45901beb3300810121ff6e4bcb63,eb4aad941b23b3003cdfa64fad4bcb5f,d34a6d941b23b3003cdfa64fad4bcbfc,ac05b99c1be3b3003cdfa64fad4bcb3a,2d5fdd101b6f73003cdfa64fad4bcbdc</u_bq_coors>
+        <u_bq_dir/>
+        <u_bq_grupnqme>Доставка. Неопределено</u_bq_grupnqme>
+        <u_bq_managers>c4cd45901beb3300810121ff6e4bcb63</u_bq_managers>
+    </x_caas_quality_bq_usergroup>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-09-17 09:50:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9380ffb31b3b73409c961028bd4bcb5f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Доставка. Неопределено</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_9380ffb31b3b73409c961028bd4bcb5f</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:31:04</sys_updated_on>
+        <tablename>x_caas_quality_bq_usergroup</tablename>
+    </sys_metadata_link>
+</record_update>

@@ -9,7 +9,7 @@
 	
 	var u_sys_id = source.u_sys_id.toString();
 	var user = new GlideRecord ('sys_user');
-	if( user.get('employee_number', source.u_employee_number)){
+	if( user.get('email', source.u_email)){
 		//матрица ответственных ---------------------------------
 		var gr = new GlideRecord ('x_caas_quality_bq_assign_matrix');
 		gr.addQuery('u_agree_list', 'CONTAINS', u_sys_id).addOrCondition('u_notify_list', 'CONTAINS', u_sys_id).addOrCondition('u_bq_user', 'CONTAINS', u_sys_id);
@@ -165,6 +165,46 @@
 			}
 		}
 		//---------------------------------User Roles
+		//Reports users---------------------------------
+		var gr = new GlideRecord ('sys_report_users_groups');
+		gr.addQuery('user_id', 'CONTAINS', u_sys_id);
+		gr.query();
+		while(gr.next()) {
+			if(gr.user != ''){
+				if (gr.user.toString() == u_sys_id ){	
+					//gr.user = user.sys_id;
+					// gr.setValue('state','inactive');
+					// gr.update();
+					// var gr2 = new GlideRecord('sys_user_has_role');
+					// gr2.initialize(); 
+					// gr2.role = gr.role; 
+					// gr2.user = user.sys_id; // это новый юзер
+					// gr2.insert();
+					gr.user_id = new_sys_id;
+					gr.update();
+				}
+			}
+		}
+		//---------------------------------Reports users
+		//Group users---------------------------------
+		var gr = new GlideRecord ('sys_user_grmember');
+		gr.addQuery('user', 'CONTAINS', u_sys_id);
+		gr.query();
+		while(gr.next()) {
+			if(gr.user != ''){
+				if (gr.user.toString() == u_sys_id ){
+					//gr.user = user.sys_id;
+					// gr.setValue('state','inactive');
+					// gr.update();
+					var gr2 = new GlideRecord('sys_user_has_role');
+					gr2.initialize(); 
+					gr2.role = gr.role; 
+					gr2.user = user.sys_id; // это новый юзер
+					gr2.insert();
+				}
+			}
+		}
+		//---------------------------------Group users
 		
 	}
 })(source, map, log, target);]]></script>
@@ -173,15 +213,15 @@
         <sys_created_on>2019-08-02 10:42:21</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>e2a28f094f8b3304b41f05818110c7a1</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>onBefore</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_transform_script_e2a28f094f8b3304b41f05818110c7a1</sys_update_name>
-        <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
-        <sys_updated_on>2019-08-26 10:23:26</sys_updated_on>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-22 14:59:38</sys_updated_on>
         <when>onBefore</when>
     </sys_transform_script>
 </record_update>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>b4e255b7db3e1b04b3d82aea4b9619fd</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_group_member">
+    <x_caas_quality_bq_group_member action="INSERT_OR_UPDATE">
+        <sys_created_by>brant_ts</sys_created_by>
+        <sys_created_on>2018-06-26 12:57:32</sys_created_on>
+        <sys_id>b4e255b7db3e1b04b3d82aea4b9619fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>brant_ts</sys_updated_by>
+        <sys_updated_on>2018-06-26 12:57:32</sys_updated_on>
+        <u_bq_group display_value="Доставка. Retail DSD.">dfb55531db210bc02f89ffc41d9619ae</u_bq_group>
+        <u_bq_user display_value="">4bfc9c00dbb27ac02f89ffc41d961990</u_bq_user>
+        <u_temp>false</u_temp>
+    </x_caas_quality_bq_group_member>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-22 08:51:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>df823b871b244c509c961028bd4bcb2e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_df823b871b244c509c961028bd4bcb2e</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-22 08:51:21</sys_updated_on>
+        <tablename>x_caas_quality_bq_group_member</tablename>
+    </sys_metadata_link>
+</record_update>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>ffb04997dbd0bb441f53d29c68961987</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_group_member">
+    <x_caas_quality_bq_group_member action="INSERT_OR_UPDATE">
+        <sys_created_by>vysotskiy_ks</sys_created_by>
+        <sys_created_on>2019-03-25 08:08:00</sys_created_on>
+        <sys_id>ffb04997dbd0bb441f53d29c68961987</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>vysotskiy_ks</sys_updated_by>
+        <sys_updated_on>2019-03-25 08:08:00</sys_updated_on>
+        <u_bq_group display_value="Доставка. Дискаунтеры">69b054d337a722005978466754990e89</u_bq_group>
+        <u_bq_user display_value="">5391145adb5077441f53d29c68961905</u_bq_user>
+        <u_temp>false</u_temp>
+    </x_caas_quality_bq_group_member>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-22 08:54:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9223bbc71b244c509c961028bd4bcb54</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_9223bbc71b244c509c961028bd4bcb54</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-22 08:54:01</sys_updated_on>
+        <tablename>x_caas_quality_bq_group_member</tablename>
+    </sys_metadata_link>
+</record_update>

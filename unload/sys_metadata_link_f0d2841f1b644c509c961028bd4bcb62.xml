@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>7ac6cdb31b633b809c961028bd4bcb36</documentkey>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="kb_knowledge"&gt;
+    &lt;kb_knowledge action="INSERT_OR_UPDATE"&gt;
+        &lt;active&gt;true&lt;/active&gt;
+        &lt;article_type&gt;text&lt;/article_type&gt;
+        &lt;author display_value=""&gt;1337be4adb03fb04b11be347489619a7&lt;/author&gt;
+        &lt;can_read_user_criteria/&gt;
+        &lt;cannot_read_user_criteria/&gt;
+        &lt;category/&gt;
+        &lt;cmdb_ci display_value=" - Android"&gt;5fceea34dbc7174411e5ffb5ae9619ca&lt;/cmdb_ci&gt;
+        &lt;description/&gt;
+        &lt;direct&gt;false&lt;/direct&gt;
+        &lt;disable_commenting&gt;false&lt;/disable_commenting&gt;
+        &lt;disable_suggesting&gt;false&lt;/disable_suggesting&gt;
+        &lt;display_attachments&gt;true&lt;/display_attachments&gt;
+        &lt;flagged&gt;false&lt;/flagged&gt;
+        &lt;image/&gt;
+        &lt;intro_text/&gt;
+        &lt;kb_category display_value="Компания"&gt;71c7b71537f7e200f2d31a7943990e64&lt;/kb_category&gt;
+        &lt;kb_knowledge_base display_value="EE Call Center"&gt;b93f8c7137bae2401c0712c543990ed2&lt;/kb_knowledge_base&gt;
+        &lt;language&gt;en&lt;/language&gt;
+        &lt;meta/&gt;
+        &lt;meta_description/&gt;
+        &lt;number&gt;KB0022477&lt;/number&gt;
+        &lt;parent/&gt;
+        &lt;published&gt;2019-09-04&lt;/published&gt;
+        &lt;rating/&gt;
+        &lt;retired/&gt;
+        &lt;roles&gt;public&lt;/roles&gt;
+        &lt;short_description&gt;Тестовая статья&lt;/short_description&gt;
+        &lt;source/&gt;
+        &lt;sys_class_name&gt;kb_knowledge&lt;/sys_class_name&gt;
+        &lt;sys_created_by&gt;Leonid.Fedorovich@softline.com&lt;/sys_created_by&gt;
+        &lt;sys_created_on&gt;2019-09-04 11:15:23&lt;/sys_created_on&gt;
+        &lt;sys_domain&gt;3ed34f2b4f808f00d8a900818110c72a&lt;/sys_domain&gt;
+        &lt;sys_domain_path&gt;!!!/!!!/!!!/!!2/&lt;/sys_domain_path&gt;
+        &lt;sys_id&gt;7ac6cdb31b633b809c961028bd4bcb36&lt;/sys_id&gt;
+        &lt;sys_mod_count&gt;8&lt;/sys_mod_count&gt;
+        &lt;sys_updated_by&gt;Leonid.Fedorovich@softline.com&lt;/sys_updated_by&gt;
+        &lt;sys_updated_on&gt;2019-09-25 11:18:21&lt;/sys_updated_on&gt;
+        &lt;sys_view_count&gt;3&lt;/sys_view_count&gt;
+        &lt;text&gt;&lt;![CDATA[&lt;h3&gt;Что-такое ООО «Карлсберг Восточная Европа»? ООО «Карлсберг Восточная Европа – компания в составе Carlsberg Group на российском рынке, которая была создана в 2015 году &lt;/h3&gt;]]&gt;&lt;/text&gt;
+        &lt;topic&gt;Балтика (ГЛ)&lt;/topic&gt;
+        &lt;u_affected_components/&gt;
+        &lt;u_assigned_to/&gt;
+        &lt;u_assignment_group/&gt;
+        &lt;u_availabilities/&gt;
+        &lt;u_business_service/&gt;
+        &lt;u_category/&gt;
+        &lt;u_cause_text/&gt;
+        &lt;u_change_request/&gt;
+        &lt;u_company display_value="Carlsberg"&gt;f66b14e1c611227b0166c3a0df4046ff&lt;/u_company&gt;
+        &lt;u_description/&gt;
+        &lt;u_faq/&gt;
+        &lt;u_features/&gt;
+        &lt;u_feedback/&gt;
+        &lt;u_fromproblem&gt;false&lt;/u_fromproblem&gt;
+        &lt;u_general_text/&gt;
+        &lt;u_incident/&gt;
+        &lt;u_knowledge/&gt;
+        &lt;u_known_error/&gt;
+        &lt;u_label_1&gt;L2&lt;/u_label_1&gt;
+        &lt;u_news/&gt;
+        &lt;u_other_clause/&gt;
+        &lt;u_photo/&gt;
+        &lt;u_policy/&gt;
+        &lt;u_problem/&gt;
+        &lt;u_procedure/&gt;
+        &lt;u_process/&gt;
+        &lt;u_published/&gt;
+        &lt;u_quick_links/&gt;
+        &lt;u_read_more/&gt;
+        &lt;u_refer_back&gt;false&lt;/u_refer_back&gt;
+        &lt;u_references/&gt;
+        &lt;u_region/&gt;
+        &lt;u_releases/&gt;
+        &lt;u_requested_item/&gt;
+        &lt;u_sip/&gt;
+        &lt;u_sub_category/&gt;
+        &lt;u_sub_status/&gt;
+        &lt;u_subject/&gt;
+        &lt;u_submitted_by/&gt;
+        &lt;u_symptom_text/&gt;
+        &lt;u_technical_tip/&gt;
+        &lt;u_valid_to/&gt;
+        &lt;u_version&gt;1&lt;/u_version&gt;
+        &lt;u_work_around_text/&gt;
+        &lt;u_work_notes/&gt;
+        &lt;use_count&gt;0&lt;/use_count&gt;
+        &lt;valid_to&gt;2020-11-27&lt;/valid_to&gt;
+        &lt;wiki/&gt;
+        &lt;workflow_state&gt;published&lt;/workflow_state&gt;
+    &lt;/kb_knowledge&gt;
+    &lt;sys_translated_text action="delete_multiple" query="documentkey=7ac6cdb31b633b809c961028bd4bcb36"/&gt;
+&lt;/record_update&gt;
+</payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-22 10:02:26</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f0d2841f1b644c509c961028bd4bcb62</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>KB0022477</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_f0d2841f1b644c509c961028bd4bcb62</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-22 10:02:26</sys_updated_on>
+        <tablename>kb_knowledge</tablename>
+    </sys_metadata_link>
+</record_update>

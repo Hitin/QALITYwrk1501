@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>04d8bf1537f7e200f2d31a7943990e50</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="kb_category">
+    <kb_category action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <full_category>Компания / Экскурсионная деятельность / Экскурсионная деятельность</full_category>
+        <label>Экскурсионная деятельность</label>
+        <parent_id>ccd8bf1537f7e200f2d31a7943990e48</parent_id>
+        <parent_table>kb_category</parent_table>
+        <sys_created_by>X-INKUPSAT</sys_created_by>
+        <sys_created_on>2016-12-19 11:06:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>04d8bf1537f7e200f2d31a7943990e50</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>x-ruFedLeo</sys_updated_by>
+        <sys_updated_on>2019-09-26 12:55:05</sys_updated_on>
+        <value>Экскурсионная деятельность</value>
+    </kb_category>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-22 09:59:10</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fc1244db1b644c509c961028bd4bcbd4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Экскурсионная деятельность</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_fc1244db1b644c509c961028bd4bcbd4</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-22 09:59:10</sys_updated_on>
+        <tablename>kb_category</tablename>
+    </sys_metadata_link>
+</record_update>

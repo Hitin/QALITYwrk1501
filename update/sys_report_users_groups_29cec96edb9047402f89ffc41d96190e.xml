@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="INSERT_OR_UPDATE">
+        <group_id/>
+        <report_id display_value="DeliveryIssues_Baltika_All_полный_с протоколом_Antonova">a9cec96edb9047402f89ffc41d96190c</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>Filippov_as</sys_created_by>
+        <sys_created_on>2017-08-03 12:38:31</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>29cec96edb9047402f89ffc41d96190e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>a9cec96edb9047402f89ffc41d96190c</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_report_users_groups_29cec96edb9047402f89ffc41d96190e</sys_update_name>
+        <sys_updated_by>Filippov_as</sys_updated_by>
+        <sys_updated_on>2017-08-03 12:38:31</sys_updated_on>
+        <user_id display_value="">e395d7e06f239e007833bd5dbb3ee4f1</user_id>
+    </sys_report_users_groups>
+</record_update>

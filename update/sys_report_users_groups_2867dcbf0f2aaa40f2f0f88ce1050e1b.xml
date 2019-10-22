@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="INSERT_OR_UPDATE">
+        <group_id/>
+        <report_id display_value="HOTLINE Knowledge articles will be expired next month">d2271cbf0f2aaa40f2f0f88ce1050ea3</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>Filippov_as</sys_created_by>
+        <sys_created_on>2016-10-25 09:47:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2867dcbf0f2aaa40f2f0f88ce1050e1b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>d2271cbf0f2aaa40f2f0f88ce1050ea3</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_report_users_groups_2867dcbf0f2aaa40f2f0f88ce1050e1b</sys_update_name>
+        <sys_updated_by>Filippov_as</sys_updated_by>
+        <sys_updated_on>2016-10-25 09:47:53</sys_updated_on>
+        <user_id display_value="">0787d21a6fab3100724708c6eb3ee4f8</user_id>
+    </sys_report_users_groups>
+</record_update>

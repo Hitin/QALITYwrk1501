@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="INSERT_OR_UPDATE">
+        <group_id/>
+        <report_id display_value="DeliveryIssues_Baltika_All_полный_с протоколом">a8f4d9a5dbfedfc0b3d82aea4b961967</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>ryabtsev_lf</sys_created_by>
+        <sys_created_on>2018-06-19 13:19:41</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>a4f4d9a5dbfedfc0b3d82aea4b961968</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>a8f4d9a5dbfedfc0b3d82aea4b961967</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_report_users_groups_a4f4d9a5dbfedfc0b3d82aea4b961968</sys_update_name>
+        <sys_updated_by>ryabtsev_lf</sys_updated_by>
+        <sys_updated_on>2018-06-19 13:19:41</sys_updated_on>
+        <user_id display_value="">0a9597e06f239e007833bd5dbb3ee496</user_id>
+    </sys_report_users_groups>
+</record_update>

@@ -4,7 +4,7 @@
         <address_list/>
         <condition/>
         <conditional>false</conditional>
-        <group_list>c09262a06f44ee4032cc4a6aea3ee4b8</group_list>
+        <group_list name="EE RU HotLine(Sales) Продажи _REP">c09262a06f44ee4032cc4a6aea3ee4b8</group_list>
         <include_detail>false</include_detail>
         <include_with/>
         <name>EE RU HotLine Sales Requests to Fulfillers(list)_weekly</name>
