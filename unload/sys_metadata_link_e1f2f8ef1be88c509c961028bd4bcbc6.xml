@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>587e410bdb5d6b44c3712ded0b9619c8</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_role_assignment">
+    <x_caas_quality_bq_role_assignment action="INSERT_OR_UPDATE">
+        <sys_created_by>tretyakova_nv</sys_created_by>
+        <sys_created_on>2018-10-26 11:19:07</sys_created_on>
+        <sys_id>587e410bdb5d6b44c3712ded0b9619c8</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-22 14:04:02</sys_updated_on>
+        <u_active>false</u_active>
+        <u_employee display_value="Masevich Zlata V.">b79269501baf73003cdfa64fad4bcb3a</u_employee>
+        <u_group display_value="Доставка. Супермаркеты">25e0501737a722005978466754990eae</u_group>
+        <u_kb_review/>
+        <u_matrix/>
+        <u_role>Координатор по ОЗС</u_role>
+    </x_caas_quality_bq_role_assignment>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-23 08:11:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e1f2f8ef1be88c509c961028bd4bcbc6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2018-10-26 13:19:07</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_e1f2f8ef1be88c509c961028bd4bcbc6</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-23 08:11:14</sys_updated_on>
+        <tablename>x_caas_quality_bq_role_assignment</tablename>
+    </sys_metadata_link>
+</record_update>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>b81805130f365240f2f0f88ce1050ea4</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_assign_matrix">
+    <x_caas_quality_bq_assign_matrix action="INSERT_OR_UPDATE">
+        <sys_created_by>Filippov_as</sys_created_by>
+        <sys_created_on>2016-04-20 14:08:24</sys_created_on>
+        <sys_id>b81805130f365240f2f0f88ce1050ea4</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-22 14:03:05</sys_updated_on>
+        <u_agree_list/>
+        <u_bq_danger/>
+        <u_bq_factory/>
+        <u_bq_topic display_value="Продажи">ba1a10a46f62d20010e00d55eb3ee4d6</u_bq_topic>
+        <u_bq_user display_value="Shabashova Irina V.">06bea5dc1b63b3003cdfa64fad4bcb1b</u_bq_user>
+        <u_bq_usercity display_value="Минск">95ca724a0f629a404a2757d003050e84</u_bq_usercity>
+        <u_bq_usergroup display_value="Качество продукции">d2d6a5316f2b3100724708c6eb3ee4bb</u_bq_usergroup>
+        <u_notify_list/>
+    </x_caas_quality_bq_assign_matrix>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-23 10:47:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>34a69da31bec8c509c961028bd4bcb8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2016-04-20 16:08:24</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_34a69da31bec8c509c961028bd4bcb8f</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-23 10:47:07</sys_updated_on>
+        <tablename>x_caas_quality_bq_assign_matrix</tablename>
+    </sys_metadata_link>
+</record_update>

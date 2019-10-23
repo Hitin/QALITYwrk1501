@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>41f3f65e6fdc62007833bd5dbb3ee401</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_group_member">
+    <x_caas_quality_bq_group_member action="INSERT_OR_UPDATE">
+        <sys_created_by>zholobov_aa</sys_created_by>
+        <sys_created_on>2016-07-01 08:59:53</sys_created_on>
+        <sys_id>41f3f65e6fdc62007833bd5dbb3ee401</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-22 14:03:42</sys_updated_on>
+        <u_bq_group display_value="Логистика -перевозки">56d6a5316f2b3100724708c6eb3ee4bb</u_bq_group>
+        <u_bq_user display_value="Konoplev Sergey S.">3a9fdd501b6f73003cdfa64fad4bcb9a</u_bq_user>
+        <u_temp>false</u_temp>
+    </x_caas_quality_bq_group_member>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-23 11:04:43</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>beaa91ab1bec8c509c961028bd4bcbea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Konoplev Sergey S.</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_beaa91ab1bec8c509c961028bd4bcbea</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-23 11:04:43</sys_updated_on>
+        <tablename>x_caas_quality_bq_group_member</tablename>
+    </sys_metadata_link>
+</record_update>

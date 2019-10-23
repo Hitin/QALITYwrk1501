@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>49fc07f0dbad2b8402558e68689619bd</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_hotline_stats">
+    <x_caas_quality_bq_hotline_stats action="INSERT_OR_UPDATE">
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-11-01 07:01:13</sys_created_on>
+        <sys_id>49fc07f0dbad2b8402558e68689619bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-11-01 07:01:13</sys_updated_on>
+        <u_avg_fb>4.98</u_avg_fb>
+        <u_breached_qty>8</u_breached_qty>
+        <u_breached_sc>c3f40371dbe81700b3d82aea4b96194a,f698c61fdbec1b00ad2315784b961921,9530e941db525300ad2315784b9619ee,4bb1cc6cdbc7db04b3d82aea4b96191d,8a013b68db071f04b3d82aea4b961909,4c66a7addbcf1300c3712ded0b961919,a7b8eed5db235b40c3712ded0b9619bf,3de97b81dbbb9700c3712ded0b9619ba</u_breached_sc>
+        <u_calculated_on>2018-11-01</u_calculated_on>
+        <u_feedback_qty>477</u_feedback_qty>
+        <u_feedback_sum>2375</u_feedback_sum>
+        <u_inc/>
+        <u_internal_qty>117</u_internal_qty>
+        <u_interval_type>y</u_interval_type>
+        <u_qty>716</u_qty>
+        <u_top_br>0</u_top_br>
+        <u_top_inc>0</u_top_inc>
+        <u_top_int>0</u_top_int>
+        <u_top_qty>0</u_top_qty>
+        <u_topic display_value="Логистика -перевозки">464a90a46f62d20010e00d55eb3ee455</u_topic>
+    </x_caas_quality_bq_hotline_stats>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-23 12:13:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c16a696f1b20cc509c961028bd4bcbf5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2018-11-01 08:01:13</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_c16a696f1b20cc509c961028bd4bcbf5</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-23 12:13:25</sys_updated_on>
+        <tablename>x_caas_quality_bq_hotline_stats</tablename>
+    </sys_metadata_link>
+</record_update>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>b436f82adb8636002f89ffc41d9619fa</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_subtopic">
+    <x_caas_quality_bq_subtopic action="INSERT_OR_UPDATE">
+        <sys_created_by>egorov_dv</sys_created_by>
+        <sys_created_on>2017-04-13 14:30:19</sys_created_on>
+        <sys_id>b436f82adb8636002f89ffc41d9619fa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>egorov_dv</sys_updated_by>
+        <sys_updated_on>2019-10-15 07:57:49</sys_updated_on>
+        <u_autoclose>false</u_autoclose>
+        <u_bq_agree_list/>
+        <u_bq_need_agree>false</u_bq_need_agree>
+        <u_bq_notif_list/>
+        <u_bq_notification>false</u_bq_notification>
+        <u_bq_order/>
+        <u_bq_subtopic>Украина (Луганск)</u_bq_subtopic>
+        <u_bq_topic display_value="Экспортные продажи">b1a5702adb8636002f89ffc41d961955</u_bq_topic>
+        <u_feedback>false</u_feedback>
+        <u_inactive>false</u_inactive>
+    </x_caas_quality_bq_subtopic>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-23 10:58:57</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>da5995e71bec8c509c961028bd4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Украина (Луганск)</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_da5995e71bec8c509c961028bd4bcb83</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-23 10:58:57</sys_updated_on>
+        <tablename>x_caas_quality_bq_subtopic</tablename>
+    </sys_metadata_link>
+</record_update>

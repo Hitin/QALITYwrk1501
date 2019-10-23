@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>c7c9f89f1b684c509c961028bd4bcb8e</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_role_assignment">
+    <x_caas_quality_bq_role_assignment action="INSERT_OR_UPDATE">
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-22 14:02:37</sys_created_on>
+        <sys_id>c7c9f89f1b684c509c961028bd4bcb8e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-22 14:02:37</sys_updated_on>
+        <u_active>true</u_active>
+        <u_employee display_value="Zholobov Artem A.">e40eb5d01ba7b3003cdfa64fad4bcba1</u_employee>
+        <u_group/>
+        <u_kb_review/>
+        <u_matrix display_value="Created 2018-07-04 10:17:23">e37f515adbcf930002558e6868961973</u_matrix>
+        <u_role>Согласующий по ОЗС</u_role>
+    </x_caas_quality_bq_role_assignment>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-23 09:28:38</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d7a449a71b6c8c509c961028bd4bcb6a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2019-10-22 16:02:37</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_d7a449a71b6c8c509c961028bd4bcb6a</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-23 09:28:38</sys_updated_on>
+        <tablename>x_caas_quality_bq_role_assignment</tablename>
+    </sys_metadata_link>
+</record_update>

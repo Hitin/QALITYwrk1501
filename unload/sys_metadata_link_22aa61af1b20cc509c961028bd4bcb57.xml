@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>889c21eadb06af80b3d82aea4b96197b</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_hotline_stats">
+    <x_caas_quality_bq_hotline_stats action="INSERT_OR_UPDATE">
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-12-01 07:00:51</sys_created_on>
+        <sys_id>889c21eadb06af80b3d82aea4b96197b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-12-01 07:02:40</sys_updated_on>
+        <u_avg_fb>4.88</u_avg_fb>
+        <u_breached_qty>75</u_breached_qty>
+        <u_breached_sc>a8d249abdb9b4f401348a3e84b961913,6922afacdb6743801348a3e84b961903,39faed59dbe383801348a3e84b961984,2daa82c6dbaf47801348a3e84b961928,bffc8724db7b0b001348a3e84b961926,13c04dc1dbffc700c3712ded0b9619a4,5234d0bedb3f03401348a3e84b961934,5744a8ebdbb74340c3712ded0b961980,18ed7e33db7747401348a3e84b9619fb,ec6da7efdb0897801348a3e84b96194d,9cc2d059dbd4d780c3712ded0b96199f,07add61adb105b0002558e68689619e0,5114f3b3db9c9f0002558e6868961937,11240c80db6c93c0c3712ded0b961941,85a42b9cdbbc5f00ad2315784b9619a2,c7f4231cdbb09f00b3d82aea4b96190a,5b548d59dbcd9f40ad2315784b961940,4774928edb0d5380b3d82aea4b961989,b80e7df3dbc19780ad2315784b961985,fd1df687db259704b3d82aea4b9619a2,0344778cdb31dfc0ad2315784b9619d8,60254bfcdb715304ad2315784b961975,61c6db85db795304ad2315784b961955,984fea19dbb19304ad2315784b961950,959e6765db35d304ad2315784b9619fb,35f14748dbc61b00b3d82aea4b961903,e03e81aedb865744ad2315784b9619b6,f554d263db025740b3d82aea4b96191a,fc4d1ce8db521b40b3d82aea4b9619e7,2f27d5efdb9ad700ad2315784b96193a,d645ed7fdb9ed780b3d82aea4b961927,6cd00eacdb6e5b80b3d82aea4b961948,73cbc1c5dbeadb00ad2315784b96198c,65d98bd2dbeadf00ad2315784b96195c,e8d550d3dba697c0b3d82aea4b9619e7,f9ccb113dbee97c0b3d82aea4b9619c2,2864deb4db325fc0b3d82aea4b96192a,e83ba7dfdb3a5f40ad2315784b96190d,6e43b2b7dbba9f40ad2315784b96194b,f16f3c18db8b9b04b3d82aea4b9619c2,4c9a95acdb871380ad2315784b96191e,89fdf609db0b5380ad2315784b961922,8890d294db5b1b0002558e68689619a5,ebdd57e0dbdf9b00c3712ded0b9619bf,07a292dddb57db0002558e686896194c,67a71d6ddb9bdb0002558e68689619c1,2c0c31eddbdbdb0002558e68689619fc,e5652912db575f0002558e6868961959,7a8825fadbdb5340c3712ded0b96196c,48fe0d61db2b974002558e6868961932,c1b7dacadbe7db40c3712ded0b961904,b5e8485cdbbb1700c3712ded0b961986,0bda37bddb735b00c3712ded0b9619f8,28fd6f3fdbfb5f00c3712ded0b961921,476a5028db802f8002558e6868961979,cfcd81e8db842f8002558e68689619c5,b16c5472db08a3c002558e686896193a,77943437dbcc27c002558e68689619af,5ba31d85db142f40c3712ded0b9619ec,8406ca09db9c2bc002558e686896191f,47c428b6db9c2380c3712ded0b9619a3,236449dcdbec2780c3712ded0b9619a6,4d91b551dba4e30002558e6868961924,6ef6200fdbb4678002558e68689619c7,f8884e6adb45efc002558e686896197d,a46a26c1db196f04c3712ded0b961994,43e9b8eddb11ef04c3712ded0b961990,311bcb4adbd5a74402558e686896199c,ce8d169fdb95eb44c3712ded0b9619bd,85f9d47fdbd92f44c3712ded0b9619d9,5c54bfbbdbd9638402558e68689619f2,18400f95dba92f8402558e6868961985,ef4a97b5dba52f84c3712ded0b961982,1b5ed3b9dba52f84c3712ded0b9619bb,eb665305dbb12b00b3d82aea4b9619f6</u_breached_sc>
+        <u_calculated_on>2018-12-01</u_calculated_on>
+        <u_feedback_qty>319</u_feedback_qty>
+        <u_feedback_sum>1557</u_feedback_sum>
+        <u_inc/>
+        <u_internal_qty>398</u_internal_qty>
+        <u_interval_type>y</u_interval_type>
+        <u_qty>618</u_qty>
+        <u_top_br>1</u_top_br>
+        <u_top_inc>0</u_top_inc>
+        <u_top_int>1</u_top_int>
+        <u_top_qty>0</u_top_qty>
+        <u_topic display_value="Качество продукции">9fb910a46f62d20010e00d55eb3ee497</u_topic>
+    </x_caas_quality_bq_hotline_stats>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-23 12:14:36</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>22aa61af1b20cc509c961028bd4bcb57</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2018-12-01 08:00:51</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_22aa61af1b20cc509c961028bd4bcb57</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-23 12:14:36</sys_updated_on>
+        <tablename>x_caas_quality_bq_hotline_stats</tablename>
+    </sys_metadata_link>
+</record_update>

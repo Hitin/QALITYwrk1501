@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>3a32ee3cdb5f5b0002558e6868961996</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_hotline_stats">
+    <x_caas_quality_bq_hotline_stats action="INSERT_OR_UPDATE">
+        <sys_created_by>X-DKBALBOO</sys_created_by>
+        <sys_created_on>2018-07-12 07:33:19</sys_created_on>
+        <sys_id>3a32ee3cdb5f5b0002558e6868961996</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>X-DKBALBOO</sys_updated_by>
+        <sys_updated_on>2018-07-12 07:33:19</sys_updated_on>
+        <u_avg_fb/>
+        <u_breached_qty>0</u_breached_qty>
+        <u_breached_sc/>
+        <u_calculated_on>2017-05-01</u_calculated_on>
+        <u_feedback_qty>0</u_feedback_qty>
+        <u_feedback_sum/>
+        <u_inc>0</u_inc>
+        <u_internal_qty>0</u_internal_qty>
+        <u_interval_type>m</u_interval_type>
+        <u_qty>0</u_qty>
+        <u_top_br>0</u_top_br>
+        <u_top_inc>0</u_top_inc>
+        <u_top_int>0</u_top_int>
+        <u_top_qty>0</u_top_qty>
+        <u_topic display_value="ОТ, ППБ и ГО (Чрезвычайные ситуации и безопасность)">9c0a50a46f62d20010e00d55eb3ee437</u_topic>
+    </x_caas_quality_bq_hotline_stats>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-23 12:41:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c7b0f1e71b60cc509c961028bd4bcb4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2018-07-12 09:33:19</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_c7b0f1e71b60cc509c961028bd4bcb4d</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-23 12:41:07</sys_updated_on>
+        <tablename>x_caas_quality_bq_hotline_stats</tablename>
+    </sys_metadata_link>
+</record_update>

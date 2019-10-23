@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>42c0b645dbb53b80b3d82aea4b96191b</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_hotline_stats">
+    <x_caas_quality_bq_hotline_stats action="INSERT_OR_UPDATE">
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-01 06:03:28</sys_created_on>
+        <sys_id>42c0b645dbb53b80b3d82aea4b96191b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-07-01 06:04:04</sys_updated_on>
+        <u_avg_fb>4.59</u_avg_fb>
+        <u_breached_qty>9</u_breached_qty>
+        <u_breached_sc>4443c357db09f740ad2315784b96192b,7611d33fdb89bb40ad2315784b96194d,625e4621db99fb80b3d82aea4b9619a9,362ef5f5db91b780ad2315784b96193e,4c2de6badb9dbb80ad2315784b961981,75950795dba5bf00b3d82aea4b96197b,98e509dbdb21bb40b3d82aea4b96197e,a21f6a38db7db780b3d82aea4b9619b0,42ea2378dbf5f780b3d82aea4b9619dd</u_breached_sc>
+        <u_calculated_on>2019-06-01</u_calculated_on>
+        <u_feedback_qty>37</u_feedback_qty>
+        <u_feedback_sum>170</u_feedback_sum>
+        <u_inc>9</u_inc>
+        <u_internal_qty>36</u_internal_qty>
+        <u_interval_type>m</u_interval_type>
+        <u_qty>54</u_qty>
+        <u_top_br>1</u_top_br>
+        <u_top_inc>0</u_top_inc>
+        <u_top_int>0</u_top_int>
+        <u_top_qty>0</u_top_qty>
+        <u_topic display_value="Качество продукции">9fb910a46f62d20010e00d55eb3ee497</u_topic>
+    </x_caas_quality_bq_hotline_stats>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-23 12:06:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>69c865eb1b20cc509c961028bd4bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2019-06-01 08:03:28</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_69c865eb1b20cc509c961028bd4bcbde</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-23 12:06:21</sys_updated_on>
+        <tablename>x_caas_quality_bq_hotline_stats</tablename>
+    </sys_metadata_link>
+</record_update>

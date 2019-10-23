@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>8d73f354db071380ad2315784b961969</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_role_assignment">
+    <x_caas_quality_bq_role_assignment action="INSERT_OR_UPDATE">
+        <sys_created_by>egorov_dv</sys_created_by>
+        <sys_created_on>2018-06-28 13:55:30</sys_created_on>
+        <sys_id>8d73f354db071380ad2315784b961969</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-22 14:03:16</sys_updated_on>
+        <u_active>true</u_active>
+        <u_employee display_value="Egorova Mariia A.">babd75541baf7300f89632e2cd4bcbaa</u_employee>
+        <u_group/>
+        <u_kb_review/>
+        <u_matrix display_value="Created 2015-09-28 12:32:37">08d8e4d96f7ac200724708c6eb3ee442</u_matrix>
+        <u_role>Ответственный по ОЗС</u_role>
+    </x_caas_quality_bq_role_assignment>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-23 09:07:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>50df34ef1b2c8c509c961028bd4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 2018-06-28 15:55:30</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_50df34ef1b2c8c509c961028bd4bcb70</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-23 09:07:24</sys_updated_on>
+        <tablename>x_caas_quality_bq_role_assignment</tablename>
+    </sys_metadata_link>
+</record_update>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>d13a2d18db95ba402eb8f3651d961961</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_warehouses">
+    <x_caas_quality_bq_warehouses action="INSERT_OR_UPDATE">
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-02-28 11:43:41</sys_created_on>
+        <sys_id>d13a2d18db95ba402eb8f3651d961961</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>antonova_kn</sys_updated_by>
+        <sys_updated_on>2018-08-21 07:17:34</sys_updated_on>
+        <u_3pl>false</u_3pl>
+        <u_code>75191</u_code>
+        <u_name>СГП-Сети Тула ВХ (Щегловская въезд 2)</u_name>
+        <u_notify>true</u_notify>
+        <u_notify_list>Shornikova_OV@baltika.com,Transport_DT@tula.baltika.ru,ozornova@baltika.com,Nezametdinov_DA@baltika.com,chumakova_og@baltika.com,chibisova_na@baltika.com</u_notify_list>
+    </x_caas_quality_bq_warehouses>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-09-17 10:07:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3734733f1b3b73409c961028bd4bcb15</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>СГП-Сети Тула ВХ (Щегловская въезд 2)</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_3734733f1b3b73409c961028bd4bcb15</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-23 07:25:24</sys_updated_on>
+        <tablename>x_caas_quality_bq_warehouses</tablename>
+    </sys_metadata_link>
+</record_update>

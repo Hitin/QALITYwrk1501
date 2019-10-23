@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>060b344c0f0366004a2757d003050ed0</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_caas_quality_bq_subtopic">
+    <x_caas_quality_bq_subtopic action="INSERT_OR_UPDATE">
+        <sys_created_by>egorov_dv</sys_created_by>
+        <sys_created_on>2016-11-07 17:26:05</sys_created_on>
+        <sys_id>060b344c0f0366004a2757d003050ed0</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-22 15:04:02</sys_updated_on>
+        <u_autoclose>false</u_autoclose>
+        <u_bq_agree_list>e40eb5d01ba7b3003cdfa64fad4bcba1,59dc41101b637300f89632e2cd4bcb90,ca571d581baf3300dcc6a688bd4bcb24,b78fdd501b237300810121ff6e4bcbe4,376d51941bef3300810121ff6e4bcb8a,efe1b5181b677300dcc6a688bd4bcbbc,e5c61d901bab73003cdfa64fad4bcb76</u_bq_agree_list>
+        <u_bq_need_agree>true</u_bq_need_agree>
+        <u_bq_notif_list>0387d21a6fab3100724708c6eb3ee4f8,376d51941bef3300810121ff6e4bcb8a,8a20a5d81ba77300f89632e2cd4bcb88,e40eb5d01ba7b3003cdfa64fad4bcba1,59dc41101b637300f89632e2cd4bcb90,ca571d581baf3300dcc6a688bd4bcb24,b78fdd501b237300810121ff6e4bcbe4,5a57519c1b6f3300810121ff6e4bcbad,cb87d21a6fab3100724708c6eb3ee4ed,efe1b5181b677300dcc6a688bd4bcbbc,e5c61d901bab73003cdfa64fad4bcb76</u_bq_notif_list>
+        <u_bq_notification>true</u_bq_notification>
+        <u_bq_order/>
+        <u_bq_subtopic>Запросы из СМИ</u_bq_subtopic>
+        <u_bq_topic display_value="Экология">9af950a46f62d20010e00d55eb3ee405</u_bq_topic>
+        <u_feedback>false</u_feedback>
+        <u_inactive>false</u_inactive>
+    </x_caas_quality_bq_subtopic>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-10-23 10:57:21</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7af8d9a71bec8c509c961028bd4bcbf9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Запросы из СМИ</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_7af8d9a71bec8c509c961028bd4bcbf9</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-23 10:57:21</sys_updated_on>
+        <tablename>x_caas_quality_bq_subtopic</tablename>
+    </sys_metadata_link>
+</record_update>
