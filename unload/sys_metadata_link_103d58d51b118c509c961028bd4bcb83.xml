@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>d10d006649ca1100f07ffc9471d9ecef</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number_counter">
+    <sys_number_counter action="INSERT_OR_UPDATE">
+        <number>23119</number>
+        <sys_created_by>gbp.sd</sys_created_by>
+        <sys_created_on>2014-01-06 10:23:03</sys_created_on>
+        <sys_id>d10d006649ca1100f07ffc9471d9ecef</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>abhishek-m@hcl.com</sys_updated_by>
+        <sys_updated_on>2017-10-31 18:42:30</sys_updated_on>
+        <table display_value="" name="kb_knowledge">kb_knowledge</table>
+    </sys_number_counter>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
+        <sys_created_on>2019-11-22 13:36:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>103d58d51b118c509c961028bd4bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>23.119</sys_name>
+        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+        <sys_update_name>sys_metadata_link_103d58d51b118c509c961028bd4bcb83</sys_update_name>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-11-22 13:36:53</sys_updated_on>
+        <tablename>sys_number_counter</tablename>
+    </sys_metadata_link>
+</record_update>

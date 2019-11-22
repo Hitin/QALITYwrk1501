@@ -7,15 +7,15 @@
         <sys_created_on>2017-03-16 14:32:41</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f85a2c65dbe5fa802f89ffc41d961960</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>f38d47876f2396407833bd5dbb3ee439</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_report_users_groups_f85a2c65dbe5fa802f89ffc41d961960</sys_update_name>
-        <sys_updated_by>Filippov_as</sys_updated_by>
-        <sys_updated_on>2017-03-16 14:32:41</sys_updated_on>
-        <user_id display_value="">84c51fe06f239e007833bd5dbb3ee466</user_id>
+        <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
+        <sys_updated_on>2019-10-25 15:45:19</sys_updated_on>
+        <user_id display_value="Tretyakova Nadezda V.">281235dc1ba3b3003cdfa64fad4bcb1a</user_id>
     </sys_report_users_groups>
 </record_update>

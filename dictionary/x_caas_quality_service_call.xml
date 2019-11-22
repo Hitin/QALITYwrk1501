@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="task" label="Обращение" max_length="40" name="x_caas_quality_service_call" sizeclass="2" type="collection">
+    <element extends="task" label="Обращение" max_length="40" name="x_caas_quality_service_call" sizeclass="17" type="collection">
         <element choice="2" label="bq_fio" max_length="40" name="bq_fio" type="choice">
             <choice/>
         </element>

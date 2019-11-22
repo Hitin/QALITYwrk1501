@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
     <sys_report_users_groups action="INSERT_OR_UPDATE">
-        <group_id display_value="">fb0ed4366ff312807833bd5dbb3ee49e</group_id>
+        <group_id display_value="EE CreateNow team_REP" name="EE CreateNow team_REP">fb0ed4366ff312807833bd5dbb3ee49e</group_id>
         <report_id display_value="HotLine_Матрица_развернутая">9d9899ebdb9d36c02eb8f3651d961951</report_id>
         <sys_class_name>sys_report_users_groups</sys_class_name>
         <sys_created_by>Filippov_as</sys_created_by>
