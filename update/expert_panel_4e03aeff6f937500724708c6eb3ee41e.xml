@@ -3,19 +3,19 @@
         <banner_step/>
         <complete_message>Завершить</complete_message>
         <description><![CDATA[<p><span style="text-decoration: underline;"><em>Хамство:</em></span></p>
-<p><strong>&laquo;Пожалуйста, разговаривайте со мной корректно. В противном случае я буду вынуждена прервать разговор&raquo;.</strong></p>
-<p><strong>&laquo;Я &nbsp;вынуждена прервать разговор. Всего доброго&raquo;.</strong></p>
+<p><strong>«Пожалуйста, разговаривайте со мной корректно. В противном случае я буду вынуждена прервать разговор».</strong></p>
+<p><strong>«Я  вынуждена прервать разговор. Всего доброго».</strong></p>
 <p><span style="text-decoration: underline;"><em>Баловство:</em></span></p>
-<p><strong>&laquo;Пожалуйста, сформулируйте Ваш вопрос более четко&raquo;&nbsp;</strong><strong>&laquo;Это не корректный вопрос, ответить на него я не могу&raquo;.</strong></p>
-<p><strong>&laquo;Есть ли у вас вопросы, касающихся&nbsp; деятельности нашей компании?&raquo;</strong></p>
-<p><strong><strong>&laquo;Если у вас нет вопросов, касающихся&nbsp; деятельности нашей компании, я вынуждена прервать разговор.<strong><strong>&raquo;</strong></strong></strong></strong></p>
-<p><strong>Спасибо за звонок, всего доброго&raquo;.</strong></p>
+<p><strong>«Пожалуйста, сформулируйте Ваш вопрос более четко» </strong><strong>«Это не корректный вопрос, ответить на него я не могу».</strong></p>
+<p><strong>«Есть ли у вас вопросы, касающихся  деятельности нашей компании?»</strong></p>
+<p><strong><strong>«Если у вас нет вопросов, касающихся  деятельности нашей компании, я вынуждена прервать разговор.<strong><strong>»</strong></strong></strong></strong></p>
+<p><strong>Спасибо за звонок, всего доброго».</strong></p>
 <p><em><span style="text-decoration: underline;">Хулиганство:</span></em></p>
-<p><strong>&laquo;Ваш звонок расценен как хулиганство, Ваш номер телефона будет передан в службу безопасности. Всего доброго.&raquo;</strong></p>
+<p><strong>«Ваш звонок расценен как хулиганство, Ваш номер телефона будет передан в службу безопасности. Всего доброго.»</strong></p>
 <p><span style="text-decoration: underline;"><em>Неадекватный, неоднократное обращение:</em></span></p>
-<p><strong>&laquo;Вы уже неоднократно обращались в нашу компанию по данному вопросу. К сожалению, никакой новой информации я вам сообщить не могу&raquo;.</strong></p>
-<p><strong><strong>&laquo;По вашему обращению я повторно отправляю информацию в <em>название отдела</em>. Также вы можете самостоятельно уточнить интересующую вас информацию по <em>телефону</em>&raquo;.</strong></strong></p>
-<p><strong><strong><strong>&laquo;Никакой новой информации, по данному вопросу, я вам предоставить не могу&raquo;.</strong></strong></strong>&nbsp;</p>]]></description>
+<p><strong>«Вы уже неоднократно обращались в нашу компанию по данному вопросу. К сожалению, никакой новой информации я вам сообщить не могу».</strong></p>
+<p><strong><strong>«По вашему обращению я повторно отправляю информацию в <em>название отдела</em>. Также вы можете самостоятельно уточнить интересующую вас информацию по <em>телефону</em>».</strong></strong></p>
+<p><strong><strong><strong>«Никакой новой информации, по данному вопросу, я вам предоставить не могу».</strong></strong></strong> </p>]]></description>
         <expert display_value="Новое обращение">7be5a05e6fdb3500724708c6eb3ee44d</expert>
         <name>hamstvo</name>
         <next_message>Далее</next_message>
@@ -24,13 +24,11 @@
         <sys_class_name>expert_panel</sys_class_name>
         <sys_created_by>x-rubesdmi</sys_created_by>
         <sys_created_on>2015-04-15 14:18:21</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>4e03aeff6f937500724708c6eb3ee41e</sys_id>
         <sys_mod_count>7</sys_mod_count>
         <sys_name>hamstvo</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>expert_panel_4e03aeff6f937500724708c6eb3ee41e</sys_update_name>
         <sys_updated_by>x-rubesdmi</sys_updated_by>

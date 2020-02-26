@@ -77,13 +77,11 @@ template.print('<br>С вопросами и предложениями по с�
         <sys_class_name>sys_script_email</sys_class_name>
         <sys_created_by>x-ruAblPet</sys_created_by>
         <sys_created_on>2018-10-05 07:29:50</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>5af08c50db05e70050c5298a48961995</sys_id>
         <sys_mod_count>53</sys_mod_count>
         <sys_name>bq_brands_sc_closed_info</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_email_5af08c50db05e70050c5298a48961995</sys_update_name>
         <sys_updated_by>x-ruAblPet</sys_updated_by>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="false" label="Direction member" max_length="40" name="x_caas_quality_bq_member_dir" type="collection">
-        <element audit="false" label="Direction" max_length="32" name="u_dir" reference="x_caas_quality_bq_direc" type="reference"/>
-        <element audit="false" element_reference="true" label="Member" max_length="32" name="u_member" reference="sys_user" type="reference"/>
+    <element label="Direction member" max_length="40" name="x_caas_quality_bq_member_dir" type="collection">
+        <element label="Direction" max_length="32" name="u_dir" reference="x_caas_quality_bq_direc" type="reference"/>
+        <element element_reference="true" label="Member" max_length="32" name="u_member" reference="sys_user" type="reference"/>
         <index name="index">
             <element name="u_member"/>
         </index>

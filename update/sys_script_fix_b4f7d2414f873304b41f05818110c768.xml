@@ -131,13 +131,11 @@ if( user.get('employee_number', u_employee_number)){
         <sys_class_name>sys_script_fix</sys_class_name>
         <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
         <sys_created_on>2019-08-02 07:33:39</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>b4f7d2414f873304b41f05818110c768</sys_id>
         <sys_mod_count>57</sys_mod_count>
         <sys_name>console</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_fix_b4f7d2414f873304b41f05818110c768</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>

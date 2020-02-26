@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sysauto_report">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_report">
     <sysauto_report action="INSERT_OR_UPDATE">
         <active>true</active>
         <address_list/>
         <condition/>
         <conditional>false</conditional>
-        <group_list name="EE RU HotLine(Sales) Продажи _REP">c09262a06f44ee4032cc4a6aea3ee4b8</group_list>
+        <group_list>c09262a06f44ee4032cc4a6aea3ee4b8</group_list>
         <include_detail>false</include_detail>
         <include_with/>
         <name>EE RU HotLine Sales Requests to Fulfillers(list)_weekly</name>
@@ -23,7 +23,7 @@
 <p> </p>
 <p>Горячая линия обращений в ООО &#34;Пивоваренная Компания &#34;Балтика&#34;</p>]]></report_body>
         <report_title>ГЛ Балтика. Обращения по группе продажи. Еженедельный</report_title>
-        <run_as display_value="Ryabtsev Lev F.">7eaa6d5adbda0b806e87f1eabf96197d</run_as>
+        <run_as display_value="">7eaa6d5adbda0b806e87f1eabf96197d</run_as>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>2</run_dayofweek>
@@ -34,20 +34,15 @@
         <sys_class_name>sysauto_report</sys_class_name>
         <sys_created_by>Filippov_as</sys_created_by>
         <sys_created_on>2016-06-09 16:09:01</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
-        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
         <sys_id>1de851df6f7f52807833bd5dbb3ee46a</sys_id>
         <sys_mod_count>28</sys_mod_count>
         <sys_name>EE RU HotLine Sales Requests to Fulfillers(list)_weekly</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysauto_report_1de851df6f7f52807833bd5dbb3ee46a</sys_update_name>
         <sys_updated_by>ryabtsev_lf</sys_updated_by>
         <sys_updated_on>2018-03-27 07:12:08</sys_updated_on>
-        <u_company/>
         <upgrade_safe>false</upgrade_safe>
         <user_list>3a1f32c8db37c300c3712ded0b96195b</user_list>
         <zip>false</zip>

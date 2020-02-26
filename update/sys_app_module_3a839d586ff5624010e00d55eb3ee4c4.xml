@@ -19,21 +19,17 @@
         <query/>
         <report/>
         <roles>bq_process_manager,bq_report_admin</roles>
-        <survey/>
-        <survey_overwrite>true</survey_overwrite>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>x-ruvoyand</sys_created_by>
         <sys_created_on>2016-09-07 10:25:48</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_domain_path/>
         <sys_id>3a839d586ff5624010e00d55eb3ee4c4</sys_id>
         <sys_mod_count>5</sys_mod_count>
         <sys_name>Причины ошибок в выборе темы</sys_name>
         <sys_overrides/>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_app_module_3a839d586ff5624010e00d55eb3ee4c4</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Фиксация звонков" max_length="40" name="x_caas_quality_bq_call_log" type="collection">
-        <element audit="false" label="Вызов принят" max_length="40" name="u_bq_ansvered" type="boolean"/>
-        <element audit="false" label="Длительность вызова" max_length="40" name="u_bq_call_duration" type="glide_duration"/>
-        <element audit="false" display="true" label="ID звонка" max_length="40" name="u_bq_ctiid" read_only="true" type="string"/>
-        <element attributes="no_audit" audit="false" dynamic_ref_qual="10a104596f80c200724708c6eb3ee4ea" label="ФИО" max_length="32" name="u_bq_fio" reference_qual="javascript:relFIO();" type="string" use_dependent_field="true" use_reference_qualifier="dynamic"/>
-        <element audit="false" label="Оператор" max_length="32" name="u_bq_operator" reference="sys_user" type="reference"/>
-        <element audit="false" label="Связанные обращения" max_length="32" name="u_bq_sc" reference="x_caas_quality_service_call" reference_qual="javascript:filterLinkedTickets()" type="reference" use_reference_qualifier="advanced"/>
-        <element audit="false" label="Телефонный номер" max_length="40" name="u_bq_tel" read_only="true" reference="x_caas_quality_bq_tel" type="reference"/>
-        <element audit="false" choice="1" label="Тип вызова" max_length="40" name="u_caller_type" type="string">
+    <element audit="true" label="Фиксация звонков" max_length="40" name="x_caas_quality_bq_call_log" type="collection">
+        <element label="Вызов принят" max_length="40" name="u_bq_ansvered" type="boolean"/>
+        <element label="Длительность вызова" max_length="40" name="u_bq_call_duration" type="glide_duration"/>
+        <element display="true" label="ID звонка" max_length="40" name="u_bq_ctiid" read_only="true" type="string"/>
+        <element attributes="no_audit" dynamic_ref_qual="10a104596f80c200724708c6eb3ee4ea" label="ФИО" max_length="32" name="u_bq_fio" reference_qual="javascript:relFIO();" type="string" use_dependent_field="true" use_reference_qualifier="dynamic"/>
+        <element label="Оператор" max_length="32" name="u_bq_operator" reference="sys_user" type="reference"/>
+        <element label="Связанные обращения" max_length="32" name="u_bq_sc" reference="x_caas_quality_service_call" reference_qual="javascript:filterLinkedTickets()" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Телефонный номер" max_length="40" name="u_bq_tel" read_only="true" reference="x_caas_quality_bq_tel" type="reference"/>
+        <element choice="1" label="Тип вызова" max_length="40" name="u_caller_type" type="string">
             <choice>
                 <element inactive_on_update="false" label="logistic" value="logistic"/>
             </choice>

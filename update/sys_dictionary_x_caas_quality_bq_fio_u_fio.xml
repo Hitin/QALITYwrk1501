@@ -5,9 +5,9 @@
         <array_denormalized>false</array_denormalized>
         <attributes/>
         <audit>false</audit>
-        <calculation>if (current.u_name.nil() &amp;&amp; current.u_lname.nil() &amp;&amp; !current.u_fio.nil()) {
+        <calculation><![CDATA[if (current.u_name.nil() && current.u_lname.nil() && !current.u_fio.nil()) {
   var names = current.u_fio.toString().split(" ");
-  if (names.length &gt; 1) {
+  if (names.length > 1) {
     current.u_name = names[0];
     names.shift();
     current.u_lname = names.join(" ");
@@ -24,7 +24,7 @@ if(!current.u_mname.nil()) {
    mname = current.u_mname + ' '; 
   }
 
-name + mname + current.u_lname;</calculation>
+name + mname + current.u_lname;]]></calculation>
         <choice/>
         <choice_field/>
         <choice_table/>
@@ -67,17 +67,15 @@ name + mname + current.u_lname;</calculation>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>x-rushaale</sys_created_by>
         <sys_created_on>2015-03-19 08:32:32</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>3d5dfeb61b6cc8509c961028bd4bcb62</sys_id>
+        <sys_id>726ec208db53c810f1ff0726ca9619b5</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>ФИО</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_dictionary_x_caas_quality_bq_fio_u_fio</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-10-21 10:21:19</sys_updated_on>
+        <sys_updated_on>2020-02-26 10:49:54</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

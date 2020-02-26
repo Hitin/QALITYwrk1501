@@ -12,7 +12,7 @@
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-21 06:46:27</sys_created_on>
             <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_domain_path/>
             <sys_id>346a7dab4fc2b780b41f05818110c79c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
@@ -31,7 +31,7 @@
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-21 06:46:44</sys_created_on>
             <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_domain_path/>
             <sys_id>247abd6b4fc2b780b41f05818110c79c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
@@ -50,7 +50,7 @@
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-21 06:47:01</sys_created_on>
             <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_domain_path/>
             <sys_id>dc8a39ab4fc2b780b41f05818110c72e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
@@ -69,7 +69,7 @@
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-21 06:47:21</sys_created_on>
             <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_domain_path/>
             <sys_id>999abd6b4fc2b780b41f05818110c784</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
@@ -88,7 +88,7 @@
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-21 06:47:46</sys_created_on>
             <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_domain_path/>
             <sys_id>9baab1ab4fc2b780b41f05818110c771</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
@@ -107,7 +107,7 @@
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-21 06:48:08</sys_created_on>
             <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_domain_path/>
             <sys_id>0dca75eb4fc2b780b41f05818110c729</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
@@ -126,7 +126,7 @@
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-21 06:48:24</sys_created_on>
             <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_domain_path/>
             <sys_id>89da3dab4fc2b780b41f05818110c735</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
@@ -139,13 +139,11 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-21 06:46:27</sys_created_on>
-            <sys_customer_update>false</sys_customer_update>
-            <sys_id>570e32ba1b6cc8509c961028bd4bcbf9</sys_id>
+            <sys_id>8c009e40db93c810f1ff0726ca961982</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>u_noise</sys_name>
             <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
             <sys_policy/>
-            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
             <sys_update_name>sys_choice_x_caas_quality_service_call_u_noise</sys_update_name>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>

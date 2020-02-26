@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="false" label="Завод" max_length="40" name="x_caas_quality_bq_factory" type="collection">
-        <element audit="false" display="true" label="Буквенный код\ завод произв." max_length="100" name="u_bq_factory" type="string"/>
+    <element label="Завод" max_length="40" name="x_caas_quality_bq_factory" type="collection">
+        <element display="true" label="Буквенный код\ завод произв." max_length="100" name="u_bq_factory" type="string"/>
     </element>
 </database>

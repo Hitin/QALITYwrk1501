@@ -45,20 +45,15 @@ list_recips.forEach(function(rec) {
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>x-ruAblPet</sys_created_by>
         <sys_created_on>2018-10-05 11:37:15</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>b1a84598dbc5e70050c5298a489619bb</sys_id>
         <sys_mod_count>19</sys_mod_count>
         <sys_name>bq Brand generate mail</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysauto_script_b1a84598dbc5e70050c5298a489619bb</sys_update_name>
         <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
         <sys_updated_on>2019-09-09 13:33:33</sys_updated_on>
-        <u_all>false</u_all>
-        <u_table/>
-        <u_type/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

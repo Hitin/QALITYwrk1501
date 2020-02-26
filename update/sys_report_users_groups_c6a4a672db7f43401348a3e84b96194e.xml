@@ -5,17 +5,15 @@
         <sys_class_name>sys_report_users_groups</sys_class_name>
         <sys_created_by>Filippov_as</sys_created_by>
         <sys_created_on>2018-01-25 13:11:59</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
         <sys_id>c6a4a672db7f43401348a3e84b96194e</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>caa4a672db7f43401348a3e84b96194d</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_report_users_groups_c6a4a672db7f43401348a3e84b96194e</sys_update_name>
         <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
         <sys_updated_on>2019-10-25 15:44:54</sys_updated_on>
-        <user_id display_value="Rebrov Aleksandr V.">101ba1d81b6b7300f89632e2cd4bcb5f</user_id>
+        <user_id display_value="">101ba1d81b6b7300f89632e2cd4bcb5f</user_id>
     </sys_report_users_groups>
 </record_update>

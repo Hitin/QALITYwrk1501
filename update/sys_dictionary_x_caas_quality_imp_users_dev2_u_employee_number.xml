@@ -48,17 +48,15 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
         <sys_created_on>2019-08-02 07:28:59</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>264dfab61b6cc8509c961028bd4bcb6d</sys_id>
+        <sys_id>c65e8ec4db53c810f1ff0726ca9619ab</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Employee number</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_dictionary_x_caas_quality_imp_users_dev2_u_employee_number</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-10-21 10:21:58</sys_updated_on>
+        <sys_updated_on>2020-02-26 10:50:16</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

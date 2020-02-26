@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="false" label="Тема обращения" max_length="40" name="x_caas_quality_bq_topic" type="collection">
-        <element audit="false" display="true" label="Тема обращения" max_length="100" name="u_bq_name" type="string"/>
-        <element audit="false" label="Порядок сортировки" max_length="40" name="u_bq_order" type="integer"/>
+    <element label="Тема обращения" max_length="40" name="x_caas_quality_bq_topic" type="collection">
+        <element display="true" label="Тема обращения" max_length="100" name="u_bq_name" type="string"/>
+        <element label="Порядок сортировки" max_length="40" name="u_bq_order" type="integer"/>
     </element>
 </database>

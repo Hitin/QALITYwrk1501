@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="false" label="Корректирующие мероприятия" max_length="40" name="x_caas_quality_bq_corr_actions" type="collection">
-        <element audit="false" label="Действия" max_length="400" name="u_action" type="string"/>
-        <element audit="false" label="Срок выполнения" max_length="40" name="u_action_date" type="glide_date"/>
-        <element audit="false" label="Ответственный" max_length="32" name="u_bq_user" reference="sys_user" type="reference"/>
-        <element audit="false" label="Описание" max_length="100" name="u_description" type="string"/>
-        <element attributes="ignore_filter_on_new=true" audit="false" default="javascript:global.getNextObjNumberPadded();" display="true" label="Номер" max_length="40" name="u_number" type="string"/>
+    <element label="Корректирующие мероприятия" max_length="40" name="x_caas_quality_bq_corr_actions" type="collection">
+        <element label="Действия" max_length="400" name="u_action" type="string"/>
+        <element label="Срок выполнения" max_length="40" name="u_action_date" type="glide_date"/>
+        <element label="Ответственный" max_length="32" name="u_bq_user" reference="sys_user" type="reference"/>
+        <element label="Описание" max_length="100" name="u_description" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Номер" max_length="40" name="u_number" type="string"/>
         <index name="index">
             <element name="u_bq_user"/>
         </index>

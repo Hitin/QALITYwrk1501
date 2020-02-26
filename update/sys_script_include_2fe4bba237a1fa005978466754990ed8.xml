@@ -49,13 +49,11 @@ GetTTNThisAddress.prototype = Object.extendsObject(global.AbstractAjaxProcessor,
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>x-ruVoyAnd</sys_created_by>
         <sys_created_on>2017-03-20 07:55:13</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>2fe4bba237a1fa005978466754990ed8</sys_id>
         <sys_mod_count>13</sys_mod_count>
         <sys_name>GetTTNThisAddress</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_2fe4bba237a1fa005978466754990ed8</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>

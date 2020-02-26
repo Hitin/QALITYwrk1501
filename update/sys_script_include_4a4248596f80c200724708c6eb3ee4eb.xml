@@ -37,13 +37,11 @@ refQual = 'sys_idIN' + ids.toString();
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>x-rubesdmi</sys_created_by>
         <sys_created_on>2015-05-14 14:57:03</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>4a4248596f80c200724708c6eb3ee4eb</sys_id>
         <sys_mod_count>6</sys_mod_count>
         <sys_name>relFIO</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_4a4248596f80c200724708c6eb3ee4eb</sys_update_name>
         <sys_updated_by>x-rubesdmi</sys_updated_by>

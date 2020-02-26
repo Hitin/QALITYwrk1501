@@ -52,13 +52,11 @@
         <sys_class_name>expert_variable</sys_class_name>
         <sys_created_by>x-rubesdmi</sys_created_by>
         <sys_created_on>2015-04-15 11:09:57</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>3029f97b6f937500724708c6eb3ee4e1</sys_id>
         <sys_mod_count>46</sys_mod_count>
         <sys_name>Подтема</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>expert_variable_3029f97b6f937500724708c6eb3ee4e1</sys_update_name>
         <sys_updated_by>x-ruVoyAnd</sys_updated_by>

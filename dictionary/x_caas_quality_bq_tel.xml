@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="false" label="Телефон" max_length="40" name="x_caas_quality_bq_tel" type="collection">
-        <element audit="false" display="true" label="Контактный телефон" max_length="12" name="u_bq_tel" type="string"/>
+    <element label="Телефон" max_length="40" name="x_caas_quality_bq_tel" type="collection">
+        <element display="true" label="Контактный телефон" max_length="12" name="u_bq_tel" type="string"/>
     </element>
 </database>

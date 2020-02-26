@@ -33,20 +33,18 @@
         <force_delivery>false</force_delivery>
         <from/>
         <generation_type>engine</generation_type>
-        <group/>
-        <group_field/>
         <importance/>
         <include_attachments>false</include_attachments>
         <item>event.parm1</item>
         <item_table/>
-        <list/>
-        <list_field/>
         <mandatory>false</mandatory>
         <message/>
         <message_html><![CDATA[<p>Произошло изменение поля автозакрытие в теме "<strong>${u_bq_topic}</strong>" подтеме "<strong>${u_bq_subtopic}</strong>"</p>
 <p>Изменения произошли ${sys_updated_on}</p>]]></message_html>
         <message_list/>
         <message_text/>
+        <messaging_channels/>
+        <messaging_content/>
         <name>bq_change_autoclosed_on_false</name>
         <omit_watermark>false</omit_watermark>
         <order>100</order>
@@ -63,16 +61,14 @@
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>ablyazov_p</sys_created_by>
         <sys_created_on>2019-04-03 11:26:58</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_domain_path/>
         <sys_id>a816f642db2837c050c5298a4896195c</sys_id>
         <sys_mod_count>8</sys_mod_count>
         <sys_name>bq_change_autoclosed_on_false</sys_name>
         <sys_overrides/>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysevent_email_action_a816f642db2837c050c5298a4896195c</sys_update_name>
         <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
@@ -80,10 +76,6 @@
         <sys_version>2</sys_version>
         <template/>
         <type>email</type>
-        <u_language>ru</u_language>
-        <u_subject/>
-        <user/>
-        <user_field/>
         <weight>0</weight>
     </sysevent_email_action>
 </record_update>

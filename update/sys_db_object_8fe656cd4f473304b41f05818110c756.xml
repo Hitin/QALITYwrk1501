@@ -16,19 +16,17 @@
         <number_ref/>
         <provider_class/>
         <read_access>true</read_access>
-        <super_class display_value="Import Set Row" name="sys_import_set_row">11d6fdac614b10000a4f78d286040359</super_class>
+        <super_class display_value="Import Set Row" name="sys_import_set_row">52cc8964db202300f6cf0032ba9619f3</super_class>
         <sys_class_code/>
         <sys_class_name>sys_db_object</sys_class_name>
         <sys_class_path/>
         <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
         <sys_created_on>2019-08-02 07:28:59</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>8fe656cd4f473304b41f05818110c756</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Quality Imp Users Dev2</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_db_object_8fe656cd4f473304b41f05818110c756</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>

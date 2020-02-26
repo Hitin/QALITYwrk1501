@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
     <sys_report_users_groups action="INSERT_OR_UPDATE">
-        <group_id display_value="EE CreateNow team_REP" name="EE CreateNow team_REP">fb0ed4366ff312807833bd5dbb3ee49e</group_id>
+        <group_id display_value="">fb0ed4366ff312807833bd5dbb3ee49e</group_id>
         <report_id display_value="EE RU SC Проблемы доставки сетевым клиентам(gauge)">f38d47876f2396407833bd5dbb3ee439</report_id>
         <sys_class_name>sys_report_users_groups</sys_class_name>
         <sys_created_by>leonid.fedorovich@softline.com</sys_created_by>
         <sys_created_on>2019-10-31 14:31:48</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>92c6df821b3488909c961028bd4bcb78</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>f38d47876f2396407833bd5dbb3ee439</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_report_users_groups_92c6df821b3488909c961028bd4bcb78</sys_update_name>
         <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>

@@ -27,14 +27,10 @@
         <force_delivery>false</force_delivery>
         <from/>
         <generation_type>event</generation_type>
-        <group/>
-        <group_field/>
         <importance/>
         <include_attachments>false</include_attachments>
         <item>event.parm1</item>
         <item_table/>
-        <list/>
-        <list_field/>
         <mandatory>false</mandatory>
         <message/>
         <message_html><![CDATA[<p>Обращаем ваше внимание в таблицу складов добавлен новый склад<br />${u_wh_code.u_code} - ${u_wh_code.URI_REF}<br />Для склада необходимо прописать контакты или удалить его, если произошла ошибка.</p>
@@ -42,6 +38,8 @@
 <p>Накладная: ${u_ttn_number} от ${u_ttn_date}<br />Клиент: ${u_buyer_code} - ${u_buyer_name}<br />Окно доставки: ${u_delivery_date} с ${u_delivery_time_from} по ${u_delivery_time_to}<br />Загружено: ${u_wh_code.u_code} - ${u_wh_code.u_name}<br />Адрес доставки: ${u_delivery_code} - ${u_delivery_address}<br />Заказ клиента: ${u_client_order}<br /><br />С уважением, команда проекта "Горячая линия" <br />ООО Пивоваренная Компания Балтика</p>]]></message_html>
         <message_list/>
         <message_text/>
+        <messaging_channels/>
+        <messaging_content/>
         <name>bq_newWH</name>
         <omit_watermark>false</omit_watermark>
         <order>100</order>
@@ -58,16 +56,14 @@
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>x-ruVoyAnd</sys_created_by>
         <sys_created_on>2017-01-16 12:13:18</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_domain_path/>
         <sys_id>fb7410a237507e00b9af806754990e0a</sys_id>
         <sys_mod_count>6</sys_mod_count>
         <sys_name>bq_newWH</sys_name>
         <sys_overrides/>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysevent_email_action_fb7410a237507e00b9af806754990e0a</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
@@ -75,10 +71,6 @@
         <sys_version>2</sys_version>
         <template/>
         <type>email</type>
-        <u_language>ru</u_language>
-        <u_subject/>
-        <user/>
-        <user_field/>
         <weight>0</weight>
     </sysevent_email_action>
 </record_update>

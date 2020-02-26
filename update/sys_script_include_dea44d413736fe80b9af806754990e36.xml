@@ -29,13 +29,11 @@ bq_getEmailDirect.prototype = {
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>x-ruVoyAnd</sys_created_by>
         <sys_created_on>2017-05-16 06:38:44</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
         <sys_id>dea44d413736fe80b9af806754990e36</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_name>bq_getEmailDirect</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_dea44d413736fe80b9af806754990e36</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>

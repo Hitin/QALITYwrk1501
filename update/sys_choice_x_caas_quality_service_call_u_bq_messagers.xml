@@ -12,7 +12,7 @@
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-20 12:14:46</sys_created_on>
             <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_domain_path/>
             <sys_id>f6ebf9134fc27780b41f05818110c773</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
@@ -31,7 +31,7 @@
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-20 12:15:04</sys_created_on>
             <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_domain_path/>
             <sys_id>dffbf1134fc27780b41f05818110c7bb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
@@ -50,7 +50,7 @@
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-20 12:15:16</sys_created_on>
             <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_domain_path/>
             <sys_id>a70cb5134fc27780b41f05818110c7e8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
@@ -69,7 +69,7 @@
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-20 12:15:29</sys_created_on>
             <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_domain_path/>
             <sys_id>e61cfd134fc27780b41f05818110c722</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
@@ -88,7 +88,7 @@
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-20 12:15:44</sys_created_on>
             <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-            <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+            <sys_domain_path/>
             <sys_id>b52cf9134fc27780b41f05818110c725</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
@@ -101,13 +101,11 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
             <sys_created_on>2019-06-20 12:14:46</sys_created_on>
-            <sys_customer_update>false</sys_customer_update>
-            <sys_id>2e0efe7a1b6cc8509c961028bd4bcba3</sys_id>
+            <sys_id>6bff4e40db93c810f1ff0726ca961945</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>u_bq_messagers</sys_name>
             <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
             <sys_policy/>
-            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
             <sys_update_name>sys_choice_x_caas_quality_service_call_u_bq_messagers</sys_update_name>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>

@@ -2,11 +2,11 @@
     <expert_panel action="INSERT_OR_UPDATE">
         <banner_step/>
         <complete_message>Завершить</complete_message>
-        <description><![CDATA[<p><span style="color: #ff0000;">Поля, отмеченные знаком&nbsp;<img style="align: baseline;" title="" src="/b01.PNGx" alt="" align="bottom" border="" hspace="" vspace="" /><span style="font-size: 12pt; background-color: #c0c0c0;"><strong><span style="background-color: #ffffff;">&nbsp;</span></strong><span style="background-color: #ffffff;"><span style="font-size: 8pt;"><span style="font-size: 10pt;">являются обязательными для&nbsp;заполнения. Если Инициатор затрудняется ответить выберите "Нет данных" или поставьте прочерк.</span></span></span></span></span></p>
-<p>&nbsp;<strong>&laquo;Оставайтесь, пожалуйста, на линии, я уточню интересующую вас информацию&raquo;</strong></p>
-<p><em>Ищем информацию в БД. <a title="Сылка на базу знаний" href="/kb_home.do?jvar_view_topic=%D0%91%D0%B0%D0%BB%D1%82%D0%B8%D0%BA%D0%B0+(%D0%93%D0%9B)&amp;sysparm_refer=kb_home.do" target="_blank">Ссылка на базу знаний</a></em></p>
-<p><em><a target="_blank" title="Ссылка сайт (тендеры)" href="http://corporate.baltika.ru/m/2626"><em><span dir="ltr">Ссылка сайт (тендеры)</span></em></a></em></p>
-<p>&nbsp;<strong>&laquo;Спасибо за ожидание&raquo;</strong></p>
+        <description><![CDATA[<p><span style="color: #ff0000;">Поля, отмеченные знаком <img style="align: baseline;" title="" src="/b01.PNGx" alt="" align="bottom" border="" hspace="" vspace="" /><span style="font-size: 12pt; background-color: #c0c0c0;"><strong><span style="background-color: #ffffff;"> </span></strong><span style="background-color: #ffffff;"><span style="font-size: 8pt;"><span style="font-size: 10pt;">являются обязательными для заполнения. Если Инициатор затрудняется ответить выберите &#34;Нет данных&#34; или поставьте прочерк.</span></span></span></span></span></p>
+<p> <strong>«Оставайтесь, пожалуйста, на линии, я уточню интересующую вас информацию»</strong></p>
+<p><em>Ищем информацию в БД. <a title="Сылка на базу знаний" href="/kb_home.do?jvar_view_topic&#61;%D0%91%D0%B0%D0%BB%D1%82%D0%B8%D0%BA%D0%B0&#43;%28%D0%93%D0%9B%29&amp;sysparm_refer&#61;kb_home.do" target="_blank" rel="nofollow">Ссылка на базу знаний</a></em></p>
+<p><em><a target="_blank" title="Ссылка сайт (тендеры)" href="http://corporate.baltika.ru/m/2626" rel="nofollow"><em><span>Ссылка сайт (тендеры)</span></em></a></em></p>
+<p> <strong>«Спасибо за ожидание»</strong></p>
 <p><em>Отвечаем на вопрос.</em></p>]]></description>
         <expert display_value="Новое обращение">7be5a05e6fdb3500724708c6eb3ee44d</expert>
         <name>quation</name>
@@ -16,13 +16,11 @@
         <sys_class_name>expert_panel</sys_class_name>
         <sys_created_by>x-rubesdmi</sys_created_by>
         <sys_created_on>2015-04-15 13:45:34</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>e7bc56ff6f937500724708c6eb3ee491</sys_id>
         <sys_mod_count>12</sys_mod_count>
         <sys_name>quation</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>expert_panel_e7bc56ff6f937500724708c6eb3ee491</sys_update_name>
         <sys_updated_by>x-rubesdmi</sys_updated_by>

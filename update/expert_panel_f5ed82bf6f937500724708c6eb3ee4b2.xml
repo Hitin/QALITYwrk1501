@@ -2,7 +2,7 @@
     <expert_panel action="INSERT_OR_UPDATE">
         <banner_step/>
         <complete_message>Завершить</complete_message>
-        <description><![CDATA[<p><span style="color: #ff0000;">Поля, отмеченные знаком&nbsp;<img style="align: baseline;" title="" src="/b01.PNGx" alt="" align="baseline" border="" hspace="" vspace="" /><span style="font-size: 12pt; background-color: #c0c0c0;"><strong><span style="background-color: #ffffff;">&nbsp;</span></strong><span style="background-color: #ffffff;"><span style="font-size: 8pt;"><span style="font-size: 10pt;">являются обязательными для</span>&nbsp;<span style="font-size: 10pt;">заполнения. Если Инициатор затрудняется ответить выберите "Нет данных" или поставьте прочерк.</span></span></span></span></span></p>]]></description>
+        <description><![CDATA[<p><span style="color: #ff0000;">Поля, отмеченные знаком <img style="align: baseline;" title="" src="/b01.PNGx" alt="" align="baseline" border="" hspace="" vspace="" /><span style="font-size: 12pt; background-color: #c0c0c0;"><strong><span style="background-color: #ffffff;"> </span></strong><span style="background-color: #ffffff;"><span style="font-size: 8pt;"><span style="font-size: 10pt;">являются обязательными для</span> <span style="font-size: 10pt;">заполнения. Если Инициатор затрудняется ответить выберите &#34;Нет данных&#34; или поставьте прочерк.</span></span></span></span></span></p>]]></description>
         <expert display_value="Новое обращение">7be5a05e6fdb3500724708c6eb3ee44d</expert>
         <name>praktika</name>
         <next_message>Далее</next_message>
@@ -11,13 +11,11 @@
         <sys_class_name>expert_panel</sys_class_name>
         <sys_created_by>x-rubesdmi</sys_created_by>
         <sys_created_on>2015-04-15 12:40:11</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>f5ed82bf6f937500724708c6eb3ee4b2</sys_id>
         <sys_mod_count>8</sys_mod_count>
         <sys_name>praktika</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>expert_panel_f5ed82bf6f937500724708c6eb3ee4b2</sys_update_name>
         <sys_updated_by>x-rubesdmi</sys_updated_by>

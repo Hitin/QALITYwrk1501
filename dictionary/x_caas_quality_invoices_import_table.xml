@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="false" extends="sys_import_set_row" label="bq_MID_ttn" max_length="40" name="x_caas_quality_invoices_import_table" type="collection">
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=CityID" audit="false" label="CityID" max_length="40" name="u_cityid" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=CityName" audit="false" label="CityName" max_length="255" name="u_cityname" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=DefDriverName" audit="false" label="DefDriverName" max_length="255" name="u_defdrivername" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=DefFulfiller" audit="false" label="DefFulfiller" max_length="128" name="u_deffulfiller" type="string"/>
-        <element attributes="import_attribute_name=is3PL" audit="false" label="is3PL" max_length="40" name="u_is3pl" type="integer"/>
-        <element attributes="import_attribute_name=MRPDemandTypeID" audit="false" label="MRPDemandTypeID" max_length="40" name="u_mrpdemandtypeid" type="integer"/>
-        <element attributes="edge_encryption_enabled=true" audit="false" label="Адрес" max_length="40" name="u_адрес" type="string"/>
-        <element attributes="edge_encryption_enabled=true" audit="false" label="Время_доставки_по" max_length="40" name="u_время_доставки_по" type="string"/>
-        <element attributes="edge_encryption_enabled=true" audit="false" label="Время_доставки_с" max_length="40" name="u_время_доставки_с" type="string"/>
-        <element attributes="edge_encryption_enabled=true" audit="false" label="Группа_сетевых_клиентов" max_length="40" name="u_группа_сетевых_клиентов" type="string"/>
-        <element audit="false" label="Дата_документа" max_length="40" name="u_дата_документа" type="datetime"/>
-        <element audit="false" label="Дата_и_время_заказа_в_DRP" max_length="40" name="u_дата_и_время_заказа_в_drp" type="datetime"/>
-        <element audit="false" label="Дата_и_время_заказа_клиента" max_length="40" name="u_дата_и_время_заказа_клиента" type="datetime"/>
-        <element attributes="edge_encryption_enabled=true" audit="false" label="Код_адреса_доставки" max_length="40" name="u_код_адреса_доставки" type="string"/>
-        <element attributes="edge_encryption_enabled=true" audit="false" label="Код_покупателя" max_length="40" name="u_код_покупателя" type="string"/>
-        <element attributes="edge_encryption_enabled=true" audit="false" label="Код_склада_отправителя" max_length="40" name="u_код_склада_отправителя" type="string"/>
-        <element attributes="edge_encryption_enabled=true" audit="false" label="Наименование_покупателя" max_length="40" name="u_наименование_покупателя" type="string"/>
-        <element attributes="edge_encryption_enabled=true" audit="false" label="Наименование_склада" max_length="40" name="u_наименование_склада" type="string"/>
-        <element attributes="edge_encryption_enabled=true" audit="false" label="Номер_документа" max_length="40" name="u_номер_документа" type="string"/>
-        <element attributes="edge_encryption_enabled=true" audit="false" label="номер_заказа_клиента" max_length="40" name="u_номер_заказа_клиента" type="string"/>
-        <element audit="false" label="Расчетная_дата_доставки" max_length="40" name="u_расчетная_дата_доставки" type="datetime"/>
+    <element extends="sys_import_set_row" label="bq_MID_ttn" max_length="40" name="x_caas_quality_invoices_import_table" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=CityID" label="CityID" max_length="40" name="u_cityid" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=CityName" label="CityName" max_length="255" name="u_cityname" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=DefDriverName" label="DefDriverName" max_length="255" name="u_defdrivername" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=DefFulfiller" label="DefFulfiller" max_length="128" name="u_deffulfiller" type="string"/>
+        <element attributes="import_attribute_name=is3PL" label="is3PL" max_length="40" name="u_is3pl" type="integer"/>
+        <element attributes="import_attribute_name=MRPDemandTypeID" label="MRPDemandTypeID" max_length="40" name="u_mrpdemandtypeid" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Адрес" max_length="40" name="u_адрес" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Время_доставки_по" max_length="40" name="u_время_доставки_по" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Время_доставки_с" max_length="40" name="u_время_доставки_с" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Группа_сетевых_клиентов" max_length="40" name="u_группа_сетевых_клиентов" type="string"/>
+        <element label="Дата_документа" max_length="40" name="u_дата_документа" type="datetime"/>
+        <element label="Дата_и_время_заказа_в_DRP" max_length="40" name="u_дата_и_время_заказа_в_drp" type="datetime"/>
+        <element label="Дата_и_время_заказа_клиента" max_length="40" name="u_дата_и_время_заказа_клиента" type="datetime"/>
+        <element attributes="edge_encryption_enabled=true" label="Код_адреса_доставки" max_length="40" name="u_код_адреса_доставки" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Код_покупателя" max_length="40" name="u_код_покупателя" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Код_склада_отправителя" max_length="40" name="u_код_склада_отправителя" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Наименование_покупателя" max_length="40" name="u_наименование_покупателя" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Наименование_склада" max_length="40" name="u_наименование_склада" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Номер_документа" max_length="40" name="u_номер_документа" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="номер_заказа_клиента" max_length="40" name="u_номер_заказа_клиента" type="string"/>
+        <element label="Расчетная_дата_доставки" max_length="40" name="u_расчетная_дата_доставки" type="datetime"/>
     </element>
 </database>

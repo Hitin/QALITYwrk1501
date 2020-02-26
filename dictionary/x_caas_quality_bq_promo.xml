@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="false" label="Акция" max_length="40" name="x_caas_quality_bq_promo" type="collection">
-        <element audit="false" label="Архивная" max_length="40" name="u_bq_arhive" type="boolean"/>
-        <element audit="false" display="true" label="Название акции" max_length="32" name="u_bq_promo_name" type="string"/>
+    <element label="Акция" max_length="40" name="x_caas_quality_bq_promo" type="collection">
+        <element label="Архивная" max_length="40" name="u_bq_arhive" type="boolean"/>
+        <element display="true" label="Название акции" max_length="32" name="u_bq_promo_name" type="string"/>
     </element>
 </database>

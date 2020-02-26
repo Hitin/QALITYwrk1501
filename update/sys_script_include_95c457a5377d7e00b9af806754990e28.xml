@@ -50,13 +50,11 @@ cti_bq_class.prototype = {
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>x-ruVoyAnd</sys_created_by>
         <sys_created_on>2017-03-29 13:13:04</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
         <sys_id>95c457a5377d7e00b9af806754990e28</sys_id>
         <sys_mod_count>5</sys_mod_count>
         <sys_name>cti_bq_class</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_95c457a5377d7e00b9af806754990e28</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>

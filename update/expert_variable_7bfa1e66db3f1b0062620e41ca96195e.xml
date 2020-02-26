@@ -52,13 +52,11 @@
         <sys_class_name>expert_variable</sys_class_name>
         <sys_created_by>x-ruAblPet</sys_created_by>
         <sys_created_on>2018-08-11 14:02:28</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
         <sys_id>7bfa1e66db3f1b0062620e41ca96195e</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_name>_u_ref_found</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>expert_variable_7bfa1e66db3f1b0062620e41ca96195e</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>

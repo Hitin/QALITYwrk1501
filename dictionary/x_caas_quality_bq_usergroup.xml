@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="false" label="Группа исполнителей" max_length="40" name="x_caas_quality_bq_usergroup" type="collection">
-        <element audit="false" label="Координаторы" max_length="4000" name="u_bq_coors" reference="sys_user" type="glide_list"/>
-        <element audit="false" choice="1" label="Дирекция" max_length="40" name="u_bq_dir" reference="x_caas_quality_bq_direc" type="choice">
+    <element label="Группа исполнителей" max_length="40" name="x_caas_quality_bq_usergroup" type="collection">
+        <element label="Координаторы" max_length="4000" name="u_bq_coors" reference="sys_user" type="glide_list"/>
+        <element choice="1" label="Дирекция" max_length="40" name="u_bq_dir" reference="x_caas_quality_bq_direc" type="choice">
             <choice/>
         </element>
-        <element audit="false" display="true" label="Группа исполнителей" max_length="40" name="u_bq_grupnqme" type="string"/>
-        <element audit="false" label="Руководители" max_length="4000" name="u_bq_managers" reference="sys_user" type="glide_list"/>
+        <element display="true" label="Группа исполнителей" max_length="40" name="u_bq_grupnqme" type="string"/>
+        <element label="Руководители" max_length="4000" name="u_bq_managers" reference="sys_user" type="glide_list"/>
     </element>
 </database>

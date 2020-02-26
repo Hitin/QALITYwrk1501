@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="false" label="Сотрудники" max_length="40" name="x_caas_quality_bq_users" type="collection">
-        <element audit="false" display="true" label="Name" max_length="40" name="u_name" type="string"/>
+    <element label="Сотрудники" max_length="40" name="x_caas_quality_bq_users" type="collection">
+        <element display="true" label="Name" max_length="40" name="u_name" type="string"/>
     </element>
 </database>

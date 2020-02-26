@@ -2,13 +2,13 @@
     <expert_panel action="INSERT_OR_UPDATE">
         <banner_step/>
         <complete_message>Завершить</complete_message>
-        <description><![CDATA[<p><span style="color: #ff0000;">Поля, отмеченные знаком&nbsp;<img style="align: baseline;" title="" src="/b01.PNGx" alt="" align="bottom" border="" hspace="" vspace="" /><span style="font-size: 12pt; background-color: #c0c0c0;"><strong><span style="background-color: #ffffff;">&nbsp;</span></strong><span style="background-color: #ffffff;"><span style="font-size: 8pt;"><span style="font-size: 10pt;">являются обязательными для</span>&nbsp;<span style="font-size: 10pt;">заполнения. Если Инициатор затрудняется ответить выберите "Нет данных" или поставьте прочерк.</span></span></span></span></span><span style="font-size: 10pt;">&nbsp;</span></p>
-<p><strong><strong>&laquo;</strong>Где и когда произошло нарушение?<strong>&raquo;</strong></strong></p>
-<p>&nbsp;<em>Суть нарушения ясна оператору:</em></p>
-<p><strong>&laquo;Оставайтесь на линии, я запишу суть нарушения.&raquo;</strong></p>
+        <description><![CDATA[<p><span style="color: #ff0000;">Поля, отмеченные знаком <img style="align: baseline;" title="" src="/b01.PNGx" alt="" align="bottom" border="" hspace="" vspace="" /><span style="font-size: 12pt; background-color: #c0c0c0;"><strong><span style="background-color: #ffffff;"> </span></strong><span style="background-color: #ffffff;"><span style="font-size: 8pt;"><span style="font-size: 10pt;">являются обязательными для</span> <span style="font-size: 10pt;">заполнения. Если Инициатор затрудняется ответить выберите &#34;Нет данных&#34; или поставьте прочерк.</span></span></span></span></span><span style="font-size: 10pt;"> </span></p>
+<p><strong><strong>«</strong>Где и когда произошло нарушение?<strong>»</strong></strong></p>
+<p> <em>Суть нарушения ясна оператору:</em></p>
+<p><strong>«Оставайтесь на линии, я запишу суть нарушения.»</strong></p>
 <p><em>Суть нарушения не ясна оператору:</em></p>
-<p><strong>&laquo;Пожалуйста, сформулируйте суть нарушения так, чтобы я могла ее записать.&raquo;</strong></p>
-<p><strong>&laquo;Спасибо за информацию.&raquo;</strong></p>]]></description>
+<p><strong>«Пожалуйста, сформулируйте суть нарушения так, чтобы я могла ее записать.»</strong></p>
+<p><strong>«Спасибо за информацию.»</strong></p>]]></description>
         <expert display_value="Новое обращение">7be5a05e6fdb3500724708c6eb3ee44d</expert>
         <name>pdd_detal</name>
         <next_message>Далее</next_message>
@@ -17,13 +17,11 @@
         <sys_class_name>expert_panel</sys_class_name>
         <sys_created_by>x-rubesdmi</sys_created_by>
         <sys_created_on>2015-04-15 08:11:55</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>bdfe093b6f937500724708c6eb3ee485</sys_id>
         <sys_mod_count>10</sys_mod_count>
         <sys_name>pdd_detal</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>expert_panel_bdfe093b6f937500724708c6eb3ee485</sys_update_name>
         <sys_updated_by>x-rubesdmi</sys_updated_by>

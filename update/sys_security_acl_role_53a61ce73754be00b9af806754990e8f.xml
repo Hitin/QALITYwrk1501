@@ -3,13 +3,11 @@
         <sys_class_name>sys_security_acl_role</sys_class_name>
         <sys_created_by>x-ruVoyAnd</sys_created_by>
         <sys_created_on>2017-01-19 14:56:22</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>53a61ce73754be00b9af806754990e8f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_caas_quality_service_call.bq_operator_delivery</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_security_acl display_value="x_caas_quality_service_call">fa9abe946f43f100724708c6eb3ee4e1</sys_security_acl>
         <sys_update_name>sys_security_acl_role_53a61ce73754be00b9af806754990e8f</sys_update_name>

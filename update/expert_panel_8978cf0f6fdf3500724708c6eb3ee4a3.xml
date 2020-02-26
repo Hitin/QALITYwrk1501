@@ -2,8 +2,8 @@
     <expert_panel action="INSERT_OR_UPDATE">
         <banner_step/>
         <complete_message>Завершить</complete_message>
-        <description><![CDATA[<p><span style="color: #ff0000;">Поля, отмеченные знаком&nbsp;<img style="align: baseline;" title="" src="/b01.PNGx" alt="" align="bottom" border="" hspace="" vspace="" /><span style="font-size: 12pt; background-color: #c0c0c0;"><strong><span style="background-color: #ffffff;">&nbsp;</span></strong><span style="background-color: #ffffff;"><span style="font-size: 8pt;"><span style="font-size: 10pt;">являются обязательными для&nbsp;заполнения. Если Инициатор затрудняется ответить выберите "Нет данных" или поставьте прочерк.</span></span></span></span></span></p>
-<p><em>Просим назвать дату розлива, срок годности, доп. буквы и цифры.&nbsp;</em><em style="font-size: 10pt;"><a href="https://carlsberg.service-now.com/nav_to.do?uri=kb_knowledge.do?sys_id=771ba643f0dddac0a8b3d0fbf8e9731c" title="Статья БЗ" target="_blank">Статья БЗ</a>&nbsp;-&nbsp;образцы маркировки готовой продукции, где искать дату розлива.</em><em>&nbsp;<br />Если данные не указаны, сделать пометку в резюме.</em></p>
+        <description><![CDATA[<p><span style="color: #ff0000;">Поля, отмеченные знаком <img style="align: baseline;" title="" src="/b01.PNGx" alt="" align="bottom" border="" hspace="" vspace="" /><span style="font-size: 12pt; background-color: #c0c0c0;"><strong><span style="background-color: #ffffff;"> </span></strong><span style="background-color: #ffffff;"><span style="font-size: 8pt;"><span style="font-size: 10pt;">являются обязательными для заполнения. Если Инициатор затрудняется ответить выберите &#34;Нет данных&#34; или поставьте прочерк.</span></span></span></span></span></p>
+<p><em>Просим назвать дату розлива, срок годности, доп. буквы и цифры. </em><em style="font-size: 10pt;"><a href="https://carlsberg.service-now.com/nav_to.do?uri&#61;kb_knowledge.do?sys_id&#61;771ba643f0dddac0a8b3d0fbf8e9731c" title="Статья БЗ" target="_blank" rel="nofollow">Статья БЗ</a> - образцы маркировки готовой продукции, где искать дату розлива.</em><em> <br />Если данные не указаны, сделать пометку в резюме.</em></p>
 <p></p>]]></description>
         <expert display_value="Новое обращение">7be5a05e6fdb3500724708c6eb3ee44d</expert>
         <name>kachestvo_Product</name>
@@ -13,13 +13,11 @@
         <sys_class_name>expert_panel</sys_class_name>
         <sys_created_by>x-rubesdmi</sys_created_by>
         <sys_created_on>2015-04-13 08:59:42</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>8978cf0f6fdf3500724708c6eb3ee4a3</sys_id>
         <sys_mod_count>10</sys_mod_count>
         <sys_name>kachestvo_Product</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>expert_panel_8978cf0f6fdf3500724708c6eb3ee4a3</sys_update_name>
         <sys_updated_by>x-rubesdmi</sys_updated_by>

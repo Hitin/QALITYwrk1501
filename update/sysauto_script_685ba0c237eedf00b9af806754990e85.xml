@@ -4,7 +4,7 @@
         <condition/>
         <conditional>false</conditional>
         <name>bq_remind_logistic_groups_17:00</name>
-        <run_as display_value="">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>1</run_dayofweek>
@@ -32,20 +32,15 @@ while (scall.next()) {
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>x-ruVoyAnd</sys_created_by>
         <sys_created_on>2018-06-08 13:19:05</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
         <sys_id>685ba0c237eedf00b9af806754990e85</sys_id>
         <sys_mod_count>14</sys_mod_count>
         <sys_name>bq_remind_logistic_groups_17:00</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysauto_script_685ba0c237eedf00b9af806754990e85</sys_update_name>
         <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
         <sys_updated_on>2019-09-10 08:34:07</sys_updated_on>
-        <u_all>false</u_all>
-        <u_table/>
-        <u_type/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

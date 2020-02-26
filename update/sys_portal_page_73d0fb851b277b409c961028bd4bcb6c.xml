@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update node_type="sys_portal_page" unload_date="2019-11-22 19:46:10">
+<?xml version="1.0" encoding="UTF-8"?><record_update node_type="sys_portal_page" unload_date="2020-02-26 10:57:29">
     <sys_portal_page action="INSERT_OR_UPDATE">
         <layout display_value="layout_2_across">f6defafa0a0a0b12000d5016bd12ff06</layout>
         <order/>
@@ -8,16 +8,14 @@
         <sys_class_name>sys_portal_page</sys_class_name>
         <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
         <sys_created_on>2019-08-27 10:34:07</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_domain_path/>
         <sys_id>73d0fb851b277b409c961028bd4bcb6c</sys_id>
         <sys_mod_count>4</sys_mod_count>
         <sys_name>EE Hotline Delivery. Горячаяя линия по Логистике</sys_name>
         <sys_overrides/>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_portal_page_73d0fb851b277b409c961028bd4bcb6c</sys_update_name>
         <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
@@ -40,7 +38,7 @@
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>current_page</name>
-                        <portal_section display_value="Created 2019-08-27 12:34:34">152177c51b277b409c961028bd4bcbdd</portal_section>
+                        <portal_section display_value="Created 2019-08-27 13:34:34">152177c51b277b409c961028bd4bcbdd</portal_section>
                         <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
                         <sys_created_on>2019-08-27 10:34:34</sys_created_on>
                         <sys_id>152177c51b277b409c961028bd4bcbdf</sys_id>
@@ -51,7 +49,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>help_text_window</name>
-                        <portal_section display_value="Created 2019-08-27 12:34:34">152177c51b277b409c961028bd4bcbdd</portal_section>
+                        <portal_section display_value="Created 2019-08-27 13:34:34">152177c51b277b409c961028bd4bcbdd</portal_section>
                         <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
                         <sys_created_on>2019-08-27 10:34:34</sys_created_on>
                         <sys_id>912177c51b277b409c961028bd4bcbde</sys_id>
@@ -62,7 +60,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>sys_id</name>
-                        <portal_section display_value="Created 2019-08-27 12:34:34">152177c51b277b409c961028bd4bcbdd</portal_section>
+                        <portal_section display_value="Created 2019-08-27 13:34:34">152177c51b277b409c961028bd4bcbdd</portal_section>
                         <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
                         <sys_created_on>2019-08-27 10:34:34</sys_created_on>
                         <sys_id>952177c51b277b409c961028bd4bcbdd</sys_id>
@@ -73,7 +71,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
-                        <portal_section display_value="Created 2019-08-27 12:34:34">152177c51b277b409c961028bd4bcbdd</portal_section>
+                        <portal_section display_value="Created 2019-08-27 13:34:34">152177c51b277b409c961028bd4bcbdd</portal_section>
                         <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
                         <sys_created_on>2019-08-27 10:34:34</sys_created_on>
                         <sys_id>952177c51b277b409c961028bd4bcbde</sys_id>
@@ -84,7 +82,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>report_type</name>
-                        <portal_section display_value="Created 2019-08-27 12:34:34">152177c51b277b409c961028bd4bcbdd</portal_section>
+                        <portal_section display_value="Created 2019-08-27 13:34:34">152177c51b277b409c961028bd4bcbdd</portal_section>
                         <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
                         <sys_created_on>2019-08-27 10:34:34</sys_created_on>
                         <sys_id>992177c51b277b409c961028bd4bcbde</sys_id>
@@ -95,7 +93,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>renderer</name>
-                        <portal_section display_value="Created 2019-08-27 12:34:34">152177c51b277b409c961028bd4bcbdd</portal_section>
+                        <portal_section display_value="Created 2019-08-27 13:34:34">152177c51b277b409c961028bd4bcbdd</portal_section>
                         <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
                         <sys_created_on>2019-08-27 10:34:34</sys_created_on>
                         <sys_id>9d2177c51b277b409c961028bd4bcbdd</sys_id>
@@ -106,7 +104,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>title</name>
-                        <portal_section display_value="Created 2019-08-27 12:34:34">152177c51b277b409c961028bd4bcbdd</portal_section>
+                        <portal_section display_value="Created 2019-08-27 13:34:34">152177c51b277b409c961028bd4bcbdd</portal_section>
                         <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
                         <sys_created_on>2019-08-27 10:34:34</sys_created_on>
                         <sys_id>9d2177c51b277b409c961028bd4bcbde</sys_id>
@@ -131,7 +129,7 @@
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>renderer</name>
-                        <portal_section display_value="Created 2019-08-27 12:34:34">952177c51b277b409c961028bd4bcbdb</portal_section>
+                        <portal_section display_value="Created 2019-08-27 13:34:34">952177c51b277b409c961028bd4bcbdb</portal_section>
                         <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
                         <sys_created_on>2019-08-27 10:34:34</sys_created_on>
                         <sys_id>112177c51b277b409c961028bd4bcbdc</sys_id>
@@ -142,7 +140,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>view</name>
-                        <portal_section display_value="Created 2019-08-27 12:34:34">952177c51b277b409c961028bd4bcbdb</portal_section>
+                        <portal_section display_value="Created 2019-08-27 13:34:34">952177c51b277b409c961028bd4bcbdb</portal_section>
                         <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
                         <sys_created_on>2019-08-27 10:34:34</sys_created_on>
                         <sys_id>152177c51b277b409c961028bd4bcbdc</sys_id>
@@ -153,7 +151,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>sys_id</name>
-                        <portal_section display_value="Created 2019-08-27 12:34:34">952177c51b277b409c961028bd4bcbdb</portal_section>
+                        <portal_section display_value="Created 2019-08-27 13:34:34">952177c51b277b409c961028bd4bcbdb</portal_section>
                         <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
                         <sys_created_on>2019-08-27 10:34:34</sys_created_on>
                         <sys_id>192177c51b277b409c961028bd4bcbdb</sys_id>
@@ -164,7 +162,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>title</name>
-                        <portal_section display_value="Created 2019-08-27 12:34:34">952177c51b277b409c961028bd4bcbdb</portal_section>
+                        <portal_section display_value="Created 2019-08-27 13:34:34">952177c51b277b409c961028bd4bcbdb</portal_section>
                         <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
                         <sys_created_on>2019-08-27 10:34:34</sys_created_on>
                         <sys_id>192177c51b277b409c961028bd4bcbdc</sys_id>
@@ -175,7 +173,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>current_page</name>
-                        <portal_section display_value="Created 2019-08-27 12:34:34">952177c51b277b409c961028bd4bcbdb</portal_section>
+                        <portal_section display_value="Created 2019-08-27 13:34:34">952177c51b277b409c961028bd4bcbdb</portal_section>
                         <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
                         <sys_created_on>2019-08-27 10:34:34</sys_created_on>
                         <sys_id>9d2177c51b277b409c961028bd4bcbdc</sys_id>

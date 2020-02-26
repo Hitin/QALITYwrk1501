@@ -19,21 +19,17 @@
         <query/>
         <report/>
         <roles>bq_ExtEnv_auditor,bq_agree_manager,bq_coordinator,bq_itil,bq_list_manager,bq_operator,bq_operator_quality,bq_operator_sites,bq_process_manager,bq_report_admin</roles>
-        <survey/>
-        <survey_overwrite>true</survey_overwrite>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
         <sys_created_on>2019-08-02 07:24:19</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
         <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_domain_path/>
         <sys_id>36d51e0d4f473304b41f05818110c72e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Города</sys_name>
         <sys_overrides/>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_app_module_36d51e0d4f473304b41f05818110c72e</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>

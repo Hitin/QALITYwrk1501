@@ -8,30 +8,27 @@
         <map display_value="bq_Invoices">06c47cf1373fa2005978466754990e6e</map>
         <reference_value_field/>
         <source_field>u_номер_документа</source_field>
-        <source_script>answer = (function transformEntry(source) {
+        <source_script><![CDATA[answer = (function transformEntry(source) {
 
 	// Add your code here
 	return ""; // return the value to be put into the target field
 
-})(source);</source_script>
+})(source);]]></source_script>
         <source_table>x_caas_quality_invoices_import_table</source_table>
         <sys_class_name>sys_transform_entry</sys_class_name>
         <sys_created_by>x-ruVoyAnd</sys_created_by>
         <sys_created_on>2016-12-20 11:06:32</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>da428db5373fa2005978466754990e51</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>u_номер_документа</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_transform_entry_da428db5373fa2005978466754990e51</sys_update_name>
         <sys_updated_by>x-ruVoyAnd</sys_updated_by>
         <sys_updated_on>2016-12-20 11:06:32</sys_updated_on>
         <target_field>u_ttn_number</target_field>
         <target_table>x_caas_quality_bq_invoices</target_table>
-        <u_baghira_master/>
         <use_source_script>false</use_source_script>
     </sys_transform_entry>
 </record_update>

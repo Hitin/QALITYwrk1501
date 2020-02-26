@@ -12,15 +12,13 @@
         <sys_class_name>sys_filter</sys_class_name>
         <sys_created_by>x-rushaale</sys_created_by>
         <sys_created_on>2015-03-30 16:11:28</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
+        <sys_domain_path/>
         <sys_id>e0b42cf66f4b710010e00d55eb3ee45b</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Оператор</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_filter_e0b42cf66f4b710010e00d55eb3ee45b</sys_update_name>
         <sys_updated_by>x-rushaale</sys_updated_by>
@@ -29,4 +27,5 @@
         <title>Оператор</title>
         <user display_value="">ab102a286ff2b100724708c6eb3ee449</user>
     </sys_filter>
+    <sys_translated_text action="delete_multiple" query="documentkey=e0b42cf66f4b710010e00d55eb3ee45b"/>
 </record_update>

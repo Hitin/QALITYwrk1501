@@ -8,13 +8,11 @@
         <sys_class_name>sysevent_register</sys_class_name>
         <sys_created_by>x-rubesdmi</sys_created_by>
         <sys_created_on>2016-04-04 13:16:55</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>9cd222026fee9200724708c6eb3ee49a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>bq_new_coors</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysevent_register_9cd222026fee9200724708c6eb3ee49a</sys_update_name>
         <sys_updated_by>x-rubesdmi</sys_updated_by>

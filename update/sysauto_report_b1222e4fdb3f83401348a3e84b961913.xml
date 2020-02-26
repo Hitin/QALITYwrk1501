@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sysauto_report">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_report">
     <sysauto_report action="INSERT_OR_UPDATE">
         <active>true</active>
         <address_list/>
@@ -22,7 +22,7 @@
 <p>По возникающим вопросам обращайтесь к Артему Жолобову  (<a href="mailto:zholobov_aa&#64;baltika.com" rel="nofollow">zholobov_aa&#64;baltika.com</a>) и Диане Кузьменко (<a href="mailto:kuzmenko&#64;baltika.com" rel="nofollow">kuzmenko&#64;baltika.com</a>)</p>
 <p>Горячая линия обращений в ООО &#34;Пивоваренная Компания &#34;Балтика&#34;</p>]]></report_body>
         <report_title>ГЛ Балтика. Не выполненные обращения по группе Экскурсии(еженедельный отчет)</report_title>
-        <run_as display_value="Ryabtsev Lev F.">7eaa6d5adbda0b806e87f1eabf96197d</run_as>
+        <run_as display_value="">7eaa6d5adbda0b806e87f1eabf96197d</run_as>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>2</run_dayofweek>
@@ -33,20 +33,15 @@
         <sys_class_name>sysauto_report</sys_class_name>
         <sys_created_by>Filippov_as</sys_created_by>
         <sys_created_on>2018-01-26 07:41:48</sys_created_on>
-        <sys_customer_update>true</sys_customer_update>
-        <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
-        <sys_domain_path>!!!/!!!/!!!/!!2/</sys_domain_path>
         <sys_id>b1222e4fdb3f83401348a3e84b961913</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_name>EE RU HotLine(excursions) обращения по Экскурсии(list) weekly</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysauto_report_b1222e4fdb3f83401348a3e84b961913</sys_update_name>
         <sys_updated_by>ryabtsev_lf</sys_updated_by>
         <sys_updated_on>2018-03-12 12:27:03</sys_updated_on>
-        <u_company/>
         <upgrade_safe>false</upgrade_safe>
         <user_list>64c51fe06f239e007833bd5dbb3ee496,4787d21a6fab3100724708c6eb3ee4f2,3225dba06f239e007833bd5dbb3ee4b0</user_list>
         <zip>false</zip>

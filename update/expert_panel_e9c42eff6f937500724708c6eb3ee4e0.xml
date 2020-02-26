@@ -3,9 +3,9 @@
         <banner_step/>
         <complete_message>Завершить</complete_message>
         <description><![CDATA[<p><em>В случае ,если Абонент не отвечает:<br />Нет ответа:</em></p>
-<p><strong><strong><strong><strong>&laquo;Говорите, пожалуйста. Я вас слушаю&raquo;.</strong></strong></strong></strong></p>
+<p><strong><strong><strong><strong>«Говорите, пожалуйста. Я вас слушаю».</strong></strong></strong></strong></p>
 <p><em>Нет ответа</em></p>
-<p><strong><strong><strong><strong>&laquo;Вас не слышно. Пожалуйста, перезвоните&raquo;.</strong></strong></strong></strong></p>]]></description>
+<p><strong><strong><strong><strong>«Вас не слышно. Пожалуйста, перезвоните».</strong></strong></strong></strong></p>]]></description>
         <expert display_value="Новое обращение">7be5a05e6fdb3500724708c6eb3ee44d</expert>
         <name>no_ansver</name>
         <next_message>Далее</next_message>
@@ -14,13 +14,11 @@
         <sys_class_name>expert_panel</sys_class_name>
         <sys_created_by>x-rubesdmi</sys_created_by>
         <sys_created_on>2015-04-15 14:19:16</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>e9c42eff6f937500724708c6eb3ee4e0</sys_id>
         <sys_mod_count>10</sys_mod_count>
         <sys_name>no_ansver</sys_name>
         <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>expert_panel_e9c42eff6f937500724708c6eb3ee4e0</sys_update_name>
         <sys_updated_by>x-rubesdmi</sys_updated_by>
