@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_наименование_покупателя" label="Наименование_покупателя" language="en" table="x_caas_quality_invoices_import_table">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_наименование_покупателя</element>
+            <help/>
+            <hint/>
+            <label>Наименование_покупателя</label>
+            <language>en</language>
+            <name>x_caas_quality_invoices_import_table</name>
+            <plural>Наименование_покупателяs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-08-26 11:02:23</sys_created_on>
+            <sys_id>faed62b01be7f7409c961028bd4bcb74</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Наименование_покупателя</sys_name>
+            <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_documentation_soft4_invoices_import_table_u_наименование_покупателя_en</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-08-26 11:02:23</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

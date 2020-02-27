@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Регион" max_length="40" name="soft4_bq_region" type="collection">
+        <element label="Федеральный округ (РФ)" max_length="40" name="u_bq_okrug" type="string"/>
+        <element label="Регион" max_length="40" name="u_name" type="string"/>
+        <element label="Код региона" max_length="40" name="u_region_code" type="string"/>
+        <element label="Часовой пояс" max_length="40" name="u_timezone" type="string"/>
+    </element>
+</database>

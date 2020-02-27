@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Причины ошибок в выборе темы" max_length="40" name="x_caas_quality_bq_error_reason" type="collection">
-        <element display="true" label="Причина ошибки в выборе темы" max_length="40" name="u_bq_value" type="string"/>
-    </element>
-</database>

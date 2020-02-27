@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_list parent="x_caas_quality_bq_topic" relationship="" sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="x_caas_quality_bq_subtopic" version="2" view="">
+    <sys_ui_list parent="soft4_bq_topic" relationship="" sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="soft4_bq_subtopic" version="2" view="">
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_subtopic</element>
-            <list_id display_value="x_caas_quality_bq_subtopic" element="NULL" name="x_caas_quality_bq_subtopic" parent="x_caas_quality_bq_topic" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a3bb95004f667780d8a900818110c72b</list_id>
+            <list_id display_value="soft4_bq_subtopic" element="NULL" name="soft4_bq_subtopic" parent="soft4_bq_topic" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a3bb95004f667780d8a900818110c72b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -18,7 +18,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_topic</element>
-            <list_id display_value="x_caas_quality_bq_subtopic" element="NULL" name="x_caas_quality_bq_subtopic" parent="x_caas_quality_bq_topic" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a3bb95004f667780d8a900818110c72b</list_id>
+            <list_id display_value="soft4_bq_subtopic" element="NULL" name="soft4_bq_subtopic" parent="soft4_bq_topic" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a3bb95004f667780d8a900818110c72b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
@@ -33,7 +33,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_order</element>
-            <list_id display_value="x_caas_quality_bq_subtopic" element="NULL" name="x_caas_quality_bq_subtopic" parent="x_caas_quality_bq_topic" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a3bb95004f667780d8a900818110c72b</list_id>
+            <list_id display_value="soft4_bq_subtopic" element="NULL" name="soft4_bq_subtopic" parent="soft4_bq_topic" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a3bb95004f667780d8a900818110c72b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
@@ -48,7 +48,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_need_agree</element>
-            <list_id display_value="x_caas_quality_bq_subtopic" element="NULL" name="x_caas_quality_bq_subtopic" parent="x_caas_quality_bq_topic" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a3bb95004f667780d8a900818110c72b</list_id>
+            <list_id display_value="soft4_bq_subtopic" element="NULL" name="soft4_bq_subtopic" parent="soft4_bq_topic" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a3bb95004f667780d8a900818110c72b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
@@ -63,7 +63,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_agree_list</element>
-            <list_id display_value="x_caas_quality_bq_subtopic" element="NULL" name="x_caas_quality_bq_subtopic" parent="x_caas_quality_bq_topic" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a3bb95004f667780d8a900818110c72b</list_id>
+            <list_id display_value="soft4_bq_subtopic" element="NULL" name="soft4_bq_subtopic" parent="soft4_bq_topic" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a3bb95004f667780d8a900818110c72b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
@@ -78,7 +78,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_notification</element>
-            <list_id display_value="x_caas_quality_bq_subtopic" element="NULL" name="x_caas_quality_bq_subtopic" parent="x_caas_quality_bq_topic" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a3bb95004f667780d8a900818110c72b</list_id>
+            <list_id display_value="soft4_bq_subtopic" element="NULL" name="soft4_bq_subtopic" parent="soft4_bq_topic" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a3bb95004f667780d8a900818110c72b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
@@ -93,7 +93,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_notif_list</element>
-            <list_id display_value="x_caas_quality_bq_subtopic" element="NULL" name="x_caas_quality_bq_subtopic" parent="x_caas_quality_bq_topic" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a3bb95004f667780d8a900818110c72b</list_id>
+            <list_id display_value="soft4_bq_subtopic" element="NULL" name="soft4_bq_subtopic" parent="soft4_bq_topic" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="Default view">a3bb95004f667780d8a900818110c72b</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>6</position>
@@ -110,8 +110,8 @@
             <element/>
             <max_value>false</max_value>
             <min_value>false</min_value>
-            <name>x_caas_quality_bq_subtopic</name>
-            <parent>x_caas_quality_bq_topic</parent>
+            <name>soft4_bq_subtopic</name>
+            <parent>soft4_bq_topic</parent>
             <position/>
             <relationship/>
             <sum>false</sum>
@@ -122,8 +122,8 @@
             <sys_domain_path/>
             <sys_id>a3bb95004f667780d8a900818110c72b</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>x_caas_quality_bq_subtopic</sys_name>
-            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_name>soft4_bq_subtopic</sys_name>
+            <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
             <sys_policy/>
             <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
             <sys_update_name>sys_ui_list_x_caas_quality_bq_subtopic_x_caas_quality_bq_topic_null_a3bb95004f667780d8a900818110c72b</sys_update_name>

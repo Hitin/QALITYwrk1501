@@ -2,7 +2,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access/>
         <active>true</active>
-        <api_name>x_caas_quality.getmyGroup</api_name>
+        <api_name>soft4.getmyGroup</api_name>
         <client_callable>true</client_callable>
         <description/>
         <name>getmyGroup</name>
@@ -11,7 +11,7 @@
 	    var ids = [];
 var refQual = '';
 		 
-				var Group_members = new GlideRecord ('x_caas_quality_bq_group_member'); //состав групп
+				var Group_members = new GlideRecord ('soft4_bq_group_member'); //состав групп
 						 Group_members.addQuery('u_bq_user', user);
 						 Group_members.query();
 				        while (Group_members.next()) {
@@ -31,7 +31,7 @@ var id = ids.toString();
         <sys_id>886c3cfa6f0cc200724708c6eb3ee41c</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>getmyGroup</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_886c3cfa6f0cc200724708c6eb3ee41c</sys_update_name>

@@ -39,10 +39,7 @@
         <exp_report_attrs>true</exp_report_attrs>
         <field/>
         <field_list>number,u_bq_applicant,sys_created_on,u_bq_contact_phone,u_bq_usergroup,u_bq_user,u_bq_danger,u_bq_applicant_info,u_bq_state,u_bq_resolved_on,u_bq_log_solution,u_bq_log_reason.u_code,u_bq_resptext,u_ttn.u_wh_code.u_name,u_ttn_number,u_ttn.u_buyer_name,u_return_qty,u_bq_prot,u_employee_name,u_claim_description</field_list>
-        <filter table="x_caas_quality_service_call">u_bq_topic=46aa161f6f972200724708c6eb3ee4ea^sys_created_onONThis week@javascript:gs.beginningOfThisWeek()@javascript:gs.endOfThisWeek()^u_bq_danger!=a1474c4c3750ba00b9af806754990e3a^EQ^ORDERBYDESCsys_created_on<item display_table="x_caas_quality_bq_topic" display_value="Проблемы доставки сетевым клиентам" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="false" value="46aa161f6f972200724708c6eb3ee4ea"/>
-            <item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="This week@javascript:gs.beginningOfThisWeek()@javascript:gs.endOfThisWeek()"/>
-            <item display_table="x_caas_quality_bq_subtopic" display_value="- none -" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="!=" or="false" value="a1474c4c3750ba00b9af806754990e3a"/>
-            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        <filter table="x_caas_quality_service_call">u_bq_topic=46aa161f6f972200724708c6eb3ee4ea^sys_created_onONThis week@javascript:gs.beginningOfThisWeek()@javascript:gs.endOfThisWeek()^u_bq_danger!=a1474c4c3750ba00b9af806754990e3a^EQ^ORDERBYDESCsys_created_on<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
             <item endquery="false" field="" goto="false" newquery="false" operator="ORDERBYDESC" or="false" value="sys_created_on"/>
         </filter>
         <from/>
@@ -101,7 +98,7 @@
         <sys_id>a8f4d9a5dbfedfc0b3d82aea4b961967</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>DeliveryIssues_Baltika_All_полный_с протоколом</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_report_a8f4d9a5dbfedfc0b3d82aea4b961967</sys_update_name>

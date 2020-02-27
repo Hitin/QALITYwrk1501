@@ -2,7 +2,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>public</access>
         <active>true</active>
-        <api_name>x_caas_quality.bq_getAssign_to</api_name>
+        <api_name>soft4.bq_getAssign_to</api_name>
         <client_callable>true</client_callable>
         <description/>
         <name>bq_getAssign_to</name>
@@ -11,7 +11,7 @@
 	var ids = [];
 	var refQual = '';
 	if (Assign_group != '') {
-		var Group_members = new GlideRecord ('x_caas_quality_bq_group_member'); //подписки заявителя
+		var Group_members = new GlideRecord ('soft4_bq_group_member'); //подписки заявителя
 		Group_members.addQuery('u_bq_group', Assign_group);
 		Group_members.query();
 		while (Group_members.next()) {
@@ -31,7 +31,7 @@
         <sys_id>b362d8916fd73500724708c6eb3ee4c9</sys_id>
         <sys_mod_count>5</sys_mod_count>
         <sys_name>bq_getAssign_to</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_b362d8916fd73500724708c6eb3ee4c9</sys_update_name>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_filter">
     <sys_filter action="INSERT_OR_UPDATE">
-        <filter table="x_caas_quality_service_call">u_bq_contact_type=Интернет-сайт^u_bq_stateINЗапрос дополнительной информации,Новое,Решено^EQ<item endquery="false" field="u_bq_contact_type" goto="false" newquery="false" operator="=" or="false" value="Интернет-сайт"/>
+        <filter table="soft4_service_call">u_bq_contact_type=Интернет-сайт^u_bq_stateINЗапрос дополнительной информации,Новое,Решено^EQ<item endquery="false" field="u_bq_contact_type" goto="false" newquery="false" operator="=" or="false" value="Интернет-сайт"/>
             <item endquery="false" field="u_bq_state" goto="false" newquery="false" operator="IN" or="false" value="Запрос дополнительной информации,Новое,Решено"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter>
@@ -16,13 +16,13 @@
         <sys_id>2b299267379ec3005978466754990e53</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_name>EE Hotline. Sites Operator tasks</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_filter_2b299267379ec3005978466754990e53</sys_update_name>
         <sys_updated_by>x-ruVoyAnd</sys_updated_by>
         <sys_updated_on>2017-11-14 07:16:14</sys_updated_on>
-        <table>x_caas_quality_service_call</table>
+        <table>soft4_service_call</table>
         <title>EE Hotline. Sites Operator tasks</title>
         <user/>
     </sys_filter>

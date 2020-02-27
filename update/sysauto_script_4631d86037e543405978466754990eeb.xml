@@ -17,7 +17,7 @@ var startDT = new GlideDateTime();
 startDT.addDays(-1).addSeconds(-1800);
 //startDT.addSeconds(-7200);
 
-var role = new GlideRecord('x_caas_quality_bq_role_assignment'); // ответственные по матрице
+var role = new GlideRecord('soft4_bq_role_assignment'); // ответственные по матрице
 role.addQuery('sys_updated_on', '>=', startDT);
 role.addQuery('u_active', true);
 role.orderBy('u_employee');
@@ -30,7 +30,7 @@ while (role.next()) {
 	} 
 }
 
-// matrix = new GlideRecord('x_caas_quality_bq_assign_matrix'); // поиск любой записи матрици для генерации события
+// matrix = new GlideRecord('soft4_bq_assign_matrix'); // поиск любой записи матрици для генерации события
 // matrix.setLimit(1);
 // matrix.query();
 // if (matrix.next()){
@@ -47,7 +47,7 @@ while (role.next()) {
 // }
 
 
-// matrix = new GlideRecord('x_caas_quality_bq_assign_matrix'); // согласующие по матрице
+// matrix = new GlideRecord('soft4_bq_assign_matrix'); // согласующие по матрице
 // matrix.addQuery('sys_updated_on', '>=', startDT);
 // matrix.addQuery('u_bq_user', '');
 // matrix.addQuery('u_agree_list', '!=', '');
@@ -81,7 +81,7 @@ while (role.next()) {
 // }
 
 
-// var group = new GlideRecord('x_caas_quality_bq_usergroup'); // координаторы
+// var group = new GlideRecord('soft4_bq_usergroup'); // координаторы
 // group.addQuery('sys_updated_on', '>=', startDT);
 // group.addQuery('u_bq_coors', '!=', '');
 // group.query();
@@ -115,7 +115,7 @@ while (role.next()) {
 // }
 
 
-// var kbCat = new GlideRecord('x_caas_quality_bq_kb_category'); //согласующие KB
+// var kbCat = new GlideRecord('soft4_bq_kb_category'); //согласующие KB
 // kbCat.addQuery('sys_updated_on', '>=', startDT);
 // kbCat.addQuery('u_bq_publishers', '!=', '');
 // kbCat.query();
@@ -155,7 +155,7 @@ while (role.next()) {
 
 // //gs.log('av ' + users.toString() + '!!!' + uniqs.toString())
 
-// matrix = new GlideRecord('x_caas_quality_bq_assign_matrix'); // поиск любой записи матрици для генерации события
+// matrix = new GlideRecord('soft4_bq_assign_matrix'); // поиск любой записи матрици для генерации события
 // matrix.setLimit(1);
 // matrix.query();
 // if (matrix.next()){
@@ -171,7 +171,7 @@ while (role.next()) {
         <sys_id>4631d86037e543405978466754990eeb</sys_id>
         <sys_mod_count>67</sys_mod_count>
         <sys_name>bq_notifyAssigneeMatrix</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysauto_script_4631d86037e543405978466754990eeb</sys_update_name>

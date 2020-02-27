@@ -19,7 +19,7 @@
 	if (fromCTI != '0'){
 	//	alert('fromCTI');
 		var op = g_user.userID;
-		var ga = new GlideAjax("x_caas_quality.bq_getParmFromCall");
+		var ga = new GlideAjax("soft4.bq_getParmFromCall");
 		ga.addParam("sysparm_name", "getParms");
 		ga.addParam("sysparm_op", op);
 		ga.getXML(ajaxResponse);
@@ -56,7 +56,7 @@ function ajaxResponse(serverResponse) {
         <sys_mod_count>30</sys_mod_count>
         <sys_name>bq_Телефония</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>expert_script_client_3f0f44376f637100724708c6eb3ee46d</sys_update_name>

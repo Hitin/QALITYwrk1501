@@ -2,7 +2,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access/>
         <active>true</active>
-        <api_name>x_caas_quality.relSCfromTel</api_name>
+        <api_name>soft4.relSCfromTel</api_name>
         <client_callable>false</client_callable>
         <description/>
         <name>relSCfromTel</name>
@@ -12,7 +12,7 @@
 	    var ids = [];
 var refQual = '';
 		 
-				var SC = new GlideRecord ('x_caas_quality_service_call'); //подписки заявителя
+				var SC = new GlideRecord ('soft4_service_call'); //подписки заявителя
 						var qc = SC.addQuery('u_bq_aon_number', PhoneId);
 	 					qc.addOrCondition('u_bq_contact_phone', Phone);
 						 SC.query();
@@ -23,7 +23,7 @@ var all_id = ids.toString();
 	 
 	 
 	 if (all_id == ''){
-				var SC_All = new GlideRecord ('x_caas_quality_service_call'); //подписки заявителя
+				var SC_All = new GlideRecord ('soft4_service_call'); //подписки заявителя
 				SC_All.query();
 				while (SC_All.next()) {
 				ids.push(SC_All.sys_id.toString());
@@ -42,7 +42,7 @@ refQual = 'sys_idIN' + ids.toString();
         <sys_id>e7250c596f80c200724708c6eb3ee436</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_name>relSCfromTel</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_e7250c596f80c200724708c6eb3ee436</sys_update_name>

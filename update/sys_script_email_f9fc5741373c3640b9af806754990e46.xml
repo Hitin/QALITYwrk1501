@@ -24,7 +24,7 @@
 		else
 			tm1 = new GlideDateTime(current.u_ttn.u_client_order);
 		tm1.addSeconds(10800);
-		//var region = new GlideRecord('x_caas_quality_bq_region');
+		//var region = new GlideRecord('soft4_bq_region');
 		/*region.get('u_region_code', current.u_ttn.u_region_code);		
 		var tm2 = new bqFunctions().getTimeZone(current.u_arrival_time_loc, region.u_timezone);  // время прибытия местное с учетом часового пояса*/ 
 		if (current.u_arrival_time_loc != '')
@@ -110,7 +110,7 @@
 	template.print('<br />');
 	
 
-	var printed_sc = new GlideRecord('x_caas_quality_service_call');
+	var printed_sc = new GlideRecord('soft4_service_call');
 	if (current.u_parent_by_ttn == '')
 		printed_sc.get(current.sys_id);
 	else 
@@ -131,7 +131,7 @@
 			else{
 				template.print('<tr><td colspan ="7">Информация по другим проблемам той же накладной</td></tr>');
 			}
-			var sc0 = new GlideRecord ('x_caas_quality_service_call');
+			var sc0 = new GlideRecord ('soft4_service_call');
 			sc0.addQuery('u_parent_by_ttn', printed_sc.sys_id).addOrCondition('sys_id', printed_sc.sys_id);
 			sc0.orderBy('u_bq_number');
 			sc0.query();
@@ -151,7 +151,7 @@
 			else{
 				template.print('<tr><td colspan ="7">Информация по накладным для текущего адреса</td></tr>');
 			}
-			var sc1 = new GlideRecord ('x_caas_quality_service_call');
+			var sc1 = new GlideRecord ('soft4_service_call');
 			if (printed_sc.u_reference_service_call == '') {
 				sc1.addQuery('u_reference_service_call', printed_sc.sys_id);
 			}
@@ -165,7 +165,7 @@
 			while (sc1.next()){
 				template.print('<tr><td>' + sc1.u_ttn.u_ttn_number + ' от ' + sc1.u_ttn.u_ttn_date + '</td><td>' + sc1.u_bq_number + ' от ' + sc1.sys_created_on + '</td><td>' + sc1.u_ttn.u_buyer_code + '<br />' + sc1.u_ttn.u_buyer_name + '</td><td>' + sc1.getDisplayValue('u_bq_usergroup') + '</td><td>' + sc1.getDisplayValue('u_bq_user') + '</td><td>' + sc1.u_bq_state + '</td><td>');
 				if (sc1.u_ttn != ''){
-					var sc2 = new GlideRecord ('x_caas_quality_service_call');
+					var sc2 = new GlideRecord ('soft4_service_call');
 					sc2.addQuery('u_other_ttn', 'CONTAINS', sc1.u_ttn.sys_id);
 					sc2.query();
 					while (sc2.next()){
@@ -192,10 +192,10 @@
 			var ttn = printed_sc.u_other_ttn;
 			var ar = ttn.split(',');
 			for (var j=0; j<ar.length; j++){
-				var ttn1 = new GlideRecord('x_caas_quality_bq_invoices');
+				var ttn1 = new GlideRecord('soft4_bq_invoices');
 				ttn1.get(ar[j]);
 				template.print('<tr><td>' + ttn1.u_ttn_number + ' от ' + ttn1.u_ttn_date + '</td><td>' + '' + '</td><td>' + ttn1.u_buyer_code + '<br />' + ttn1.u_buyer_name + '</td><td>' + ttn1.getDisplayValue('u_group') + '</td><td>' + '' + '</td><td>' + '' + '</td><td>');
-				var sc2 = new GlideRecord ('x_caas_quality_service_call');
+				var sc2 = new GlideRecord ('soft4_service_call');
 				sc2.addQuery('u_other_ttn', 'CONTAINS', ttn1.sys_id);
 				sc2.addQuery('sys_id', '!=', printed_sc.sys_id);
 				sc2.query();
@@ -216,7 +216,7 @@
 			else {
 				template.print('<tr><td colspan ="7">Жалобы на приёмщиков</td></tr>');
 			}
-			var sc3 = new GlideRecord ('x_caas_quality_service_call');
+			var sc3 = new GlideRecord ('soft4_service_call');
 			if (printed_sc.u_reference_service_call == '') sc3.addQuery('u_reference_service_call', printed_sc.sys_id);
 			else sc3.addQuery('u_reference_service_call', printed_sc.u_reference_service_call);
 			sc3.addQuery('u_bq_danger', '1a0704c43790ba00b9af806754990ebb');
@@ -224,7 +224,7 @@
 			while (sc3.next()){
 				template.print('<tr><td>' + sc3.u_ttn.u_ttn_number + ' от ' + sc3.u_ttn.u_ttn_date + '</td><td>' + sc3.u_bq_number + ' от ' + sc3.sys_created_on + '</td><td>' + sc3.u_ttn.u_buyer_code + '<br />' + sc3.u_ttn.u_buyer_name + '</td><td></td><td></td><td>' + sc3.u_bq_state + '</td><td>');
 				if (sc3.u_ttn != ''){
-					var sc2 = new GlideRecord ('x_caas_quality_service_call');
+					var sc2 = new GlideRecord ('soft4_service_call');
 					sc2.addQuery('u_other_ttn', 'CONTAINS', sc3.u_ttn.sys_id);
 					sc2.query();
 					while (sc2.next()){
@@ -250,7 +250,7 @@
         <sys_id>f9fc5741373c3640b9af806754990e46</sys_id>
         <sys_mod_count>92</sys_mod_count>
         <sys_name>bq_log_info</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_email_f9fc5741373c3640b9af806754990e46</sys_update_name>

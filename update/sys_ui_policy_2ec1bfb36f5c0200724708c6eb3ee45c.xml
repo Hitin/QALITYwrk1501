@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
         <active>true</active>
-        <conditions table="x_caas_quality_service_call">u_bq_state!=Закрыто^ORu_bq_topic=46aa161f6f972200724708c6eb3ee4ea^NQu_bq_contact_type=Интернет-сайт^u_bq_danger.u_feedback=true^ORu_autoclose=true^EQ<item endquery="false" field="u_bq_state" goto="false" newquery="false" operator="!=" or="false" value="Закрыто"/>
-            <item display_table="x_caas_quality_bq_topic" display_value="Проблемы доставки сетевым клиентам" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="true" value="46aa161f6f972200724708c6eb3ee4ea"/>
+        <conditions table="soft4_service_call">u_bq_state!=Закрыто^ORu_bq_topic=46aa161f6f972200724708c6eb3ee4ea^NQu_bq_contact_type=Интернет-сайт^u_bq_danger.u_feedback=true^ORu_autoclose=true^EQ<item endquery="false" field="u_bq_state" goto="false" newquery="false" operator="!=" or="false" value="Закрыто"/>
+            <item endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="true" value="46aa161f6f972200724708c6eb3ee4ea"/>
             <item endquery="false" field="u_bq_contact_type" goto="false" newquery="true" operator="=" or="false" value="Интернет-сайт"/>
             <item endquery="false" field="u_bq_danger.u_feedback" goto="false" newquery="false" operator="=" or="false" value="true"/>
             <item endquery="false" field="u_autoclose" goto="false" newquery="false" operator="=" or="true" value="true"/>
@@ -35,13 +35,13 @@
         <sys_mod_count>8</sys_mod_count>
         <sys_name>bq_Убрать обязательность заполнения полей</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_ui_policy_2ec1bfb36f5c0200724708c6eb3ee45c</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
         <sys_updated_on>2019-07-17 13:09:37</sys_updated_on>
-        <table>x_caas_quality_service_call</table>
+        <table>soft4_service_call</table>
         <ui_type>0</ui_type>
         <view/>
     </sys_ui_policy>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
         <active>true</active>
-        <conditions table="x_caas_quality_service_call">u_bq_topic=20f91c646f62d20010e00d55eb3ee473^u_bq_danger=da20e8e46f62d20010e00d55eb3ee454^ORu_bq_danger=5a30ace46f62d20010e00d55eb3ee445^ORu_bq_danger=a0306ce46f62d20010e00d55eb3ee45b^u_autoclose=false^EQ<item display_table="x_caas_quality_bq_topic" display_value="ПДД" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="false" value="20f91c646f62d20010e00d55eb3ee473"/>
-            <item display_table="x_caas_quality_bq_subtopic" display_value="Аварии с жертвами с авто и/или сотрудниками Компании" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="false" value="da20e8e46f62d20010e00d55eb3ee454"/>
-            <item display_table="x_caas_quality_bq_subtopic" display_value="+Неопасные нарушения" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="5a30ace46f62d20010e00d55eb3ee445"/>
-            <item display_table="x_caas_quality_bq_subtopic" display_value="Опасные/грубые нарушения, ДТП без жертв" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="a0306ce46f62d20010e00d55eb3ee45b"/>
+        <conditions table="soft4_service_call">u_bq_topic=20f91c646f62d20010e00d55eb3ee473^u_bq_danger=da20e8e46f62d20010e00d55eb3ee454^ORu_bq_danger=5a30ace46f62d20010e00d55eb3ee445^ORu_bq_danger=a0306ce46f62d20010e00d55eb3ee45b^u_autoclose=false^EQ<item endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="false" value="20f91c646f62d20010e00d55eb3ee473"/>
+            <item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="false" value="da20e8e46f62d20010e00d55eb3ee454"/>
+            <item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="5a30ace46f62d20010e00d55eb3ee445"/>
+            <item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="a0306ce46f62d20010e00d55eb3ee45b"/>
             <item endquery="false" field="u_autoclose" goto="false" newquery="false" operator="=" or="false" value="false"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </conditions>
@@ -35,13 +35,13 @@
         <sys_mod_count>2</sys_mod_count>
         <sys_name>bq_DTP</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_ui_policy_cb992de337c80380b9af806754990e27</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
         <sys_updated_on>2019-07-17 13:10:08</sys_updated_on>
-        <table>x_caas_quality_service_call</table>
+        <table>soft4_service_call</table>
         <ui_type>0</ui_type>
         <view/>
     </sys_ui_policy>

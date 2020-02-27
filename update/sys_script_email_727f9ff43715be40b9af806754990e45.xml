@@ -2,7 +2,7 @@
     <sys_script_email action="INSERT_OR_UPDATE">
         <name>bq_log_3PL_4H</name>
         <new_lines_to_html>false</new_lines_to_html>
-        <script><![CDATA[var sc = new GlideRecord('x_caas_quality_service_call');
+        <script><![CDATA[var sc = new GlideRecord('soft4_service_call');
 var nowDT = new GlideDateTime();
 var endDT = new GlideDateTime(nowDT.toString().substring(0, 14) + '00:00');//.addSeconds(10800);
 var beginDT = new GlideDateTime(endDT);
@@ -64,7 +64,7 @@ template.print('</table>');
         <sys_id>727f9ff43715be40b9af806754990e45</sys_id>
         <sys_mod_count>54</sys_mod_count>
         <sys_name>bq_log_3PL_4H</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_email_727f9ff43715be40b9af806754990e45</sys_update_name>

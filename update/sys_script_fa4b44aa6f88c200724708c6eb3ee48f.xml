@@ -11,11 +11,11 @@
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>x_caas_quality_service_call</collection>
+        <collection>soft4_service_call</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_caas_quality_service_call">u_bq_contact_phoneVALCHANGES^EQ<item endquery="false" field="u_bq_contact_phone" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+        <filter_condition table="soft4_service_call">u_bq_contact_phoneVALCHANGES^EQ<item endquery="false" field="u_bq_contact_phone" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
@@ -39,7 +39,7 @@ tels = current.u_bq_contact_phone.toString().split(",");
 	single_tel = tels[i].toString().replace(/ /g,'');
 		//gs.addInfoMessage(single_tel);
 	telID = '-1';
-		var tel = new GlideRecord('x_caas_quality_bq_tel');
+		var tel = new GlideRecord('soft4_bq_tel');
 			tel.addQuery('u_bq_tel', single_tel);
 			tel.query();
 				while(tel.next()){
@@ -47,7 +47,7 @@ tels = current.u_bq_contact_phone.toString().split(",");
 						telID = tel.sys_id;
 					}
 				if (telID == '-1'){
-				var telNew =  new GlideRecord('x_caas_quality_bq_tel');
+				var telNew =  new GlideRecord('soft4_bq_tel');
 					telNew.u_bq_tel = single_tel;
 					telNew.insert();
 					//current.u_tel = telNew.sys_id;
@@ -65,7 +65,7 @@ current.update();
         <sys_mod_count>9</sys_mod_count>
         <sys_name>bq_Добавление конт телефона к списку</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_fa4b44aa6f88c200724708c6eb3ee48f</sys_update_name>

@@ -6,8 +6,8 @@
         <advanced_condition/>
         <affected_field_on_event/>
         <category display_value="">28627beddb60230002558e68689619e3</category>
-        <collection>x_caas_quality_service_call</collection>
-        <condition table="x_caas_quality_service_call">u_bq_topicCHANGESTO46aa161f6f972200724708c6eb3ee4ea^u_bq_stateCHANGESFROM^u_bq_danger.u_bq_notification=true^u_bq_stateCHANGESTOНазначено в группу^u_bq_end_call=false^EQ<item display_table="x_caas_quality_bq_topic" display_value="Проблемы доставки сетевым клиентам" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="CHANGESTO" or="false" value="46aa161f6f972200724708c6eb3ee4ea"/>
+        <collection>soft4_service_call</collection>
+        <condition table="soft4_service_call">u_bq_topicCHANGESTO46aa161f6f972200724708c6eb3ee4ea^u_bq_stateCHANGESFROM^u_bq_danger.u_bq_notification=true^u_bq_stateCHANGESTOНазначено в группу^u_bq_end_call=false^EQ<item endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="CHANGESTO" or="false" value="46aa161f6f972200724708c6eb3ee4ea"/>
             <item endquery="false" field="u_bq_state" goto="false" newquery="false" operator="CHANGESFROM" or="false" value=""/>
             <item endquery="false" field="u_bq_danger.u_bq_notification" goto="false" newquery="false" operator="=" or="false" value="true"/>
             <item endquery="false" field="u_bq_state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="Назначено в группу"/>
@@ -68,7 +68,7 @@
         <sys_mod_count>12</sys_mod_count>
         <sys_name>bq_log_notification</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysevent_email_action_a31628a637507e00b9af806754990e82</sys_update_name>

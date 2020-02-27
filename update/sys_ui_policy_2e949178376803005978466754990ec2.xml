@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
         <active>true</active>
-        <conditions table="x_caas_quality_service_call">u_bq_topic=387a67b76f05ea0010e00d55eb3ee4a0^ORu_bq_topic=9fb910a46f62d20010e00d55eb3ee497^ORu_bq_topic=ba1a10a46f62d20010e00d55eb3ee4d6^ORu_bq_topic=d11a1c646f62d20010e00d55eb3ee49b^ORu_bq_topic=033aeab1dbcbf2882eb8f3651d9619a7^EQ<item display_table="x_caas_quality_bq_topic" display_value="Администрирование процесса" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="false" value="387a67b76f05ea0010e00d55eb3ee4a0"/>
-            <item display_table="x_caas_quality_bq_topic" display_value="Качество продукции" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="true" value="9fb910a46f62d20010e00d55eb3ee497"/>
-            <item display_table="x_caas_quality_bq_topic" display_value="Продажи" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="true" value="ba1a10a46f62d20010e00d55eb3ee4d6"/>
-            <item display_table="x_caas_quality_bq_topic" display_value="Маркетинг" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="true" value="d11a1c646f62d20010e00d55eb3ee49b"/>
-            <item display_table="x_caas_quality_bq_topic" display_value="ПЭТ-кеги" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="true" value="033aeab1dbcbf2882eb8f3651d9619a7"/>
+        <conditions table="soft4_service_call">u_bq_topic=387a67b76f05ea0010e00d55eb3ee4a0^ORu_bq_topic=9fb910a46f62d20010e00d55eb3ee497^ORu_bq_topic=ba1a10a46f62d20010e00d55eb3ee4d6^ORu_bq_topic=d11a1c646f62d20010e00d55eb3ee49b^ORu_bq_topic=033aeab1dbcbf2882eb8f3651d9619a7^EQ<item endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="false" value="387a67b76f05ea0010e00d55eb3ee4a0"/>
+            <item endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="true" value="9fb910a46f62d20010e00d55eb3ee497"/>
+            <item endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="true" value="ba1a10a46f62d20010e00d55eb3ee4d6"/>
+            <item endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="true" value="d11a1c646f62d20010e00d55eb3ee49b"/>
+            <item endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="true" value="033aeab1dbcbf2882eb8f3651d9619a7"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </conditions>
         <description/>
@@ -39,13 +39,13 @@
         <sys_mod_count>3</sys_mod_count>
         <sys_name>bq_hide_production_tab</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_ui_policy_2e949178376803005978466754990ec2</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
         <sys_updated_on>2019-07-17 13:26:17</sys_updated_on>
-        <table>x_caas_quality_service_call</table>
+        <table>soft4_service_call</table>
         <ui_type>0</ui_type>
         <view display_value="hotline" name="hotline">hotline</view>
     </sys_ui_policy>

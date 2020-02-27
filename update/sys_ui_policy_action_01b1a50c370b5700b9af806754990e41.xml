@@ -10,13 +10,13 @@
         <sys_id>01b1a50c370b5700b9af806754990e41</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>u_bq_group</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_ui_policy_action_01b1a50c370b5700b9af806754990e41</sys_update_name>
         <sys_updated_by>x-ruVoyAnd</sys_updated_by>
         <sys_updated_on>2018-06-27 08:40:21</sys_updated_on>
-        <table>x_caas_quality_bq_group_member</table>
+        <table>soft4_bq_group_member</table>
         <ui_policy display_value="bq_Employee mandatory">ee91250c370b5700b9af806754990e9b</ui_policy>
         <visible>ignore</visible>
     </sys_ui_policy_action>

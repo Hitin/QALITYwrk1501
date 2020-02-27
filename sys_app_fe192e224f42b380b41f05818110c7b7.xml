@@ -12,10 +12,10 @@
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
-        <scope>x_caas_quality</scope>
+        <scope>soft4</scope>
         <scoped_administration>false</scoped_administration>
         <short_description/>
-        <source>x_caas_quality</source>
+        <source>soft4</source>
         <store_correlation_id>REPOAPP0000159774</store_correlation_id>
         <store_url/>
         <sys_class_name>sys_app</sys_class_name>
@@ -23,14 +23,14 @@
         <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
         <sys_created_on>2019-06-18 07:36:32</sys_created_on>
         <sys_id>fe192e224f42b380b41f05818110c7b7</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2020-02-26 11:11:57</sys_updated_on>
+        <sys_updated_on>2020-02-27 08:11:48</sys_updated_on>
         <template/>
         <trackable>true</trackable>
-        <user_role display_value="x_caas_quality.user" name="x_caas_quality.user">43196e224f42b380b41f05818110c71e</user_role>
+        <user_role display_value="soft4.user" name="soft4.user">43196e224f42b380b41f05818110c71e</user_role>
         <vendor/>
         <vendor_prefix/>
-        <version>1.0.7</version>
+        <version>1.0.9</version>
     </sys_app>
 </record_update>

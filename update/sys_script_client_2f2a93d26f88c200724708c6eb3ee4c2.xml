@@ -22,14 +22,14 @@
 		//gsftSubmit(gel('update_and_stay'));
 		gsftSubmit(null, g_form.getFormElement(), 'update_and_stay');
 		
-		var url1 = 'x_caas_quality_service_call.do?sys_id='+newValue;
+		var url1 = 'soft4_service_call.do?sys_id='+newValue;
 		//window.location = url1;
 		var url = new GlideURL(url1);  
 		var w = getTopWindow();  
 		var newWindow = w.open(url.getURL());  
 		newWindow.focus();
 		//window.close();
-		var ga = new GlideAjax('x_caas_quality.bq_CallCountIncrement');
+		var ga = new GlideAjax('soft4.bq_CallCountIncrement');
 		ga.addParam('sysparm_name','bq_callCountIncrement');
 		ga.addParam('sysparm_sysid', newValue);
 		ga.getXML(resp);
@@ -53,13 +53,13 @@ function resp(response) {
         <sys_mod_count>47</sys_mod_count>
         <sys_name>bq_При выборе обращения</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_client_2f2a93d26f88c200724708c6eb3ee4c2</sys_update_name>
         <sys_updated_by>ablyazov_p@baltika.com</sys_updated_by>
         <sys_updated_on>2019-11-21 08:21:52</sys_updated_on>
-        <table>x_caas_quality_bq_call_log</table>
+        <table>soft4_bq_call_log</table>
         <type>onChange</type>
         <ui_type>0</ui_type>
         <view/>

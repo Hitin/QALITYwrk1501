@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
         <active>true</active>
-        <conditions table="x_caas_quality_service_call">u_bq_danger=cbfa961f6f972200724708c6eb3ee44e^ORu_bq_danger=90fa1edb6f972200724708c6eb3ee451^EQ<item display_table="x_caas_quality_bq_subtopic" display_value="Длительный простой" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="false" value="cbfa961f6f972200724708c6eb3ee44e"/>
-            <item display_table="x_caas_quality_bq_subtopic" display_value="Поломка автомобиля" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="90fa1edb6f972200724708c6eb3ee451"/>
+        <conditions table="soft4_service_call">u_bq_danger=cbfa961f6f972200724708c6eb3ee44e^ORu_bq_danger=90fa1edb6f972200724708c6eb3ee451^EQ<item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="false" value="cbfa961f6f972200724708c6eb3ee44e"/>
+            <item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="90fa1edb6f972200724708c6eb3ee451"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </conditions>
         <description/>
@@ -32,13 +32,13 @@
         <sys_mod_count>2</sys_mod_count>
         <sys_name>bq_other_orders_visible</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_ui_policy_b4f600f237fbe2005978466754990e88</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
         <sys_updated_on>2019-07-17 13:09:36</sys_updated_on>
-        <table>x_caas_quality_service_call</table>
+        <table>soft4_service_call</table>
         <ui_type>0</ui_type>
         <view display_value="Logistic" name="logistic">logistic</view>
     </sys_ui_policy>

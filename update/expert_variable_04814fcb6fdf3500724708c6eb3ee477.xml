@@ -41,7 +41,7 @@
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
         <record_producer_table/>
-        <reference>x_caas_quality_bq_city</reference>
+        <reference>soft4_bq_city</reference>
         <reference_qual/>
         <reference_qual_condition/>
         <scale_max>5</scale_max>
@@ -55,7 +55,7 @@
         <sys_id>04814fcb6fdf3500724708c6eb3ee477</sys_id>
         <sys_mod_count>8</sys_mod_count>
         <sys_name>Город встречи</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>expert_variable_04814fcb6fdf3500724708c6eb3ee477</sys_update_name>

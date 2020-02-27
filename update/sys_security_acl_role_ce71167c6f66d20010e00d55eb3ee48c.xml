@@ -5,11 +5,11 @@
         <sys_created_on>2016-03-31 14:49:18</sys_created_on>
         <sys_id>ce71167c6f66d20010e00d55eb3ee48c</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_caas_quality_bq_factory.bq_agree_manager</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_name>soft4_bq_factory.bq_agree_manager</sys_name>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
-        <sys_security_acl display_value="x_caas_quality_bq_factory">c2f01a7c6f66d20010e00d55eb3ee40f</sys_security_acl>
+        <sys_security_acl display_value="soft4_bq_factory">c2f01a7c6f66d20010e00d55eb3ee40f</sys_security_acl>
         <sys_update_name>sys_security_acl_role_ce71167c6f66d20010e00d55eb3ee48c</sys_update_name>
         <sys_updated_by>x-rubesdmi</sys_updated_by>
         <sys_updated_on>2016-03-31 14:49:18</sys_updated_on>

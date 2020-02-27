@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_section caption="" section_id="617f16b14f9233c0b41f05818110c7c2" sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="x_caas_quality_service_call" version="3" view="logistic">
+    <sys_ui_section caption="" section_id="617f16b14f9233c0b41f05818110c7c2" sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="soft4_service_call" version="3" view="logistic">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_bq_number</element>
             <position>0</position>
@@ -8,7 +8,7 @@
             <sys_id>7a2c31064f6e3bc0d8a900818110c70b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -22,7 +22,7 @@
             <sys_id>fe2c31064f6e3bc0d8a900818110c70b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -36,7 +36,7 @@
             <sys_id>762c31064f6e3bc0d8a900818110c70c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -50,7 +50,7 @@
             <sys_id>fa2c31064f6e3bc0d8a900818110c70c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -64,7 +64,7 @@
             <sys_id>722c31064f6e3bc0d8a900818110c70d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -78,7 +78,7 @@
             <sys_id>f62c31064f6e3bc0d8a900818110c70d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -92,7 +92,7 @@
             <sys_id>7e2c31064f6e3bc0d8a900818110c70d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -106,7 +106,7 @@
             <sys_id>ba2c31064f6e3bc0d8a900818110c71a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -120,7 +120,7 @@
             <sys_id>322c31064f6e3bc0d8a900818110c71b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -134,7 +134,7 @@
             <sys_id>b62c31064f6e3bc0d8a900818110c71b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -148,7 +148,7 @@
             <sys_id>3e2c31064f6e3bc0d8a900818110c71b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -162,7 +162,7 @@
             <sys_id>b22c31064f6e3bc0d8a900818110c71c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -176,7 +176,7 @@
             <sys_id>3a2c31064f6e3bc0d8a900818110c71c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -190,7 +190,7 @@
             <sys_id>be2c31064f6e3bc0d8a900818110c71c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -204,7 +204,7 @@
             <sys_id>362c31064f6e3bc0d8a900818110c71d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -218,7 +218,7 @@
             <sys_id>ba2c31064f6e3bc0d8a900818110c71d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -232,7 +232,7 @@
             <sys_id>322c31064f6e3bc0d8a900818110c71e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -246,7 +246,7 @@
             <sys_id>b62c31064f6e3bc0d8a900818110c71e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -260,7 +260,7 @@
             <sys_id>3e2c31064f6e3bc0d8a900818110c71e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -274,7 +274,7 @@
             <sys_id>b22c31064f6e3bc0d8a900818110c71f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -288,7 +288,7 @@
             <sys_id>3a2c31064f6e3bc0d8a900818110c71f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -302,7 +302,7 @@
             <sys_id>be2c31064f6e3bc0d8a900818110c71f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -316,7 +316,7 @@
             <sys_id>362c31064f6e3bc0d8a900818110c720</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -330,7 +330,7 @@
             <sys_id>ba2c31064f6e3bc0d8a900818110c720</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -344,7 +344,7 @@
             <sys_id>322c31064f6e3bc0d8a900818110c721</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -358,7 +358,7 @@
             <sys_id>b62c31064f6e3bc0d8a900818110c721</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -372,7 +372,7 @@
             <sys_id>3e2c31064f6e3bc0d8a900818110c721</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -386,7 +386,7 @@
             <sys_id>b22c31064f6e3bc0d8a900818110c722</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -400,7 +400,7 @@
             <sys_id>3a2c31064f6e3bc0d8a900818110c722</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -414,7 +414,7 @@
             <sys_id>be2c31064f6e3bc0d8a900818110c722</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -428,7 +428,7 @@
             <sys_id>362c31064f6e3bc0d8a900818110c723</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -442,7 +442,7 @@
             <sys_id>ba2c31064f6e3bc0d8a900818110c723</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -456,7 +456,7 @@
             <sys_id>322c31064f6e3bc0d8a900818110c724</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -470,7 +470,7 @@
             <sys_id>b62c31064f6e3bc0d8a900818110c724</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -484,7 +484,7 @@
             <sys_id>3e2c31064f6e3bc0d8a900818110c724</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -498,7 +498,7 @@
             <sys_id>b22c31064f6e3bc0d8a900818110c725</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -512,7 +512,7 @@
             <sys_id>3a2c31064f6e3bc0d8a900818110c725</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -526,7 +526,7 @@
             <sys_id>be2c31064f6e3bc0d8a900818110c725</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -540,7 +540,7 @@
             <sys_id>362c31064f6e3bc0d8a900818110c726</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -554,7 +554,7 @@
             <sys_id>ba2c31064f6e3bc0d8a900818110c726</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -568,7 +568,7 @@
             <sys_id>322c31064f6e3bc0d8a900818110c727</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -582,7 +582,7 @@
             <sys_id>362c31064f6e3bc0d8a900818110c740</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -596,7 +596,7 @@
             <sys_id>ba2c31064f6e3bc0d8a900818110c740</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -610,7 +610,7 @@
             <sys_id>322c31064f6e3bc0d8a900818110c741</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -624,7 +624,7 @@
             <sys_id>b62c31064f6e3bc0d8a900818110c741</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -638,7 +638,7 @@
             <sys_id>3e2c31064f6e3bc0d8a900818110c741</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -652,7 +652,7 @@
             <sys_id>b22c31064f6e3bc0d8a900818110c742</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -666,7 +666,7 @@
             <sys_id>3a2c31064f6e3bc0d8a900818110c742</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -680,7 +680,7 @@
             <sys_id>be2c31064f6e3bc0d8a900818110c742</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -694,7 +694,7 @@
             <sys_id>362c31064f6e3bc0d8a900818110c743</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -708,7 +708,7 @@
             <sys_id>ba2c31064f6e3bc0d8a900818110c743</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -722,7 +722,7 @@
             <sys_id>322c31064f6e3bc0d8a900818110c744</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -736,7 +736,7 @@
             <sys_id>b62c31064f6e3bc0d8a900818110c744</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -750,7 +750,7 @@
             <sys_id>3e2c31064f6e3bc0d8a900818110c744</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -764,7 +764,7 @@
             <sys_id>b22c31064f6e3bc0d8a900818110c745</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -778,7 +778,7 @@
             <sys_id>3a2c31064f6e3bc0d8a900818110c745</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">617f16b14f9233c0b41f05818110c7c2</sys_ui_section>
             <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-11 11:34:38</sys_updated_on>
             <sys_user/>
@@ -787,7 +787,7 @@
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>
-            <name>x_caas_quality_service_call</name>
+            <name>soft4_service_call</name>
             <roles/>
             <sys_class_name>sys_ui_section</sys_class_name>
             <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
@@ -796,9 +796,9 @@
             <sys_domain_path/>
             <sys_id>617f16b14f9233c0b41f05818110c7c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>x_caas_quality_service_call</sys_name>
+            <sys_name>soft4_service_call</sys_name>
             <sys_overrides/>
-            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
             <sys_policy/>
             <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
             <sys_update_name>sys_ui_section_617f16b14f9233c0b41f05818110c7c2</sys_update_name>

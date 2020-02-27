@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Телефон" max_length="40" name="x_caas_quality_bq_tel" type="collection">
-        <element display="true" label="Контактный телефон" max_length="12" name="u_bq_tel" type="string"/>
-    </element>
-</database>

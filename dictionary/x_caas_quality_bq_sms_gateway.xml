@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="СМС Шлюз" max_length="40" name="x_caas_quality_bq_sms_gateway" type="collection">
-        <element label="Использовать шлюз Билайн" max_length="40" name="u_type_1" type="boolean"/>
-        <element label="Использовать шлюз SMS Traffic (тип 1)" max_length="40" name="u_type_2" type="boolean"/>
-        <element label="Использовать шлюз SMS Traffic (тип 2)" max_length="40" name="u_type_3" type="boolean"/>
-    </element>
-</database>

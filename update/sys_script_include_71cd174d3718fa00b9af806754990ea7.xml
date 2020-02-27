@@ -2,7 +2,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>public</access>
         <active>true</active>
-        <api_name>x_caas_quality.CheckArrivalTime</api_name>
+        <api_name>soft4.CheckArrivalTime</api_name>
         <client_callable>true</client_callable>
         <description/>
         <name>CheckArrivalTime</name>
@@ -28,7 +28,7 @@ CheckArrivalTime.prototype = Object.extendsObject(global.AbstractAjaxProcessor, 
         <sys_id>71cd174d3718fa00b9af806754990ea7</sys_id>
         <sys_mod_count>40</sys_mod_count>
         <sys_name>CheckArrivalTime</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_71cd174d3718fa00b9af806754990ea7</sys_update_name>

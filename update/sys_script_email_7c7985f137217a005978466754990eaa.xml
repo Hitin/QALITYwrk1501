@@ -20,14 +20,14 @@ if (current.u_alter_mail != '' && (current.u_bq_state == 'Решено' || curre
 	template.print('<span style="color: #FF0000;">Альтернативный E-mail: ' + current.u_alter_mail + '</span><br />');
 	// + current.u_loyalty + '<br />' + current.u_age + '<br />' + current.u_gender + '<br /></td></tr>');
 //template.print('<tr><td>Резюме обращения</td><td colspan = "3">' + current.u_bq_applicant_info.replaceAll('\n', '<br>') + '</td></tr>');
-template.print('<tr><td>Резюме обращения</td><td colspan = "3">' + new x_caas_quality.bqFunctions().replaceAll(current.u_bq_applicant_info, '\n', '<br>') + '</td></tr>');
+template.print('<tr><td>Резюме обращения</td><td colspan = "3">' + new soft4.bqFunctions().replaceAll(current.u_bq_applicant_info, '\n', '<br>') + '</td></tr>');
 template.print('<tr><td>Протокол</td><td colspan = "3">');
 var notes = current.u_bq_prot_list.getJournalEntry(-1); 
 var na = notes.split("\n\n");   
 var ind = 23;
 for (var i = 0; i < na.length; i++) {	
 	//na[i] = na[i].replaceAll('(Протокол (Для внутренней переписки))', '-');
-	na[i] = new x_caas_quality.bqFunctions().replaceAll(na[i], '(Протокол (Для внутренней переписки))', '-');
+	na[i] = new soft4.bqFunctions().replaceAll(na[i], '(Протокол (Для внутренней переписки))', '-');
 
 	//	if (i == 0 || na[i-1].indexOf('Содержание ответа для инициатора') == -1)
 	if (na[i].substring(0,2) == '20' && na[i].indexOf('-') == 4)
@@ -38,7 +38,7 @@ for (var i = 0; i < na.length; i++) {
 }    			  
 template.print('</td></tr>');
 
-	var scall = new GlideRecord ('x_caas_quality_service_call');
+	var scall = new GlideRecord ('soft4_service_call');
 	if (current.u_bq_topic == '387a67b76f05ea0010e00d55eb3ee4a0')
 		scall.get(current.u_reference_service_call);
 	else 
@@ -171,7 +171,7 @@ template.print('</table>');]]></script>
         <sys_id>7c7985f137217a005978466754990eaa</sys_id>
         <sys_mod_count>66</sys_mod_count>
         <sys_name>bq_info</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_email_7c7985f137217a005978466754990eaa</sys_update_name>

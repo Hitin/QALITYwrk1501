@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
         <active>false</active>
-        <conditions table="x_caas_quality_service_call">u_bq_danger=1482b6716f192e0032cc4a6aea3ee4f3^u_tp_fioISEMPTY^u_foISEMPTY^ORu_cfISEMPTY^ORu_bq_usercityISEMPTY^ORu_streetISEMPTY^ORu_houseISEMPTY^ORu_tt_nameISEMPTY^EQ<item display_table="x_caas_quality_bq_subtopic" display_value="Жалоба от ТТ на сотрудников службы продаж" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="false" value="1482b6716f192e0032cc4a6aea3ee4f3"/>
+        <conditions table="soft4_service_call">u_bq_danger=1482b6716f192e0032cc4a6aea3ee4f3^u_tp_fioISEMPTY^u_foISEMPTY^ORu_cfISEMPTY^ORu_bq_usercityISEMPTY^ORu_streetISEMPTY^ORu_houseISEMPTY^ORu_tt_nameISEMPTY^EQ<item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="false" value="1482b6716f192e0032cc4a6aea3ee4f3"/>
             <item endquery="false" field="u_tp_fio" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
             <item endquery="false" field="u_fo" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
             <item endquery="false" field="u_cf" goto="false" newquery="false" operator="ISEMPTY" or="true" value=""/>
@@ -38,13 +38,13 @@
         <sys_mod_count>6</sys_mod_count>
         <sys_name>bq_addressFields AddressAnnotaion</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_ui_policy_21cea70837e903405978466754990e66</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
         <sys_updated_on>2019-07-17 13:07:57</sys_updated_on>
-        <table>x_caas_quality_service_call</table>
+        <table>soft4_service_call</table>
         <ui_type>0</ui_type>
         <view display_value="hotline" name="hotline">hotline</view>
     </sys_ui_policy>

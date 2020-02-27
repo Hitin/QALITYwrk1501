@@ -6,7 +6,7 @@
         <advanced_condition/>
         <affected_field_on_event/>
         <category display_value="">bc62bbeddb60230002558e6868961936</category>
-        <collection>x_caas_quality_bq_role_assignment</collection>
+        <collection>soft4_bq_role_assignment</collection>
         <condition/>
         <content_type>text/html</content_type>
         <default_interval/>
@@ -64,7 +64,7 @@
         <sys_mod_count>16</sys_mod_count>
         <sys_name>EE_ bq_newmatrixArgee</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysevent_email_action_4f5a2a2f374c1300b9af806754990eb1</sys_update_name>

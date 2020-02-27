@@ -2,7 +2,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>public</access>
         <active>true</active>
-        <api_name>x_caas_quality.bq_toWork</api_name>
+        <api_name>soft4.bq_toWork</api_name>
         <client_callable>true</client_callable>
         <description/>
         <name>bq_toWork</name>
@@ -13,7 +13,7 @@ bq_toWork.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 			current.u_bq_state = 'Назначено ответственному';
 		} 
 		else {
-			var cityGR = new GlideRecord ('x_caas_quality_bq_city');
+			var cityGR = new GlideRecord ('soft4_bq_city');
 			if ((cityGR.get(current.u_bq_usercity) && cityGR.u_tree_level != '') || current.u_bq_usercity == ''){
 				var Topic = current.u_bq_topic;
 				var Danger = current.u_bq_danger;
@@ -27,7 +27,7 @@ bq_toWork.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
 				var AM;
 				//Проверка, есть ли хоть 1 запись в матрице по данной теме
-				AM = new GlideRecord ('x_caas_quality_bq_assign_matrix');
+				AM = new GlideRecord ('soft4_bq_assign_matrix');
 				AM.addQuery('u_bq_topic', Topic);
 				AM.addQuery('u_agree_list', '');
 				AM.addQuery('u_notify_list', '');
@@ -39,7 +39,7 @@ bq_toWork.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 				else {
 					//Поиск по заводам для темы Качество
 					if (Topic == '9fb910a46f62d20010e00d55eb3ee497'/* && current.u_bq_usergroup != ''*/){
-						AM = new GlideRecord ('x_caas_quality_bq_assign_matrix');
+						AM = new GlideRecord ('soft4_bq_assign_matrix');
 						AM.addQuery('u_agree_list', '');
 						AM.addQuery('u_notify_list', '');
 						AM.addQuery('u_bq_topic', Topic);
@@ -59,7 +59,7 @@ bq_toWork.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 					//поиск по тема - подтема - город и при необходимости цикличный перебор родительских локаций
 					while (current.u_bq_user == '' && lvl != -1 && r<10){
 						r++;
-						AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+						AM = new GlideRecord ('soft4_bq_assign_matrix'); 
 						AM.addQuery('u_agree_list', '');
 						AM.addQuery('u_notify_list', '');
 						AM.addQuery('u_bq_topic', Topic);
@@ -75,9 +75,9 @@ bq_toWork.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 						}
 						else if (lvl == 0) lvl = -1; 
 						else if (lvl > 0){
-							var loc = new GlideRecord ('x_caas_quality_bq_city');
+							var loc = new GlideRecord ('soft4_bq_city');
 							loc.get(location);
-							var newLoc = new GlideRecord ('x_caas_quality_bq_city');
+							var newLoc = new GlideRecord ('soft4_bq_city');
 							if (newLoc.get(loc.u_bq_parent)) {
 						//		gs.log('!!! '+  r + '-- ' + lvl + ' -- ' + loc.sys_id + '-- ' + newLoc.sys_id);
 								lvl = newLoc.u_tree_level;
@@ -91,7 +91,7 @@ bq_toWork.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 					}
 					//поиск по тема - подтема - без локации
 					if (current.u_bq_user == ''){
-						AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+						AM = new GlideRecord ('soft4_bq_assign_matrix'); 
 						AM.addQuery('u_agree_list', '');
 						AM.addQuery('u_notify_list', '');
 						AM.addQuery('u_bq_topic', Topic);
@@ -109,7 +109,7 @@ bq_toWork.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 					//поиск по тема - город и при необходимости цикличный перебор родительских локаций
 					while (current.u_bq_user == '' && lvl != -1 && r<10){
 						r++;
-						AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+						AM = new GlideRecord ('soft4_bq_assign_matrix'); 
 						AM.addQuery('u_agree_list', '');
 						AM.addQuery('u_notify_list', '');
 						AM.addQuery('u_bq_topic', Topic);
@@ -122,9 +122,9 @@ bq_toWork.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 						}
 						else if (lvl == 0) lvl = -1; 
 						else if (lvl > 0){
-							var loc = new GlideRecord ('x_caas_quality_bq_city');
+							var loc = new GlideRecord ('soft4_bq_city');
 							loc.get(location);
-							var newLoc = new GlideRecord ('x_caas_quality_bq_city');
+							var newLoc = new GlideRecord ('soft4_bq_city');
 							if (newLoc.get(loc.u_bq_parent)) {
 								lvl = newLoc.u_tree_level;
 								location = newLoc.sys_id;
@@ -137,7 +137,7 @@ bq_toWork.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 					}
 					//поиск по тема - без подтемы - без локации
 					if (current.u_bq_user == ''){
-						AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+						AM = new GlideRecord ('soft4_bq_assign_matrix'); 
 						AM.addQuery('u_agree_list', '');
 						AM.addQuery('u_notify_list', '');
 						AM.addQuery('u_bq_topic', Topic);
@@ -167,7 +167,7 @@ bq_toWork.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 				var Factory = current.u_bq_factory;
 				var RegionID = "";
 				if (CityID != ''){
-					var City  = new GlideRecord ('x_caas_quality_bq_city');
+					var City  = new GlideRecord ('soft4_bq_city');
 					City.addQuery('sys_id',CityID);
 					City.query();
 					if (City.next()){
@@ -177,14 +177,14 @@ bq_toWork.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 				var UserID = '-1';
 				current.u_bq_user ="";
 
-				var AMbyRegion1 = new GlideRecord ('x_caas_quality_bq_assign_matrix');
+				var AMbyRegion1 = new GlideRecord ('soft4_bq_assign_matrix');
 				AMbyRegion1.addQuery('u_bq_topic', Topic);
 				AMbyRegion1.addQuery('u_bq_usercity', RegionID);
-				var AMbyRegion2 = new GlideRecord ('x_caas_quality_bq_assign_matrix');
+				var AMbyRegion2 = new GlideRecord ('soft4_bq_assign_matrix');
 				AMbyRegion2.addQuery('u_bq_topic', Topic);
 				AMbyRegion2.addQuery('u_bq_usercity', RegionID);
 
-				var AM = new GlideRecord ('x_caas_quality_bq_assign_matrix');
+				var AM = new GlideRecord ('soft4_bq_assign_matrix');
 				AM.addQuery('u_bq_topic', Topic);
 				AM.orderByDesc('u_bq_factory');
 				AM.orderByDesc('u_bq_danger');
@@ -263,7 +263,7 @@ bq_toWork.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_id>c7ac129837e736005978466754990e10</sys_id>
         <sys_mod_count>11</sys_mod_count>
         <sys_name>bq_toWork</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_c7ac129837e736005978466754990e10</sys_update_name>

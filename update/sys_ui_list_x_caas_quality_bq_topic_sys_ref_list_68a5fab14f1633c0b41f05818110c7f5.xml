@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_list parent="" relationship="" sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="x_caas_quality_bq_topic" version="2" view="sys_ref_list">
+    <sys_ui_list parent="" relationship="" sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="soft4_bq_topic" version="2" view="sys_ref_list">
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>u_bq_name</element>
-            <list_id display_value="x_caas_quality_bq_topic" element="NULL" name="x_caas_quality_bq_topic" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="26fb0160db202300f6cf0032ba961964">68a5fab14f1633c0b41f05818110c7f5</list_id>
+            <list_id display_value="soft4_bq_topic" element="NULL" name="soft4_bq_topic" parent="NULL" relationship="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="26fb0160db202300f6cf0032ba961964">68a5fab14f1633c0b41f05818110c7f5</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -20,7 +20,7 @@
             <element/>
             <max_value>false</max_value>
             <min_value>false</min_value>
-            <name>x_caas_quality_bq_topic</name>
+            <name>soft4_bq_topic</name>
             <parent/>
             <position/>
             <relationship/>
@@ -32,8 +32,8 @@
             <sys_domain_path/>
             <sys_id>68a5fab14f1633c0b41f05818110c7f5</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>x_caas_quality_bq_topic</sys_name>
-            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_name>soft4_bq_topic</sys_name>
+            <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
             <sys_policy/>
             <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
             <sys_update_name>sys_ui_list_x_caas_quality_bq_topic_sys_ref_list_68a5fab14f1633c0b41f05818110c7f5</sys_update_name>

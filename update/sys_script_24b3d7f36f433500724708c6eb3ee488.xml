@@ -11,7 +11,7 @@
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>x_caas_quality_bq_group_role</collection>
+        <collection>soft4_bq_group_role</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
@@ -27,8 +27,8 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[gs.include("x_caas_quality.bq_RoleManager"); 
-var rm = new x_caas_quality.bq_RoleManager(); 
+        <script><![CDATA[gs.include("soft4.bq_RoleManager"); 
+var rm = new soft4.bq_RoleManager(); 
 rm.bq_deleteInheritedFromGroups(current);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>x-rubesdmi</sys_created_by>
@@ -39,7 +39,7 @@ rm.bq_deleteInheritedFromGroups(current);]]></script>
         <sys_mod_count>6</sys_mod_count>
         <sys_name>bq Group Role Deleted</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_24b3d7f36f433500724708c6eb3ee488</sys_update_name>

@@ -51,7 +51,7 @@ ctiArgs.cti_caller_type=sysparm_caller_type;
 //additional statements to accommodate any other incoming values needed
 	
 
-	var ctiEvaluator = new global.CTIEvaluator("new x_caas_quality.cti_bq_log_class().cti_bq_log_srv()", ctiArgs);
+	var ctiEvaluator = new global.CTIEvaluator("new soft4.cti_bq_log_class().cti_bq_log_srv()", ctiArgs);
     var result = ctiEvaluator.evaluate();
 	
 //	gs.log('New Sys_id :'+result);
@@ -59,7 +59,7 @@ ctiArgs.cti_caller_type=sysparm_caller_type;
             if (url == null) {
             //	url = "expert_shell.do?sysparm_sys_id=7be5a05e6fdb3500724708c6eb3ee44d&sysparm_initial=true&sysparm_view=";
 			//	url = "u_bq_call_log.do?sys_id="+callnum.sys_id;
-				url = "x_caas_quality_bq_call_log.do?sys_id="+result;
+				url = "soft4_bq_call_log.do?sys_id="+result;
             	if (fQuery != null)
             	   url += "&sysparm_query=" + fQuery;
             }
@@ -75,7 +75,7 @@ ctiArgs.cti_caller_type=sysparm_caller_type;
         <sys_mod_count>21</sys_mod_count>
         <sys_name>bq cti_bq_log</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_7a521a864f62b344b41f05818110c7f5</sys_update_name>

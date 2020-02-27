@@ -17,7 +17,7 @@
 
 
 	if (g_form.getValue('new_caller') == 'Yes' && g_form.getValue('caller') == ''){
-		var NewUser = new GlideRecord('x_caas_quality_bq_fio');
+		var NewUser = new GlideRecord('soft4_bq_fio');
 		NewUser.u_name =g_form.getValue('u_name');
 		NewUser.u_mname =g_form.getValue('u_mname');
 		NewUser.u_lname =g_form.getValue('u_lname');		
@@ -28,7 +28,7 @@
 		NewUser.u_age =g_form.getValue('u_age');
 		NewUser.u_description = 'Зарегистрирован новый пользователь: ' + g_form.getValue('u_name') + '. Контактные данные: тел. ' + g_form.getValue('u_tel') + ',почта ' + g_form.getValue('u_mail') + '. Дата регистрации: ' + g_form.nowDateTime();
 		NewUser.insert();
-		var NewUser2 = new GlideRecord('x_caas_quality_bq_fio');
+		var NewUser2 = new GlideRecord('soft4_bq_fio');
 			NewUser2.addQuery('u_description', NewUser.u_description);
 			NewUser2.query();
 				while (NewUser2.next()){
@@ -51,7 +51,7 @@
         <sys_mod_count>11</sys_mod_count>
         <sys_name>bq_Новый заявитель</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>expert_script_client_d3456bcf6fdf3500724708c6eb3ee496</sys_update_name>

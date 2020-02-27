@@ -14,7 +14,7 @@
         <run_type>periodically</run_type>
         <script><![CDATA[var assGr = '';
 var calls = [];
-var scall = new GlideRecord('x_caas_quality_service_call');
+var scall = new GlideRecord('soft4_service_call');
 scall.addQuery('u_bq_state', '!=', 'Закрыто');
 scall.addQuery('u_bq_topic', '46aa161f6f972200724708c6eb3ee4ea');
 scall.addQuery('u_bq_usergroup', '!=', '7301949337a722005978466754990e4f');
@@ -25,7 +25,7 @@ scall.query();
 while (scall.next()) {
 	if (assGr == '' || assGr != scall.u_bq_usergroup) {
 		assGr = scall.getValue('u_bq_usergroup');
-		gs.eventQueue('bq_notify_logistic_groups', scall, new x_caas_quality.bqFunctions().getLogUserByGroup(assGr), scall.getDisplayValue('u_bq_usergroup'));
+		gs.eventQueue('bq_notify_logistic_groups', scall, new soft4.bqFunctions().getLogUserByGroup(assGr), scall.getDisplayValue('u_bq_usergroup'));
 	} 
 }
 ]]></script>
@@ -35,7 +35,7 @@ while (scall.next()) {
         <sys_id>685ba0c237eedf00b9af806754990e85</sys_id>
         <sys_mod_count>14</sys_mod_count>
         <sys_name>bq_remind_logistic_groups_17:00</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysauto_script_685ba0c237eedf00b9af806754990e85</sys_update_name>

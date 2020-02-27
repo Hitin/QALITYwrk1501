@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_section caption="" section_id="c69326021bf33b009c961028bd4bcb7a" sys_domain="47409f2aa0671000fa2f197b22cada57" table="x_caas_quality_imp_users_dev2" version="3" view="">
+    <sys_ui_section caption="" section_id="c69326021bf33b009c961028bd4bcb7a" sys_domain="47409f2aa0671000fa2f197b22cada57" table="soft4_imp_users_dev2" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>template_import_log</element>
             <position>0</position>
@@ -8,7 +8,7 @@
             <sys_id>c29362421bf33b009c961028bd4bcb82</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_imp_users_dev2" sys_domain="47409f2aa0671000fa2f197b22cada57" view="Default view">c69326021bf33b009c961028bd4bcb7a</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_imp_users_dev2" sys_domain="47409f2aa0671000fa2f197b22cada57" view="Default view">c69326021bf33b009c961028bd4bcb7a</sys_ui_section>
             <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
             <sys_updated_on>2019-09-11 17:45:22</sys_updated_on>
             <sys_user/>
@@ -17,7 +17,7 @@
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>
-            <name>x_caas_quality_imp_users_dev2</name>
+            <name>soft4_imp_users_dev2</name>
             <roles/>
             <sys_class_name>sys_ui_section</sys_class_name>
             <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
@@ -26,9 +26,9 @@
             <sys_domain_path/>
             <sys_id>c69326021bf33b009c961028bd4bcb7a</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>x_caas_quality_imp_users_dev2</sys_name>
+            <sys_name>soft4_imp_users_dev2</sys_name>
             <sys_overrides/>
-            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
             <sys_policy/>
             <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
             <sys_update_name>sys_ui_section_c69326021bf33b009c961028bd4bcb7a</sys_update_name>

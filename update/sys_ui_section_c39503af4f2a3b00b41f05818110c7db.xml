@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_section caption="Ход работ" section_id="c39503af4f2a3b00b41f05818110c7db" sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="x_caas_quality_service_call" version="3" view="hotline2-old">
+    <sys_ui_section caption="Ход работ" section_id="c39503af4f2a3b00b41f05818110c7db" sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="soft4_service_call" version="3" view="hotline2-old">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_bq_contact_type</element>
             <position>0</position>
@@ -8,7 +8,7 @@
             <sys_id>47958be34f6a3b00b41f05818110c7cb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="Ход работ" display_value="Ход работ" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d4754fa34f6a3b00b41f05818110c79a">c39503af4f2a3b00b41f05818110c7db</sys_ui_section>
+            <sys_ui_section caption="Ход работ" display_value="Ход работ" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d4754fa34f6a3b00b41f05818110c79a">c39503af4f2a3b00b41f05818110c7db</sys_ui_section>
             <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-16 08:46:23</sys_updated_on>
             <sys_user/>
@@ -22,7 +22,7 @@
             <sys_id>cb958be34f6a3b00b41f05818110c7cb</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="Ход работ" display_value="Ход работ" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d4754fa34f6a3b00b41f05818110c79a">c39503af4f2a3b00b41f05818110c7db</sys_ui_section>
+            <sys_ui_section caption="Ход работ" display_value="Ход работ" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d4754fa34f6a3b00b41f05818110c79a">c39503af4f2a3b00b41f05818110c7db</sys_ui_section>
             <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-16 08:46:23</sys_updated_on>
             <sys_user/>
@@ -36,7 +36,7 @@
             <sys_id>c7958be34f6a3b00b41f05818110c7ca</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter display_value="Activities (filtered)">444ea5c6bf310100e628555b3f0739d6</sys_ui_formatter>
-            <sys_ui_section caption="Ход работ" display_value="Ход работ" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d4754fa34f6a3b00b41f05818110c79a">c39503af4f2a3b00b41f05818110c7db</sys_ui_section>
+            <sys_ui_section caption="Ход работ" display_value="Ход работ" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="d4754fa34f6a3b00b41f05818110c79a">c39503af4f2a3b00b41f05818110c7db</sys_ui_section>
             <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-16 08:46:23</sys_updated_on>
             <sys_user/>
@@ -45,7 +45,7 @@
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption>Ход работ</caption>
             <header>false</header>
-            <name>x_caas_quality_service_call</name>
+            <name>soft4_service_call</name>
             <roles/>
             <sys_class_name>sys_ui_section</sys_class_name>
             <sys_created_by>Leonid.Fedorovich@softline.com</sys_created_by>
@@ -56,7 +56,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Ход работ</sys_name>
             <sys_overrides/>
-            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
             <sys_policy/>
             <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
             <sys_update_name>sys_ui_section_c39503af4f2a3b00b41f05818110c7db</sys_update_name>

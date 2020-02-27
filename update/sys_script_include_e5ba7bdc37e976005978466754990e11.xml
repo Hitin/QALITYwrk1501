@@ -2,7 +2,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>public</access>
         <active>false</active>
-        <api_name>x_caas_quality.cti_bq_log_class</api_name>
+        <api_name>soft4.cti_bq_log_class</api_name>
         <client_callable>false</client_callable>
         <description/>
         <name>cti_bq_log_class</name>
@@ -17,7 +17,7 @@ cti_bq_log_class.prototype = {
 		gs.info('cti_task_id ' + cti_taskID);
 		gs.info('PA!!!2 ');
 		var phoneID = '-1';
-		var telAON = new GlideRecord ('x_caas_quality_bq_tel');
+		var telAON = new GlideRecord ('soft4_bq_tel');
 		telAON.addQuery('u_bq_tel', cti_caller_phone);
 		telAON.query();
 		while (telAON.next()){
@@ -25,7 +25,7 @@ cti_bq_log_class.prototype = {
 	//		gs.log('!!! '+ phoneID + this.phone);
 		}
 		if (phoneID == '-1'){
-			var telAON_new = new GlideRecord ('x_caas_quality_bq_tel');
+			var telAON_new = new GlideRecord ('soft4_bq_tel');
 			telAON_new.initialize();
 			telAON_new.u_bq_tel = cti_caller_phone;
 		//	phoneID = telAON_new.sys_id;
@@ -37,7 +37,7 @@ cti_bq_log_class.prototype = {
 		//gs.log('Full Name :'+this.phone);
 		//gs.log('Name :'+this.caller_type);
 		gs.info('PA2222 = ' + phoneID)
-		var callnum = new GlideRecord ('x_caas_quality_bq_call_log');
+		var callnum = new GlideRecord ('soft4_bq_call_log');
 		// callnum.newRecord();
  		callnum.initialize();
 		callnum.u_bq_operator = gs.getUserID();
@@ -57,7 +57,7 @@ cti_bq_log_class.prototype = {
         <sys_id>e5ba7bdc37e976005978466754990e11</sys_id>
         <sys_mod_count>63</sys_mod_count>
         <sys_name>cti_bq_log_class</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_e5ba7bdc37e976005978466754990e11</sys_update_name>

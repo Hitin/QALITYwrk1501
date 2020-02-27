@@ -2,7 +2,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>public</access>
         <active>true</active>
-        <api_name>x_caas_quality.bqAjax</api_name>
+        <api_name>soft4.bqAjax</api_name>
         <client_callable>true</client_callable>
         <description/>
         <name>bqAjax</name>
@@ -22,11 +22,11 @@ bqAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 	},
 	ttnCheck: function(){
 		var ttn = this.getParameter('sysparm_ttn');
-		var ttngr = new GlideRecord ('x_caas_quality_bq_invoices');
+		var ttngr = new GlideRecord ('soft4_bq_invoices');
 		var res = '';
 		var result = this.newItem("result");
 		if (ttngr.get(ttn) && ttngr.u_linked_to_sc){
-			var sc = new GlideRecord ('x_caas_quality_service_call');
+			var sc = new GlideRecord ('soft4_service_call');
 			sc.addQuery('u_bq_topic', '46aa161f6f972200724708c6eb3ee4ea'); //Проблемы доставки сетевым клиентам
 			sc.addQuery('u_bq_danger', '!=', '1a0704c43790ba00b9af806754990ebb'); //Жалоба на поведение приемщиков
 			sc.addQuery('u_ttn', ttngr.sys_id);
@@ -64,7 +64,7 @@ bqAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 		var top = this.getParameter('sysparm_top');
 		var sc_id = this.getParameter('sysparm_parent');
 		//var res = '';
-		var sc = new GlideRecord ('x_caas_quality_service_call');
+		var sc = new GlideRecord ('soft4_service_call');
 		sc.addQuery('sys_id', sc_id).addOrCondition('u_parent_by_ttn', sc_id);
 		sc.addQuery('u_bq_danger', top);
 		sc.query();
@@ -79,7 +79,7 @@ bqAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 		return res;
 	},
 // 	closeSites: function(){
-// 		var sc = new GlideRecord ('x_caas_quality_service_call');
+// 		var sc = new GlideRecord ('soft4_service_call');
 // 		sc.get(this.getParameter('sysparm_sc_id'));
 // 		var action = this.getParameter('sysparm_action');
 // 		sc.u_bq_state = 'Закрыто';
@@ -99,7 +99,7 @@ bqAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 		/****************************/
 	//	var res = '';
 		
-		var sub_n = new GlideRecord ('x_caas_quality_bq_subtopic');
+		var sub_n = new GlideRecord ('soft4_bq_subtopic');
 		sub_n.get(this.getParameter('sysparm_sub_n'));
 		var result = this.newItem("result");
 		//автозакрытие с ответом
@@ -125,7 +125,7 @@ bqAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 	},
 	getTTNFields: function(){
 		var result = this.newItem("result");
-		var ttnGR = new GlideRecord ('x_caas_quality_bq_invoices');
+		var ttnGR = new GlideRecord ('soft4_bq_invoices');
 		if (ttnGR.get(this.getParameter('sysparm_ttn_id'))){
 			result.setAttribute("ttnNum", ttnGR.u_ttn_number);
 			result.setAttribute("wh", ttnGR.u_wh_code.getDisplayValue());
@@ -134,12 +134,12 @@ bqAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 			
 	},
 	getParentTtn: function(){
-		var sc = new GlideRecord ('x_caas_quality_service_call');
+		var sc = new GlideRecord ('soft4_service_call');
 		sc.get(this.getParameter('sysparm_parent_id'));
 		return sc.u_ttn_number;
 	},
 	getSubtopic: function(){	
-		var sub = new GlideRecord ('x_caas_quality_bq_subtopic');
+		var sub = new GlideRecord ('soft4_bq_subtopic');
 		sub.addQuery('u_bq_topic', this.getParameter('sysparm_topic'));
 		sub.addQuery('sys_id','!=', '976a2ac937d4fa00b9af806754990e12');
 		sub.addQuery('sys_id','!=', '1a0704c43790ba00b9af806754990ebb');
@@ -177,13 +177,13 @@ bqAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 	},
 	isMemberOf: function(){
 		var user = this.getParameter('sysparm_user');
-		var gr = new GlideRecord ('x_caas_quality_bq_usergroup');
+		var gr = new GlideRecord ('soft4_bq_usergroup');
 		if (gr.get(this.getParameter('sysparm_group'))){
 			if (gr.u_bq_coors.indexOf(user) > -1){
 				return true;
 			}
 			else{
-				var grm = new GlideRecord ('x_caas_quality_bq_group_member');
+				var grm = new GlideRecord ('soft4_bq_group_member');
 				grm.addQuery('u_bq_group', gr.sys_id);
 				grm.addQuery('u_bq_user', user);
 				grm.setLimit(1);
@@ -200,9 +200,9 @@ bqAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 	getFoAndObl: function(){
 		var result = this.newItem("result");
 		
-		var city = new GlideRecord ('x_caas_quality_bq_city');
-		var obl = new GlideRecord ('x_caas_quality_bq_city');
-		//var obl = new GlideRecord ('x_caas_quality_bq_city');
+		var city = new GlideRecord ('soft4_bq_city');
+		var obl = new GlideRecord ('soft4_bq_city');
+		//var obl = new GlideRecord ('soft4_bq_city');
 		if (city.get(this.getParameter('sysparm_city_id'))){
 			if (city.u_tree_level == '4'){
 				result.setAttribute("obl", city.u_bq_parent );
@@ -224,7 +224,7 @@ bqAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_id>c6cb5e4437244700b9af806754990e56</sys_id>
         <sys_mod_count>74</sys_mod_count>
         <sys_name>bqAjax</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_c6cb5e4437244700b9af806754990e56</sys_update_name>

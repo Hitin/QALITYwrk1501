@@ -44,7 +44,7 @@ if(typeof window == 'undefined')
  runUpdate();
 
 function runUpdate(){
-var parent = new GlideRecord ('x_caas_quality_service_call');
+var parent = new GlideRecord ('soft4_service_call');
 var t = ''; 
 parent.addQuery('sys_id',current.u_reference_service_call);
 parent.query();
@@ -76,13 +76,13 @@ if (parent.next()){
         <sys_mod_count>36</sys_mod_count>
         <sys_name>Вернуть оператору</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_ui_action_709058186fb5624010e00d55eb3ee4b4</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
         <sys_updated_on>2019-08-30 10:40:22</sys_updated_on>
-        <table>x_caas_quality_service_call</table>
+        <table>soft4_service_call</table>
         <ui11_compatible>false</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
     </sys_ui_action>

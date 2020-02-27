@@ -3,11 +3,11 @@
         <active>true</active>
         <admin_overrides>true</admin_overrides>
         <advanced>false</advanced>
-        <condition table="x_caas_quality_bq_group_member">u_bq_groupSTARTSWITHДоставка^EQ<item endquery="false" field="u_bq_group" goto="false" newquery="false" operator="STARTSWITH" or="false" value="Доставка"/>
+        <condition table="soft4_bq_group_member">u_bq_groupSTARTSWITHДоставка^EQ<item endquery="false" field="u_bq_group" goto="false" newquery="false" operator="STARTSWITH" or="false" value="Доставка"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <description/>
-        <name>x_caas_quality_bq_group_member</name>
+        <name>soft4_bq_group_member</name>
         <operation display_value="read">read</operation>
         <script/>
         <sys_class_name>sys_security_acl</sys_class_name>
@@ -15,8 +15,8 @@
         <sys_created_on>2017-01-20 09:08:37</sys_created_on>
         <sys_id>2d8050373798be00b9af806754990eeb</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_caas_quality_bq_group_member</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_name>soft4_bq_group_member</sys_name>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_security_acl_2d8050373798be00b9af806754990eeb</sys_update_name>

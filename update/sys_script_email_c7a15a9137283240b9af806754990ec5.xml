@@ -29,7 +29,7 @@ if (current.u_bq_state != 'Закрыто' && current.u_log_country != 'BY') {
 	template.print('<tr><td colspan="3"><a href="mailto:ServiceDeskCEE@baltika.com?subject=Re: '+ current.number+' Назначение другого ответственного&body=Внимание: для назначения ответственного добавьте его почтовый адрес В КОПИЮ этого письма %0AУкажите текст для ответственного:">Назначить другого ответственного</a>' + ' - после перехода по ссылке «Назначить другого ответственного», необходимо добавить почтовый адрес нужного ответственного В КОПИЮ появившегося письма.</td></tr>');
 }
 for (var i = 0; i < chArr.length; i++){
-	var codes = new GlideRecord('x_caas_quality_bq_delivery_close_code');
+	var codes = new GlideRecord('soft4_bq_delivery_close_code');
 	if (chArr[i] == 'Возврат')
 		codes.addQuery('u_solution', chArr[i]).addOrCondition('u_solution', 'Частичный возврат');
 	else														  
@@ -85,7 +85,7 @@ template.print('</table>');
         <sys_id>c7a15a9137283240b9af806754990ec5</sys_id>
         <sys_mod_count>57</sys_mod_count>
         <sys_name>bq_log_service_calls_resolution_table</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_email_c7a15a9137283240b9af806754990ec5</sys_update_name>

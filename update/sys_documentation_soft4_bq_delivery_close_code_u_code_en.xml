@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_code" label="Код" language="en" table="x_caas_quality_bq_delivery_close_code">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_code</element>
+            <help/>
+            <hint/>
+            <label>Код</label>
+            <language>en</language>
+            <name>x_caas_quality_bq_delivery_close_code</name>
+            <plural>Кодs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-27 07:57:45</sys_created_on>
+            <sys_id>426e8208db53c810f1ff0726ca9619dd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Код</sys_name>
+            <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_documentation_soft4_bq_delivery_close_code_u_code_en</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-27 07:57:45</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

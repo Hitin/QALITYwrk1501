@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_section caption="" section_id="d8291b636f21624010e00d55eb3ee4c9" sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="x_caas_quality_service_call" version="3" view="subcategory_dialog">
+    <sys_ui_section caption="" section_id="d8291b636f21624010e00d55eb3ee4c9" sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="soft4_service_call" version="3" view="subcategory_dialog">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_bq_danger</element>
             <position>0</position>
@@ -8,7 +8,7 @@
             <sys_id>bbb86dd84f3e7740b41f05818110c726</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="cae1ddd04f767740b41f05818110c7fe">d8291b636f21624010e00d55eb3ee4c9</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="cae1ddd04f767740b41f05818110c7fe">d8291b636f21624010e00d55eb3ee4c9</sys_ui_section>
             <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-18 09:56:05</sys_updated_on>
             <sys_user/>
@@ -22,7 +22,7 @@
             <sys_id>f7b86dd84f3e7740b41f05818110c733</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="cae1ddd04f767740b41f05818110c7fe">d8291b636f21624010e00d55eb3ee4c9</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="cae1ddd04f767740b41f05818110c7fe">d8291b636f21624010e00d55eb3ee4c9</sys_ui_section>
             <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-18 09:56:05</sys_updated_on>
             <sys_user/>
@@ -36,7 +36,7 @@
             <sys_id>7fb86dd84f3e7740b41f05818110c733</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_caas_quality_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="cae1ddd04f767740b41f05818110c7fe">d8291b636f21624010e00d55eb3ee4c9</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="soft4_service_call" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="cae1ddd04f767740b41f05818110c7fe">d8291b636f21624010e00d55eb3ee4c9</sys_ui_section>
             <sys_updated_by>Leonid.Fedorovich@softline.com</sys_updated_by>
             <sys_updated_on>2019-07-18 09:56:05</sys_updated_on>
             <sys_user/>
@@ -45,7 +45,7 @@
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>
-            <name>x_caas_quality_service_call</name>
+            <name>soft4_service_call</name>
             <roles/>
             <sys_class_name>sys_ui_section</sys_class_name>
             <sys_created_by>x-ruvoyand</sys_created_by>
@@ -54,9 +54,9 @@
             <sys_domain_path/>
             <sys_id>d8291b636f21624010e00d55eb3ee4c9</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>x_caas_quality_service_call</sys_name>
+            <sys_name>soft4_service_call</sys_name>
             <sys_overrides/>
-            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
             <sys_policy/>
             <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
             <sys_update_name>sys_ui_section_d8291b636f21624010e00d55eb3ee4c9</sys_update_name>

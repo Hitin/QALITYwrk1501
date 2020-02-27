@@ -11,7 +11,7 @@
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>x_caas_quality_bq_group_role</collection>
+        <collection>soft4_bq_group_role</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
@@ -33,9 +33,9 @@ msgArray.push(current.u_bq_role.name + "");
 var msg = gs.getMessage("Роль: {0}, Для группы: {1}", msgArray);
 
 gs.addInfoMessage(msg);
-gs.include("x_caas_quality.bq_RoleManager");
+gs.include("soft4.bq_RoleManager");
 
-var rm = new x_caas_quality.bq_RoleManager(); 
+var rm = new soft4.bq_RoleManager(); 
 
 if (current.u_inherits.changesTo(true)) {
   rm.bq_addInheritedRoles(current);
@@ -55,7 +55,7 @@ if (current.u_inherits.changesTo(true)) {
         <sys_mod_count>5</sys_mod_count>
         <sys_name>bq Group Role Changed</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_3252dfb36f433500724708c6eb3ee45e</sys_update_name>

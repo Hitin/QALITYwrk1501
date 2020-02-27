@@ -4,8 +4,8 @@
         <admin_overrides>true</admin_overrides>
         <advanced>false</advanced>
         <condition/>
-        <description>Allow list_edit for records in x_caas_quality_bq_call_log, for users with role admin.</description>
-        <name>x_caas_quality_bq_call_log</name>
+        <description>Allow list_edit for records in soft4_bq_call_log, for users with role admin.</description>
+        <name>soft4_bq_call_log</name>
         <operation display_value="list_edit">54f535270a0a0b8c007c67009ab2bdc0</operation>
         <script/>
         <sys_class_name>sys_security_acl</sys_class_name>
@@ -13,8 +13,8 @@
         <sys_created_on>2016-08-05 09:02:02</sys_created_on>
         <sys_id>af8347e16f896a0010e00d55eb3ee4fb</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_name>x_caas_quality_bq_call_log</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_name>soft4_bq_call_log</sys_name>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_security_acl_af8347e16f896a0010e00d55eb3ee4fb</sys_update_name>

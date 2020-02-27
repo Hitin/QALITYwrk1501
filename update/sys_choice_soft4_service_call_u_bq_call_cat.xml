@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_bq_call_cat" table="soft4_service_call" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_bq_call_cat</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Не категорировано</label>
+            <language>en</language>
+            <name>soft4_service_call</name>
+            <sequence/>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-20 09:48:57</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path/>
+            <sys_id>177ad5574f027780b41f05818110c701</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-20 09:48:57</sys_updated_on>
+            <value>Не категорировано</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_bq_call_cat</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Благодарность</label>
+            <language>en</language>
+            <name>soft4_service_call</name>
+            <sequence>0</sequence>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-20 10:25:33</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path/>
+            <sys_id>dae2691f4f027780b41f05818110c79e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-20 10:25:33</sys_updated_on>
+            <value>Благодарность</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_bq_call_cat</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Благотворительность</label>
+            <language>en</language>
+            <name>soft4_service_call</name>
+            <sequence>1</sequence>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-20 10:25:52</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path/>
+            <sys_id>3403a51f4f027780b41f05818110c784</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-20 10:25:52</sys_updated_on>
+            <value>Благотворительность</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_bq_call_cat</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Вопрос</label>
+            <language>en</language>
+            <name>soft4_service_call</name>
+            <sequence>1</sequence>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-20 10:26:04</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path/>
+            <sys_id>c813e99f4f027780b41f05818110c71c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-20 10:26:04</sys_updated_on>
+            <value>Вопрос</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_bq_call_cat</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Нецелевые звонки. Ошибка</label>
+            <language>en</language>
+            <name>soft4_service_call</name>
+            <sequence>3</sequence>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-20 10:26:19</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path/>
+            <sys_id>ef132d1f4f027780b41f05818110c7d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-20 10:26:19</sys_updated_on>
+            <value>Нецелевые звонки. Ошибка</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_bq_call_cat</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Нецелевые звонки. Хулиганство</label>
+            <language>en</language>
+            <name>soft4_service_call</name>
+            <sequence>4</sequence>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-20 10:26:32</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path/>
+            <sys_id>3a23ed9f4f027780b41f05818110c732</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-20 10:26:32</sys_updated_on>
+            <value>Нецелевые звонки. Хулиганство</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_bq_call_cat</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Предложение</label>
+            <language>en</language>
+            <name>soft4_service_call</name>
+            <sequence>5</sequence>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-20 10:26:45</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path/>
+            <sys_id>f933ad1f4f027780b41f05818110c7c6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-20 10:26:45</sys_updated_on>
+            <value>Предложение</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_bq_call_cat</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Рекламация (претензия)</label>
+            <language>en</language>
+            <name>soft4_service_call</name>
+            <sequence>6</sequence>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-20 10:27:07</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path/>
+            <sys_id>41432d9f4f027780b41f05818110c7bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-20 10:27:07</sys_updated_on>
+            <value>Рекламация (претензия)</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_bq_call_cat</element>
+            <name>soft4_service_call</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-20 09:48:57</sys_created_on>
+            <sys_id>c3ff0e40db93c810f1ff0726ca96197a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_bq_call_cat</sys_name>
+            <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_choice_soft4_service_call_u_bq_call_cat</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-20 09:48:57</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

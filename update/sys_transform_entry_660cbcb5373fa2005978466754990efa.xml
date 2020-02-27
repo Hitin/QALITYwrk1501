@@ -14,21 +14,21 @@
 	return ""; // return the value to be put into the target field
 
 })(source);]]></source_script>
-        <source_table>x_caas_quality_invoices_import_table</source_table>
+        <source_table>soft4_invoices_import_table</source_table>
         <sys_class_name>sys_transform_entry</sys_class_name>
         <sys_created_by>x-ruVoyAnd</sys_created_by>
         <sys_created_on>2016-12-20 10:39:11</sys_created_on>
         <sys_id>660cbcb5373fa2005978466754990efa</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>u_код_покупателя</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_transform_entry_660cbcb5373fa2005978466754990efa</sys_update_name>
         <sys_updated_by>x-ruVoyAnd</sys_updated_by>
         <sys_updated_on>2016-12-20 10:39:11</sys_updated_on>
         <target_field>u_buyer_code</target_field>
-        <target_table>x_caas_quality_bq_invoices</target_table>
+        <target_table>soft4_bq_invoices</target_table>
         <use_source_script>false</use_source_script>
     </sys_transform_entry>
 </record_update>

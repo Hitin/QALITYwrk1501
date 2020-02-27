@@ -13,7 +13,7 @@
         <map_page/>
         <mobile_title>bq Group Roles</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
-        <name>x_caas_quality_bq_group_role</name>
+        <name>soft4_bq_group_role</name>
         <order/>
         <override_menu_roles>false</override_menu_roles>
         <query/>
@@ -28,7 +28,7 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_name>bq Group Roles</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_app_module_dd8306b84f4fbfc0b41f05818110c70c</sys_update_name>

@@ -159,7 +159,7 @@ function mainFunction(t,correction,date,isShort){
 		//Рост связан с подключением обращений с корпоративного сайта к общей схеме обработки.
 		
 		
-		var stat = new GlideRecord('x_caas_quality_bq_hotline_stats');
+		var stat = new GlideRecord('soft4_bq_hotline_stats');
 		stat.addQuery('u_top_inc', 1);
 		stat.addQuery('u_interval_type','m');
 		stat.addQuery('u_calculated_on', thisGT.getDate());
@@ -186,7 +186,7 @@ function mainFunction(t,correction,date,isShort){
 			template.print('не изменилось');
 	//	
 		
-		stat = new GlideRecord('x_caas_quality_bq_hotline_stats');
+		stat = new GlideRecord('soft4_bq_hotline_stats');
 		stat.addQuery('u_breached_qty', '>', 0);
 		stat.addQuery('u_interval_type','m');
 		stat.addQuery('u_calculated_on', thisGT.getDate());
@@ -218,7 +218,7 @@ function mainFunction(t,correction,date,isShort){
 			template.print('<span style="color: red;"><b>уменьшилась на ' + Math.abs(percAggr[8]).toFixed(2) + '%</b></span>');
 		else
 			template.print('не изменилась');
-		stat = new GlideRecord('x_caas_quality_bq_hotline_stats');
+		stat = new GlideRecord('soft4_bq_hotline_stats');
 		stat.addQuery('u_feedback_qty', '>', 0);
 		stat.addQuery('u_interval_type','m');
 		stat.addQuery('u_calculated_on', thisGT.getDate());
@@ -270,7 +270,7 @@ function mainFunction(t,correction,date,isShort){
 	template.print('</tr>');
 	
 	
-	var st = new GlideRecord('x_caas_quality_bq_hotline_stats');
+	var st = new GlideRecord('soft4_bq_hotline_stats');
 	st.addQuery('u_interval_type',t);
 	st.addQuery('u_calculated_on', thisGT.getDate());
 	st.addQuery('u_topic.u_inactive', false);
@@ -320,7 +320,7 @@ function mainFunction(t,correction,date,isShort){
 			template.print('<td>' + st.u_breached_qty + '</td>');
 		//7
 		if (!isShort){
-			var prev_st = new GlideRecord('x_caas_quality_bq_hotline_stats');
+			var prev_st = new GlideRecord('soft4_bq_hotline_stats');
 			prev_st.addQuery('u_interval_type',t);
 			prev_st.addQuery('u_calculated_on', lastGT.getDate());
 			prev_st.addQuery('u_topic', st.u_topic);
@@ -374,23 +374,23 @@ function mainFunction(t,correction,date,isShort){
 			var link = '<a href="' + gs.getProperty('glide.servlet.uri') ;
 			if (st.u_breached_sc != ''){			
 				arrSC = st.u_breached_sc.split(',');
-				var scall = new GlideRecord('x_caas_quality_service_call');
+				var scall = new GlideRecord('soft4_service_call');
 				if (arrSC.length < 10){
-					link += 'nav_to.do?uri=x_caas_quality_service_call.do?sys_id='; 
+					link += 'nav_to.do?uri=soft4_service_call.do?sys_id='; 
 					for (var j = 0; j < arrSC.length; j++){
 						if (scall.get(arrSC[j]))
 							template.print(link + scall.sys_id + '">' + scall.number + '</a><br>');
 					}
 				}
 				else{
-					link += 'x_caas_quality_service_call_list.do?sysparm_query=numberIN';
-					var scall = new GlideRecord('x_caas_quality_service_call');
+					link += 'soft4_service_call_list.do?sysparm_query=numberIN';
+					var scall = new GlideRecord('soft4_service_call');
 					for (var j = 0; j < arrSC.length; j++){
 						if (scall.get(arrSC[j]))
 							link += scall.number + ',';
 						if (j % 150 == 0 && j != 0){
 							template.print(link + '&sysparm_first_row=1&sysparm_view=">Список запросов</a><br>');
-							link = '<a href="' + gs.getProperty('glide.servlet.uri') + 'x_caas_quality_service_call_list.do?sysparm_query=numberIN';
+							link = '<a href="' + gs.getProperty('glide.servlet.uri') + 'soft4_service_call_list.do?sysparm_query=numberIN';
 						}
 					}
 					template.print(link + '&sysparm_first_row=1&sysparm_view=">Список запросов</a><br>');
@@ -532,7 +532,7 @@ function aggPrint(header, bgcolor, ar, type){
         <sys_id>6b32fa56379ad7005978466754990ea9</sys_id>
         <sys_mod_count>439</sys_mod_count>
         <sys_name>bq_hotline_report</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_email_6b32fa56379ad7005978466754990ea9</sys_update_name>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Direction member" max_length="40" name="soft4_bq_member_dir" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Direction" max_length="32" name="u_dir" reference="soft4_bq_direc" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" element_reference="true" label="Member" max_length="32" name="u_member" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="u_member"/>
+        </index>
+        <index name="index2">
+            <element name="u_dir"/>
+        </index>
+    </element>
+</database>

@@ -7,7 +7,7 @@
         <name>console</name>
         <record_for_rollback>false</record_for_rollback>
         <run_once>true</run_once>
-        <script><![CDATA[var current = new GlideRecord('x_caas_quality_service_call');
+        <script><![CDATA[var current = new GlideRecord('soft4_service_call');
 current.get('8e6aab6d1b537b009c961028bd4bcbb9');
 var txt = '';
 		txt = 'Заявка ' + current.u_bq_number + ' по ТТН ' + current.u_ttn_number + ' принята. ';
@@ -16,10 +16,10 @@ var txt = '';
 		//cTime.addSeconds(69600); cDay.addDaysUTC(1); //+11 hours 
 		cTime.addSeconds(46800); cDay.addDaysUTC(2); cTime.addDaysUTC(2);//+3 hours
 		//cTime.addSeconds(-7200); //-2 hours
-		//var isHoliday = new x_caas_quality.bqFunctions().isHoliday(cTime);
-		gs.info('holiday? ' + new x_caas_quality.bqFunctions().isHoliday(cTime));
+		//var isHoliday = new soft4.bqFunctions().isHoliday(cTime);
+		gs.info('holiday? ' + new soft4.bqFunctions().isHoliday(cTime));
 		gs.info('cTime =' + cTime);
-			if (new x_caas_quality.bqFunctions().isHoliday(cTime))
+			if (new soft4.bqFunctions().isHoliday(cTime))
 				var tMin = '08:00:00';
 			else 
 				var tMin = '06:00:00';
@@ -48,7 +48,7 @@ var txt = '';
 				} else if(cTime > ctMax) {
 					cTime.addDaysUTC(1);
 					gs.info('cTime+1 =' + cTime);				
-					if (new x_caas_quality.bqFunctions().isHoliday(cTime))
+					if (new soft4.bqFunctions().isHoliday(cTime))
 						txt += 'с 8:30 до 11:30. ';
 					else 
 						txt += 'с 6:30 до 9:30. ';
@@ -134,7 +134,7 @@ if( user.get('employee_number', u_employee_number)){
         <sys_id>b4f7d2414f873304b41f05818110c768</sys_id>
         <sys_mod_count>57</sys_mod_count>
         <sys_name>console</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_fix_b4f7d2414f873304b41f05818110c768</sys_update_name>

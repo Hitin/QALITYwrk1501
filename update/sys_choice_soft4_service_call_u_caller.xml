@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_caller" table="soft4_service_call" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_caller</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Взрослый</label>
+            <language>en</language>
+            <name>soft4_service_call</name>
+            <sequence/>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-21 06:08:01</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path/>
+            <sys_id>5091b5af4f82b780b41f05818110c7ea</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-21 06:08:01</sys_updated_on>
+            <value>Взрослый</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_caller</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Женщина</label>
+            <language>en</language>
+            <name>soft4_service_call</name>
+            <sequence/>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-21 06:08:14</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path/>
+            <sys_id>64a171af4f82b780b41f05818110c778</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-21 06:08:14</sys_updated_on>
+            <value>Женщина</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_caller</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Мужчина</label>
+            <language>en</language>
+            <name>soft4_service_call</name>
+            <sequence/>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-21 06:08:36</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path/>
+            <sys_id>98b139af4f82b780b41f05818110c7f7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-21 06:08:36</sys_updated_on>
+            <value>Мужчина</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_caller</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Подросток</label>
+            <language>en</language>
+            <name>soft4_service_call</name>
+            <sequence/>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-21 06:08:54</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path/>
+            <sys_id>16c1b9af4f82b780b41f05818110c76e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-21 06:08:54</sys_updated_on>
+            <value>Подросток</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_caller</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Пожилой</label>
+            <language>en</language>
+            <name>soft4_service_call</name>
+            <sequence/>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-21 06:09:17</sys_created_on>
+            <sys_domain>3ed34f2b4f808f00d8a900818110c72a</sys_domain>
+            <sys_domain_path/>
+            <sys_id>53d179af4f82b780b41f05818110c722</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-21 06:09:17</sys_updated_on>
+            <value>Пожилой</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_caller</element>
+            <name>soft4_service_call</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-06-21 06:08:01</sys_created_on>
+            <sys_id>3bff8e40db93c810f1ff0726ca961900</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_caller</sys_name>
+            <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_choice_soft4_service_call_u_caller</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-06-21 06:08:01</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_related sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="x_caas_quality_service_call" version="2" view="logistic">
+    <sys_ui_related sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="soft4_service_call" version="2" view="logistic">
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Обращение - Logistic" name="x_caas_quality_service_call" related_list="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">3dadacb3dbe33780074d83305b96192c</list_id>
+            <list_id display_value="Обращение - Logistic" name="soft4_service_call" related_list="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">3dadacb3dbe33780074d83305b96192c</list_id>
             <order_by/>
             <position>0</position>
             <related_list>REL:f55866314fd233c0b41f05818110c7cf</related_list>
@@ -16,7 +16,7 @@
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Обращение - Logistic" name="x_caas_quality_service_call" related_list="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">3dadacb3dbe33780074d83305b96192c</list_id>
+            <list_id display_value="Обращение - Logistic" name="soft4_service_call" related_list="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">3dadacb3dbe33780074d83305b96192c</list_id>
             <order_by/>
             <position>1</position>
             <related_list>REL:9e59aa714fd233c0b41f05818110c7d3</related_list>
@@ -30,7 +30,7 @@
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Обращение - Logistic" name="x_caas_quality_service_call" related_list="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">3dadacb3dbe33780074d83305b96192c</list_id>
+            <list_id display_value="Обращение - Logistic" name="soft4_service_call" related_list="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">3dadacb3dbe33780074d83305b96192c</list_id>
             <order_by/>
             <position>2</position>
             <related_list>REL:8e99ee714fd233c0b41f05818110c775</related_list>
@@ -44,7 +44,7 @@
         </sys_ui_related_list_entry>
         <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
             <filter/>
-            <list_id display_value="Обращение - Logistic" name="x_caas_quality_service_call" related_list="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">3dadacb3dbe33780074d83305b96192c</list_id>
+            <list_id display_value="Обращение - Logistic" name="soft4_service_call" related_list="NULL" sys_domain="3ed34f2b4f808f00d8a900818110c72a" view="ad7f16b14f9233c0b41f05818110c7bc">3dadacb3dbe33780074d83305b96192c</list_id>
             <order_by/>
             <position>3</position>
             <related_list>REL:ddc9a2b14fd233c0b41f05818110c79d</related_list>
@@ -59,7 +59,7 @@
         <sys_ui_related_list action="INSERT_OR_UPDATE">
             <calculated_name>Обращение - Logistic</calculated_name>
             <filter/>
-            <name>x_caas_quality_service_call</name>
+            <name>soft4_service_call</name>
             <order_by/>
             <position/>
             <related_list/>
@@ -71,7 +71,7 @@
             <sys_id>3dadacb3dbe33780074d83305b96192c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Обращение - Logistic</sys_name>
-            <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
             <sys_policy/>
             <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
             <sys_update_name>sys_ui_related_x_caas_quality_service_call_logistic_3dadacb3dbe33780074d83305b96192c</sys_update_name>

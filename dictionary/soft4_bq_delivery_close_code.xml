@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Доставка. Коды решений" max_length="40" name="soft4_bq_delivery_close_code" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Архивная" max_length="40" name="u_archive" type="boolean"/>
+        <element label="Код" max_length="40" name="u_code" type="string"/>
+        <element label="Комментарий" max_length="2000" name="u_comments" type="string"/>
+        <element display="true" label="Название" max_length="150" name="u_name" type="string"/>
+        <element choice="1" choice_field="u_bq_log_solution" label="Решение заявки" max_length="40" name="u_solution" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Частичный возврат" sequence="10" value="Частичный возврат"/>
+                <element inactive_on_update="false" label="Возврат" sequence="20" value="Возврат"/>
+            </choice>
+        </element>
+    </element>
+</database>

@@ -2,7 +2,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>public</access>
         <active>true</active>
-        <api_name>x_caas_quality.bqFunctions</api_name>
+        <api_name>soft4.bqFunctions</api_name>
         <client_callable>false</client_callable>
         <description>.</description>
         <name>bqFunctions</name>
@@ -85,7 +85,7 @@ bqFunctions.prototype = {
 		current.u_agree_list = '';
 		//Поиск по заводам для темы Качество
 		if (Topic == '9fb910a46f62d20010e00d55eb3ee497'/* && current.u_bq_usergroup != ''*/){
-			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix');
+			AM = new GlideRecord ('soft4_bq_assign_matrix');
 			AM.addQuery('u_agree_list', '!=', '');
 			AM.addQuery('u_bq_topic', Topic);
 			AM.addQuery('u_bq_danger', Danger).addOrCondition('u_bq_danger', '');
@@ -101,7 +101,7 @@ bqFunctions.prototype = {
 		//поиск по тема - подтема - город и при необходимости цикличный перебор родительских локаций
 		while (current.u_agree_list == '' && lvl != -1 && r<10){
 			r++;
-			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+			AM = new GlideRecord ('soft4_bq_assign_matrix'); 
 			AM.addQuery('u_agree_list', '!=', '');
 			AM.addQuery('u_bq_topic', Topic);
 			AM.addQuery('u_bq_danger', Danger);
@@ -112,9 +112,9 @@ bqFunctions.prototype = {
 			}
 			else if (lvl == 0) lvl = -1; 
 			else if (lvl > 0){
-				var loc = new GlideRecord ('x_caas_quality_bq_city');
+				var loc = new GlideRecord ('soft4_bq_city');
 				loc.get(location);
-				var newLoc = new GlideRecord ('x_caas_quality_bq_city');
+				var newLoc = new GlideRecord ('soft4_bq_city');
 				if (newLoc.get(loc.u_bq_parent)) {
 			//		gs.log('!!! '+  r + '-- ' + lvl + ' -- ' + loc.sys_id + '-- ' + newLoc.sys_id);
 					lvl = newLoc.u_tree_level;
@@ -129,7 +129,7 @@ bqFunctions.prototype = {
 			
 		//поиск по тема - подтема - без локации
 		if (current.u_agree_list == ''){
-			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+			AM = new GlideRecord ('soft4_bq_assign_matrix'); 
 			AM.addQuery('u_agree_list', '!=', '');
 			AM.addQuery('u_bq_topic', Topic);
 			AM.addQuery('u_bq_danger', Danger);
@@ -145,7 +145,7 @@ bqFunctions.prototype = {
 		//поиск по тема - город и при необходимости цикличный перебор родительских локаций
 		while (current.u_agree_list == '' && lvl != -1 && r<10){
 			r++;
-			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+			AM = new GlideRecord ('soft4_bq_assign_matrix'); 
 			AM.addQuery('u_agree_list', '!=', '');
 			AM.addQuery('u_bq_topic', Topic);
 			AM.addQuery('u_bq_danger', '');
@@ -156,9 +156,9 @@ bqFunctions.prototype = {
 			}
 			else if (lvl == 0) lvl = -1; 
 			else if (lvl > 0){
-				var loc = new GlideRecord ('x_caas_quality_bq_city');
+				var loc = new GlideRecord ('soft4_bq_city');
 				loc.get(location);
-				var newLoc = new GlideRecord ('x_caas_quality_bq_city');
+				var newLoc = new GlideRecord ('soft4_bq_city');
 				if (newLoc.get(loc.u_bq_parent)) {
 					lvl = newLoc.u_tree_level;
 					location = newLoc.sys_id;
@@ -171,7 +171,7 @@ bqFunctions.prototype = {
 		}
 		//поиск по тема - без подтемы - без локации
 		if (current.u_agree_list == ''){
-			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+			AM = new GlideRecord ('soft4_bq_assign_matrix'); 
 			AM.addQuery('u_agree_list', '!=', '');
 			AM.addQuery('u_bq_topic', Topic);
 			AM.addQuery('u_bq_danger', '');
@@ -191,7 +191,7 @@ bqFunctions.prototype = {
 		current.u_notify_list = '';
 		//Поиск по заводам для темы Качество
 		if (Topic == '9fb910a46f62d20010e00d55eb3ee497'/* && current.u_bq_usergroup != ''*/){
-			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix');
+			AM = new GlideRecord ('soft4_bq_assign_matrix');
 			AM.addQuery('u_notify_list', '!=', '');
 			AM.addQuery('u_bq_topic', Topic);
 			AM.addQuery('u_bq_danger', Danger).addOrCondition('u_bq_danger', '');
@@ -207,7 +207,7 @@ bqFunctions.prototype = {
 		//поиск по тема - подтема - город и при необходимости цикличный перебор родительских локаций
 		while (current.u_notify_list == '' && lvl != -1 && r<10){
 			r++;
-			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+			AM = new GlideRecord ('soft4_bq_assign_matrix'); 
 			AM.addQuery('u_notify_list', '!=', '');
 			AM.addQuery('u_bq_topic', Topic);
 			AM.addQuery('u_bq_danger', Danger);
@@ -218,9 +218,9 @@ bqFunctions.prototype = {
 			}
 			else if (lvl == 0) lvl = -1; 
 			else if (lvl > 0){
-				var loc = new GlideRecord ('x_caas_quality_bq_city');
+				var loc = new GlideRecord ('soft4_bq_city');
 				loc.get(location);
-				var newLoc = new GlideRecord ('x_caas_quality_bq_city');
+				var newLoc = new GlideRecord ('soft4_bq_city');
 				if (newLoc.get(loc.u_bq_parent)) {
 			//		gs.log('!!! '+  r + '-- ' + lvl + ' -- ' + loc.sys_id + '-- ' + newLoc.sys_id);
 					lvl = newLoc.u_tree_level;
@@ -235,7 +235,7 @@ bqFunctions.prototype = {
 			
 		//поиск по тема - подтема - без локации
 		if (current.u_notify_list == ''){
-			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+			AM = new GlideRecord ('soft4_bq_assign_matrix'); 
 			AM.addQuery('u_notify_list', '!=', '');
 			AM.addQuery('u_bq_topic', Topic);
 			AM.addQuery('u_bq_danger', Danger);
@@ -251,7 +251,7 @@ bqFunctions.prototype = {
 		//поиск по тема - город и при необходимости цикличный перебор родительских локаций
 		while (current.u_notify_list == '' && lvl != -1 && r<10){
 			r++;
-			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+			AM = new GlideRecord ('soft4_bq_assign_matrix'); 
 			AM.addQuery('u_notify_list', '!=', '');
 			AM.addQuery('u_bq_topic', Topic);
 			AM.addQuery('u_bq_danger', '');
@@ -262,9 +262,9 @@ bqFunctions.prototype = {
 			}
 			else if (lvl == 0) lvl = -1; 
 			else if (lvl > 0){
-				var loc = new GlideRecord ('x_caas_quality_bq_city');
+				var loc = new GlideRecord ('soft4_bq_city');
 				loc.get(location);
-				var newLoc = new GlideRecord ('x_caas_quality_bq_city');
+				var newLoc = new GlideRecord ('soft4_bq_city');
 				if (newLoc.get(loc.u_bq_parent)) {
 					lvl = newLoc.u_tree_level;
 					location = newLoc.sys_id;
@@ -277,7 +277,7 @@ bqFunctions.prototype = {
 		}
 		//поиск по тема - без подтемы - без локации
 		if (current.u_notify_list == ''){
-			AM = new GlideRecord ('x_caas_quality_bq_assign_matrix'); 
+			AM = new GlideRecord ('soft4_bq_assign_matrix'); 
 			AM.addQuery('u_notify_list', '!=', '');
 			AM.addQuery('u_bq_topic', Topic);
 			AM.addQuery('u_bq_danger', '');
@@ -296,8 +296,8 @@ bqFunctions.prototype = {
 		return output;
 	},
 	roleUpdate: function(searchRef,record,value,roleName,actionType){
-		var role = new GlideRecord ('x_caas_quality_bq_role_assignment');
-		var role1 = new GlideRecord ('x_caas_quality_bq_role_assignment');
+		var role = new GlideRecord ('soft4_bq_role_assignment');
+		var role1 = new GlideRecord ('soft4_bq_role_assignment');
 		if (actionType == 'delete'){
 			role.addQuery('u_matrix', record).addOrCondition('u_group', record).addOrCondition('u_kb_review', record);
 			role.addQuery('u_active', true);
@@ -321,7 +321,7 @@ bqFunctions.prototype = {
 					role.u_active = false;
 					role.update();
 					if (value != ''){
-						role1 = new GlideRecord ('x_caas_quality_bq_role_assignment');
+						role1 = new GlideRecord ('soft4_bq_role_assignment');
 						role1.initialize();
 						role1.u_role = roleName;
 						role1.u_matrix = record;
@@ -332,7 +332,7 @@ bqFunctions.prototype = {
 				}
 			}
 			else if (value != ''){
-				role1 = new GlideRecord ('x_caas_quality_bq_role_assignment');
+				role1 = new GlideRecord ('soft4_bq_role_assignment');
 				role1.initialize();
 				role1.u_role = roleName;
 				role1.u_matrix = record;
@@ -357,7 +357,7 @@ bqFunctions.prototype = {
 			if (str != ''){
 				for (var i = 0; i<arr.length; i++){
 				//	gs.log('av ' + arr.length + str + arr[i])
-					role = new GlideRecord ('x_caas_quality_bq_role_assignment');
+					role = new GlideRecord ('soft4_bq_role_assignment');
 					role.addQuery(searchRef, record);
 					role.addQuery('u_role', roleName);
 					role.addQuery('u_active', true);
@@ -369,7 +369,7 @@ bqFunctions.prototype = {
 						role.update();
 					}
 					else {
-						role1 = new GlideRecord ('x_caas_quality_bq_role_assignment');
+						role1 = new GlideRecord ('soft4_bq_role_assignment');
 						role1.initialize();
 						role1.u_role = roleName;
 						if (searchRef == 'u_matrix')
@@ -404,7 +404,7 @@ bqFunctions.prototype = {
 	},
 	getLogUserByGroup: function(group_id){
 		var resArr = [];
-		var usr = new GlideRecord ('x_caas_quality_bq_group_member');
+		var usr = new GlideRecord ('soft4_bq_group_member');
 		usr.addQuery('u_bq_group', group_id);
 		usr.query();
 		while (usr.next()){
@@ -421,7 +421,7 @@ bqFunctions.prototype = {
         <sys_id>496afba537c44b405978466754990ebc</sys_id>
         <sys_mod_count>47</sys_mod_count>
         <sys_name>bqFunctions</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_496afba537c44b405978466754990ebc</sys_update_name>

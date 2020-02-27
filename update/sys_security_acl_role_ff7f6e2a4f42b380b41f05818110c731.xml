@@ -5,15 +5,15 @@
         <sys_created_on>2019-06-18 08:04:26</sys_created_on>
         <sys_id>ff7f6e2a4f42b380b41f05818110c731</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_caas_quality_service_call.x_caas_quality.user</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_name>soft4_service_call.soft4.user</sys_name>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
-        <sys_security_acl display_value="x_caas_quality_service_call">377f2e2a4f42b380b41f05818110c7e1</sys_security_acl>
+        <sys_security_acl display_value="soft4_service_call">377f2e2a4f42b380b41f05818110c7e1</sys_security_acl>
         <sys_update_name>sys_security_acl_role_ff7f6e2a4f42b380b41f05818110c731</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
         <sys_updated_on>2019-06-18 08:04:26</sys_updated_on>
-        <sys_user_role display_value="x_caas_quality.user" name="x_caas_quality.user">43196e224f42b380b41f05818110c71e</sys_user_role>
+        <sys_user_role display_value="soft4.user" name="soft4.user">43196e224f42b380b41f05818110c71e</sys_user_role>
         <transaction_id/>
     </sys_security_acl_role>
 </record_update>

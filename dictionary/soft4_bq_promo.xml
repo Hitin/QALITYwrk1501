@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Акция" max_length="40" name="soft4_bq_promo" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Архивная" max_length="40" name="u_bq_arhive" type="boolean"/>
+        <element display="true" label="Название акции" max_length="32" name="u_bq_promo_name" type="string"/>
+    </element>
+</database>

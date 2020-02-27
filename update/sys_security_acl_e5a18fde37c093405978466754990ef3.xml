@@ -3,11 +3,11 @@
         <active>true</active>
         <admin_overrides>true</admin_overrides>
         <advanced>false</advanced>
-        <condition table="x_caas_quality_bq_usergroup">u_bq_grupnqmeSTARTSWITHДоставка^EQ<item endquery="false" field="u_bq_grupnqme" goto="false" newquery="false" operator="STARTSWITH" or="false" value="Доставка"/>
+        <condition table="soft4_bq_usergroup">u_bq_grupnqmeSTARTSWITHДоставка^EQ<item endquery="false" field="u_bq_grupnqme" goto="false" newquery="false" operator="STARTSWITH" or="false" value="Доставка"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
-        <description>Allow read for records in x_caas_quality_bq_usergroup, for users with role bq_delivery_auditor, and if the ACL condition (u_bq_grupnqmeSTARTSWITHДоставка^EQ) evaluates to true.</description>
-        <name>x_caas_quality_bq_usergroup</name>
+        <description>Allow read for records in soft4_bq_usergroup, for users with role bq_delivery_auditor, and if the ACL condition (u_bq_grupnqmeSTARTSWITHДоставка^EQ) evaluates to true.</description>
+        <name>soft4_bq_usergroup</name>
         <operation display_value="read">read</operation>
         <script/>
         <sys_class_name>sys_security_acl</sys_class_name>
@@ -15,8 +15,8 @@
         <sys_created_on>2018-02-05 12:19:25</sys_created_on>
         <sys_id>e5a18fde37c093405978466754990ef3</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_name>x_caas_quality_bq_usergroup</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_name>soft4_bq_usergroup</sys_name>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_security_acl_e5a18fde37c093405978466754990ef3</sys_update_name>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_дата_и_время_заказа_в_drp" label="Дата_и_время_заказа_в_DRP" language="en" table="x_caas_quality_invoices_import_table">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_дата_и_время_заказа_в_drp</element>
+            <help/>
+            <hint/>
+            <label>Дата_и_время_заказа_в_DRP</label>
+            <language>en</language>
+            <name>x_caas_quality_invoices_import_table</name>
+            <plural>Дата_и_время_заказа_в_DRPs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>Petr.Ablyazov@softline.com</sys_created_by>
+            <sys_created_on>2019-08-26 11:02:20</sys_created_on>
+            <sys_id>d6ed22b01be7f7409c961028bd4bcbb0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Дата_и_время_заказа_в_DRP</sys_name>
+            <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
+            <sys_update_name>sys_documentation_soft4_invoices_import_table_u_дата_и_время_заказа_в_drp_en</sys_update_name>
+            <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
+            <sys_updated_on>2019-08-26 11:02:20</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -11,11 +11,11 @@
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>x_caas_quality_service_call</collection>
+        <collection>soft4_service_call</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_caas_quality_service_call">u_bq_contact_type=Интернет-сайт^u_bq_stateCHANGESFROMЗакрыто^ORu_bq_stateCHANGESFROMРешено^u_alter_mailISNOTEMPTY^EQ<item endquery="false" field="u_bq_contact_type" goto="false" newquery="false" operator="=" or="false" value="Интернет-сайт"/>
+        <filter_condition table="soft4_service_call">u_bq_contact_type=Интернет-сайт^u_bq_stateCHANGESFROMЗакрыто^ORu_bq_stateCHANGESFROMРешено^u_alter_mailISNOTEMPTY^EQ<item endquery="false" field="u_bq_contact_type" goto="false" newquery="false" operator="=" or="false" value="Интернет-сайт"/>
             <item endquery="false" field="u_bq_state" goto="false" newquery="false" operator="CHANGESFROM" or="false" value="Закрыто"/>
             <item endquery="false" field="u_bq_state" goto="false" newquery="false" operator="CHANGESFROM" or="true" value="Решено"/>
             <item endquery="false" field="u_alter_mail" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
@@ -45,7 +45,7 @@
         <sys_mod_count>3</sys_mod_count>
         <sys_name>bq Replace e-mail initiator on alternat</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_36af7085dbf0a78062620e41ca9619fd</sys_update_name>

@@ -55,7 +55,7 @@
 		var confirmChild = true;
 		if (g_form.getValue('u_bq_topic') == '46aa161f6f972200724708c6eb3ee4ea' && g_form.getValue('u_multiple_solution')=='true'){
 			var parent = g_form.getDisplayBox('u_reference_service_call').value;
-			var ga = new GlideAjax('x_caas_quality.bqAjax');
+			var ga = new GlideAjax('soft4.bqAjax');
 			ga.addParam('sysparm_name', 'getParentTtn');
 			ga.addParam('sysparm_parent_id', g_form.getValue('u_reference_service_call'));
 			ga.getXMLWait(); 
@@ -113,7 +113,7 @@ function RunSC(){
 				addr = current.u_bq_usergroup.u_bq_coors;
 			else
 				addr = current.u_bq_user;
-			var rep = new x_caas_quality.bqFunctions().replaceAll(current.u_mail_history_txt, '\n', '<br>');
+			var rep = new soft4.bqFunctions().replaceAll(current.u_mail_history_txt, '\n', '<br>');
 			gs.eventQueue('bq_site_mail_from_caller_to_assignee', current, addr, rep);
 		//	gs.eventQueue('bq_site_mail_from_caller_to_assignee', current, addr, current.u_mail_history_txt.replaceAll('\n', '<br>'));
 
@@ -122,7 +122,7 @@ function RunSC(){
 			current.u_bq_state = 'Назначено ответственному';
 		} 
 		else {
-			var cityGR = new GlideRecord('x_caas_quality_bq_city');
+			var cityGR = new GlideRecord('soft4_bq_city');
 			if ((cityGR.get(current.u_bq_usercity) && cityGR.u_tree_level != '') || current.u_bq_usercity == ''){
 				var Topic = current.u_bq_topic;
 				var Danger = current.u_bq_danger;
@@ -136,7 +136,7 @@ function RunSC(){
 
 				var AM;
 				//Проверка, есть ли хоть 1 запись в матрице по данной теме
-				AM = new GlideRecord('x_caas_quality_bq_assign_matrix');
+				AM = new GlideRecord('soft4_bq_assign_matrix');
 				AM.addQuery('u_bq_topic', Topic);
 				AM.addQuery('u_agree_list', '');
 				AM.addQuery('u_notify_list', '');
@@ -148,7 +148,7 @@ function RunSC(){
 				else {
 					//Поиск по заводам для темы Качество
 					if (Topic == '9fb910a46f62d20010e00d55eb3ee497'/* && current.u_bq_usergroup != ''*/){
-						AM = new GlideRecord('x_caas_quality_bq_assign_matrix');
+						AM = new GlideRecord('soft4_bq_assign_matrix');
 						AM.addQuery('u_agree_list', '');
 						AM.addQuery('u_notify_list', '');
 						AM.addQuery('u_bq_topic', Topic);
@@ -168,7 +168,7 @@ function RunSC(){
 					//поиск по тема - подтема - город и при необходимости цикличный перебор родительских локаций
 					while (current.u_bq_user == '' && lvl != -1 && r<10){
 						r++;
-						AM = new GlideRecord('x_caas_quality_bq_assign_matrix'); 
+						AM = new GlideRecord('soft4_bq_assign_matrix'); 
 						AM.addQuery('u_agree_list', '');
 						AM.addQuery('u_notify_list', '');
 						AM.addQuery('u_bq_topic', Topic);
@@ -182,9 +182,9 @@ function RunSC(){
 						}
 						else if (lvl == 0) lvl = -1; 
 						else if (lvl > 0){
-							var loc = new GlideRecord('x_caas_quality_bq_city');
+							var loc = new GlideRecord('soft4_bq_city');
 							loc.get(location);
-							var newLoc = new GlideRecord('x_caas_quality_bq_city');
+							var newLoc = new GlideRecord('soft4_bq_city');
 							if (newLoc.get(loc.u_bq_parent)) {
 								lvl = newLoc.u_tree_level;
 								location = newLoc.sys_id;
@@ -197,7 +197,7 @@ function RunSC(){
 					}
 					//поиск по тема - подтема - без локации
 					if (current.u_bq_user == ''){
-						AM = new GlideRecord('x_caas_quality_bq_assign_matrix'); 
+						AM = new GlideRecord('soft4_bq_assign_matrix'); 
 						AM.addQuery('u_agree_list', '');
 						AM.addQuery('u_notify_list', '');
 						AM.addQuery('u_bq_topic', Topic);
@@ -215,7 +215,7 @@ function RunSC(){
 					//поиск по тема - город и при необходимости цикличный перебор родительских локаций
 					while (current.u_bq_user == '' && lvl != -1 && r<10){
 						r++;
-						AM = new GlideRecord('x_caas_quality_bq_assign_matrix'); 
+						AM = new GlideRecord('soft4_bq_assign_matrix'); 
 						AM.addQuery('u_agree_list', '');
 						AM.addQuery('u_notify_list', '');
 						AM.addQuery('u_bq_topic', Topic);
@@ -228,9 +228,9 @@ function RunSC(){
 						}
 						else if (lvl == 0) lvl = -1; 
 						else if (lvl > 0){
-							var loc = new GlideRecord('x_caas_quality_bq_city');
+							var loc = new GlideRecord('soft4_bq_city');
 							loc.get(location);
-							var newLoc = new GlideRecord('x_caas_quality_bq_city');
+							var newLoc = new GlideRecord('soft4_bq_city');
 							if (newLoc.get(loc.u_bq_parent)) {
 								lvl = newLoc.u_tree_level;
 								location = newLoc.sys_id;
@@ -243,7 +243,7 @@ function RunSC(){
 					}
 					//поиск по тема - без подтемы - без локации
 					if (current.u_bq_user == ''){
-						AM = new GlideRecord('x_caas_quality_bq_assign_matrix'); 
+						AM = new GlideRecord('soft4_bq_assign_matrix'); 
 						AM.addQuery('u_agree_list', '');
 						AM.addQuery('u_notify_list', '');
 						AM.addQuery('u_bq_topic', Topic);
@@ -270,7 +270,7 @@ function RunSC(){
 				var Factory = current.u_bq_factory;
 				var RegionID = "";
 				if (CityID != ''){
-					var City  = new GlideRecord('x_caas_quality_bq_city');
+					var City  = new GlideRecord('soft4_bq_city');
 					City.addQuery('sys_id',CityID);
 					City.query();
 					if (City.next()){
@@ -280,14 +280,14 @@ function RunSC(){
 				var UserID = '-1';
 				current.u_bq_user ="";
 
-				var AMbyRegion1 = new GlideRecord('x_caas_quality_bq_assign_matrix');
+				var AMbyRegion1 = new GlideRecord('soft4_bq_assign_matrix');
 				AMbyRegion1.addQuery('u_bq_topic', Topic);
 				AMbyRegion1.addQuery('u_bq_usercity', RegionID);
-				var AMbyRegion2 = new GlideRecord('x_caas_quality_bq_assign_matrix');
+				var AMbyRegion2 = new GlideRecord('soft4_bq_assign_matrix');
 				AMbyRegion2.addQuery('u_bq_topic', Topic);
 				AMbyRegion2.addQuery('u_bq_usercity', RegionID);
 
-				var AM = new GlideRecord('x_caas_quality_bq_assign_matrix');
+				var AM = new GlideRecord('soft4_bq_assign_matrix');
 				AM.addQuery('u_bq_topic', Topic);
 				AM.orderByDesc('u_bq_factory');
 				AM.orderByDesc('u_bq_danger');
@@ -373,13 +373,13 @@ function RunSC(){
         <sys_mod_count>170</sys_mod_count>
         <sys_name>На исполнение</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_ui_action_d6cb8e156f83710010e00d55eb3ee433</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
         <sys_updated_on>2019-09-04 10:28:42</sys_updated_on>
-        <table>x_caas_quality_service_call</table>
+        <table>soft4_service_call</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
     </sys_ui_action>

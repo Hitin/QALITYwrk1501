@@ -26,7 +26,7 @@
         <name>Зарегистрировать обращение</name>
         <onclick/>
         <order>100</order>
-        <script><![CDATA[var caller = new GlideRecord('x_caas_quality_bq_fio');
+        <script><![CDATA[var caller = new GlideRecord('soft4_bq_fio');
 caller.addQuery('sys_id', current.u_bq_fio);
 caller.query();
 
@@ -61,13 +61,13 @@ else {
         <sys_mod_count>9</sys_mod_count>
         <sys_name>Зарегистрировать обращение</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_ui_action_bd94a7456f80c200724708c6eb3ee470</sys_update_name>
         <sys_updated_by>x-ruVoyAnd</sys_updated_by>
         <sys_updated_on>2016-12-19 11:19:23</sys_updated_on>
-        <table>x_caas_quality_bq_call_log</table>
+        <table>soft4_bq_call_log</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
     </sys_ui_action>

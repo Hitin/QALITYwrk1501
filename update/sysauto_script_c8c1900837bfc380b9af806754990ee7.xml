@@ -12,7 +12,7 @@
         <run_start>2018-01-16 13:26:51</run_start>
         <run_time>1969-12-31 21:30:00</run_time>
         <run_type>daily</run_type>
-        <script><![CDATA[var groups = new GlideRecord('x_caas_quality_bq_usergroup');
+        <script><![CDATA[var groups = new GlideRecord('soft4_bq_usergroup');
 groups.addQuery('u_bq_grupnqme', 'STARTSWITH', 'Доставка.SV');
 groups.query();
 var grArr = [];
@@ -24,7 +24,7 @@ var beginDT = new GlideDateTime(endDT);
 beginDT.addDaysUTC(-1);
 
 for (var i = 0; i < grArr.length; i++){
-	var ttn = new GlideRecord('x_caas_quality_bq_invoices');
+	var ttn = new GlideRecord('soft4_bq_invoices');
 	ttn.addQuery('sys_created_on', '>=', beginDT);
 	ttn.addQuery('sys_created_on', '<', endDT);
 	ttn.addQuery('u_assignee', '!=', '');
@@ -35,13 +35,13 @@ for (var i = 0; i < grArr.length; i++){
 	while (ttn.next()){
 		if (assignee != ttn.u_assignee){
 			assignee = ttn.getValue('u_assignee');
-			var grM = new GlideRecord('x_caas_quality_bq_group_member');
+			var grM = new GlideRecord('soft4_bq_group_member');
 			grM.addQuery('u_bq_group', grArr[i]);
 			grM.addQuery('u_bq_user', ttn.u_assignee);
 			grM.setLimit(1);
 			grM.query();
 			if (!grM.hasNext()){
-				var grM1 = new GlideRecord('x_caas_quality_bq_group_member');
+				var grM1 = new GlideRecord('soft4_bq_group_member');
 				grM1.initialize();
 				grM1.u_bq_group = grArr[i];
 				grM1.u_bq_user = ttn.u_assignee;
@@ -58,7 +58,7 @@ for (var i = 0; i < grArr.length; i++){
         <sys_id>c8c1900837bfc380b9af806754990ee7</sys_id>
         <sys_mod_count>21</sys_mod_count>
         <sys_name>bq_Populate_BY_logistic_groups</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysauto_script_c8c1900837bfc380b9af806754990ee7</sys_update_name>

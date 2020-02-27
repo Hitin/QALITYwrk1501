@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Доставка. Накладные" max_length="40" name="soft4_bq_invoices" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Ответственный" max_length="32" name="u_assignee" reference="sys_user" type="reference"/>
+        <element label="Код покупателя" max_length="40" name="u_buyer_code" type="string"/>
+        <element label="Название покупателя" max_length="250" name="u_buyer_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Дата и время заказа клиента" max_length="40" name="u_client_order" type="glide_date_time"/>
+        <element label="Адрес доставки" max_length="200" name="u_delivery_address" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Город доставки" max_length="32" name="u_delivery_city" reference="soft4_bq_city" type="reference"/>
+        <element label="Код адреса доставки" max_length="40" name="u_delivery_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Расчетная дата доставки" max_length="40" name="u_delivery_date" type="glide_date"/>
+        <element label="Время доставки с" max_length="40" name="u_delivery_time_from" type="string"/>
+        <element label="Время доставки по" max_length="40" name="u_delivery_time_to" type="string"/>
+        <element label="Имя водителя" max_length="40" name="u_driver_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Дата и время заказа в DRP" max_length="40" name="u_drp_order" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Группа сетевых клиентов" max_length="32" name="u_group" reference="soft4_bq_usergroup" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Связана с обращением" max_length="40" name="u_linked_to_sc" type="boolean"/>
+        <element label="Mrp demand type" max_length="40" name="u_mrp_demand_type" type="string"/>
+        <element label="Номер заказа клиента" max_length="40" name="u_order_number" type="string"/>
+        <element label="Region Code" max_length="40" name="u_region_code" type="string"/>
+        <element display="true" label="Номер ТТН без преффикса" max_length="40" name="u_tth_short_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Дата ТТН" max_length="40" name="u_ttn_date" type="glide_date"/>
+        <element label="Номер ТТН" max_length="40" name="u_ttn_number" type="string"/>
+        <element attributes="ref_ac_columns_search=true,ref_ac_columns=u_code,ref_auto_completer=AJAXTableCompleter,edge_encryption_enabled=true" label="Код склада отправителя" max_length="32" name="u_wh_code" reference="soft4_bq_warehouses" type="reference"/>
+        <index name="index">
+            <element name="u_assignee"/>
+        </index>
+        <index name="index2">
+            <element name="u_group"/>
+        </index>
+        <index name="index3">
+            <element name="u_delivery_city"/>
+        </index>
+        <index name="index4">
+            <element name="u_wh_code"/>
+        </index>
+    </element>
+</database>

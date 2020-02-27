@@ -6,8 +6,8 @@
         <advanced_condition/>
         <affected_field_on_event/>
         <category display_value="">28627beddb60230002558e68689619e3</category>
-        <collection>x_caas_quality_service_call</collection>
-        <condition table="x_caas_quality_service_call">u_bq_contact_type=Monolit-Drive^u_multiple_solution=false^u_bq_stateCHANGESFROMЗакрыто^EQ<item endquery="false" field="u_bq_contact_type" goto="false" newquery="false" operator="=" or="false" value="Monolit-Drive"/>
+        <collection>soft4_service_call</collection>
+        <condition table="soft4_service_call">u_bq_contact_type=Monolit-Drive^u_multiple_solution=false^u_bq_stateCHANGESFROMЗакрыто^EQ<item endquery="false" field="u_bq_contact_type" goto="false" newquery="false" operator="=" or="false" value="Monolit-Drive"/>
             <item endquery="false" field="u_multiple_solution" goto="false" newquery="false" operator="=" or="false" value="false"/>
             <item endquery="false" field="u_bq_state" goto="false" newquery="false" operator="CHANGESFROM" or="false" value="Закрыто"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
@@ -68,7 +68,7 @@ ${mail_script:bq_getLastComment}
         <sys_mod_count>8</sys_mod_count>
         <sys_name>bq_log_ reopenToApp</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysevent_email_action_0af34d7537bb32405978466754990e7e</sys_update_name>

@@ -2,7 +2,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>public</access>
         <active>true</active>
-        <api_name>x_caas_quality.bq_getTTNgroup</api_name>
+        <api_name>soft4.bq_getTTNgroup</api_name>
         <client_callable>true</client_callable>
         <description/>
         <name>bq_getTTNgroup</name>
@@ -11,7 +11,7 @@ bq_getTTNgroup.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
     getTTNgroup: function(){
 		var num = 0;
 		var res = '';
-		var ttn = new GlideRecord ('x_caas_quality_bq_invoices');
+		var ttn = new GlideRecord ('soft4_bq_invoices');
 		if (ttn.get('sys_id', this.getParameter('sysparm_ttn'))){
 			return ttn.u_group.sys_id;
 		}
@@ -26,7 +26,7 @@ bq_getTTNgroup.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_id>001125d537317e00b9af806754990ec5</sys_id>
         <sys_mod_count>4</sys_mod_count>
         <sys_name>bq_getTTNgroup</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_001125d537317e00b9af806754990ec5</sys_update_name>

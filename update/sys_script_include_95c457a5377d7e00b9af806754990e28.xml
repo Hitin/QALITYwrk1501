@@ -2,7 +2,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>public</access>
         <active>false</active>
-        <api_name>x_caas_quality.cti_bq_class</api_name>
+        <api_name>soft4.cti_bq_class</api_name>
         <client_callable>false</client_callable>
         <description/>
         <name>cti_bq_class</name>
@@ -13,7 +13,7 @@ cti_bq_class.prototype = {
 	cti_bq_srv: function() {
 	//	gs.log('ctiargs phone :'+cti_caller_phone);
 		var phoneID = '-1';
-		var telAON = new GlideRecord ('x_caas_quality_bq_tel');
+		var telAON = new GlideRecord ('soft4_bq_tel');
 		telAON.addQuery('u_bq_tel', cti_caller_phone);
 		telAON.query();
 		while (telAON.next()){
@@ -21,7 +21,7 @@ cti_bq_class.prototype = {
 	//		gs.log('!!! '+ phoneID + this.phone);
 		}
 		if (phoneID == '-1'){
-			var telAON_new = new GlideRecord ('x_caas_quality_bq_tel');
+			var telAON_new = new GlideRecord ('soft4_bq_tel');
 			telAON_new.initialize();
 			telAON_new.u_bq_tel = cti_caller_phone;
 		//	phoneID = telAON_new.sys_id;
@@ -33,7 +33,7 @@ cti_bq_class.prototype = {
 		//gs.log('Full Name :'+this.phone);
 		//gs.log('Name :'+this.caller_type);
 
-		var callnum = new GlideRecord ('x_caas_quality_bq_call_log');
+		var callnum = new GlideRecord ('soft4_bq_call_log');
 		// callnum.newRecord();
  		callnum.initialize();
 		callnum.u_bq_operator = gs.getUserID();
@@ -53,7 +53,7 @@ cti_bq_class.prototype = {
         <sys_id>95c457a5377d7e00b9af806754990e28</sys_id>
         <sys_mod_count>5</sys_mod_count>
         <sys_name>cti_bq_class</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_95c457a5377d7e00b9af806754990e28</sys_update_name>

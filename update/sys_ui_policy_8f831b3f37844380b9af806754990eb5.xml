@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
         <active>true</active>
-        <conditions table="x_caas_quality_service_call">u_bq_danger=ccb06f876f91ee0032cc4a6aea3ee4ae^ORu_bq_danger=20a0eb876f91ee0032cc4a6aea3ee422^ORu_bq_danger=3c902b876f91ee0032cc4a6aea3ee4be^ORu_bq_danger=1cef5b476f91ee0032cc4a6aea3ee49d^ORu_bq_danger=f9cf97476f91ee0032cc4a6aea3ee4b4^ORu_bq_danger=6d80ab876f91ee0032cc4a6aea3ee4c3^ORu_bq_danger=2d5063876f91ee0032cc4a6aea3ee49d^ORu_bq_danger=a3ef9b476f91ee0032cc4a6aea3ee415^ORu_bq_danger=d2a9464bdb9f4b80c3712ded0b9619ed^ORu_bq_danger=f8c9864bdb9f4b80c3712ded0b961913^ORu_bq_danger=bc734a87db89c3002f89ffc41d9619e6^u_autoclose=false^EQ<item display_table="x_caas_quality_bq_subtopic" display_value="Недолив/ Недовложения (в упаковке отсутствует единица продукции)" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="false" value="ccb06f876f91ee0032cc4a6aea3ee4ae"/>
-            <item display_table="x_caas_quality_bq_subtopic" display_value="Дефект укупоривания" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="20a0eb876f91ee0032cc4a6aea3ee422"/>
-            <item display_table="x_caas_quality_bq_subtopic" display_value="Осадок/ мутность/ цвет" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="3c902b876f91ee0032cc4a6aea3ee4be"/>
-            <item display_table="x_caas_quality_bq_subtopic" display_value="Несоответствие внешнему виду" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="1cef5b476f91ee0032cc4a6aea3ee49d"/>
-            <item display_table="x_caas_quality_bq_subtopic" display_value="Несоответствие вкуса/ аромата" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="f9cf97476f91ee0032cc4a6aea3ee4b4"/>
-            <item display_table="x_caas_quality_bq_subtopic" display_value="Неопасные посторонние включения (бумага, резина, часть упаковки)" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="6d80ab876f91ee0032cc4a6aea3ee4c3"/>
-            <item display_table="x_caas_quality_bq_subtopic" display_value="Опасные посторонние включения (стекло, остр. предметы, фрагменты животных, химич. средства)" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="2d5063876f91ee0032cc4a6aea3ee49d"/>
-            <item display_table="x_caas_quality_bq_subtopic" display_value="Жалоба на предполагаемый вред жизни/здоровью/имуществу" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="a3ef9b476f91ee0032cc4a6aea3ee415"/>
-            <item display_table="x_caas_quality_bq_subtopic" display_value="Пенообразование" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="d2a9464bdb9f4b80c3712ded0b9619ed"/>
-            <item display_table="x_caas_quality_bq_subtopic" display_value="Коррозия" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="f8c9864bdb9f4b80c3712ded0b961913"/>
-            <item display_table="x_caas_quality_bq_subtopic" display_value="Травмы причиненные упаковкой (взрывы и т.д.)" endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="bc734a87db89c3002f89ffc41d9619e6"/>
+        <conditions table="soft4_service_call">u_bq_danger=ccb06f876f91ee0032cc4a6aea3ee4ae^ORu_bq_danger=20a0eb876f91ee0032cc4a6aea3ee422^ORu_bq_danger=3c902b876f91ee0032cc4a6aea3ee4be^ORu_bq_danger=1cef5b476f91ee0032cc4a6aea3ee49d^ORu_bq_danger=f9cf97476f91ee0032cc4a6aea3ee4b4^ORu_bq_danger=6d80ab876f91ee0032cc4a6aea3ee4c3^ORu_bq_danger=2d5063876f91ee0032cc4a6aea3ee49d^ORu_bq_danger=a3ef9b476f91ee0032cc4a6aea3ee415^ORu_bq_danger=d2a9464bdb9f4b80c3712ded0b9619ed^ORu_bq_danger=f8c9864bdb9f4b80c3712ded0b961913^ORu_bq_danger=bc734a87db89c3002f89ffc41d9619e6^u_autoclose=false^EQ<item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="false" value="ccb06f876f91ee0032cc4a6aea3ee4ae"/>
+            <item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="20a0eb876f91ee0032cc4a6aea3ee422"/>
+            <item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="3c902b876f91ee0032cc4a6aea3ee4be"/>
+            <item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="1cef5b476f91ee0032cc4a6aea3ee49d"/>
+            <item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="f9cf97476f91ee0032cc4a6aea3ee4b4"/>
+            <item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="6d80ab876f91ee0032cc4a6aea3ee4c3"/>
+            <item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="2d5063876f91ee0032cc4a6aea3ee49d"/>
+            <item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="a3ef9b476f91ee0032cc4a6aea3ee415"/>
+            <item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="d2a9464bdb9f4b80c3712ded0b9619ed"/>
+            <item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="f8c9864bdb9f4b80c3712ded0b961913"/>
+            <item endquery="false" field="u_bq_danger" goto="false" newquery="false" operator="=" or="true" value="bc734a87db89c3002f89ffc41d9619e6"/>
             <item endquery="false" field="u_autoclose" goto="false" newquery="false" operator="=" or="false" value="false"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </conditions>
@@ -42,13 +42,13 @@
         <sys_mod_count>4</sys_mod_count>
         <sys_name>bq_SKU Mandatory</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_ui_policy_8f831b3f37844380b9af806754990eb5</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
         <sys_updated_on>2019-07-17 13:09:59</sys_updated_on>
-        <table>x_caas_quality_service_call</table>
+        <table>soft4_service_call</table>
         <ui_type>0</ui_type>
         <view/>
     </sys_ui_policy>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
     <sys_number action="INSERT_OR_UPDATE">
-        <category display_value="" name="x_caas_quality_bq_corr_actions">x_caas_quality_bq_corr_actions</category>
+        <category display_value="" name="soft4_bq_corr_actions">soft4_bq_corr_actions</category>
         <maximum_digits>7</maximum_digits>
         <number>1</number>
         <prefix>COR</prefix>
@@ -10,7 +10,7 @@
         <sys_id>52a5963d375897005978466754990e56</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>COR</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_number_52a5963d375897005978466754990e56</sys_update_name>

@@ -2,7 +2,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>public</access>
         <active>true</active>
-        <api_name>x_caas_quality.bq_getParmFromCall</api_name>
+        <api_name>soft4.bq_getParmFromCall</api_name>
         <client_callable>true</client_callable>
         <description/>
         <name>bq_getParmFromCall</name>
@@ -14,7 +14,7 @@ bq_getParmFromCall.prototype = Object.extendsObject(global.AbstractAjaxProcessor
 		var id = this.newItem("id");
 		var fio = this.newItem("fio");
 		
-		var callnum = new GlideRecord ('x_caas_quality_bq_call_log');
+		var callnum = new GlideRecord ('soft4_bq_call_log');
 		var op = this.getParameter('sysparm_op');
 		var dt = new GlideDateTime();
 		dt.addSeconds(-1200);
@@ -41,7 +41,7 @@ bq_getParmFromCall.prototype = Object.extendsObject(global.AbstractAjaxProcessor
         <sys_id>f6548a9a379bf200b9af806754990e79</sys_id>
         <sys_mod_count>12</sys_mod_count>
         <sys_name>bq_getParmFromCall</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_f6548a9a379bf200b9af806754990e79</sys_update_name>

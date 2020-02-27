@@ -2,7 +2,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>public</access>
         <active>true</active>
-        <api_name>x_caas_quality.bq_getEmailDirect</api_name>
+        <api_name>soft4.bq_getEmailDirect</api_name>
         <client_callable>false</client_callable>
         <description/>
         <name>bq_getEmailDirect</name>
@@ -32,7 +32,7 @@ bq_getEmailDirect.prototype = {
         <sys_id>dea44d413736fe80b9af806754990e36</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_name>bq_getEmailDirect</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_dea44d413736fe80b9af806754990e36</sys_update_name>

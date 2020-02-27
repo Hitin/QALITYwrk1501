@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="task" label="Обращение" max_length="40" name="soft4_service_call" type="collection">
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="2" label="Bq fio" max_length="40" name="bq_fio" type="choice">
+            <choice/>
+        </element>
+        <element audit="true" label="Акцент" max_length="40" name="u_accent" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Возраст" max_length="40" name="u_age" type="integer"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true,edge_encryption_enabled=true" audit="true" label="Список согласующих" max_length="4000" name="u_agree_list" reference="sys_user" type="glide_list"/>
+        <element audit="true" label="Альтернативный e-mail" max_length="40" name="u_alter_mail" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Автоответ отправлен" max_length="40" name="u_answer_sent" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Время прибытия на точку местное" max_length="40" name="u_arrival_time" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Время прибытия на точку московское" max_length="40" name="u_arrival_time_loc" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Автозакрытие" max_length="40" name="u_autoclose" type="boolean"/>
+        <element audit="true" label="Населенный пункт/доп информация" max_length="100" name="u_bq_add_location" type="string"/>
+        <element audit="true" label="Адрес торговой точки" max_length="200" name="u_bq_adress_tt" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Требуется согласовать с КОРКОМ / Охраной труда" max_length="40" name="u_bq_agreed" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Номер АОН" max_length="32" name="u_bq_aon_number" reference="soft4_bq_tel" type="reference"/>
+        <element attributes="no_audit, ref_contributions=user_show_service_call" audit="true" default="Аноним" label="ФИО" max_length="32" name="u_bq_applicant" type="string"/>
+        <element audit="true" label="Резюме обращения" max_length="4000" name="u_bq_applicant_info" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Группа согласующих" max_length="32" name="u_bq_approve_group" reference="soft4_bq_usergroup" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Просрочено назначение группе" max_length="40" name="u_bq_assign_group" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Просрочено назначение ответственному" max_length="40" name="u_bq_assign_user" type="boolean"/>
+        <element audit="true" label="Номер машины" max_length="40" name="u_bq_auto" type="string"/>
+        <element audit="true" label="Номер линии розлива" max_length="40" name="u_bq_bottling_line" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Бренд" max_length="32" name="u_bq_brand" reference="soft4_bq_brand" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Город покупки" max_length="32" name="u_bq_buycity" reference="soft4_bq_city" type="reference"/>
+        <element audit="true" label="Дата покупки" max_length="40" name="u_bq_buydate" type="string"/>
+        <element audit="true" label="Место покупки" max_length="40" name="u_bq_buy_location" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="3" default="Не категорировано" label="Категория обращения" max_length="40" name="u_bq_call_cat" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Не категорировано" value="Не категорировано"/>
+                <element inactive_on_update="false" label="Благодарность" sequence="0" value="Благодарность"/>
+                <element inactive_on_update="false" label="Благотворительность" sequence="1" value="Благотворительность"/>
+                <element inactive_on_update="false" label="Вопрос" sequence="1" value="Вопрос"/>
+                <element inactive_on_update="false" label="Нецелевые звонки. Ошибка" sequence="3" value="Нецелевые звонки. Ошибка"/>
+                <element inactive_on_update="false" label="Нецелевые звонки. Хулиганство" sequence="4" value="Нецелевые звонки. Хулиганство"/>
+                <element inactive_on_update="false" label="Предложение" sequence="5" value="Предложение"/>
+                <element inactive_on_update="false" label="Рекламация (претензия)" sequence="6" value="Рекламация (претензия)"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" audit="true" default="0" label="Счетчик переназначений" max_length="40" name="u_bq_changecount" read_only="true" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Решено сотрудником" max_length="32" name="u_bq_closed_by" reference="sys_user" type="reference"/>
+        <element audit="true" choice="1" label="Причина закрытия" max_length="40" name="u_bq_close_reason" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Не работает приемка" value="Не работает приемка"/>
+                <element inactive_on_update="false" label="Не существует-ремонт" value="Не существует-ремонт"/>
+            </choice>
+        </element>
+        <element audit="true" label="Контактные телефоны" max_length="100" name="u_bq_contact_phone" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="1" label="Канал поступления" max_length="40" name="u_bq_contact_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="miniCRM" value="miniCRM"/>
+                <element inactive_on_update="false" label="Monolit-Drive" value="Monolit-Drive"/>
+                <element inactive_on_update="false" label="Внутренние обращения" value="Внутренние обращения"/>
+                <element inactive_on_update="false" label="Звонок (Горячая линия Логистика)" value="Звонок (Горячая линия Логистика)"/>
+                <element inactive_on_update="false" label="Звонок (Горячая линия)" value="Звонок"/>
+                <element inactive_on_update="false" label="Интернет-сайт" value="Интернет-сайт"/>
+                <element inactive_on_update="false" label="Курьерская/Почтовая доставка" value="Курьерская/Почтовая доставка"/>
+                <element inactive_on_update="false" label="Мобильное приложение" value="Мобильное приложение"/>
+                <element inactive_on_update="false" label="По факту телефонного разговора" value="По факту телефонного разговора"/>
+                <element inactive_on_update="false" label="СМС-сообщение" value="СМС-сообщение"/>
+                <element inactive_on_update="false" label="Электронная почта" value="e-mail"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Дата регистрации" max_length="40" name="u_bq_created_on" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Звонок" max_length="32" name="u_bq_ctiid" reference="soft4_bq_call_log" type="reference"/>
+        <element attributes="ref_qual_elements=u_bq_topic,ref_sequence=u_bq_order,edge_encryption_enabled=true" audit="true" choice="1" label="Подтема" mandatory="true" max_length="32" name="u_bq_danger" reference="soft4_bq_subtopic" reference_qual="javascript:'u_inactive=false^u_bq_topic=' + current.u_bq_topic +'^sys_id!=a1474c4c3750ba00b9af806754990e3a';" type="reference" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Ответственная дирекция" max_length="32" name="u_bq_dir" reference="soft4_bq_direc" type="reference"/>
+        <element audit="true" label="Адрес ДТП" max_length="40" name="u_bq_dtp_addr" type="string"/>
+        <element audit="true" label="Номер машины" max_length="40" name="u_bq_dtp_auto" type="string"/>
+        <element audit="true" label="Время ДТП" max_length="40" name="u_bq_dtp_time" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Аварийное завершение звонка" max_length="40" name="u_bq_end_call" read_only="true" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" dynamic_creation="true" dynamic_creation_script="current.u_bq_value = value;&#13;&#10;current.insert();" label="Причины ошибок в выборе темы" max_length="32" name="u_bq_error_reason" reference="soft4_bq_error_reason" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="1" label="Запись на экскурсию" max_length="40" name="u_bq_excursion" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Информация об экскурсии" sequence="1" value="Информация об экскурсии"/>
+                <element inactive_on_update="false" label="Запись на экскурсию оператором" sequence="2" value="Запись на экскурсию оператором"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Город Экскурсии" max_length="32" name="u_bq_excursion_city" reference="soft4_bq_city" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Вы готовы ее передать на экспертизу?" max_length="40" name="u_bq_expertise" type="boolean"/>
+        <element audit="true" label="Годен до" max_length="40" name="u_bq_exp_date" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="1" label="Буквенный код\ завод произв." max_length="32" name="u_bq_factory" reference="soft4_bq_factory" reference_qual="u_bq_factoryANYTHING^EQ" reference_qual_condition="u_bq_factoryANYTHING^EQ" type="reference">
+            <choice/>
+        </element>
+        <element audit="true" label="Компания Инициатора" max_length="140" name="u_bq_inc_company" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Просрочено В работе" max_length="40" name="u_bq_inwork" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="1" choice_field="category" choice_table="kb_knowledge" label="Категория БЗ v2" max_length="40" name="u_bq_kb_category" type="choice">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Категория БЗ" max_length="32" name="u_bq_kb_category_v3" reference="kb_category" reference_qual="javascript: new global.KnowledgeRefQualifiers().getRefQualCategoryIdsForKB('b93f8c7137bae2401c0712c543990ed2');" type="reference" use_reference_qualifier="advanced"/>
+        <element audit="true" label="Тема статьи БЗ" max_length="100" name="u_bq_kb_short_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="1" choice_field="topic" choice_table="kb_knowledge" default="Балтика (ГЛ)" label="Раздел БЗ" max_length="40" name="u_bq_kb_topic" read_only="true" type="choice">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Добавить в Базу знаний" max_length="40" name="u_bq_knowledge" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Причина" max_length="32" name="u_bq_log_reason" reference="soft4_bq_delivery_close_code" reference_qual="javascript:get_log_code()" type="reference" use_reference_qualifier="advanced"/>
+        <element audit="true" choice="1" label="Решение заявки" max_length="40" name="u_bq_log_solution" type="string">
+            <choice>
+                <element dependent_value="RUS" inactive="true" inactive_on_update="true" label="Приемка" sequence="0" value="Приемка"/>
+                <element dependent_value="BY" inactive_on_update="false" label="Приемка" sequence="1" value="Приемка"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Транспорт" sequence="1" value="Приемка. Транспорт"/>
+                <element dependent_value="BY" inactive="true" inactive_on_update="true" label="Частичный возврат" sequence="1" value="Частичный возврат"/>
+                <element dependent_value="BY" inactive="true" inactive_on_update="true" label="Возврат" sequence="2" value="Возврат"/>
+                <element dependent_value="RUS" inactive="true" inactive_on_update="true" label="Приемка. Логистика. Завал паллет (перепаллетка с выездом)" sequence="3" value="Приемка. Логистика. Завал паллет (перепаллетка с выездом)"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Склад" sequence="4" value="Приемка. Склад"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Производство" sequence="5" value="Приемка. Производство"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Служба продаж" sequence="6" value="Приемка. Служба продаж"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. IT" sequence="7" value="Приемка. IT"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Back-Office" sequence="8" value="Приемка. Back-Office"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Приемка. Логистика. Завал паллет (перепаллетка с выездом)" sequence="9" value="Приемка. Логистика. Завал паллет (перепаллетка с выездом)"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Вывоз пустых кег согласован" sequence="10" value="Вывоз пустых кег согласован"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Частичный возврат" sequence="10" value="Частичный возврат"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Возврат" sequence="11" value="Возврат"/>
+                <element dependent_value="RUS" inactive_on_update="false" label="Вывоз пустых кег НЕ согласован" sequence="11" value="Вывоз пустых кег НЕ согласован"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" audit="true" default="0" label="Счетчик обратной связи" max_length="40" name="u_bq_mail_count" read_only="true" type="integer"/>
+        <element audit="true" label="Дата розлива" max_length="40" name="u_bq_make_data" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Вы хотите встретиться с нашим представителем?" max_length="40" name="u_bq_meet" type="boolean"/>
+        <element audit="true" label="Адрес" max_length="40" name="u_bq_meet_address" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Город встречи" max_length="32" name="u_bq_meet_city" reference="soft4_bq_city" reference_qual="u_bq_parentISNOTEMPTY^EQ" reference_qual_condition="u_bq_parentISNOTEMPTY^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Индекс" max_length="40" name="u_bq_meet_index" type="integer"/>
+        <element audit="true" label="Результаты встречи" max_length="4000" name="u_bq_meet_result" type="journal"/>
+        <element audit="true" label="Принятые меры" max_length="4000" name="u_bq_meri" type="journal"/>
+        <element audit="true" choice="1" label="Есть ли возможность отправить фото паллета одним из перечисленных способов?" max_length="40" name="u_bq_messagers" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Нет возможности" sequence="1" value="Нет возможности"/>
+                <element inactive_on_update="false" label="WhatsApp" sequence="2" value="WhatsApp"/>
+                <element inactive_on_update="false" label="Telegram" sequence="3" value="Telegram"/>
+                <element inactive_on_update="false" label="Viber" sequence="4" value="Viber"/>
+                <element inactive_on_update="false" label="Эл. Почта" sequence="5" value="Эл. Почта"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Новый заявитель" max_length="40" name="u_bq_newuser" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Отказался от оценки" max_length="40" name="u_bq_no_satisfaction" type="boolean"/>
+        <element audit="true" label="Номер обращения" max_length="40" name="u_bq_number" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="1" default="no" label="Есть ли заказы на другие адреса в автомобиле?" max_length="40" name="u_bq_other_orders_s" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="ДА" value="yes"/>
+                <element inactive_on_update="false" label="НЕТ" value="no"/>
+            </choice>
+        </element>
+        <element audit="true" label="Другая акция" max_length="40" name="u_bq_other_promo" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="1" label="Какая вакансия вас интересует?" max_length="40" name="u_bq_praktika_quoter" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Другая" sequence="100" value="Другая"/>
+                <element inactive_on_update="false" label="Прохождение практики" sequence="200" value="Прохождение практики"/>
+                <element inactive_on_update="false" label="Торговый представитель" sequence="300" value="Торговый представитель"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Дата производства с упаковки" max_length="40" name="u_bq_prod_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="1" default="fa0299d8378076005978466754990e15" label="Акции" max_length="32" name="u_bq_promo_new" reference="soft4_bq_promo" reference_qual="u_bq_arhive=false^EQ" reference_qual_condition="u_bq_arhive=false^EQ" type="reference">
+            <choice/>
+        </element>
+        <element audit="true" label="Протокол (Для внутренней переписки)" max_length="4000" name="u_bq_prot" type="journal"/>
+        <element audit="true" label="Протокол (Для внутренней переписки)" max_length="4000" name="u_bq_prot_input" type="journal_input"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" dependent="u_bq_prot_input" dependent_on_field="u_bq_prot_input" label="Протокол (Для внутренней переписки)" max_length="4000" name="u_bq_prot_list" type="journal_list" use_dependent_field="true"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Счетчик переоткрытий" max_length="40" name="u_bq_reopen_count" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Дата Решения" max_length="40" name="u_bq_resolved_on" type="glide_date_time"/>
+        <element attributes="knowledge_search=true,edge_encryption_enabled=true" audit="true" label="Содержание ответа для инциатора" max_length="8000" name="u_bq_resptext" type="html"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" default="0" label="Счетчик возвратов на ГЛ" max_length="40" name="u_bq_return_count" read_only="true" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="1" label="Оценка удовлетворенности" max_length="40" name="u_bq_satisfaction" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="0 – обратная связь не была предоставлена" sequence="0" value="0"/>
+                <element inactive_on_update="false" label="1" sequence="1" value="1"/>
+                <element inactive_on_update="false" label="2" sequence="2" value="2"/>
+                <element inactive_on_update="false" label="3" sequence="3" value="3"/>
+                <element inactive_on_update="false" label="4" sequence="4" value="4"/>
+                <element inactive_on_update="false" label="5" sequence="5" value="5"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Есть ли возможность, при согласии ТТ, перепаллетировать самому?" max_length="40" name="u_bq_self_repallet" type="boolean"/>
+        <element audit="true" label="SKU" max_length="40" name="u_bq_sku" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="1" default="Новое" label="Статус" max_length="40" name="u_bq_state" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Ждет ответа" value="Ждет ответа"/>
+                <element inactive_on_update="false" label="Ответ получен" value="Ответ получен"/>
+                <element inactive_on_update="false" label="Не согласованно" sequence="0" value="Не согласованно"/>
+                <element inactive_on_update="false" label="Получена информация" sequence="1" value="Получена информация"/>
+                <element inactive_on_update="false" label="Согласованно" sequence="2" value="Согласованно"/>
+                <element inactive_on_update="false" label="В работе" sequence="3" value="В работе"/>
+                <element inactive_on_update="false" label="Закрыто" sequence="4" value="Закрыто"/>
+                <element inactive_on_update="false" label="Запрос дополнительной информации" sequence="5" value="Запрос дополнительной информации"/>
+                <element inactive_on_update="false" label="На согласовании" sequence="6" value="На согласовании"/>
+                <element inactive_on_update="false" label="Назначено в группу" sequence="7" value="Назначено в группу"/>
+                <element inactive_on_update="false" label="Назначено ответственному" sequence="8" value="Назначено ответственному"/>
+                <element inactive_on_update="false" label="Назначено на менеджера процесса" sequence="9" value="Назначено на менеджера процесса"/>
+                <element inactive_on_update="false" label="Новое" sequence="9" value="Новое"/>
+                <element inactive_on_update="false" label="Решено" sequence="10" value="Решено"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Хочу вас уведомить, что тару необходимо сохранить!" max_length="40" name="u_bq_tara" type="boolean"/>
+        <element attributes="ref_sequence=u_bq_order,edge_encryption_enabled=true" audit="true" choice="1" label="Тема обращения" mandatory="true" max_length="32" name="u_bq_topic" reference="soft4_bq_topic" reference_qual="u_bq_name!=Администрирование процесса^u_inactive=false^u_bq_name!=Проблемы доставки сетевым клиентам^EQ" reference_qual_condition="u_bq_name!=Администрирование процесса^u_inactive=false^u_bq_name!=Проблемы доставки сетевым клиентам^EQ" type="reference">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Ответственный" max_length="32" name="u_bq_user" reference="sys_user" reference_floats="true" reference_qual="javascript:bq_getAssign_to()" type="reference" use_reference_qualifier="advanced"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Город" max_length="32" name="u_bq_usercity" reference="soft4_bq_city" reference_qual="u_bq_parentISNOTEMPTY^EQ" reference_qual_condition="u_bq_parentISNOTEMPTY^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" dynamic_ref_qual="de841481374c76005978466754990e38" label="Группа исполнителей" max_length="32" name="u_bq_usergroup" reference="soft4_bq_usergroup" reference_qual="javascript:get_bq_group()" type="reference" use_reference_qualifier="dynamic"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Вам необходимо возмещение стоимости?" max_length="40" name="u_bq_vozm" type="boolean"/>
+        <element audit="true" label="Корпус" max_length="100" name="u_building" type="string"/>
+        <element audit="true" label="Юр. лицо" max_length="200" name="u_buyer" type="string"/>
+        <element audit="true" choice="1" label="Звонивший" max_length="40" name="u_caller" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Взрослый" value="Взрослый"/>
+                <element inactive_on_update="false" label="Женщина" value="Женщина"/>
+                <element inactive_on_update="false" label="Мужчина" value="Мужчина"/>
+                <element inactive_on_update="false" label="Подросток" value="Подросток"/>
+                <element inactive_on_update="false" label="Пожилой" value="Пожилой"/>
+            </choice>
+        </element>
+        <element audit="true" choice="1" label="Откуда звонок" max_length="40" name="u_caller_location" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Внутренний" value="Внутренний"/>
+                <element inactive_on_update="false" label="Из телефонной будки" value="Из телефонной будки"/>
+                <element inactive_on_update="false" label="Не из телефонной будки" value="Не из телефонной будки"/>
+                <element inactive_on_update="false" label="Не определено" value="Не определено"/>
+                <element inactive_on_update="false" label="Радиотелефон" value="Радиотелефон"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Счётчик звонков" max_length="40" name="u_call_counter" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Упоминание о возможном опоздании в предыдущих заявках" max_length="40" name="u_can_be_late" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="1" label="Область" max_length="32" name="u_cf" reference="soft4_bq_city" reference_qual="javascript:'u_tree_level=3^u_bq_parent='+current.u_fo;" type="reference" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element audit="true" label="Суть жалобы" max_length="400" name="u_claim_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Корректирующее мероприятие" max_length="32" name="u_corr_action" reference="soft4_bq_corr_actions" type="reference"/>
+        <element audit="true" label="ФИО водителя" max_length="100" name="u_driver_name" type="string"/>
+        <element audit="true" label="Имя приемщика" max_length="40" name="u_employee_name" type="string"/>
+        <element audit="true" label="Пункт разгрузки" max_length="100" name="u_finish_point" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="1" label="Федеральный Округ" max_length="32" name="u_fo" reference="soft4_bq_city" reference_qual="u_tree_level=2^EQ" reference_qual_condition="u_tree_level=2^EQ" type="reference">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="1" label="Пол" max_length="40" name="u_gender" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Ж" value="Ж"/>
+                <element inactive_on_update="false" label="М" value="М"/>
+            </choice>
+        </element>
+        <element audit="true" label="Дом (корпус)" max_length="100" name="u_house" type="string"/>
+        <element audit="true" choice="1" label="Язык" max_length="40" name="u_language" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Грубый" value="Грубый"/>
+                <element inactive_on_update="false" label="Жаргонный" value="Жаргонный"/>
+                <element inactive_on_update="false" label="Наличие слов паразитов" value="Наличие слов паразитов"/>
+                <element inactive_on_update="false" label="Непринужденный" value="Непринужденный"/>
+                <element inactive_on_update="false" label="Непристойный" value="Непристойный"/>
+                <element inactive_on_update="false" label="Нормативный" value="Нормативный"/>
+                <element inactive_on_update="false" label="Очень культурный" value="Очень культурный"/>
+                <element inactive_on_update="false" label="Развязанный" value="Развязанный"/>
+                <element inactive_on_update="false" label="Сдержанный" value="Сдержанный"/>
+            </choice>
+        </element>
+        <element audit="true" label="Признак страны (Логистика)" max_length="40" name="u_log_country" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Решение изменено" max_length="40" name="u_log_res_changed" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Решение отправлено" max_length="40" name="u_log_res_sent" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" choice="1" label="Лояльность" max_length="40" name="u_loyalty" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="нейтрально" value="нейтрально"/>
+                <element inactive_on_update="false" label="отрицательно" value="отрицательно"/>
+                <element inactive_on_update="false" label="положительно" value="положительно"/>
+            </choice>
+        </element>
+        <element audit="true" label="e-mail" max_length="40" name="u_mail" type="string"/>
+        <element audit="true" label="История переписки" max_length="8000" name="u_mail_history_txt" type="string"/>
+        <element audit="true" label="Тема письма" max_length="200" name="u_mcrm_key" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Дата встречи" max_length="40" name="u_meet_date" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Решается вместе с родительским обращением" max_length="40" name="u_multiple_solution" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Отправить автоответ инициатору" max_length="40" name="u_needed_answer" type="boolean"/>
+        <element audit="true" choice="1" label="Шумы" max_length="40" name="u_noise" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Голоса" value="Голоса"/>
+                <element inactive_on_update="false" label="Гости" value="Гости"/>
+                <element inactive_on_update="false" label="Завод" value="Завод"/>
+                <element inactive_on_update="false" label="Музыка" value="Музыка"/>
+                <element inactive_on_update="false" label="Офис" value="Офис"/>
+                <element inactive_on_update="false" label="Тихо" value="Тихо"/>
+                <element inactive_on_update="false" label="Уличное движение" value="Уличное движение"/>
+            </choice>
+        </element>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true,edge_encryption_enabled=true" audit="true" label="Список уведомляемых" max_length="4000" name="u_notify_list" reference="sys_user" type="glide_list"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Количество несоответствующей продукции меньше или равно пяти упаковкам?" max_length="40" name="u_notmatch_qty" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Нет связи с ТТН" max_length="40" name="u_no_ttn_link" type="boolean"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true,edge_encryption_enabled=true" audit="true" label="Другие накладные" max_length="4000" name="u_other_ttn" reference="soft4_bq_invoices" reference_qual="no_sort=true,slushbucket_ref_no_expand=true,edge_encryption_enabled=true" reference_qual_condition="no_sort=true,slushbucket_ref_no_expand=true,edge_encryption_enabled=true" type="glide_list"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Родительское обращение по ТТН" max_length="32" name="u_parent_by_ttn" reference="soft4_service_call" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Запрошено Фото" max_length="40" name="u_photo_requested" type="boolean"/>
+        <element audit="true" choice="1" label="Вид продукта" max_length="40" name="u_product_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="б\а продукция разливная" value="б\а продукция разливная"/>
+                <element inactive_on_update="false" label="б\а продукция тарированная" value="б\а продукция тарированная"/>
+                <element inactive_on_update="false" label="Не указано" value="Не указано"/>
+                <element inactive_on_update="false" label="Пиво алк. разливное" value="Пиво алк. разливное"/>
+                <element inactive_on_update="false" label="Пиво алк. тарированное" value="Пиво алк. тарированное"/>
+                <element inactive_on_update="false" label="Пиво б\а разливное" value="Пиво б\а разливное"/>
+                <element inactive_on_update="false" label="Пиво б\а тарированное" value="Пиво б\а тарированное"/>
+                <element inactive_on_update="false" label="прочее" value="прочее"/>
+            </choice>
+        </element>
+        <element audit="true" label="Наименование продукции" max_length="40" name="u_prod_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Родительское обращение" max_length="32" name="u_reference_service_call" reference="soft4_service_call" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Напомнить" max_length="40" name="u_remind" type="boolean"/>
+        <element audit="true" label="Текст напоминания" max_length="100" name="u_remind_text" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Кому напомнить" max_length="32" name="u_remind_to" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Когда напомнить" max_length="40" name="u_remind_when" type="glide_date"/>
+        <element audit="true" default="ru" label="Язык автоотвеaта" max_length="40" name="u_resp_lang" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Returned to New" max_length="40" name="u_returned_to_new" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Объем возврата от клиента меньше или равен пяти упаковкам?" max_length="40" name="u_return_qty" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Отправлено на исполнение" max_length="40" name="u_sent_to_work" type="boolean"/>
+        <element audit="true" choice="3" default="Нет" label="Обращение подтверждено" max_length="40" name="u_solution_state" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Да" value="Да"/>
+                <element inactive_on_update="false" label="Нет" value="Нет"/>
+            </choice>
+        </element>
+        <element audit="true" choice="1" label="Говорит" max_length="40" name="u_speak" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Агрессивно" value="Агрессивно"/>
+                <element inactive_on_update="false" label="Без пауз" value="Без пауз"/>
+                <element inactive_on_update="false" label="Возбужденно" value="Возбужденно"/>
+                <element inactive_on_update="false" label="Истерично" value="Истерично"/>
+                <element inactive_on_update="false" label="Логично" value="Логично"/>
+                <element inactive_on_update="false" label="Нелогично" value="Нелогично"/>
+                <element inactive_on_update="false" label="Непоследовательно" value="Непоследовательно"/>
+                <element inactive_on_update="false" label="Осторожно" value="Осторожно"/>
+                <element inactive_on_update="false" label="Последовательно" value="Последовательно"/>
+                <element inactive_on_update="false" label="Пьяный" value="Пьяный"/>
+                <element inactive_on_update="false" label="Раздраженно" value="Раздраженно"/>
+                <element inactive_on_update="false" label="С заиканием" value="С заиканием"/>
+                <element inactive_on_update="false" label="С паузами" value="С паузами"/>
+                <element inactive_on_update="false" label="С юмором" value="С юмором"/>
+                <element inactive_on_update="false" label="Сердито" value="Сердито"/>
+                <element inactive_on_update="false" label="Спокойно" value="Спокойно"/>
+                <element inactive_on_update="false" label="Удрученно" value="Удрученно"/>
+            </choice>
+        </element>
+        <element audit="true" choice="1" label="Речь" max_length="40" name="u_speech" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Бедный словарный запас" value="Бедный словарный запас"/>
+                <element inactive_on_update="false" label="Без дефектов" value="Без дефектов"/>
+                <element inactive_on_update="false" label="Богатый словарный запас" value="Богатый словарный запас"/>
+                <element inactive_on_update="false" label="Быстрая" value="Быстрая"/>
+                <element inactive_on_update="false" label="Выразительная" value="Выразительная"/>
+                <element inactive_on_update="false" label="Гнусавая" value="Гнусавая"/>
+                <element inactive_on_update="false" label="Запоминающаяся" value="Запоминающаяся"/>
+                <element inactive_on_update="false" label="Картавая" value="Картавая"/>
+                <element inactive_on_update="false" label="Литературная" value="Литературная"/>
+                <element inactive_on_update="false" label="Медленная" value="Медленная"/>
+                <element inactive_on_update="false" label="Невыразительная" value="Невыразительная"/>
+                <element inactive_on_update="false" label="Неразборчивая" value="Неразборчивая"/>
+                <element inactive_on_update="false" label="Отчетливая" value="Отчетливая"/>
+                <element inactive_on_update="false" label="Официальная" value="Официальная"/>
+                <element inactive_on_update="false" label="Просторечная" value="Просторечная"/>
+                <element inactive_on_update="false" label="Разговорная" value="Разговорная"/>
+                <element inactive_on_update="false" label="Шепелявая" value="Шепелявая"/>
+            </choice>
+        </element>
+        <element audit="true" label="Пункт погрузки" max_length="100" name="u_start_point" type="string"/>
+        <element audit="true" label="Улица" max_length="100" name="u_street" type="string"/>
+        <element audit="true" label="Телефон Торгового Представителя" max_length="40" name="u_tel_tp" type="string"/>
+        <element audit="true" label="ФИО Торгового Представителя" max_length="100" name="u_tp_fio" type="string"/>
+        <element audit="true" label="Транспортная компания" max_length="100" name="u_transport_company" type="string"/>
+        <element attributes="edge_encryption_enabled=true" audit="true" label="Накладная" max_length="32" name="u_ttn" reference="soft4_bq_invoices" reference_qual="javascript: bq_ttnFilter();" type="reference" use_reference_qualifier="advanced"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true,edge_encryption_enabled=true" audit="true" label="Другие ТТН для текущего адреса" max_length="4000" name="u_ttn_list_thistt" reference="soft4_bq_invoices" type="glide_list"/>
+        <element audit="true" label="Номер ТТН" max_length="40" name="u_ttn_number" type="string"/>
+        <element audit="true" label="Наименование ТТ" max_length="100" name="u_tt_name" type="string"/>
+        <element audit="true" choice="1" label="Голос" max_length="40" name="u_voice" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Высокий" value="Высокий"/>
+                <element inactive_on_update="false" label="Глухой" value="Глухой"/>
+                <element inactive_on_update="false" label="Громкий" value="Громкий"/>
+                <element inactive_on_update="false" label="Грубый" value="Грубый"/>
+                <element inactive_on_update="false" label="Звонкий" value="Звонкий"/>
+                <element inactive_on_update="false" label="Измененный" value="Измененный"/>
+                <element inactive_on_update="false" label="Искаженный" value="Искаженный"/>
+                <element inactive_on_update="false" label="Мягкий" value="Мягкий"/>
+                <element inactive_on_update="false" label="Низкий" value="Низкий"/>
+                <element inactive_on_update="false" label="Обычный/естественный" value="Обычный/естественный"/>
+                <element inactive_on_update="false" label="Пронзительный" value="Пронзительный"/>
+                <element inactive_on_update="false" label="Сильный" value="Сильный"/>
+                <element inactive_on_update="false" label="Слабый" value="Слабый"/>
+                <element inactive_on_update="false" label="Средний" value="Средний"/>
+                <element inactive_on_update="false" label="Хорошо поставленный" value="Хорошо поставленный"/>
+                <element inactive_on_update="false" label="Хриплый" value="Хриплый"/>
+            </choice>
+        </element>
+        <element audit="true" label="Название склада" max_length="40" name="u_wh_name" type="string"/>
+    </element>
+</database>

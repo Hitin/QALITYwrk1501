@@ -11,11 +11,11 @@
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>x_caas_quality_service_call</collection>
+        <collection>soft4_service_call</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_caas_quality_service_call">u_bq_stateCHANGESTOНазначено в группу^ORu_bq_stateCHANGESTOНазначено ответственному^u_bq_contact_type=Интернет-сайт^u_bq_danger.u_autoclose=true^EQ<item endquery="false" field="u_bq_state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="Назначено в группу"/>
+        <filter_condition table="soft4_service_call">u_bq_stateCHANGESTOНазначено в группу^ORu_bq_stateCHANGESTOНазначено ответственному^u_bq_contact_type=Интернет-сайт^u_bq_danger.u_autoclose=true^EQ<item endquery="false" field="u_bq_state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="Назначено в группу"/>
             <item endquery="false" field="u_bq_state" goto="false" newquery="false" operator="CHANGESTO" or="true" value="Назначено ответственному"/>
             <item endquery="false" field="u_bq_contact_type" goto="false" newquery="false" operator="=" or="false" value="Интернет-сайт"/>
             <item endquery="false" field="u_bq_danger.u_autoclose" goto="false" newquery="false" operator="=" or="false" value="true"/>
@@ -57,7 +57,7 @@
         <sys_mod_count>11</sys_mod_count>
         <sys_name>bq autoClose for site</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_ea82763c378a0780b9af806754990e69</sys_update_name>

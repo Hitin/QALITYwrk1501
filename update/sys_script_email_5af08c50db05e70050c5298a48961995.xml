@@ -9,7 +9,7 @@ var EndKey = new GlideDateTime();
 var user = event.parm1;
 var br = '';
 var br_names = '';
-var brends = new GlideRecord('x_caas_quality_bq_brand');
+var brends = new GlideRecord('soft4_bq_brand');
 brends.addQuery('u_bq_recipients', 'CONTAINS', user);
 brends.query();
 while (brends.next()){
@@ -28,7 +28,7 @@ template.print('Все обработанные обращения за пери
 
 template.print('<table border="1" cellpadding="5" cellspacing="0">');
 template.print('<tr><th>Бренд</th><th>Номер обращения</th><th>Дата предоставления ответа</th><th>Город</th><th>Тема:<br>Подтема</th><th>Содержание обращения:</th><th>Предоставленный ответ*:</th></tr>');
-var scall = new GlideRecord('x_caas_quality_service_call');
+var scall = new GlideRecord('soft4_service_call');
 scall.addQuery('u_bq_state', 'Закрыто');
 scall.addQuery('u_bq_resolved_on', '<', EndKey);
 scall.addQuery('u_bq_resolved_on', '>', StartKey);
@@ -37,23 +37,23 @@ scall.addQuery('u_bq_brand', 'IN', br);
 scall.orderByDesc('u_bq_brand');
 scall.query();
 while (scall.next()){
-	var brend = new GlideRecord('x_caas_quality_bq_brand');
+	var brend = new GlideRecord('soft4_bq_brand');
 	if (brend.get(scall.u_bq_brand)){
 		if (brend.u_bq_recipients.indexOf(user) > -1){
 			template.print('<tr>');
 			template.print('<th style="font-weight: 100;">' + brend.u_name + '</th>');
 			template.print('<th style="font-weight: 100;">' + scall.u_bq_number + '</th>');
 			template.print('<th style="font-weight: 100;">' + scall.u_bq_resolved_on.getByFormat('yyyy-MM-dd') + '</th>');
-			var city = new GlideRecord('x_caas_quality_bq_city');
+			var city = new GlideRecord('soft4_bq_city');
 			if (city.get(scall.u_bq_usercity))
 				template.print('<th style="font-weight: 100;">' + city.u_name + '</th>');
 			else
 				template.print('<th style="font-weight: 100;">Не указан</th>');
-			var topic = new GlideRecord('x_caas_quality_bq_topic');
+			var topic = new GlideRecord('soft4_bq_topic');
 			if (topic.get(scall.u_bq_topic)){
 				template.print('<th style="font-weight: 100;">');
 				template.print(topic.u_bq_name + ':<br>');
-				var subtopic = new GlideRecord('x_caas_quality_bq_subtopic');
+				var subtopic = new GlideRecord('soft4_bq_subtopic');
 				if (subtopic.get(scall.u_bq_danger))
 					template.print(subtopic.u_bq_subtopic);
 				template.print('</th>');
@@ -80,7 +80,7 @@ template.print('<br>С вопросами и предложениями по с�
         <sys_id>5af08c50db05e70050c5298a48961995</sys_id>
         <sys_mod_count>53</sys_mod_count>
         <sys_name>bq_brands_sc_closed_info</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_email_5af08c50db05e70050c5298a48961995</sys_update_name>

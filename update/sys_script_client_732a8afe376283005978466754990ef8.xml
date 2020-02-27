@@ -14,7 +14,7 @@
    if (isLoading || newValue === '') {
       return;
    }
-	var ga = new GlideAjax('x_caas_quality.bqAjax');
+	var ga = new GlideAjax('soft4.bqAjax');
 	ga.addParam('sysparm_name', 'getTTNFields');
 	ga.addParam('sysparm_ttn_id', newValue);
 	ga.getXML(ajaxResponse);
@@ -36,13 +36,13 @@ function ajaxResponse(serverResponse) {
         <sys_mod_count>3</sys_mod_count>
         <sys_name>fill TTN fields</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_client_732a8afe376283005978466754990ef8</sys_update_name>
         <sys_updated_by>x-ruVoyAnd</sys_updated_by>
         <sys_updated_on>2017-11-24 08:14:01</sys_updated_on>
-        <table>x_caas_quality_service_call</table>
+        <table>soft4_service_call</table>
         <type>onChange</type>
         <ui_type>0</ui_type>
         <view/>

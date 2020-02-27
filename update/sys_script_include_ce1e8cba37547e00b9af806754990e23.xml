@@ -2,14 +2,14 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>public</access>
         <active>true</active>
-        <api_name>x_caas_quality.get_bq_group</api_name>
+        <api_name>soft4.get_bq_group</api_name>
         <client_callable>true</client_callable>
         <description/>
         <name>get_bq_group</name>
         <script><![CDATA[function get_bq_group() {
  	var ids = [];
 	var refQual = '';
-	var gr = new GlideRecord ('x_caas_quality_bq_usergroup');
+	var gr = new GlideRecord ('soft4_bq_usergroup');
 	if (current.u_bq_topic == '46aa161f6f972200724708c6eb3ee4ea'){
 		gr.addQuery('u_bq_grupnqme', 'CONTAINS', 'Доставка.');
 	}
@@ -34,7 +34,7 @@
         <sys_id>ce1e8cba37547e00b9af806754990e23</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_name>get_bq_group</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_ce1e8cba37547e00b9af806754990e23</sys_update_name>

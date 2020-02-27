@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="3ed34f2b4f808f00d8a900818110c72a" table="sys_filter">
     <sys_filter action="INSERT_OR_UPDATE">
-        <filter table="x_caas_quality_service_call">u_bq_stateINЗакрыто,Запрос дополнительной информации,Новое,Решено^u_bq_contact_type=Звонок^EQ<item endquery="false" field="u_bq_state" goto="false" newquery="false" operator="IN" or="false" value="Закрыто,Запрос дополнительной информации,Новое,Решено"/>
-            <item endquery="false" field="u_bq_contact_type" goto="false" newquery="false" operator="=" or="false" value="Звонок"/>
-            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        <filter table="x_caas_quality_service_call">u_bq_stateINЗакрыто,Запрос дополнительной информации,Новое,Решено^u_bq_contact_type=Звонок^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter>
         <group/>
         <last_used/>
@@ -16,7 +14,7 @@
         <sys_id>dce42603db9b9340c3712ded0b9619ff</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>pik</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_filter_dce42603db9b9340c3712ded0b9619ff</sys_update_name>

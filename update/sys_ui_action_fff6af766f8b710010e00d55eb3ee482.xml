@@ -43,13 +43,13 @@ current.update();
         <sys_mod_count>9</sys_mod_count>
         <sys_name>Согласовать</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_ui_action_fff6af766f8b710010e00d55eb3ee482</sys_update_name>
         <sys_updated_by>x-rutipali</sys_updated_by>
         <sys_updated_on>2016-07-04 11:38:42</sys_updated_on>
-        <table>x_caas_quality_service_call</table>
+        <table>soft4_service_call</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
     </sys_ui_action>

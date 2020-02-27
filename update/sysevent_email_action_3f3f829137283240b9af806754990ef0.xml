@@ -6,9 +6,9 @@
         <advanced_condition/>
         <affected_field_on_event/>
         <category display_value="">28627beddb60230002558e68689619e3</category>
-        <collection>x_caas_quality_service_call</collection>
-        <condition table="x_caas_quality_service_call">u_bq_userVALCHANGES^u_bq_topic=46aa161f6f972200724708c6eb3ee4ea^u_multiple_solution=false^u_log_country=RUS^ORu_log_countryISEMPTY^EQ<item endquery="false" field="u_bq_user" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
-            <item display_table="x_caas_quality_bq_topic" display_value="Проблемы доставки сетевым клиентам" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="false" value="46aa161f6f972200724708c6eb3ee4ea"/>
+        <collection>soft4_service_call</collection>
+        <condition table="soft4_service_call">u_bq_userVALCHANGES^u_bq_topic=46aa161f6f972200724708c6eb3ee4ea^u_multiple_solution=false^u_log_country=RUS^ORu_log_countryISEMPTY^EQ<item endquery="false" field="u_bq_user" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="false" value="46aa161f6f972200724708c6eb3ee4ea"/>
             <item endquery="false" field="u_multiple_solution" goto="false" newquery="false" operator="=" or="false" value="false"/>
             <item endquery="false" field="u_log_country" goto="false" newquery="false" operator="=" or="false" value="RUS"/>
             <item endquery="false" field="u_log_country" goto="false" newquery="false" operator="ISEMPTY" or="true" value=""/>
@@ -71,7 +71,7 @@
         <sys_mod_count>19</sys_mod_count>
         <sys_name>bq_log_ Назначено ответственному_RUS</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysevent_email_action_3f3f829137283240b9af806754990ef0</sys_update_name>

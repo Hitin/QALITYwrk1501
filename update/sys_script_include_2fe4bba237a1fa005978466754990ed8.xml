@@ -2,7 +2,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>public</access>
         <active>true</active>
-        <api_name>x_caas_quality.GetTTNThisAddress</api_name>
+        <api_name>soft4.GetTTNThisAddress</api_name>
         <client_callable>true</client_callable>
         <description/>
         <name>GetTTNThisAddress</name>
@@ -10,10 +10,10 @@
 GetTTNThisAddress.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 	getTTNThisAddress: function() {
 		var ttnS = this.getParameter('sysparm_this_ttn');
-		var ttn = new GlideRecord ('x_caas_quality_bq_invoices');
+		var ttn = new GlideRecord ('soft4_bq_invoices');
 		ttn.get(ttnS);
 		var code = ttn.u_delivery_code;
-// 		ttn = new GlideRecord ('x_caas_quality_bq_invoices');
+// 		ttn = new GlideRecord ('soft4_bq_invoices');
 // 		ttn.addQuery('u_delivery_code', code);
 // 		ttn.addQuery('sys_id', '!=', ttnS);
 // 		ttn
@@ -21,10 +21,10 @@ GetTTNThisAddress.prototype = Object.extendsObject(global.AbstractAjaxProcessor,
 	},
 	getTTNThisMrpType: function() {
 		var ttnS = this.getParameter('sysparm_this_ttn');
-		var ttn = new GlideRecord ('x_caas_quality_bq_invoices');
+		var ttn = new GlideRecord ('soft4_bq_invoices');
 		ttn.get(ttnS);
 		var mrpType = ttn.u_mrp_demand_type;
-// 		ttn = new GlideRecord ('x_caas_quality_bq_invoices');
+// 		ttn = new GlideRecord ('soft4_bq_invoices');
 // 		ttn.addQuery('u_delivery_code', code);
 // 		ttn.addQuery('sys_id', '!=', ttnS);
 // 		ttn
@@ -32,12 +32,12 @@ GetTTNThisAddress.prototype = Object.extendsObject(global.AbstractAjaxProcessor,
 	},
 	getTTNThisQual: function() {
 		var ttnS = this.getParameter('sysparm_this_ttn');
-		var ttn = new GlideRecord ('x_caas_quality_bq_invoices');
+		var ttn = new GlideRecord ('soft4_bq_invoices');
 		ttn.get(ttnS);
 		var mrpType = ttn.u_mrp_demand_type;
 		var code = ttn.u_delivery_code;
 		var condition = 'u_delivery_code='+ code + '^sys_id!=' + ttnS + '^u_mrp_demand_type=' + mrpType ;
-// 		ttn = new GlideRecord ('x_caas_quality_bq_invoices');
+// 		ttn = new GlideRecord ('soft4_bq_invoices');
 // 		ttn.addQuery('u_delivery_code', code);
 // 		ttn.addQuery('sys_id', '!=', ttnS);
 // 		ttn
@@ -52,7 +52,7 @@ GetTTNThisAddress.prototype = Object.extendsObject(global.AbstractAjaxProcessor,
         <sys_id>2fe4bba237a1fa005978466754990ed8</sys_id>
         <sys_mod_count>13</sys_mod_count>
         <sys_name>GetTTNThisAddress</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sys_script_include_2fe4bba237a1fa005978466754990ed8</sys_update_name>

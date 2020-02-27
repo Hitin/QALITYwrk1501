@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="bq group member" max_length="40" name="soft4_bq_group_member" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Группа" max_length="32" name="u_bq_group" reference="soft4_bq_usergroup" reference_floats="true" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Сотрудник" max_length="32" name="u_bq_user" reference="sys_user" reference_floats="true" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Временный" max_length="40" name="u_temp" type="boolean"/>
+        <index name="index">
+            <element name="u_bq_group"/>
+        </index>
+        <index name="index2">
+            <element name="u_bq_user"/>
+        </index>
+    </element>
+</database>

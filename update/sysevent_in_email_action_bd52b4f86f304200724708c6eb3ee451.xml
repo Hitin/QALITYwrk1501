@@ -54,7 +54,7 @@
 	var ive;
 	var txt = '';
 	txt = email.body_html.replace(/<[^>]+>/g,'')/*.replaceAll('\n','')*/;
-	txt = new x_caas_quality.bqFunctions().htmlToTxt(txt);
+	txt = new soft4.bqFunctions().htmlToTxt(txt);
 
 // 	var t = email.body_text.replace(/<[^>]+>/g,'');
 // 	t = t.substring(t.indexOf('Сообщение<td>') + 13);
@@ -91,7 +91,7 @@
 	//	gs.log('AV '+i + names[i] + '---' + txt.substring(indB[i],indE[i]) + indB[i] + '--' + indE[i]);
 	}
 
-	var matrix = new GlideRecord('x_caas_quality_bq_site_matrix');
+	var matrix = new GlideRecord('soft4_bq_site_matrix');
 	if (lang != ''){
 		if (lang == 'ru')
 			matrix.addQuery('u_mail_subject_ru', email.subject);
@@ -102,7 +102,7 @@
 			matrix.orderByDesc('u_region');
 		}
 		else if (mailType == 3 || mailType == 30){
-			var cat =  new x_caas_quality.bqFunctions().htmlToTxt(txt.substring(indB[2],indE[2]));
+			var cat =  new soft4.bqFunctions().htmlToTxt(txt.substring(indB[2],indE[2]));
 			matrix.addQuery('u_category', cat).addOrCondition('u_category', cat.substring(0,cat.length - 1))/*.addOrCondition('u_category', txt.substring(indB[2],indE[2] - 1))*/.addOrCondition('u_category','');
 			matrix.orderByDesc('u_category');
 		}
@@ -115,7 +115,7 @@
 			current.u_bq_topic = matrix.u_topic;
 			if (matrix.u_subtopic != ''){
 				current.u_bq_danger = matrix.u_subtopic;
-				var sub = new GlideRecord('x_caas_quality_bq_subtopic');
+				var sub = new GlideRecord('soft4_bq_subtopic');
 				if (sub.get(matrix.u_subtopic) && sub.u_autoclose && !sub.u_feedback){
 					if (lang == 'ru')
 						current.u_bq_resptext = '<p>Ваше предложение отправлено на рассмотрение ответственному лицу. В случае заинтересованности с вами обязательно свяжутся.</p>';
@@ -149,7 +149,7 @@
 			else current.u_mail = m.substring(0,mi-1);
 			current.u_bq_applicant = txt.substring(indB[1],indE[1]);	
 			if (current.u_bq_usercity == ''){
-				var city = new GlideRecord('x_caas_quality_bq_city');
+				var city = new GlideRecord('soft4_bq_city');
 				city.get('u_name', txt.substring(indB[3],indE[3]));
 				current.u_bq_usercity = city.sys_id;
 			}
@@ -168,7 +168,7 @@
 		}	
 	}
 	else{
-		current.u_bq_applicant_info = new x_caas_quality.bqFunctions().htmlToTxt(email.body_text);
+		current.u_bq_applicant_info = new soft4.bqFunctions().htmlToTxt(email.body_text);
 		current.u_mail = email.from;
 	}
 
@@ -196,7 +196,7 @@ else if (email.direct.toLowerCase().indexOf('bqualityhotline_app@baltika.com') >
 			var scN = email.subject.substring(12,21);
 		}
 		
-		var sc = new GlideRecord('x_caas_quality_service_call');
+		var sc = new GlideRecord('soft4_service_call');
 		if (sc.get('u_bq_number',scN)){
 			if (sc.u_bq_state == 'Закрыто'){
 				sc.u_bq_reopen_count ++;
@@ -221,7 +221,7 @@ else if (email.direct.toLowerCase().indexOf('bqualityhotline_app@baltika.com') >
 	}
 	else {//new
 		current.u_bq_topic = '46aa161f6f972200724708c6eb3ee4ea';
-		var subtopic = new GlideRecord('x_caas_quality_bq_subtopic');
+		var subtopic = new GlideRecord('soft4_bq_subtopic');
 		subtopic.addQuery('u_bq_topic', '46aa161f6f972200724708c6eb3ee4ea');
 		subtopic.addQuery('u_bq_subtopic', email.body.incidenttypename);
 		subtopic.query();
@@ -257,7 +257,7 @@ else if (email.direct.toLowerCase().indexOf('bqualityhotline_app@baltika.com') >
 		else 
 			current.u_log_country = 'RUS';
 			
-		var ttn = new GlideRecord('x_caas_quality_bq_invoices');
+		var ttn = new GlideRecord('soft4_bq_invoices');
 		ttn.addQuery('u_ttn_number', mainTTNnumber);
 		ttn.query();
 		if (ttn.next()){
@@ -296,7 +296,7 @@ else if (email.direct.toLowerCase().indexOf('bqualityhotline_app@baltika.com') >
 		var ttnThisAr = ttnThisList.split(';');
 		var SCttnThisList = '';
 		for (var i = 0; i < ttnThisAr.length; i++){
-			ttn = new GlideRecord('x_caas_quality_bq_invoices');
+			ttn = new GlideRecord('soft4_bq_invoices');
 			if (ttn.get('u_ttn_number', ttnThisAr[i]) && ttn.u_ttn_number != '' && ttn.sys_id != current.u_ttn) {
 				SCttnThisList += ttn.sys_id + ',';
 			}
@@ -309,7 +309,7 @@ else if (email.direct.toLowerCase().indexOf('bqualityhotline_app@baltika.com') >
 		var ttnOtherAr = ttnOtherList.split(';');
 		var SCttnOtherList = '';		
 		for (var j = 0; j < ttnOtherAr.length; j++){
-			ttn = new GlideRecord('x_caas_quality_bq_invoices');
+			ttn = new GlideRecord('soft4_bq_invoices');
 			if (ttn.get('u_ttn_number', ttnOtherAr[j]) && ttn.u_ttn_number != '' && ttn.sys_id != current.u_ttn) {
 				SCttnOtherList += ttn.sys_id + ',';
 			}
@@ -352,7 +352,7 @@ else if (email.direct.toLowerCase().indexOf('bqualityhotline_app@baltika.com') >
 		current.u_driver_name = current.u_bq_applicant;
 	
 		if (current.u_log_country == 'RUS' || current.u_log_country == ''){
-			var r = new GlideRecord('x_caas_quality_bq_delivery_close_code');
+			var r = new GlideRecord('soft4_bq_delivery_close_code');
 			if (current.u_bq_danger == 'e9eadedb6f972200724708c6eb3ee49f' && current.u_return_qty == true && current.u_bq_usergroup != 'c480145737a722005978466754990ec3'){//бой
 				r.get('u_code', 'R_002');
 				current.u_bq_log_reason = r.sys_id;
@@ -416,7 +416,7 @@ else if (email.direct.toLowerCase().indexOf('bqualityhotline_app@baltika.com') >
 	}
 }
 else if (email.direct.toLowerCase().indexOf('bqualityhotline_mcrm@baltika.com') >= 0 || email.direct.toLowerCase().indexOf('rusdit_test_hl_mcrm@baltika.com') >= 0 ){
-	var sc = new GlideRecord('x_caas_quality_service_call');
+	var sc = new GlideRecord('soft4_service_call');
 	var pr = email.subject.substring(0,2);
 	if (pr == 'SC' && sc.get('u_bq_number', email.subject.substring(0,9))){
 		var addr = '';
@@ -435,12 +435,12 @@ else if (email.direct.toLowerCase().indexOf('bqualityhotline_mcrm@baltika.com') 
 			gs.eventQueue('bq_site_mail_from_caller_to_assignee', sc, addr, email.body_text.replaceAll('\n', '<br>'));
 		sc.u_bq_prot_input = email.body_text;
 		sc.update();
-		sys_email.target_table = "x_caas_quality_service_call";  
+		sys_email.target_table = "soft4_service_call";  
 		sys_email.instance = sc.getValue("sys_id");  
 		sys_email.update();  
 	}
 	else{
-		var city = new GlideRecord('x_caas_quality_bq_city');
+		var city = new GlideRecord('soft4_bq_city');
 		if (city.get('u_name', email.body.cityname)){
 			current.u_bq_usercity = city.sys_id;
 			current.u_cf = city.u_bq_parent;
@@ -459,11 +459,11 @@ else if (email.direct.toLowerCase().indexOf('bqualityhotline_mcrm@baltika.com') 
 		current.u_tel_tp = email.body.phonenumber;
 		
 		current.u_bq_applicant_info = email.body.comment;
-		var top = new GlideRecord('x_caas_quality_bq_topic');
+		var top = new GlideRecord('soft4_bq_topic');
 	// 	if (top.get('u_bq_name', email.body.complaintypename)){
 	// 		current.u_bq_topic = top.sys_id;
 		current.u_bq_topic.setDisplayValue('Качество продукции');
-		var sub = new GlideRecord('x_caas_quality_bq_subtopic');
+		var sub = new GlideRecord('soft4_bq_subtopic');
 		if (email.body.complainsubtypename == 'Посторонние включения'){
 			current.u_bq_danger = '6d80ab876f91ee0032cc4a6aea3ee4c3';
 		}
@@ -474,7 +474,7 @@ else if (email.direct.toLowerCase().indexOf('bqualityhotline_mcrm@baltika.com') 
 		current.u_bq_contact_type = 'miniCRM';
 		current.u_mcrm_key = email.subject;
 		current.u_bq_make_data = email.body.productiondate.substring(0,10);
-		var citygr = new GlideRecord('x_caas_quality_bq_city');
+		var citygr = new GlideRecord('soft4_bq_city');
 		var city = email.body.cityname;
 		if (city.substring(0,2) != 'г ')
 			citygr.get('u_name', city);
@@ -486,7 +486,7 @@ else if (email.direct.toLowerCase().indexOf('bqualityhotline_mcrm@baltika.com') 
 		current.u_bq_sku = 'Не задано';
 		current.u_bq_brand.setDisplayValue('Не задано');
 		current.u_bq_call_cat = 'Рекламация (претензия)';
-		var fact = new GlideRecord('x_caas_quality_bq_factory');
+		var fact = new GlideRecord('soft4_bq_factory');
 		//gs.info('AV_ ' + email.body.intercompanyname.nil());
 		if (email.body.intercompanyname == '' ) //|| email.body.intercompanyname.nil())
 			current.u_bq_factory = 'be7b19026fae9200724708c6eb3ee4c6';
@@ -508,7 +508,7 @@ else if (email.direct.toLowerCase().indexOf('bqualityhotline_mcrm@baltika.com') 
 		current.u_bq_no_satisfaction = true;
 		var factUsersString = current.u_bq_factory.u_notify_list.toString();
 		if (current.u_bq_factory != 'be7b19026fae9200724708c6eb3ee4c6'){
-			var hq = new GlideRecord('x_caas_quality_bq_factory');
+			var hq = new GlideRecord('soft4_bq_factory');
 			if (hq.get('be7b19026fae9200724708c6eb3ee4c6'))
 				factUsersString += ',' + hq.u_notify_list.toString();
 		}
@@ -520,7 +520,7 @@ else if (email.direct.toLowerCase().indexOf('bqualityhotline_mcrm@baltika.com') 
 				shortArray.push(fullArray[i]);
 		}
 		gs.eventQueue('bq_mcrm_toFactory', current, shortArray.toString());
-		new x_caas_quality.bq_toWork().toWork();
+		new soft4.bq_toWork().toWork();
 		current.insert();
 	}
 
@@ -537,13 +537,13 @@ else if (email.direct.toLowerCase().indexOf('bqualityhotline_mcrm@baltika.com') 
         <sys_mod_count>343</sys_mod_count>
         <sys_name>bq_Create Service call</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysevent_in_email_action_bd52b4f86f304200724708c6eb3ee451</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
         <sys_updated_on>2019-08-28 06:05:43</sys_updated_on>
-        <table>x_caas_quality_service_call</table>
+        <table>soft4_service_call</table>
         <template/>
         <type>new</type>
     </sysevent_in_email_action>

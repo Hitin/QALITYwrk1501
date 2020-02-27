@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Таблица назначений" max_length="40" name="soft4_bq_assign_matrix" type="collection">
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true,edge_encryption_enabled=true" label="Список согласующих" max_length="4000" name="u_agree_list" reference="sys_user" type="glide_list"/>
+        <element attributes="ref_qual_elements=u_bq_topic,edge_encryption_enabled=true" choice="1" dynamic_ref_qual="23a5342c6f62d20010e00d55eb3ee4d6" label="Подтема" max_length="40" name="u_bq_danger" reference="soft4_bq_subtopic" reference_qual="javascript:'u_bq_topic=' + current.u_bq_topic;" type="reference" use_dependent_field="true" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Буквенный код\ завод произв." max_length="40" name="u_bq_factory" reference="soft4_bq_factory" type="reference">
+            <choice/>
+        </element>
+        <element attributes="ref_sequence=u_bq_order,edge_encryption_enabled=true" choice="1" label="Тема обращения" max_length="40" name="u_bq_topic" reference="soft4_bq_topic" type="reference">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Город/ регион" max_length="32" name="u_bq_usercity" reference="soft4_bq_city" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" dynamic_ref_qual="48b813ba6fde520010e00d55eb3ee41e" label="Группа исполнителей" max_length="32" name="u_bq_usergroup" reference="soft4_bq_usergroup" reference_qual="javascript:soft4.bq_getAssignGroup();" type="reference" use_reference_qualifier="dynamic"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true,edge_encryption_enabled=true" label="Список уведомляемых" max_length="4000" name="u_notify_list" reference="sys_user" type="glide_list"/>
+        <index name="index">
+            <element name="u_bq_usergroup"/>
+        </index>
+        <index name="index2">
+            <element name="u_bq_usercity"/>
+        </index>
+        <index name="index3">
+            <element name="u_bq_danger"/>
+        </index>
+        <index name="index4">
+            <element name="u_bq_topic"/>
+        </index>
+        <index name="index5">
+            <element name="u_bq_factory"/>
+        </index>
+    </element>
+</database>

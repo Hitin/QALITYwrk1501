@@ -6,11 +6,11 @@
         <checked_out/>
         <checked_out_by/>
         <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
-        <condition table="x_caas_quality_service_call">u_bq_topic=46aa161f6f972200724708c6eb3ee4ea^u_bq_state=Назначено в группу^u_bq_end_call=false^u_log_country!=BY^NQu_bq_topic=46aa161f6f972200724708c6eb3ee4ea^u_bq_state=Назначено ответственному^u_log_countrySTARTSWITHBY^EQ<item display_table="x_caas_quality_bq_topic" display_value="Проблемы доставки сетевым клиентам" endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="false" value="46aa161f6f972200724708c6eb3ee4ea"/>
+        <condition table="soft4_service_call">u_bq_topic=46aa161f6f972200724708c6eb3ee4ea^u_bq_state=Назначено в группу^u_bq_end_call=false^u_log_country!=BY^NQu_bq_topic=46aa161f6f972200724708c6eb3ee4ea^u_bq_state=Назначено ответственному^u_log_countrySTARTSWITHBY^EQ<item endquery="false" field="u_bq_topic" goto="false" newquery="false" operator="=" or="false" value="46aa161f6f972200724708c6eb3ee4ea"/>
             <item endquery="false" field="u_bq_state" goto="false" newquery="false" operator="=" or="false" value="Назначено в группу"/>
             <item endquery="false" field="u_bq_end_call" goto="false" newquery="false" operator="=" or="false" value="false"/>
             <item endquery="false" field="u_log_country" goto="false" newquery="false" operator="!=" or="false" value="BY"/>
-            <item display_table="x_caas_quality_bq_topic" display_value="Проблемы доставки сетевым клиентам" endquery="false" field="u_bq_topic" goto="false" newquery="true" operator="=" or="false" value="46aa161f6f972200724708c6eb3ee4ea"/>
+            <item endquery="false" field="u_bq_topic" goto="false" newquery="true" operator="=" or="false" value="46aa161f6f972200724708c6eb3ee4ea"/>
             <item endquery="false" field="u_bq_state" goto="false" newquery="false" operator="=" or="false" value="Назначено ответственному"/>
             <item endquery="false" field="u_log_country" goto="false" newquery="false" operator="STARTSWITH" or="false" value="BY"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
@@ -42,7 +42,7 @@
         <sys_mod_count>6</sys_mod_count>
         <sys_updated_by>leonid.fedorovich@softline.com</sys_updated_by>
         <sys_updated_on>2019-10-22 09:23:03</sys_updated_on>
-        <table>x_caas_quality_service_call</table>
+        <table>soft4_service_call</table>
         <timezone/>
         <validated>true</validated>
         <workflow display_value="BQ Logistic">984ef1b91bef3f409c961028bd4bcb33</workflow>
@@ -61,13 +61,13 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_name>BQ Logistic</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>wf_workflow_984ef1b91bef3f409c961028bd4bcb33</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
         <sys_updated_on>2019-08-29 10:08:03</sys_updated_on>
-        <table>x_caas_quality_service_call</table>
+        <table>soft4_service_call</table>
         <template>false</template>
         <vars/>
     </wf_workflow>
@@ -1939,7 +1939,7 @@ answer = 0;</value>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
         <sys_updated_on>2019-09-13 07:13:17</sys_updated_on>
         <value>(function() {&#13;
-	var usr = new GlideRecord ('x_caas_quality_bq_group_member');&#13;
+	var usr = new GlideRecord ('soft4_bq_group_member');&#13;
 	usr.addQuery('u_bq_group', current.u_bq_usergroup);&#13;
 	usr.query();&#13;
 	var addr = '';&#13;
@@ -1976,7 +1976,7 @@ answer = 0;</value>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
         <sys_updated_on>2019-09-13 07:13:17</sys_updated_on>
         <value>(function() {&#13;
-	var usr = new GlideRecord ('x_caas_quality_bq_group_member');&#13;
+	var usr = new GlideRecord ('soft4_bq_group_member');&#13;
 	usr.addQuery('u_bq_group', current.u_bq_usergroup);&#13;
 	usr.query();&#13;
 	var addr = '';&#13;
@@ -3271,7 +3271,7 @@ var txt = '';&#13;
 		var cDay = new GlideDate();&#13;
 		var cTime = new GlideDateTime();&#13;
 		cTime.addSeconds(10800); //+3 hours&#13;
-		var tMin = new x_caas_quality.bqFunctions().isHoliday(cTime) ? '08:00:00' : '06:00:00';&#13;
+		var tMin = new soft4.bqFunctions().isHoliday(cTime) ? '08:00:00' : '06:00:00';&#13;
 		var tMax = '19:30:00';&#13;
 		var ctMin = new GlideDateTime (cDay.toString() + ' ' + tMin);&#13;
 		var ctMax = new GlideDateTime (cDay.toString() + ' ' + tMax);&#13;
@@ -3292,7 +3292,7 @@ var txt = '';&#13;
 				txt += ctMin.toString().substring(11,16) + '. ';&#13;
 			} else if(cTime &gt; ctMax) {&#13;
 				cTime.addDaysUTC(1);&#13;
-				txt += new x_caas_quality.bqFunctions().isHoliday(cTime) ? 'с 8:30 до 11:30. ' : 'с 6:30 до 9:30. ';&#13;
+				txt += new soft4.bqFunctions().isHoliday(cTime) ? 'с 8:30 до 11:30. ' : 'с 6:30 до 9:30. ';&#13;
 			}&#13;
 			txt += 'Ожидайте SMS или звонка оператора.';&#13;
 			//txt += 'Она будет обработана с 8:30 до 11:30. Ожидайте SMS или звонка оператора';&#13;
@@ -3368,7 +3368,7 @@ var txt = '';&#13;
 		var cDay = new GlideDate();&#13;
 		var cTime = new GlideDateTime();&#13;
 		cTime.addSeconds(10800); //+3 hours&#13;
-		var tMin = new x_caas_quality.bqFunctions().isHoliday(cTime) ? '08:00:00' : '06:00:00';&#13;
+		var tMin = new soft4.bqFunctions().isHoliday(cTime) ? '08:00:00' : '06:00:00';&#13;
 		var tMax = '19:30:00';&#13;
 		var ctMin = new GlideDateTime (cDay.toString() + ' ' + tMin);&#13;
 		var ctMax = new GlideDateTime (cDay.toString() + ' ' + tMax);&#13;
@@ -3389,7 +3389,7 @@ var txt = '';&#13;
 				txt += ctMin.toString().substring(11,16) + '. ';&#13;
 			} else if(cTime &gt; ctMax) {&#13;
 				cTime.addDaysUTC(1);&#13;
-				txt += new x_caas_quality.bqFunctions().isHoliday(cTime) ? 'с 8:30 до 11:30. ' : 'с 6:30 до 9:30. ';&#13;
+				txt += new soft4.bqFunctions().isHoliday(cTime) ? 'с 8:30 до 11:30. ' : 'с 6:30 до 9:30. ';&#13;
 			}&#13;
 			txt += 'Ожидайте SMS или звонка оператора.';&#13;
 			//txt += 'Она будет обработана с 8:30 до 11:30. Ожидайте SMS или звонка оператора';&#13;
@@ -3609,7 +3609,7 @@ var midN = new GlideDateTime();&#13;
 var sendTime;&#13;
 cTime.addSeconds(10800); //+3 hours&#13;
 //var tMin = '08:30:00';&#13;
-var tMin = new x_caas_quality.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
+var tMin = new soft4.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
 var tMax = '19:30:00';&#13;
 var ctMin = new GlideDateTime (cDay.toString() + ' ' + tMin);&#13;
 var ctMax = new GlideDateTime (cDay.toString() + ' ' + tMax);&#13;
@@ -3622,7 +3622,7 @@ else {&#13;
 	}&#13;
 	else if (cTime &gt;= ctMax) {&#13;
 		cTime.addDaysUTC(1);&#13;
-		tMin = new x_caas_quality.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
+		tMin = new soft4.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
 		sendTime = new GlideDateTime(nDay.toString() + ' ' + tMin);&#13;
 	}&#13;
 	answer = gs.dateDiff(cTime, sendTime, true);&#13;
@@ -3904,7 +3904,7 @@ var midN = new GlideDateTime();&#13;
 var sendTime;&#13;
 cTime.addSeconds(10800); //+3 hours&#13;
 //var tMin = '08:30:00';&#13;
-var tMin = new x_caas_quality.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
+var tMin = new soft4.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
 var tMax = '19:30:00';&#13;
 var ctMin = new GlideDateTime (cDay.toString() + ' ' + tMin);&#13;
 var ctMax = new GlideDateTime (cDay.toString() + ' ' + tMax);&#13;
@@ -3917,7 +3917,7 @@ else {&#13;
 	}&#13;
 	else if (cTime &gt;= ctMax) {&#13;
 		cTime.addDaysUTC(1);&#13;
-		tMin = new x_caas_quality.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
+		tMin = new soft4.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
 		sendTime = new GlideDateTime(nDay.toString() + ' ' + tMin);&#13;
 	}&#13;
 	answer = gs.dateDiff(cTime, sendTime, true);&#13;
@@ -4136,7 +4136,7 @@ var cTime = new GlideDateTime();&#13;
 var sendTime;&#13;
 cTime.addSeconds(10800); //+3 hours&#13;
 //var tMin = '08:30:00';&#13;
-var tMin = new x_caas_quality.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
+var tMin = new soft4.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
 var tMax = '19:30:00';&#13;
 var ctMin = new GlideDateTime (cDay.toString() + ' ' + tMin);&#13;
 var ctMax = new GlideDateTime (cDay.toString() + ' ' + tMax);&#13;
@@ -4149,7 +4149,7 @@ else {&#13;
 	}&#13;
 	else if (cTime &gt;= ctMax) {&#13;
 		cTime.addDaysUTC(1);&#13;
-		tMin = new x_caas_quality.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
+		tMin = new soft4.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
 		sendTime = new GlideDateTime(nDay.toString() + ' ' + tMin);&#13;
 	}&#13;
 	answer = gs.dateDiff(cTime, sendTime, true);&#13;
@@ -4431,7 +4431,7 @@ var cTime = new GlideDateTime();&#13;
 var sendTime;&#13;
 cTime.addSeconds(10800); //+3 hours&#13;
 //var tMin = '08:30:00';&#13;
-var tMin = new x_caas_quality.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
+var tMin = new soft4.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
 var tMax = '19:30:00';&#13;
 var ctMin = new GlideDateTime (cDay.toString() + ' ' + tMin);&#13;
 var ctMax = new GlideDateTime (cDay.toString() + ' ' + tMax);&#13;
@@ -4444,7 +4444,7 @@ else {&#13;
 	}&#13;
 	else if (cTime &gt;= ctMax) {&#13;
 		cTime.addDaysUTC(1);&#13;
-		tMin = new x_caas_quality.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
+		tMin = new soft4.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
 		sendTime = new GlideDateTime(nDay.toString() + ' ' + tMin);&#13;
 	}&#13;
 	answer = gs.dateDiff(cTime, sendTime, true);&#13;
@@ -4520,7 +4520,7 @@ gs.log('!!! '+ answer);&#13;
 var cTime = new GlideDateTime();&#13;
 cTime.addSeconds(10800); //+3 hours&#13;
 //var tMin = '08:30:00';&#13;
-var tMin = new x_caas_quality.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
+var tMin = new soft4.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
 var tMax = '19:30:00';&#13;
 var ctMin = new GlideDateTime (cDay.toString() + ' ' + tMin);&#13;
 var ctMax = new GlideDateTime (cDay.toString() + ' ' + tMax);&#13;
@@ -4604,7 +4604,7 @@ else {&#13;
 var cTime = new GlideDateTime();&#13;
 cTime.addSeconds(10800); //+3 hours&#13;
 //var tMin = '08:30:00';&#13;
-var tMin = new x_caas_quality.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
+var tMin = new soft4.bqFunctions().isHoliday(cTime) ? '08:30:00' : '06:30:00';&#13;
 var tMax = '19:30:00';&#13;
 var ctMin = new GlideDateTime (cDay.toString() + ' ' + tMin);&#13;
 var ctMax = new GlideDateTime (cDay.toString() + ' ' + tMax);&#13;

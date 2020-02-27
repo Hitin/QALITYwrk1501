@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Назначения ролей" max_length="40" name="soft4_bq_role_assignment" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Активна" max_length="40" name="u_active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Сотрудник" max_length="32" name="u_employee" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Группа исполнителей" max_length="32" name="u_group" reference="soft4_bq_usergroup" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Согласование БЗ" max_length="32" name="u_kb_review" reference="soft4_bq_kb_category" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Матрица ответственных" max_length="32" name="u_matrix" reference="soft4_bq_assign_matrix" type="reference"/>
+        <element choice="1" label="Роль" max_length="40" name="u_role" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Координатор по ОЗС" value="Координатор по ОЗС"/>
+                <element inactive_on_update="false" label="Ответственный по ОЗС" value="Ответственный по ОЗС"/>
+                <element inactive_on_update="false" label="Согласующий Базы Знаний" value="Согласующий Базы Знаний"/>
+                <element inactive_on_update="false" label="Согласующий по ОЗС" value="Согласующий по ОЗС"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="u_employee"/>
+        </index>
+        <index name="index2">
+            <element name="u_group"/>
+        </index>
+        <index name="index3">
+            <element name="u_kb_review"/>
+        </index>
+        <index name="index4">
+            <element name="u_matrix"/>
+        </index>
+    </element>
+</database>

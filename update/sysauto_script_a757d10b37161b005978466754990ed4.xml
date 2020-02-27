@@ -19,7 +19,7 @@ var pPrevStartKey;
 var pPrevEndKey;
 var st;
 var arrSC = [];
-var tops = new GlideRecord('x_caas_quality_bq_topic');
+var tops = new GlideRecord('soft4_bq_topic');
 
 var styles = ['u_top_br', 'u_top_inc', 'u_top_int', 'u_top_qty'];
 	
@@ -58,14 +58,14 @@ else {
 //gs.log('av m' + pPrevStartKey + ' ' + pPrevEndKey + ' ' + pStartKey + ' ' + pEndKey);
 populate ('m');
 
-st = new GlideRecord('x_caas_quality_bq_hotline_stats');
+st = new GlideRecord('soft4_bq_hotline_stats');
 st.orderByDesc('u_calculated_on');
 st.setLimit(1);
 st.query();
 if (st.next())
 	gs.eventQueue('bq_stats_send',st);
 
-var stDel = new GlideRecord('x_caas_quality_bq_hotline_stats');
+var stDel = new GlideRecord('soft4_bq_hotline_stats');
 var delBefore = new GlideDateTime();
 delBefore.addDaysUTC(-1100);
 stDel.addQuery('u_calculated_on', '<', delBefore.getDate());
@@ -79,14 +79,14 @@ function populate(ptype){
 	tops.query();
 
 	while (tops.next()){
-		st = new GlideRecord('x_caas_quality_bq_hotline_stats');
+		st = new GlideRecord('soft4_bq_hotline_stats');
 		st.initialize();
 		st.u_topic = tops.sys_id;
 		st.u_interval_type = ptype;
 		st.u_qty = setQty('all',pStartKey,pEndKey);
 			gs.info('Test type = ' + ptype);
 		if (ptype == 'm' || gdt.getMonthUTC() != 1){
-			var st_prev = new GlideRecord('x_caas_quality_bq_hotline_stats');
+			var st_prev = new GlideRecord('soft4_bq_hotline_stats');
 			st_prev.addQuery('u_interval_type',ptype);
 			st_prev.addQuery('u_topic',	st.u_topic);
 		//	st_prev.addQuery('sys_id', '!=', st.sys_id);
@@ -131,7 +131,7 @@ function populate(ptype){
 }
 
 function setQty(type,start,end){
-	var agg = new GlideAggregate('x_caas_quality_service_call');
+	var agg = new GlideAggregate('soft4_service_call');
 	agg.addQuery('u_bq_state', 'IN', 'Закрыто,Решено');
 	agg.addQuery('u_bq_topic', tops.sys_id);
 	agg.addQuery('u_bq_contact_type','IN','Звонок,Интернет-сайт');
@@ -164,7 +164,7 @@ function setQty(type,start,end){
 function setValByGR(type,start,end){ //brCount //avgFB
 	var dif = 0;
 	var res = [];
-	var sc = new GlideRecord('x_caas_quality_service_call');
+	var sc = new GlideRecord('soft4_service_call');
 	sc.addQuery('u_bq_topic', tops.sys_id);
 	sc.addQuery('u_bq_state', 'IN', 'Закрыто,Решено');
 	sc.addQuery('u_bq_no_satisfaction', false);
@@ -197,7 +197,7 @@ function setValByGR(type,start,end){ //brCount //avgFB
 	return res;
 }
 function fillStyles(style,ptype,dateOn){
-	var st = new GlideRecord('x_caas_quality_bq_hotline_stats');
+	var st = new GlideRecord('soft4_bq_hotline_stats');
 	st.addQuery('u_calculated_on', dateOn.getDate());
 	st.addQuery('u_interval_type', ptype);
 	var orderedBy;
@@ -237,7 +237,7 @@ function fillStyles(style,ptype,dateOn){
         <sys_id>a757d10b37161b005978466754990ed4</sys_id>
         <sys_mod_count>157</sys_mod_count>
         <sys_name>bq Hotline Stats population</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysauto_script_a757d10b37161b005978466754990ed4</sys_update_name>

@@ -15,7 +15,7 @@ function createContact() {
 	var telID = '-1';
 
 	if (wizard.new_caller == 'Yes'){
-		var NewUser = new GlideRecord('x_caas_quality_bq_fio');
+		var NewUser = new GlideRecord('soft4_bq_fio');
 		NewUser.u_name = wizard.u_name;
 		NewUser.u_mname = wizard.u_mname;
 		NewUser.u_lname = wizard.u_lname;		
@@ -28,7 +28,7 @@ function createContact() {
 		NewUser.u_bq_phones = wizard.u_bq_aon_number;
 		NewUser.u_description = 'Зарегистрирован в рамках заявки: ' + current.number;
 		NewUser.insert();
-		var NewUser2 = new GlideRecord('x_caas_quality_bq_fio');
+		var NewUser2 = new GlideRecord('soft4_bq_fio');
 			NewUser2.addQuery('u_description', NewUser.u_description);
 			NewUser2.query();
 				while (NewUser2.next()){
@@ -43,13 +43,13 @@ function createContact() {
         <sys_id>10344f0f6fdf3500724708c6eb3ee4eb</sys_id>
         <sys_mod_count>11</sys_mod_count>
         <sys_name>Регистрация обращения</sys_name>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>expert_panel_template_10344f0f6fdf3500724708c6eb3ee4eb</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
         <sys_updated_on>2019-07-11 12:56:46</sys_updated_on>
-        <table>x_caas_quality_service_call</table>
+        <table>soft4_service_call</table>
         <template/>
         <title/>
         <view/>

@@ -37,7 +37,7 @@ function checkAgreeList(){
 			return false;
 }
 
-if (current.getTableName() == "x_caas_quality_service_call") {
+if (current.getTableName() == "soft4_service_call") {
 	current.comments = "reply from: " + email.origemail + "\n\n" + email.body_text;
 	
 	if (email.subject.toLowerCase().indexOf("согласовано") >= 0 && current.u_bq_state == 'На согласовании') {
@@ -111,7 +111,7 @@ if (current.getTableName() == "x_caas_quality_service_call") {
 		if (current.u_bq_topic == '46aa161f6f972200724708c6eb3ee4ea'){
 			var ItilUser = new GlideRecord('sys_user');
 			if (ItilUser.get('email', email.from)){
-				var usergroup = new GlideRecord('x_caas_quality_bq_group_member');
+				var usergroup = new GlideRecord('soft4_bq_group_member');
 				usergroup.addQuery('u_bq_group', current.u_bq_usergroup);
 				usergroup.addQuery('u_bq_user', ItilUser.sys_id);
 				usergroup.setLimit(1);
@@ -187,7 +187,7 @@ if (current.getTableName() == "x_caas_quality_service_call") {
 				ItilUser.query();
 				if (ItilUser.next()){
 					current.u_bq_user = ItilUser.sys_id;
-					var grMember = new GlideRecord('x_caas_quality_bq_group_member');
+					var grMember = new GlideRecord('soft4_bq_group_member');
 					grMember.addQuery('u_bq_group', current.u_bq_usergroup.sys_id);
 					grMember.addQuery('u_bq_user',ItilUser.sys_id);
 					grMember.query();
@@ -217,7 +217,7 @@ if (current.getTableName() == "x_caas_quality_service_call") {
 		newUser.query();
 		if (newUser.next()){
 			current.u_bq_prot_input = email.body_text.substring(87);
-			var matrix= new GlideRecord('x_caas_quality_bq_assign_matrix');
+			var matrix= new GlideRecord('soft4_bq_assign_matrix');
 			if (newUser != oldUser){
 				current.u_bq_user = newUser.sys_id;
 				matrix.addQuery('u_bq_user',oldUser.sys_id);
@@ -246,7 +246,7 @@ if (current.getTableName() == "x_caas_quality_service_call") {
 		}
  		current.u_bq_resptext = parms[2];
  		current.u_bq_state = "Закрыто";
- 		var gr = new GlideRecord('x_caas_quality_bq_delivery_close_code');
+ 		var gr = new GlideRecord('soft4_bq_delivery_close_code');
 		if (current.u_log_country == 'BY'){
 			if (parms[1] !=	'приемка'){
 				gr.get('u_code', 'R_001');
@@ -291,7 +291,7 @@ if (current.getTableName() == "x_caas_quality_service_call") {
 		ItilUser.addQuery('active', true);
 		ItilUser.query();
 		if (ItilUser.next()){
-			var grMember = new GlideRecord('x_caas_quality_bq_group_member');
+			var grMember = new GlideRecord('soft4_bq_group_member');
 			grMember.addQuery('u_bq_group.u_bq_grupnqme', 'CONTAINS', 'Доставка.');
 			grMember.addQuery('u_bq_group', '!=', '7301949337a722005978466754990e4f');
 			grMember.addQuery('u_bq_user',ItilUser.sys_id);
@@ -347,7 +347,7 @@ if (current.getTableName() == "x_caas_quality_service_call") {
 	
 	if (current.u_bq_contact_type == 'Интернет-сайт' && email.from.toLowerCase() == current.u_mail.toLowerCase()) {
 	//	gs.log('AV' + current.u_bq_contact_type + email.from.toLowerCase() + current.u_mail.toLowerCase())
-		var sub = new GlideRecord('x_caas_quality_bq_subtopic');
+		var sub = new GlideRecord('soft4_bq_subtopic');
 	//	sub.get(current.u_bq_danger);
 		if (current.u_bq_state == 'Решено' || current.u_bq_state == 'Закрыто' || current.u_bq_usergroup == ''){
 			var addr = '';
@@ -386,7 +386,7 @@ if (current.getTableName() == "x_caas_quality_service_call") {
 		
 	}
 	if (current.u_bq_contact_type == 'Интернет-сайт' && email.from.toLowerCase() != current.u_mail.toLowerCase() && email.from.toLowerCase() != current.u_bq_user.email.toLowerCase() && email.from.toLowerCase().indexOf("@baltika.com") == -1 && email.from.toLowerCase().indexOf("baltika.ru") == -1) {
-		var sub = new GlideRecord('x_caas_quality_bq_subtopic');
+		var sub = new GlideRecord('soft4_bq_subtopic');
 		if (current.u_bq_state == 'Закрыто'){
 			var addr = '';
 			var op = new GlideRecord('sys_user_has_role');
@@ -428,13 +428,13 @@ if (current.getTableName() == "x_caas_quality_service_call") {
         <sys_mod_count>148</sys_mod_count>
         <sys_name>bq_Update Service Call</sys_name>
         <sys_overrides/>
-        <sys_package display_value="QUALITY" source="x_caas_quality">fe192e224f42b380b41f05818110c7b7</sys_package>
+        <sys_package display_value="QUALITY" source="soft4">fe192e224f42b380b41f05818110c7b7</sys_package>
         <sys_policy/>
         <sys_scope display_value="QUALITY">fe192e224f42b380b41f05818110c7b7</sys_scope>
         <sys_update_name>sysevent_in_email_action_859ef6266fcbf100724708c6eb3ee451</sys_update_name>
         <sys_updated_by>Petr.Ablyazov@softline.com</sys_updated_by>
         <sys_updated_on>2019-08-27 12:11:28</sys_updated_on>
-        <table>x_caas_quality_service_call</table>
+        <table>soft4_service_call</table>
         <template/>
         <type>reply</type>
     </sysevent_in_email_action>
